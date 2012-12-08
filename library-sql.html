@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>SQL</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="libraries.html" title="Libraries" /><link rel="prev" href="library-spring.html" title="Spring Integration" /><link rel="next" href="library-struts-codebehind.html" title="Struts - Code Behind" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://qi4j.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://qi4j.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/qi4j.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Version Switcher -->
+
+<script type="text/javascript" src="js/versionswitcher.js"></script>
+
+<!-- Qi4j WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3118496-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="_core.html">Core</a></span></dt><dt><span class="section"><span xmlns="" href="libraries.html">Libraries</span></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="libraries.html#_overview_3">Overview</a></span></dt><dt><span class="section"><a href="library-alarm.html">Alarms</a></span></dt><dt><span class="section"><a href="library-caching.html">Caching</a></span></dt><dt><span class="section"><a href="library-circuitbreaker.html">Circuit Breaker</a></span></dt><dt><span class="section"><a href="library-constraints.html">Constraints</a></span></dt><dt><span class="section"><a href="library-conversion.html">Conversion</a></span></dt><dt><span class="section"><a href="library-cxf.html">CXF WebService</a></span></dt><dt><span class="section"><a href="library-eventsourcing.html">Event Sourcing</a></span></dt><dt><span class="section"><a href="library-eventsourcing-jdbm.html">Event Sourcing - JDBM</a></span></dt><dt><span class="section"><a href="library-eventsourcing-rest.html">Event Sourcing - ReST</a></span></dt><dt><span class="section"><a href="library-fileconfig.html">FileConfig</a></span></dt><dt><span class="section"><a href="library-http.html">HTTP</a></span></dt><dt><span class="section"><a href="library-jmx.html">JMX</a></span></dt><dt><span class="section"><a href="library-locking.html">Locking</a></span></dt><dt><span class="section"><a href="library-logging.html">Logging</a></span></dt><dt><span class="section"><a href="library-neo4j.html">Neo4j</a></span></dt><dt><span class="section"><a href="library-osgi.html">OSGi</a></span></dt><dt><span class="section"><a href="library-rdf.html">RDF</a></span></dt><dt><span class="section"><a href="library-rest-client.html">ReST Client</a></span></dt><dt><span class="section"><a href="library-rest-client-primer.html">ReST - HATEOAS Primer</a></span></dt><dt><span class="section"><a href="library-rest-common.html">ReST Common</a></span></dt><dt><span class="section"><a href="library-rest-server.html">ReST Server</a></span></dt><dt><span class="section"><a href="library-scheduler.html">Scheduler</a></span></dt><dt><span class="section"><a href="library-script-beanshell.html">Beanshell Scripting</a></span></dt><dt><span class="section"><a href="library-script-groovy.html">Groovy Scripting</a></span></dt><dt><span class="section"><a href="library-script-javascript.html">Javascript Scripting</a></span></dt><dt><span class="section"><a href="library-script-jruby.html">JRuby Scripting</a></span></dt><dt><span class="section"><a href="lang-scala.html">Scala Support</a></span></dt><dt><span class="section"><a href="library-servlet.html">Servlet</a></span></dt><dt><span class="section"><a href="library-shiro.html">Shiro Security</a></span></dt><dt><span class="section"><a href="library-shiro-web.html">Shiro Web Security</a></span></dt><dt><span class="section"><a href="library-spring.html">Spring Integration</a></span></dt><dt><span class="section"><span xmlns="" href="library-sql.html">SQL</span></span></dt><dt><span class="section"><a href="library-struts-codebehind.html">Struts - Code Behind</a></span></dt><dt><span class="section"><a href="library-struts-convention.html">Struts - Convention</a></span></dt><dt><span class="section"><a href="library-struts-plugin.html">Struts - Plugin</a></span></dt><dt><span class="section"><a href="library-uid.html">UID</a></span></dt><dt><span class="section"><a href="library-uowfile.html">UoWFile</a></span></dt></dl></div></div><div class="section" title="SQL"><div class="titlepage"><div><div><h3 class="title"><a id="library-sql"></a>SQL</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The SQL Library provides facilities for working with SQL databases.</p><p>The center piece is the DataSource support that comes with
+<a class="xref" href="library-circuitbreaker.html" title="Circuit Breaker">Circuit Breaker Library</a> and <a class="xref" href="library-jmx.html" title="JMX"> JMX Library</a> support. Facilities for doing SQL I/O with the <a class="xref" href="core-io.html" title="Core I/O API">I/O API</a> are provided.</p><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>See the <a class="xref" href="sample-sql-support.html" title="SQL Support Sample">SQL Support Sample</a> that demonstrate combined use of <a class="xref" href="library-sql.html" title="SQL">SQL Library</a>, <a class="xref" href="extension-es-sql.html" title="SQL EntityStore"> SQL EntityStore</a> and
+<a class="xref" href="extension-indexing-sql.html" title="SQL Index/Query">SQL Index/Query</a>.</p></div><p>Moreover, supplementary libraries helps dealing with different connection pool implementations and schema migrations.
+None of theses libraries depends on an actual JDBC driver, you are free to use the one that suits your needs.</p><div class="section" title="DataSource and connection pools"><div class="titlepage"><div><div><h4 class="title"><a id="_datasource_and_connection_pools"></a>DataSource and connection pools</h4></div></div></div><p>DataSource support comes in four flavors:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+using the <a class="ulink" href="http://jolbox.com/" target="_top">BoneCP</a> connection pool
+</li><li class="listitem">
+using the <a class="ulink" href="http://sourceforge.net/projects/c3p0/" target="_top">C3P0</a> connection pool
+</li><li class="listitem">
+using the <a class="ulink" href="http://commons.apache.org/dbcp/" target="_top">Apache DBCP</a> connection pool
+</li><li class="listitem">
+importing an existing DataSource provided at assembly time
+</li></ul></div><div class="section" title="Connection Pools"><div class="titlepage"><div><div><h5 class="title"><a id="_connection_pools"></a>Connection Pools</h5></div></div></div><p>Connection Pools support is provided by supplementary libraries.</p><p><span class="strong"><strong>BoneCP</strong></span></p><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>BoneCP support resides in the <span class="strong"><strong>sql-bonecp</strong></span> module.</p><pre class="programlisting brush: java">// Assemble the BoneCP based Service Importer
+new BoneCPDataSourceServiceAssembler().
+        identifiedBy( DS_SERVICE_ID ).
+        visibleIn( Visibility.module ).
+        withConfig( config ).
+        withConfigVisibility( Visibility.layer ).
+        assemble( module );
+</pre><p><span class="strong"><strong>C3P0</strong></span></p><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>C3P0 support resides in the <span class="strong"><strong>sql-c3p0</strong></span> module.</p><pre class="programlisting brush: java">// Assemble the C3P0 based Service Importer
+new C3P0DataSourceServiceAssembler().
+        identifiedBy( DS_SERVICE_ID ).
+        visibleIn( Visibility.module ).
+        withConfig( config ).
+        withConfigVisibility( Visibility.layer ).
+        assemble( module );
+</pre><p><span class="strong"><strong>Apache DBCP</strong></span></p><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>Apache DBCP support resides in the <span class="strong"><strong>sql-dbcp</strong></span> module.</p><pre class="programlisting brush: java">// Assemble the Apache DBCP based Service Importer
+new DBCPDataSourceServiceAssembler().
+        identifiedBy( DS_SERVICE_ID ).
+        visibleIn( Visibility.module ).
+        withConfig( config ).
+        withConfigVisibility( Visibility.layer ).
+        assemble( module );
+</pre></div><div class="section" title="DataSource"><div class="titlepage"><div><div><h5 class="title"><a id="_datasource"></a>DataSource</h5></div></div></div><p><span class="strong"><strong>Assembly</strong></span></p><pre class="programlisting brush: java">// Assemble a DataSource
+new DataSourceAssembler().
+        withDataSourceServiceIdentity( DS_SERVICE_ID ).
+        identifiedBy( DS_ID ).
+        visibleIn( Visibility.module ).
+        assemble( module );
+// Another DataSource managed by the same C3P0 connection pool
+new DataSourceAssembler().
+        withDataSourceServiceIdentity( DS_SERVICE_ID ).
+        identifiedBy( OTHER_DS_ID ).
+        visibleIn( Visibility.module ).
+        assemble( module );
+</pre><p>Assembled DataSources must be visible from the connection pool importer service.</p><p><span class="strong"><strong>Configuration</strong></span></p><p>You need to provide a DataSource Configuration Entity per assembled DataSource.
+See <a class="xref" href="howto-configure-service.html" title="Configure a Service">Configure a Service</a>.</p><pre class="programlisting brush: java">public interface DataSourceConfigurationState
+        extends Enabled
+{
+    Property&lt;String&gt; driver();
+    Property&lt;String&gt; url();
+    @UseDefaults Property&lt;String&gt; username();
+    @UseDefaults Property&lt;String&gt; password();
+    @Optional Property&lt;Integer&gt; minPoolSize();
+    @Optional Property&lt;Integer&gt; maxPoolSize();
+    @Optional Property&lt;Integer&gt; loginTimeoutSeconds();
+    @Optional Property&lt;Integer&gt; maxConnectionAgeSeconds();
+    @Optional Property&lt;String&gt; validationQuery();
+    @UseDefaults Property&lt;String&gt; properties();
+}
+</pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: plain">enabled=true
+url=jdbc:derby:memory:testdb;create=true
+driver=org.apache.derby.jdbc.EmbeddedDriver
+username=
+password=</pre></div><div class="section" title="Importing an existing DataSource"><div class="titlepage"><div><div><h5 class="title"><a id="_importing_an_existing_datasource"></a>Importing an existing DataSource</h5></div></div></div><p>Importing an existing DataSource at assembly time is usefull when your Qi4j
+Application runs in an environment where DataSource are already provided.</p><pre class="programlisting brush: java">new ExternalDataSourceAssembler( externalDataSource ).
+        visibleIn( Visibility.module ).
+        identifiedBy( "datasource-external-id" ).
+        withCircuitBreaker( DataSources.newDataSourceCircuitBreaker() ).
+        assemble( module );
+</pre><p>This mechanism is provided as an integration convenience and using the embedded
+connection pools described above is recommended.</p></div></div><div class="section" title="Circuit Breaker"><div class="titlepage"><div><div><h4 class="title"><a id="_circuit_breaker_2"></a>Circuit Breaker</h4></div></div></div><p>Assemblers for managed and external DataSource takes an optional
+CircuitBreaker and set it as <a class="xref" href="glossary.html#def-metainfo">MetaInfo</a> of the DataSource.</p><pre class="programlisting brush: java">CircuitBreaker circuitBreaker = newDataSourceCircuitBreaker( 5 /* threshold */,
+                                                             1000 * 60 * 5 /* 5min timeout */ );
+new DataSourceAssembler().
+        withDataSourceServiceIdentity( DS_SERVICE_ID ).
+        identifiedBy( DS_ID ).
+        visibleIn( Visibility.layer ).
+        withCircuitBreaker( circuitBreaker ).
+        assemble( module );
+</pre><p>Then, when you gets injected or lookup a DataSource it will be automatically wrapped
+by a CircuitBreaker proxy.</p><pre class="programlisting brush: java">@Service
+DataSource dataSource; // Wrapped with a CircuitBreaker proxy
+</pre></div><div class="section" title="I/O"><div class="titlepage"><div><div><h4 class="title"><a id="_i_o"></a>I/O</h4></div></div></div><p>Here is a simple example:</p><pre class="programlisting brush: java">// Look up the DataSource
+DataSource ds = module.findService( DataSource.class ).get();
+
+// Instanciate Databases helper
+Databases database = new Databases( ds );
+
+// Assert that insertion works
+assertTrue( database.update( "insert into test values ('someid', 'bar')" ) == 1 );
+  [...snip...]
+
+// Select rows and load them in a List
+List&lt;SomeValue&gt; rows = new ArrayList&lt;SomeValue&gt;();
+database.query( "select * from test" ).transferTo( map( toValue, collection( rows ) ) );
+
+// Transfer all rows to System.out
+Inputs.iterable( rows ).transferTo( Outputs.systemOut() );
+</pre></div><div class="section" title="JMX"><div class="titlepage"><div><div><h4 class="title"><a id="_jmx"></a>JMX</h4></div></div></div><p>Thanks to the <a class="xref" href="library-jmx.html" title="JMX"> JMX Library</a> the Configuration of DataSources is exposed
+through JMX.</p><pre class="programlisting brush: java">new DataSourceJMXAssembler().visibleIn( Visibility.module ).assemble( module );
+</pre><p>Every DataSource visible from the DataSourceConfigurationManager Service
+will get its Configuration available using a JMX client.</p><p>Note that the JMX support does not apply to existing DataSource imported as
+described above.</p></div><div class="section" title="Schema migration"><div class="titlepage"><div><div><h4 class="title"><a id="_schema_migration"></a>Schema migration</h4></div></div></div><p>Database schema migration can be delegated to <a class="ulink" href="http://www.liquibase.org/" target="_top">Liquibase</a>.</p><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>Liquibase support resides in the <span class="strong"><strong>sql-liquibase</strong></span> module.</p><p><span class="strong"><strong>Assembly</strong></span></p><pre class="programlisting brush: java">new LiquibaseAssembler( Visibility.module ).
+        withConfigIn( configModule, Visibility.layer ).
+        assemble( module );
+</pre><p>The LiquibaseService is activated on Application startup and if enabled it
+applies the configured changelog.</p><p><span class="strong"><strong>Configuration</strong></span></p><pre class="programlisting brush: java">public interface LiquibaseConfiguration
+        extends ConfigurationComposite, Enabled
+{
+    @UseDefaults Property&lt;String&gt; contexts();
+    @UseDefaults Property&lt;String&gt; changeLog();
+}
+</pre><p>For the Liquibase service to be enabled you must set it’s Configuration
+<code class="literal">enabled</code> Property to TRUE. <span class="strong"><strong>contexts</strong></span> and <span class="strong"><strong>changeLog</strong></span> are optional.</p></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

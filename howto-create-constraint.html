@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Create a Constraint</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tutorials.html" title="Tutorials" /><link rel="prev" href="howto-create-entity.html" title="Create an Entity" /><link rel="next" href="howto-create-concern.html" title="Create a Concern" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://qi4j.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://qi4j.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/qi4j.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Version Switcher -->
+
+<script type="text/javascript" src="js/versionswitcher.js"></script>
+
+<!-- Qi4j WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3118496-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><span xmlns="" href="tutorials.html">Tutorials</span></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="_core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="tutorials.html#_overview">Overview</a></span></dt><dt><span class="section"><a href="two-minutes-intro.html">Qi4j in 2 minutes</a></span></dt><dt><span class="section"><a href="ten-minutes-intro.html">Qi4j in 10 minutes</a></span></dt><dt><span class="section"><a href="thirty-minutes-intro.html">Qi4j in 30 minutes</a></span></dt><dt><span class="section"><a href="two-hours-intro.html">Qi4j in 2 hours</a></span></dt><dt><span class="section"><a href="introduction-background.html">Background</a></span></dt><dt><span class="section"><a href="what-is-cop.html">What is COP?</a></span></dt><dt><span class="section"><a href="qi4j-cop.html">COP with Java and Qi4j</a></span></dt><dt><span class="section"><a href="state-modeling.html">Qi4j and state modeling</a></span></dt><dt><span class="section"><a href="what-s-an-object-anyway.html">What’s an Object anyway?</a></span></dt><dt><span class="section"><a href="tut-composites.html">Transient Composites Tutorial</a></span></dt><dt><span class="section"><a href="tut-services.html">Services Composites Tutorial</a></span></dt><dt><span class="section"><a href="howto-depend-on-qi4j.html">Depend on Qi4j in your build</a></span></dt><dt><span class="section"><a href="howto-assemble-application.html">Assemble an Application</a></span></dt><dt><span class="section"><a href="howto-configure-service.html">Configure a Service</a></span></dt><dt><span class="section"><a href="howto-create-entity.html">Create an Entity</a></span></dt><dt><span class="section"><span xmlns="" href="howto-create-constraint.html">Create a Constraint</span></span></dt><dt><span class="section"><a href="howto-create-concern.html">Create a Concern</a></span></dt><dt><span class="section"><a href="howto-create-sideeffect.html">Create a SideEffect</a></span></dt><dt><span class="section"><a href="howto-leverage-properties.html">Leverage Properties</a></span></dt><dt><span class="section"><a href="howto-contextual-fragments.html">Use contextual fragments</a></span></dt><dt><span class="section"><a href="howto-use-io.html">Use I/O API</a></span></dt><dt><span class="section"><a href="related.html">Related publications &amp; projects</a></span></dt></dl></div></div><div class="section" title="Create a Constraint"><div class="titlepage"><div><div><h3 class="title"><a id="howto-create-constraint"></a>Create a Constraint</h3></div></div></div><p>Constraints are defined in <a class="xref" href="glossary.html#def-constraint">Constraint</a>.</p><div class="section" title="Method Constraint"><div class="titlepage"><div><div><h4 class="title"><a id="_method_constraint"></a>Method Constraint</h4></div></div></div><p>Method Constraints are declared with annotations on the method argument. The annotation itself is custom, and it is possible to make your own.</p><pre class="programlisting brush: java">public interface Dialer
+{
+    void callPhoneNumber(@PhoneNumber String phoneNo);
+
+}
+</pre><p>In the code above we say that we want the argument to the callPhoneNumber() method to be a valid phone number. This annotation is not built-in, so we need to declare it.</p><pre class="programlisting brush: java">@ConstraintDeclaration
+@Retention( RetentionPolicy.RUNTIME )
+@Target( { ElementType.PARAMETER, ElementType.ANNOTATION_TYPE, ElementType.METHOD } )
+public @interface PhoneNumber
+{
+}
+</pre><p>We then need to provide the Constraint implementation.</p><pre class="programlisting brush: java">public class PhoneNumberConstraint
+        implements Constraint&lt;PhoneNumber, String&gt;
+{
+    public boolean isValid( PhoneNumber annotation, String number )
+    {
+        boolean validPhoneNumber = true; // check phone number format...
+        return validPhoneNumber;  // return true if valid phone number.
+    }
+}
+</pre><p>We also need to include the Constraint on the Composites we want to have them present.</p><pre class="programlisting brush: java">@Constraints( PhoneNumberConstraint.class )
+public interface DialerComposite extends ServiceComposite, Dialer
+{
+}
+</pre><p><span class="strong"><strong><span class="line-through">Constraints doesn’t throw any exceptions, as violation of constraints are domain specific. Instead, the Qi4j runtime will record all the violations in the InvocationContext, which is available to Concerns and Mixins. For instance;</span></strong></span></p><pre class="programlisting brush: java">public class ParameterViolationConcern
+    implements InvocationHandler
+{
+    @Structure private InvocationContext invocation;
+    @ConcernFor private InvocationHandler next;
+    public Object invoke( Object proxy, Method method, Object[] args )
+        throws Exception
+    {
+        Collection&lt;ConstraintViolation&gt; violations =
+            invocation.getConstraintViolations();
+        if( violations.size() &gt; 0 )
+        {
+            throw new MyConstraintVioaltionException( violations );
+        }
+        return next.invoke( proxy, method, args );
+    }
+}</pre></div><div class="section" title="Property Constraint"><div class="titlepage"><div><div><h4 class="title"><a id="_property_constraint"></a>Property Constraint</h4></div></div></div><p>Property Constraints are declared on the Property method.</p><pre class="programlisting brush: java">public interface HasPhoneNumber
+{
+    @PhoneNumber Property&lt;String&gt; phoneNumber();
+}
+</pre><p>In this case, the Constraint associated with the phoneNumber() method, will be called before the set() method on that Property is called. And any ConstraintViolations will be available to Concerns declared for the Property itself. For instance;</p><pre class="programlisting brush: java">public class ParameterViolationConcern
+    implements HasPhoneNumber
+{
+    @Structure private InvocationContext invocation;
+    @ConcernFor private HasPhoneNumber next;
+    @Concerns( CheckViolation.class )
+    public abstract Property&lt;String&gt; phoneNumber();
+    private abstract class CheckViolation
+        implements Property&lt;String&gt;
+    {
+        @ConcernFor Property&lt;String&gt; next;
+        public void set( String number )
+        {
+            Collection&lt;ConstraintViolation&gt; violations =
+                invocation.getConstraintViolations();
+            if( violations.size() &gt; 0 )
+            {
+                throw new MyConstraintVioaltionException( violations );
+            }
+            return next.set( number );
+        }
+    }
+}</pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

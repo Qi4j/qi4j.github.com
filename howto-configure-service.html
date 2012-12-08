@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Configure a Service</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tutorials.html" title="Tutorials" /><link rel="prev" href="howto-assemble-application.html" title="Assemble an Application" /><link rel="next" href="howto-create-entity.html" title="Create an Entity" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://qi4j.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://qi4j.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/qi4j.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Version Switcher -->
+
+<script type="text/javascript" src="js/versionswitcher.js"></script>
+
+<!-- Qi4j WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3118496-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><span xmlns="" href="tutorials.html">Tutorials</span></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="_core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="tutorials.html#_overview">Overview</a></span></dt><dt><span class="section"><a href="two-minutes-intro.html">Qi4j in 2 minutes</a></span></dt><dt><span class="section"><a href="ten-minutes-intro.html">Qi4j in 10 minutes</a></span></dt><dt><span class="section"><a href="thirty-minutes-intro.html">Qi4j in 30 minutes</a></span></dt><dt><span class="section"><a href="two-hours-intro.html">Qi4j in 2 hours</a></span></dt><dt><span class="section"><a href="introduction-background.html">Background</a></span></dt><dt><span class="section"><a href="what-is-cop.html">What is COP?</a></span></dt><dt><span class="section"><a href="qi4j-cop.html">COP with Java and Qi4j</a></span></dt><dt><span class="section"><a href="state-modeling.html">Qi4j and state modeling</a></span></dt><dt><span class="section"><a href="what-s-an-object-anyway.html">What’s an Object anyway?</a></span></dt><dt><span class="section"><a href="tut-composites.html">Transient Composites Tutorial</a></span></dt><dt><span class="section"><a href="tut-services.html">Services Composites Tutorial</a></span></dt><dt><span class="section"><a href="howto-depend-on-qi4j.html">Depend on Qi4j in your build</a></span></dt><dt><span class="section"><a href="howto-assemble-application.html">Assemble an Application</a></span></dt><dt><span class="section"><span xmlns="" href="howto-configure-service.html">Configure a Service</span></span></dt><dt><span class="section"><a href="howto-create-entity.html">Create an Entity</a></span></dt><dt><span class="section"><a href="howto-create-constraint.html">Create a Constraint</a></span></dt><dt><span class="section"><a href="howto-create-concern.html">Create a Concern</a></span></dt><dt><span class="section"><a href="howto-create-sideeffect.html">Create a SideEffect</a></span></dt><dt><span class="section"><a href="howto-leverage-properties.html">Leverage Properties</a></span></dt><dt><span class="section"><a href="howto-contextual-fragments.html">Use contextual fragments</a></span></dt><dt><span class="section"><a href="howto-use-io.html">Use I/O API</a></span></dt><dt><span class="section"><a href="related.html">Related publications &amp; projects</a></span></dt></dl></div></div><div class="section" title="Configure a Service"><div class="titlepage"><div><div><h3 class="title"><a id="howto-configure-service"></a>Configure a Service</h3></div></div></div><p>Qi4j supports a Configuration system for services. The configuration instance itself is an Entity and is therefor
+readable, writeable and queryable, just like other Entities. This should make Configuration management much simpler,
+since you can easily build GUI tools to allow editing of these in runtime. However, to simplify the initial values of
+the Configuration instance, Qi4j also does the initial bootstrapping of the Configuration entity for you. This HowTo is
+going to show how.</p><div class="section" title="We need a Service"><div class="titlepage"><div><div><h4 class="title"><a id="_we_need_a_service"></a>We need a Service</h4></div></div></div><p>To illustrate these features we create an TravelPlan service, which allows clients to find and make Reservations to
+Destinations. For the sake of simplicity, we are leaving out the domain details…</p><pre class="programlisting brush: java">public interface TravelPlan
+{
+    // Domain methods, which are beyond the discussion at hand.
+}
+</pre><p>So, then there is the ServiceComposite…</p><pre class="programlisting brush: java">// The package is relevant to the Initial Values discussed later.
+package org.niclas.hedhman.travel;
+  [...snip...]
+
+@Mixins( { TravelPlanMixin.class } )
+public interface TravelPlanService extends TravelPlan, ServiceComposite
+{}
+</pre><p>And then in the Mixin we actually need to connect to a foreign system to obtain the various details that the service
+can provide to the clients. For instance, it needs a host name and port and a protocol to use. We put these into a
+configuration interface.</p><pre class="programlisting brush: java">public interface TravelPlanConfiguration
+{
+    Property&lt;String&gt; hostName();
+
+    @Range( min=0, max=65535 )
+    Property&lt;Integer&gt; portNumber();
+
+    @Matches( "(ssh|rlogin|telnet)" )
+    Property&lt;String&gt; protocol();
+}
+</pre><p>We used the recommended type-safe Property subtype pattern, and for each PortNumber and Protocol we have defined a
+Constraint required.</p><p>Now we can access this configuration in the TravelPlanMixin like this;</p><pre class="programlisting brush: java">import org.qi4j.api.configuration.Configuration;
+
+public class TravelPlanMixin implements TravelPlan
+{
+    @This
+    Configuration&lt;TravelPlanConfiguration&gt; config;
+
+    private void foo()
+    {
+        TravelPlanConfiguration tpConf = config.get();
+        String hostName = tpConf.hostName().get();
+        // ...
+    }
+      [...snip...]
+
+}
+</pre><p>And from the Service point of view, it doesn’t need to worry about where the configuration really comes from. But it may
+want to control when the Configuration should be refreshed, to ensure that atomic changes are happening. This is done
+with the refresh() method in the Configuration interface;</p><pre class="programlisting brush: java">public void doSomething()
+{
+    // Refresh Configuration before reading it.
+    config.refresh();
+
+    TravelPlanConfiguration tpConf = config.get();
+    // ...
+}
+</pre><p>This ensures that any updates to the Configuration that has occurred will be retrieved and available to the Service.
+Since Configuration instance is an Entity, the UnitOfWork system will ensure that the Configuration is consistent and
+not in the middle of value changes.</p><div class="section" title="Initial Values"><div class="titlepage"><div><div><h5 class="title"><a id="_initial_values"></a>Initial Values</h5></div></div></div><p>The initial Configuration instance will be created automatically behind the scenes, by reading a properties file and
+create an Entity with the same identity as the identity of the service. That was a handful. Services are, as we know,
+singletons and have an identity specified at assembly. Even if it is not provided, one will automatically be assigned.
+The service’s "identifiedBy" will be used as the identifier for the Configuration entity and stored in the visible
+EntityStore. This identity is also used to locate a properties file in the same package as the ServiceComposite belongs
+to.</p><p>So, we create a properties file, where the keys are the names of the properties in TravelPlanConfiguration.</p><pre class="programlisting brush: bash"># Hostname to the TravelPlan service
+hostName=niclas.hedhman.org
+
+# Port number to use for the connection
+portNumber=5439
+
+# Protocol to use; Valid options "ssh", "rlogin", "telnet"
+protocol=ssh
+
+</pre><p>File: org/hedhman/niclas/travel/TravelPlanService.properties</p><p>Note that the file resides in the directory equivalent to the package name of the TravelPlanService.</p><p>And this would work with the standard assembly.</p><pre class="programlisting brush: java">public void assemble(ModuleAssembly module) throws AssemblyException
+{
+    module.addServices(TravelPlanService.class).instantiateOnStartup();
+}
+</pre></div></div><div class="section" title="Non-default Identity"><div class="titlepage"><div><div><h4 class="title"><a id="_non_default_identity"></a>Non-default Identity</h4></div></div></div><p>If you need to use multiple instances of the same service, or that the service has a non-default Identity, then you need
+to name the properties file according to the Identity of the service declaration, but the file will still need to be in
+the same package as the ServiceComposite sub type, the TravelPlanService in the above example. For instance;</p><pre class="programlisting brush: java">public void assemble(ModuleAssembly module) throws AssemblyException
+{
+    module.addServices(TravelPlanService.class)
+            .instantiateOnStartup()
+            .identifiedBy("ExpediaService");
+
+    module.addServices(TravelPlanService.class)
+            .instantiateOnStartup()
+            .identifiedBy("OrbitzService");
+}
+</pre><p>And the two files for configuration,</p><pre class="programlisting brush: bash"># Hostname to the TravelPlan service
+hostName=expedia.hedhman.org
+
+# Port number to use for the connection
+portNumber=9251
+
+# Protocol to use; Valid options "ssh", "rlogin", "telnet"
+protocol=ssh
+</pre><p>File: org/hedhman/niclas/travel/ExpediaService.properties</p><pre class="programlisting brush: bash"># Hostname to the TravelPlan service
+hostName=orbitz.hedhman.org
+
+# Port number to use for the connection
+portNumber=7412
+
+# Protocol to use; Valid options "ssh", "rlogin", "telnet"
+protocol=rlogin
+</pre><p>File: org/hedhman/niclas/travel/OrbitzService.properties</p></div><div class="section" title="Changing Configuration in runtime"><div class="titlepage"><div><div><h4 class="title"><a id="_changing_configuration_in_runtime"></a>Changing Configuration in runtime</h4></div></div></div><p>Unlike most frameworks, the Configuration in Qi4j is an active Entity, and once the properties file has been read once
+at the first(!) startup, it no longer serves any purpose. The Configuration will always be retrieved from the
+EntityStore. Changes to the properties file are not taken into consideration if the Configuration entity is found in the
+entity store.</p><p>But that also means that applications should not cache the configuration values, and instead read them from the
+Configuration instance every time needed, and do a refresh() method call when it is safe to update the Configuration
+Entity with new values.</p></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

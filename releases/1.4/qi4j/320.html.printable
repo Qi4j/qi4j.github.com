@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Pre-releases    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="downloads.html" title="" class="breadcrumb c48" >Download</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >Pre-releases</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="320.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="441.html" class="newsxmm" title="Release 1.4">Release 1.4</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="439.html" class="newsxmm" title="Release 1.3">Release 1.3</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="399.html" class="newsxmm" title="Release 1.2">Release 1.2</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="390.html" class="newsxmm" title="Release 1.1">Release 1.1</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="389.html" class="newsxmm" title="Release 1.0">Release 1.0</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="320.html" class="navigationxxactivex" title="Pre-releases">Pre-releases</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b409580001823" ><div class="c51" id="svid10_6f43db4e123f11b409580003195">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580001944" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_6f43db4e123f11b409580003597">
+<div id="Heading"><!-- Heading --></div><div id="h-Pre10releases" class="sv-inline"><!-- Pre-1.0 releases --></div><h1 class="heading">Pre-1.0 releases</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003880">
+<div id="Content"><!-- Content --></div><span class="normal">The Qi4j community is still working towards a 1.0 release. During this pre-1.0 release phase, we have relaxed many compatibility requirements that typically kicks in for stable and mature software. Once 1.0 is released, you can expect that;</span><ul><li><span class="normal">For changes in the 3rd version digit, for instance from 1.3.1 to 1.3.2, only bug fixes have occurred.</span></li><li><span class="normal">For changes in the 2nd version digit, for instance from 1.3.1 to 1.4, more features have been added.</span></li><li><span class="normal">For changes in the 1st version digit, for instance from 1.3.1 to 2.0, incompatibilities have been introduced.</span></li></ul><p><span class="normal">But until 1.0 is out, you may experience the full range of incompatibilities at any point.</span></p><p><span class="normal">Below you will find the release notes of the pre-1.0 releases as they are made.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002837">
+<div id="Text1"><!-- Text 1 --></div><div id="h-ReleaseNotesfor07" class="sv-inline"><!-- Release Notes for 0.7 --></div><h1 class="heading">Release Notes for 0.7</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003057">
+<div id="HTML5"><!-- HTML 5 --></div>    
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-186'>QI-186</a>] -         Objects has no States tab.
+</li>
+</ul>
+    
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-154'>QI-154</a>] -         UnitOfWork needs refactoring.
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-196'>QI-196</a>] -         Introduce QualifiedName as explicit concept
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-197'>QI-197</a>] -         UI and Icon for Envisage
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-200'>QI-200</a>] -         Envisage Stacked Graph color scheme
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-201'>QI-201</a>] -         Envisage PDF print stacked graph
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-202'>QI-202</a>] -         Layer and Module detail tab info
+</li>
+</ul>
+    
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-182'>QI-182</a>] -         Service Configuration Tab content
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-183'>QI-183</a>] -         Content on the Dependencies Tab
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-184'>QI-184</a>] -         Content on the Methods tab
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-185'>QI-185</a>] -         Content on States tab
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-187'>QI-187</a>] -         Service Usage Tab
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-188'>QI-188</a>] -         General Tab
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-189'>QI-189</a>] -         Printing
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-190'>QI-190</a>] -         Overview Graph
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-198'>QI-198</a>] -         add new type Imported Service
+</li>
+</ul>
+    
+<h2>        Task
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-93'>QI-93</a>] -         Make all produced Jars OSGi-friendly.
+</li>
+</ul>
+<h2>        Sub-task
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-155'>QI-155</a>] -         Visibility problems in Nested UoWs
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-158'>QI-158</a>] -         Events
+</li>
+</ul>
+
+</div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004123">
+<div id="Text-0"><!-- Text --></div><div id="h-ReleaseNotesfor06" class="sv-inline"><!-- Release Notes for 0.6 --></div><h1 class="heading">Release Notes for 0.6</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004432">
+<div id="HTML4"><!-- HTML 4 --></div>    
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-147'>QI-147</a>] -         Nested unit of work + entity creational + constraint bug
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-173'>QI-173</a>] -         Indexing/Querying of inner-class types doesn't work
+</li>
+</ul>
+    
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-171'>QI-171</a>] -         Use @Optional for injections
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-172'>QI-172</a>] -         Specify that properties should use default values using annotation
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-193'>QI-193</a>] -         Generalize meta-info for Usecase and UnitOfWork
+</li>
+</ul>
+    
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-174'>QI-174</a>] -         ValueComposite Persistence
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-175'>QI-175</a>] -         ValueComposite Indexing/Querying
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-176'>QI-176</a>] -         ValueBuilder/ValueBuilderFactory for ValueComposites
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-177'>QI-177</a>] -         @UseDefaults on collections and enums
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-178'>QI-178</a>] -         Contextual concerns
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-179'>QI-179</a>] -         Add ApplicationAssembler
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-180'>QI-180</a>] -         Contextual sideeffects
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-191'>QI-191</a>] -         Assembly time mixin declarations
+</li>
+</ul>
+ 
+<h2>        Sub-task
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-156'>QI-156</a>] -         Ability to sync to underlying store.
+</li>
+</ul>
+
+</div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003228">
+<div id="svid05"><!-- 0.5 --></div><div id="h-ReleaseNotesfor05" class="sv-inline"><!-- Release Notes for 0.5 --></div><h1 class="heading">Release Notes for 0.5</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003375">
+<div id="HTML-0"><!-- HTML --></div>
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-29'>QI-29</a>] -         Adding PropertyInfo for a Composite overwrites earlier added PropertyInfo(s) for other composites when the property is defined in a common parent interface
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-132'>QI-132</a>] -         Property&lt;String[]&gt; strings(); doesn't work...
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-148'>QI-148</a>] -         public interface Name extends Property&lt;String&gt; does not always work
+</li>
+</ul>
+    
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-43'>QI-43</a>] -         Try to remove setManyAssociation
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-131'>QI-131</a>] -         Add support for listing properties and associations of an entity
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-139'>QI-139</a>] -         QueryExpressions.or() and and() should allow more operands
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-142'>QI-142</a>] -         Refactory &quot;ImmutableProperty&quot; to &quot;@Immutable Property&quot;
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-145'>QI-145</a>] -         Refactor nested unit of work
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-149'>QI-149</a>] -         Hosted vs Imported Services
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-163'>QI-163</a>] -         EntityStores should be in package org.qi4j.entitystore
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-164'>QI-164</a>] -         Rename IBatis EntityStore to LegacySql 
+</li>
+</ul>
+    
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-98'>QI-98</a>] -         Define ValueComposites
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-127'>QI-127</a>] -         Make possible to mark an Entity as not indexable
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-161'>QI-161</a>] -         Allow Property subtypes
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-162'>QI-162</a>] -         Create Spring importer for services
+</li>
+</ul>
+    
+<h2>        Task
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-134'>QI-134</a>] -         Make Qi4j Core jar files OSGi bundles.
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-82'>QI-82</a>] -         Investigate if Property&lt;Javabean&gt; should be indexed and queryable.
+</li>
+</ul>
+
+</div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002768">
+<div id="svid04"><!-- 0.4 --></div><div id="h-ReleaseNotesfor04" class="sv-inline"><!-- Release Notes for 0.4 --></div><h1 class="heading">Release Notes for 0.4</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004318">
+<div id="HTML1"><!-- HTML 1 --></div><h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-95'>QI-95</a>] -         RDF and Jdbm store leads to data corruption
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-99'>QI-99</a>] -         Don't write unmodified objects to the JDBM store.
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-103'>QI-103</a>] -         Lifecycle is not invoked
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-119'>QI-119</a>] -         No proper constructor selection done for instantiation
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-120'>QI-120</a>] -         Service injection doesn't consider generics
+</li>
+</ul>
+    
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-96'>QI-96</a>] -         Refactory EntityStore to not require CompositeDescriptor/Module
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-97'>QI-97</a>] -         Optimize RDF indexing
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-104'>QI-104</a>] -         Move the Query implementation details to Runtime
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-123'>QI-123</a>] -         Make generic EntityStore change notification
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-125'>QI-125</a>] -         Add support for @Structure injection of Layer and Application
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-126'>QI-126</a>] -         Add support for EntityStore change notifications
+</li>
+</ul>
+    
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-91'>QI-91</a>] -         Make it possible to name method parameters
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-105'>QI-105</a>] -         SPARQL endpoint for EntityFinder
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-118'>QI-118</a>] -         ServiceModel should implement model visitor
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-122'>QI-122</a>] -         Add support for querying iterables
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-124'>QI-124</a>] -         New EntityStore based on Preferences API
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-129'>QI-129</a>] -         Implement Association Roles
+</li>
+</ul>
+ 
+<h2>Task
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-107'>QI-107</a>] -         Java serialization of result data
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-111'>QI-111</a>] -         Get zooming and panning done
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-114'>QI-114</a>] -         Details panel for methods
+</li>
+</ul>
+    
+
+</div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003023">
+<div id="svid03"><!-- 0.3 --></div><div id="h-ReleaseNotesfor03" class="sv-inline"><!-- Release Notes for 0.3 --></div><h1 class="heading">Release Notes for 0.3</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003583">
+<div id="HTML2"><!-- HTML 2 --></div>       
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-37'>QI-37</a>] -         Properties of the stateOfComposite() returned Object return String UNSET for all types
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-53'>QI-53</a>] -         Exception when trying to declare a property with a generic type and a constraint
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-55'>QI-55</a>] -         ArrayIndexOutOfBounds exception on adding a class with @Uses annotation to the module
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-60'>QI-60</a>] -         Exception raised when using a 'State of Composite' object with ObjectBuilder
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-63'>QI-63</a>] -         Setting an association to null results in an exception
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-65'>QI-65</a>] -         Adding @NotNull to Composite causes runtime exception
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-70'>QI-70</a>] -         @NotEmpty causes java.lang.NullPointerException
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-71'>QI-71</a>] -         Qi4j Service injection doesn't inject services that are provided in another module or layer.
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-73'>QI-73</a>] -         Constraint on Property backed by a computed property causes exception at Entity creation
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-74'>QI-74</a>] -         Constraint is not applied on Composite creation
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-75'>QI-75</a>] -         EntityBuilder.getState().type() throws IAE
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-78'>QI-78</a>] -         Creating layers in an order different from their dependencies results in a null pointer in the used layers model
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-79'>QI-79</a>] -         Entities are not Composites to the full extent.
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-80'>QI-80</a>] -         Allow Association and ManyAssociation in domain model, without requiring a backing EntityComposite.
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-81'>QI-81</a>] -         @This does not work in Concerns (SideEffects?)
+</li>
+</ul>
+    
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-42'>QI-42</a>] -         Allow ManyAssociation to be undefined apart from base Collection semantics
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-68'>QI-68</a>] -         Model refactoring
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-77'>QI-77</a>] -         Remove all dependencies on runtime
+</li>
+</ul>
+    
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-85'>QI-85</a>] -         Add assembly declaration of properties
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-86'>QI-86</a>] -         Add assembly information for associations
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-90'>QI-90</a>] -         Add support for composite constraints
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-92'>QI-92</a>] -         library-http backed by Jetty6
+</li>
+</ul>
+    
+<h2>        Task
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-40'>QI-40</a>] -         Add a way to get information in CompositeBinding
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-76'>QI-76</a>] -         Update openrdf dependencies to 2.1.3
+</li>
+</ul>
+
+</div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004085">
+<div id="svid02"><!-- 0.2 --></div><div id="h-ReleaseNotesfor02" class="sv-inline"><!-- Release Notes for 0.2 --></div><h1 class="heading">Release Notes for 0.2</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003858">
+<div id="HTML3"><!-- HTML 3 --></div>       
+<h2>        Bug
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-41'>QI-41</a>] -         EntityComposite.equals(null) throws NPE
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-59'>QI-59</a>] -         Constraints ignored for Entities
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-61'>QI-61</a>] -         NPE when indexing nested entities
+</li>
+</ul>
+    
+<h2>        Improvement
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-31'>QI-31</a>] -         Make ComputedPropertyInstance an ImmutableProperty
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-35'>QI-35</a>] -         Rename @ThisCompositeAs to @This
+</li>
+</ul>
+    
+<h2>        New Feature
+</h2>
+<ul>
+<li>[<a href='http://issues.ops4j.org/browse/QI-32'>QI-32</a>] -         Add base classes for generic concerns and generic sideeffects
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-34'>QI-34</a>] -         Add support for constraints on properties
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-36'>QI-36</a>] -         Create generic mixin for JRuby
+</li>
+<li>[<a href='http://issues.ops4j.org/browse/QI-38'>QI-38</a>] -         Add support for property syntax in Ruby
+</li>
+</ul>
+    
+</div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-1"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

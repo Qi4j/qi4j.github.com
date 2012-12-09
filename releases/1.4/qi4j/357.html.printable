@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>lt    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="15.html" title="" class="breadcrumb c48" >Documentation</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="31.html" title="" class="breadcrumb c48" >Qi4j - The Complete Manual</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="query.html" title="" class="breadcrumb c48" >Query API</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="fluentquery.html" title="" class="breadcrumb c48" >Fluent Query API</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="352.html" title="" class="breadcrumb c48" >Operators</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >lt</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="357.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="31.html" class="newsxmm" title="Qi4j - The Complete Manual">Qi4j - The Complete Manual</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="32.html" class="newsxmm" title="Overview">Overview</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="209.html" class="newsxmm" title="Composition">Composition</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="70.html" class="newsxmm" title="Assembly">Assembly</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="35.html" class="newsxmm" title="Core System API">Core System API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="73.html" class="newsxmm" title="Runtime Bootstrap API">Runtime Bootstrap API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="36.html" class="newsxmm" title="Persistence">Persistence</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="query.html" class="newsxmm" title="Query API">Query API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="fluentquery.html" class="newsxmm" title="Fluent Query API">Fluent Query API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="367.html" class="newsxmm" title="Factory Methods">Factory Methods</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="352.html" class="newsxmm" title="Operators">Operators</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="362.html" class="newsxmm" title="and">and</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="365.html" class="newsxmm" title="contains">contains</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="366.html" class="newsxmm" title="containsAll">containsAll</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="355.html" class="newsxmm" title="eq">eq</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="360.html" class="newsxmm" title="ge">ge</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="358.html" class="newsxmm" title="gt">gt</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="354.html" class="newsxmm" title="isNotNull">isNotNull</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="353.html" class="newsxmm" title="isNull">isNull</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="359.html" class="newsxmm" title="le">le</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="357.html" class="navigationxxactivex" title="lt">lt</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="361.html" class="newsxmm" title="matches">matches</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="364.html" class="newsxmm" title="not">not</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="356.html" class="newsxmm" title="notEq">notEq</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="363.html" class="newsxmm" title="or">or</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+            </td>
+   <td class="c15">
+                        <a href="377.html" class="newsxmm" title="Named Native Queries">Named Native Queries</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="43.html" class="newsxmm" title="Indexing">Indexing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="33.html" class="newsxmm" title="Concepts">Concepts</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="42.html" class="newsxmm" title="References">References</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="139.html" class="newsxmm" title="Extensions">Extensions</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="226.html" class="newsxmm" title="Libraries">Libraries</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000912" ><div class="c53" id="svid10_6f43db4e123f11b409580004222">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_38c6b4cb1249ac3d5d58000287" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_38c6b4cb1249ac3d5d58000288">
+<div id="Heading"><!-- Heading --></div><div id="h-QueryExpressionslt" class="sv-inline"><!-- QueryExpressions.lt() --></div><h1 class="heading">QueryExpressions.lt()</h1></div>
+<div class="c52"></div>
+<div id="svid12_38c6b4cb1249ac3d5d58000289">
+<div id="Content"><!-- Content --></div><span class="normal">Content goes here...</span></div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

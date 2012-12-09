@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Qi4j in 10 minutes    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(../2.6f43db4e123f11b40958000145/0/1964/print/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="introduction.html" title="" class="breadcrumb c48" >Introduction to Qi4j</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >Qi4j in 10 minutes</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="163.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="160.html" class="newsxmm" title="Background">Background</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="199.html" class="newsxmm" title="Qi4j in 2 minutes">Qi4j in 2 minutes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="163.html" class="navigationxxactivex" title="Qi4j in 10 minutes">Qi4j in 10 minutes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="162.html" class="newsxmm" title="Qi4j in 30 minutes">Qi4j in 30 minutes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="161.html" class="newsxmm" title="Qi4j in 2 hours">Qi4j in 2 hours</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000912" ><div class="c53" id="svid10_6f43db4e123f11b409580004222">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580001097" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_6f43db4e123f11b409580004144">
+<div id="Heading"><!-- Heading --></div><div id="h-Qi4jin10minutes" class="sv-inline"><!-- Qi4j in 10 minutes --></div><h1 class="heading">Qi4j in 10 minutes</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003059">
+<div id="Content"><!-- Content --></div><ul class="c87"><li><span class="normal">Qi4j does not introduce any new programming language, no additional compilers needed and all your existing tools work just like before. It is pure Java 5.</span></li><li><span class="normal">Qi4j works with Composites.</span></li><li><span class="normal">The equivalent of an Object instance in OOP, is a Composite instance in Qi4j.</span></li><li><span class="normal">Composites are constructed from Fragments.</span></li><li><span class="normal">Fragments are Mixins, Concerns, Constraints and SideEffects.</span></li><li><span class="normal">Only Mixins carry Composite state. The others are shared between Composite instances.</span></li></ul><p><span class="normal">Composition is done with Java interfaces and Annotations. Example;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580002845">
+<div id="Example1"><!-- Example 1 --></div><span class="javaxcode">@Concerns({PurchaseLimitConcern.class, InventoryConcern.class})</span><br /><span class="javaxcode">public interface OrderComposite </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;extends Order, HasSequenceNumber, HasCustomer, </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasLineItems, Confirmable, Composite</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003540">
+<div id="Content2"><!-- Content 2 --></div><span class="normal">This Composite is potentially complete. The Composite interface has a Mixin declared which is always present, the PropertyMixin, which will handle all properties we use. The two Concerns are interceptors that are placed on the methods that the Concerns declare, for instance;</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003255">
+<div id="Example2"><!-- Example 2 --></div><span class="javaxcode">public abstract class InventoryConcern extends ConcernOf&lt;Order&gt;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements Order</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@Service private InventoryService inventory;</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public void addLineItem( LineItem item )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String productCode = item.productCode().get();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int quantity = item.quantity().get();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inventory.remove( productCode, quantity );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next.addLineItem( item );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public void removeLineItem( LineItem item )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String productCode = item.productCode().get();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int quantity = item.quantity().get();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inventory.add( productCode, quantity );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next.removeLineItem( item );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003900">
+<div id="Content3"><!-- Content 3 --></div><span class="normal">The InventoryConcern is implemented as an abstract class, since we are not interested in the many other methods in the Order interface.</span><br /><span class="normal">Extending the ConcernOf is a convenience mechanism, instaead of an explicit @ConcernFor annotation on a private field, which can be used in rare occasions when you are not able to extend. This base class defines the </span><span class="javaxcode"><strong>next</strong></span><span class="normal"> field, which is set up by the Qi4j runtime and points to the next fragment in the call stack.</span><br /><span class="normal">We can also see that the InventoryService is provided to the concern, which is done with dependency injection. Qi4j also supports dependency injection via constructors and methods.</span><p><span class="normal">The above example is not that good, since it is obviously doing persistence, and we have no code handling this. But Qi4j supports persistence directly in its Core. So simply by changing the interface it extends to EntityComposite;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003327">
+<div id="Example3"><!-- Example 3 --></div><span class="javaxcode">@Concerns({PurchaseLimitConcern.class, InventoryConcern.class})</span><br /><span class="javaxcode">public interface OrderEntity </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;extends Order, HasSequenceNumber, HasCustomer, </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasLineItems, Confirmable, </span><span class="javaxcode"><strong>EntityComposite</strong></span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002960">
+<div id="Content4"><!-- Content 4 --></div><span class="normal">No other changes are needed, provided that the Qi4j Runtime has been setup with one or more persisted entity stores. But we have a naming convention that EntityComposites have "Entity" as the suffix in its name.</span><br /><span class="normal">There are other built-in Composite subtypes as well, such as ValueComposite and ServiceComposite. This distinction helps both to communicate intent as well as having more precisely defined functionality.</span><p><span class="normal">Now, let's say that we want to send a mail to sales@mycompany.com when the order is confirmed. This is a SideEffect, and will execute after the Constraints, Concerns and Mixins. We add the SideEffect to the OrderEntity;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003786">
+<div id="Example4"><!-- Example 4 --></div><span class="javaxcode">@SideEffects( MailNotifySideEffect.class )</span><br /><span class="javaxcode">@Concerns({PurchaseLimitConcern.class, InventoryConcern.class})</span><br /><span class="javaxcode">public interface OrderEntity </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;extends Order, HasSequenceNumber, HasCustomer, </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HasLineItems, Confirmable, EntityComposite</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003509">
+<div id="Content5"><!-- Content 5 --></div><span class="normal">The SideEffect implementation is fairly simple.</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580002743">
+<div id="Text-0"><!-- Text --></div><span class="javaxcode">public abstract class MailNotifySideEffect</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;extends SideEffectOf&lt;Confirmable&gt;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements Confirmable</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@Service private MailService mailer;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@This private HasLineItems hasItems;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@This private HasCustomer hasCustomer;</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public void confirm()</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder builder = new StringBuilder();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append( "An Order has been made.\n\n\n" );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append( "Customer:" );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append( hasCustomer.name().get() );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append( "\n\nItems ordered:\n" );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for( LineItem item : items.lineItems() )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append( item.name().get() );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append( " : " );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append( item.quantity().get() );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.append( "\n" );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mailer.send( "sales@mycompany.com", builder.toString() ); </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004221">
+<div id="Text1"><!-- Text 1 --></div><span class="normal">The MailService is dependency injected, as we have seen before.</span><p><span class="normal">@This is telling Qi4j that the SideEffect needs a reference to the Composite instance that it belongs to. By asking for both the HasCustomer and the HasLineItems types, we get type-safety and don't need to bother with casts. In fact, Qi4j will ensure that you can't even cast the </span><span class="javaxcode">hasCustomer</span><span class="normal"> instance to the </span><span class="javaxcode">HasLineItems</span><span class="normal"> type. By not referencing the aggregated interface </span><span class="javaxcode">OrderEntity</span><span class="normal">, we reduce the coupling of this SideEffect and it can be used in any other Composite where the HasCustomer and HasLineItems combination is used, for instance in an </span><span class="javaxcode">InvoiceEntity</span><span class="normal">.</span></p><p><span class="normal">So, build the report, send it via the MailService.</span></p><p><!-- empty --></p><div id="h-Conclusion" class="sv-inline"><!-- Conclusion --></div><h2 class="subheading">Conclusion</h2><p><span class="normal">In this short introduction, we have covered the essence of Qi4j. We have looked at what is a Composite, seen some of the Fragments in action, and how simple it is to turn a Composite into a persisted Composite, known as an EntityComposite.</span></p></div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

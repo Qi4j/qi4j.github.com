@@ -1,0 +1,928 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Qi4j - The Complete Manual    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="15.html" title="" class="breadcrumb c48" >Documentation</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >Qi4j - The Complete Manual</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="31.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="31.html" class="navigationxxactivex" title="Qi4j - The Complete Manual">Qi4j - The Complete Manual</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="32.html" class="newsxmm" title="Overview">Overview</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="209.html" class="newsxmm" title="Composition">Composition</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="70.html" class="newsxmm" title="Assembly">Assembly</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="35.html" class="newsxmm" title="Core System API">Core System API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="73.html" class="newsxmm" title="Runtime Bootstrap API">Runtime Bootstrap API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="36.html" class="newsxmm" title="Persistence">Persistence</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="query.html" class="newsxmm" title="Query API">Query API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="43.html" class="newsxmm" title="Indexing">Indexing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="33.html" class="newsxmm" title="Concepts">Concepts</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="42.html" class="newsxmm" title="References">References</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="139.html" class="newsxmm" title="Extensions">Extensions</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="226.html" class="newsxmm" title="Libraries">Libraries</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000912" ><div class="c53" id="svid10_6f43db4e123f11b409580004222">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580002240" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_6f43db4e123f11b409580002708">
+<div id="Heading"><!-- Heading --></div><div id="h-Qi4jTheCompleteManual" class="sv-inline"><!-- Qi4j - The Complete Manual --></div><h1 class="heading">Qi4j - The Complete Manual</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004238">
+<div id="Content"><!-- Content --></div><span class="normal">Qi4j - The Complete Manual is the book straight from the horse's mouth when it comes to the Composite Oriented Programming implementation Qi4j.</span><p><!-- empty --></p><div id="h-Audience" class="sv-inline"><!-- Audience --></div><h2 class="subheading">Audience</h2><p><span class="normal">This book is targeted at Advanced Beginners and Competent Qi4j developers. If you are completely new to Qi4j, please check out the website and particularly the </span><a class="normal" title="Link to Qi4j Introduction" href="introduction.html">Introduction to Qi4j</a><span class="normal">, http://www.qi4j.org/introduction.html.</span></p><p><!-- empty --></p><div id="h-Content" class="sv-inline"><!-- Content --></div><h2 class="subheading">Content</h2><p><span class="normal">This book covers all aspects of the programming model, how to apply your domain-driven modeling in this new exciting environment and show how to put Qi4j at work in many different kind of environments, from embedded into Tomcat, JBoss and other Java EE systems to OSGi and plain stand-alone. It will show you how well Qi4j plays with these platforms as well as technologies like Spring Framework, Guice and other Dependency Injection systems.</span></p><p><!-- empty --></p><div id="h-Sections" class="sv-inline"><!-- Sections --></div><h2 class="subheading">Sections</h2><p><span class="normal">The book covers the Core aspects of the Qi4j eco-system, and only briefly touches on the many extensions available. See the Qi4j Extensions for full documentation of these.</span></p><ul><li><span class="normal">Overview - Skims the basic principles of Composite Oriented Programming and the general approach in the Qi4j implementation.</span></li><li><span class="normal">Composition - Talks about how Qi4j implements Composites.</span></li><li><span class="normal">Assembly - The tasks involved to wire everything together into working applications.</span></li><li><span class="normal">Core System&nbsp;&nbsp;- Complete description of the Core APIs, like Core API, Extension API and Runtime Bootstrap API.</span></li><li><span class="normal">Persistence - Persistence is a core concern in Qi4j, and this section deals with the generic aspect of Persistence. See Qi4j Extensions for more information about each implementation.</span></li><li><span class="normal">Query API - Queries are done in the domain model, and this section explains how that can be done.</span></li><li><span class="normal">Extension SPI - Manual for extension authors. Covers creation of EntityStores and Indexing subsystems.</span></li><li><span class="normal">Concepts - A comprehensive list of all terminology used in this book, and a short description of what they are, and where to find additional material. </span></li></ul></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003809">
+<div id="Text1"><!-- Text 1 --></div>
+</div>
+<div class="c52"></div>
+<div class="c32" id="svid12_6f43db4e123f11b409580002911">
+<div id="Text-0"><!-- Text --></div><div id="h-TableofContent" class="sv-inline"><!-- Table of Content --></div><h1 class="heading">Table of Content</h1></div>
+<div class="c52"></div>
+<div class="c86" id="svid12_6f43db4e123f11b40958000559">
+<div id="Listmenu"><!-- List menu --></div>
+<div class="12.6f43db4e123f11b40958000559">
+         <ul class="c90">
+            <li class="c79">
+               <a href="32.html" title="" class="tablexofxcontent">Overview</a>
+            </li>
+            <li class="c79">
+               <a href="209.html" title="" class="tablexofxcontent">Composition</a>
+               <ul class="c91">
+                  <li class="c79">
+                     <a href="266.html" title="" class="navigation">Fragments</a>
+                     <ul class="c91">
+                        <li class="c79">
+                           <a href="263.html" title="" class="navigation">Composite Type</a>
+                        </li>
+                        <li class="c79">
+                           <a href="210.html" title="" class="navigation">Mixin</a>
+                        </li>
+                        <li class="c79">
+                           <a href="262.html" title="" class="navigation">Concern</a>
+                        </li>
+                        <li class="c79">
+                           <a href="265.html" title="" class="navigation">Constraint</a>
+                        </li>
+                        <li class="c79">
+                           <a href="264.html" title="" class="navigation">Side Effect</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="c79">
+                     <a href="267.html" title="" class="navigation">Composite Meta Types</a>
+                     <ul class="c91">
+                        <li class="c79">
+                           <a href="212.html" title="" class="navigation">EntityComposite</a>
+                        </li>
+                        <li class="c79">
+                           <a href="260.html" title="" class="navigation">ValueComposite</a>
+                        </li>
+                        <li class="c79">
+                           <a href="211.html" title="" class="navigation">ServiceComposite</a>
+                           <ul class="c91">
+                              <li class="c79">
+                                 <a href="321.html" title="" class="navigation">ConfigurationComposite</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="c79">
+                           <a href="261.html" title="" class="navigation">TransientComposite</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="c79">
+                     <a href="34.html" title="" class="navigation">Structure</a>
+                     <ul class="c91">
+                        <li class="c79">
+                           <a href="66.html" title="" class="navigation">Application</a>
+                        </li>
+                        <li class="c79">
+                           <a href="68.html" title="" class="navigation">Layer</a>
+                        </li>
+                        <li class="c79">
+                           <a href="69.html" title="" class="navigation">Module</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li class="c79">
+               <a href="70.html" title="" class="tablexofxcontent">Assembly</a>
+               <ul class="c91">
+                  <li class="c79">
+                     <a href="204.html" title="" class="navigation">ApplicationAssembly</a>
+                  </li>
+                  <li class="c79">
+                     <a href="205.html" title="" class="navigation">LayerAssembly</a>
+                  </li>
+                  <li class="c79">
+                     <a href="47.html" title="" class="navigation">ModuleAssembly</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="c79">
+               <a href="35.html" title="" class="tablexofxcontent">Core System API</a>
+               <ul class="c91">
+                  <li class="c79">
+                     <a href="71.html" title="" class="navigation">Core API</a>
+                     <ul class="c91">
+                        <li class="c79">
+                           <a href="6.html" title="" class="navigation">Annotations</a>
+                           <ul class="c91">
+                              <li class="c79">
+                                 <a href="110.html" title="" class="navigation">AppliesTo</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="280.html" title="" class="navigation">AssociationField</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="281.html" title="" class="navigation">AssociationParameter</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="285.html" title="" class="navigation">Computed</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="119.html" title="" class="navigation">ConcernFor</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="114.html" title="" class="navigation">Concerns</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="118.html" title="" class="navigation">ConstraintDeclaration</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="67.html" title="" class="navigation">Constraints</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="286.html" title="" class="navigation">Immutable</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="111.html" title="" class="navigation">Invocation</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="283.html" title="" class="navigation">InvocationScope</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="116.html" title="" class="navigation">Mixins</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="284.html" title="" class="navigation">Name</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="277.html" title="" class="navigation">Optional</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="122.html" title="" class="navigation">PropertyField</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="275.html" title="" class="navigation">PropertyParameter</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="278.html" title="" class="navigation">Queryable</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="279.html" title="" class="navigation">RDF</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="123.html" title="" class="navigation">Service</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="117.html" title="" class="navigation">SideEffectFor</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="113.html" title="" class="navigation">SideEffects</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="282.html" title="" class="navigation">Structure</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="124.html" title="" class="navigation">This</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="109.html" title="" class="navigation">Uses</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="c79">
+                           <a href="99.html" title="" class="navigation">Composite</a>
+                        </li>
+                        <li class="c79">
+                           <a href="100.html" title="" class="navigation">EntityComposite</a>
+                        </li>
+                        <li class="c79">
+                           <a href="101.html" title="" class="navigation">ServiceComposite</a>
+                        </li>
+                        <li class="c79">
+                           <a href="108.html" title="" class="navigation">ValueComposite</a>
+                        </li>
+                        <li class="c79">
+                           <a href="287.html" title="" class="navigation">TransientComposite</a>
+                        </li>
+                        <li class="c79">
+                           <a href="105.html" title="" class="navigation">TransientBuilderFactory</a>
+                        </li>
+                        <li class="c79">
+                           <a href="106.html" title="" class="navigation">TransientBuilder</a>
+                        </li>
+                        <li class="c79">
+                           <a href="107.html" title="" class="navigation">ServiceComposite</a>
+                        </li>
+                        <li class="c79">
+                           <a href="188.html" title="" class="navigation">ObjectBuilderFactory</a>
+                        </li>
+                        <li class="c79">
+                           <a href="112.html" title="" class="navigation">ObjectBuilder</a>
+                        </li>
+                        <li class="c79">
+                           <a href="181.html" title="" class="navigation">Property</a>
+                        </li>
+                        <li class="c79">
+                           <a href="184.html" title="" class="navigation">Association</a>
+                        </li>
+                        <li class="c79">
+                           <a href="185.html" title="" class="navigation">ManyAssociation</a>
+                        </li>
+                        <li class="c79">
+                           <a href="189.html" title="" class="navigation">EntitySession</a>
+                        </li>
+                        <li class="c79">
+                           <a href="190.html" title="" class="navigation">EntitySessionFactory</a>
+                        </li>
+                        <li class="c79">
+                           <a href="191.html" title="" class="navigation">Constraint</a>
+                        </li>
+                        <li class="c79">
+                           <a href="196.html" title="" class="navigation">ConstraintViolation</a>
+                        </li>
+                        <li class="c79">
+                           <a href="197.html" title="" class="navigation">CompositeContext</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="c79">
+                     <a href="72.html" title="" class="navigation">Extension SPIs</a>
+                     <ul class="c91">
+                        <li class="c79">
+                           <a href="165.html" title="" class="navigation">Persistence SPI</a>
+                           <ul class="c91">
+                              <li class="c79">
+                                 <a href="193.html" title="" class="navigation">EntityState</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="192.html" title="" class="navigation">EntityStore</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="343.html" title="" class="navigation">EntityTypeRegistry</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="342.html" title="" class="navigation">MemoryEntityStore</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="c79">
+                           <a href="164.html" title="" class="navigation">Structure API</a>
+                        </li>
+                        <li class="c79">
+                           <a href="166.html" title="" class="navigation">Query SPI</a>
+                        </li>
+                        <li class="c79">
+                           <a href="167.html" title="" class="navigation">Indexing SPI</a>
+                        </li>
+                        <li class="c79">
+                           <a href="194.html" title="" class="navigation">Serialization API</a>
+                        </li>
+                        <li class="c79">
+                           <a href="195.html" title="" class="navigation">RDF API</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li class="c79">
+               <a href="73.html" title="" class="tablexofxcontent">Runtime Bootstrap API</a>
+               <ul class="c91">
+                  <li class="c79">
+                     <a href="74.html" title="" class="navigation">AbstractAssembly</a>
+                  </li>
+                  <li class="c79">
+                     <a href="77.html" title="" class="navigation">ApplicationAssembly</a>
+                  </li>
+                  <li class="c79">
+                     <a href="76.html" title="" class="navigation">ApplicationAssemblyFactory</a>
+                  </li>
+                  <li class="c79">
+                     <a href="75.html" title="" class="navigation">ApplicationFactory</a>
+                  </li>
+                  <li class="c79">
+                     <a href="120.html" title="" class="navigation">Assembler</a>
+                  </li>
+                  <li class="c79">
+                     <a href="198.html" title="" class="navigation">AssemblerCollection</a>
+                  </li>
+                  <li class="c79">
+                     <a href="140.html" title="" class="navigation">AssociationDeclaration</a>
+                  </li>
+                  <li class="c79">
+                     <a href="183.html" title="" class="navigation">CompositeDeclaration</a>
+                  </li>
+                  <li class="c79">
+                     <a href="78.html" title="" class="navigation">LayerAssembly</a>
+                  </li>
+                  <li class="c79">
+                     <a href="79.html" title="" class="navigation">ModuleAssembly</a>
+                  </li>
+                  <li class="c79">
+                     <a href="133.html" title="" class="navigation">ObjectDeclaration</a>
+                  </li>
+                  <li class="c79">
+                     <a href="132.html" title="" class="navigation">PropertyDeclaration</a>
+                  </li>
+                  <li class="c79">
+                     <a href="128.html" title="" class="navigation">ServiceDeclaration</a>
+                  </li>
+                  <li class="c79">
+                     <a href="127.html" title="" class="navigation">SingletonAssembler</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="c79">
+               <a href="36.html" title="" class="tablexofxcontent">Persistence</a>
+               <ul class="c91">
+                  <li class="c79">
+                     <a href="80.html" title="" class="navigation">Entity Composite</a>
+                  </li>
+                  <li class="c79">
+                     <a href="persistence_cache.html" title="" class="navigation">Cache</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="c79">
+               <a href="query.html" title="" class="tablexofxcontent">Query API</a>
+               <ul class="c91">
+                  <li class="c79">
+                     <a href="fluentquery.html" title="" class="navigation">Fluent Query API</a>
+                     <ul class="c91">
+                        <li class="c79">
+                           <a href="367.html" title="" class="navigation">Factory Methods</a>
+                           <ul class="c91">
+                              <li class="c79">
+                                 <a href="373.html" title="" class="navigation">oneOf</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="374.html" title="" class="navigation">orderBy</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="368.html" title="" class="navigation">templateFor</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="369.html" title="" class="navigation">variable</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="c79">
+                           <a href="352.html" title="" class="navigation">Operators</a>
+                           <ul class="c91">
+                              <li class="c79">
+                                 <a href="362.html" title="" class="navigation">and</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="365.html" title="" class="navigation">contains</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="366.html" title="" class="navigation">containsAll</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="355.html" title="" class="navigation">eq</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="360.html" title="" class="navigation">ge</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="358.html" title="" class="navigation">gt</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="354.html" title="" class="navigation">isNotNull</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="353.html" title="" class="navigation">isNull</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="359.html" title="" class="navigation">le</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="357.html" title="" class="navigation">lt</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="361.html" title="" class="navigation">matches</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="364.html" title="" class="navigation">not</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="356.html" title="" class="navigation">notEq</a>
+                              </li>
+                              <li class="c79">
+                                 <a href="363.html" title="" class="navigation">or</a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="c79">
+                     <a href="377.html" title="" class="navigation">Named Native Queries</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="c79">
+               <a href="43.html" title="" class="tablexofxcontent">Indexing</a>
+            </li>
+            <li class="c79">
+               <a href="33.html" title="" class="tablexofxcontent">Concepts</a>
+               <ul class="c91">
+                  <li class="c79">
+                     <a href="44.html" title="" class="navigation">Abstract Mixin</a>
+                  </li>
+                  <li class="c79">
+                     <a href="45.html" title="" class="navigation">Abstract Modifier</a>
+                  </li>
+                  <li class="c79">
+                     <a href="46.html" title="" class="navigation">Application</a>
+                  </li>
+                  <li class="c79">
+                     <a href="202.html" title="" class="navigation">Association</a>
+                  </li>
+                  <li class="c79">
+                     <a href="48.html" title="" class="navigation">Composite</a>
+                  </li>
+                  <li class="c79">
+                     <a href="347.html" title="" class="navigation">Composite Context</a>
+                  </li>
+                  <li class="c79">
+                     <a href="344.html" title="" class="navigation">Composite Meta Type</a>
+                  </li>
+                  <li class="c79">
+                     <a href="49.html" title="" class="navigation">Composite Type</a>
+                  </li>
+                  <li class="c79">
+                     <a href="50.html" title="" class="navigation">Concern</a>
+                  </li>
+                  <li class="c79">
+                     <a href="345.html" title="" class="navigation">Configuration Composite</a>
+                  </li>
+                  <li class="c79">
+                     <a href="51.html" title="" class="navigation">Constraint</a>
+                  </li>
+                  <li class="c79">
+                     <a href="52.html" title="" class="navigation">Entity Composite</a>
+                  </li>
+                  <li class="c79">
+                     <a href="53.html" title="" class="navigation">Fragment</a>
+                  </li>
+                  <li class="c79">
+                     <a href="54.html" title="" class="navigation">Generic Fragment</a>
+                  </li>
+                  <li class="c79">
+                     <a href="55.html" title="" class="navigation">Generic Mixin</a>
+                  </li>
+                  <li class="c79">
+                     <a href="56.html" title="" class="navigation">Invocation Stack</a>
+                  </li>
+                  <li class="c79">
+                     <a href="57.html" title="" class="navigation">Layer</a>
+                  </li>
+                  <li class="c79">
+                     <a href="203.html" title="" class="navigation">ManyAssociation</a>
+                  </li>
+                  <li class="c79">
+                     <a href="58.html" title="" class="navigation">Mixin</a>
+                  </li>
+                  <li class="c79">
+                     <a href="59.html" title="" class="navigation">Mixin Type</a>
+                  </li>
+                  <li class="c79">
+                     <a href="60.html" title="" class="navigation">Modifier</a>
+                  </li>
+                  <li class="c79">
+                     <a href="61.html" title="" class="navigation">Module</a>
+                  </li>
+                  <li class="c79">
+                     <a href="125.html" title="" class="navigation">Object</a>
+                  </li>
+                  <li class="c79">
+                     <a href="130.html" title="" class="navigation">ParameterConstraint</a>
+                  </li>
+                  <li class="c79">
+                     <a href="220.html" title="" class="navigation">Private Mixin</a>
+                  </li>
+                  <li class="c79">
+                     <a href="174.html" title="" class="navigation">Property</a>
+                  </li>
+                  <li class="c79">
+                     <a href="62.html" title="" class="navigation">Service Composite</a>
+                  </li>
+                  <li class="c79">
+                     <a href="63.html" title="" class="navigation">Side Effect</a>
+                  </li>
+                  <li class="c79">
+                     <a href="142.html" title="" class="navigation">Specification</a>
+                  </li>
+                  <li class="c79">
+                     <a href="346.html" title="" class="navigation">Transient Composite</a>
+                  </li>
+                  <li class="c79">
+                     <a href="64.html" title="" class="navigation">Typed Fragment</a>
+                  </li>
+                  <li class="c79">
+                     <a href="65.html" title="" class="navigation">Value Composite</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="c79">
+               <a href="42.html" title="" class="tablexofxcontent">References</a>
+            </li>
+         </ul>
+</div>
+</div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

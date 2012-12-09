@@ -1,0 +1,958 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Concerns    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="15.html" title="" class="breadcrumb c48" >Documentation</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="31.html" title="" class="breadcrumb c48" >Qi4j - The Complete Manual</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="35.html" title="" class="breadcrumb c48" >Core System API</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="71.html" title="" class="breadcrumb c48" >Core API</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="6.html" title="" class="breadcrumb c48" >Annotations</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >Concerns</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="114.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="31.html" class="newsxmm" title="Qi4j - The Complete Manual">Qi4j - The Complete Manual</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="32.html" class="newsxmm" title="Overview">Overview</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="209.html" class="newsxmm" title="Composition">Composition</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="70.html" class="newsxmm" title="Assembly">Assembly</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="35.html" class="newsxmm" title="Core System API">Core System API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="71.html" class="newsxmm" title="Core API">Core API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="6.html" class="newsxmm" title="Annotations">Annotations</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="110.html" class="newsxmm" title="AppliesTo">AppliesTo</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="280.html" class="newsxmm" title="AssociationField">AssociationField</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="281.html" class="newsxmm" title="AssociationParameter">AssociationParameter</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="285.html" class="newsxmm" title="Computed">Computed</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="119.html" class="newsxmm" title="ConcernFor">ConcernFor</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="114.html" class="navigationxxactivex" title="Concerns">Concerns</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="118.html" class="newsxmm" title="ConstraintDeclaration">ConstraintDeclaration</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="67.html" class="newsxmm" title="Constraints">Constraints</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="286.html" class="newsxmm" title="Immutable">Immutable</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="111.html" class="newsxmm" title="Invocation">Invocation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="283.html" class="newsxmm" title="InvocationScope">InvocationScope</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="116.html" class="newsxmm" title="Mixins">Mixins</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="284.html" class="newsxmm" title="Name">Name</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="277.html" class="newsxmm" title="Optional">Optional</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="122.html" class="newsxmm" title="PropertyField">PropertyField</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="275.html" class="newsxmm" title="PropertyParameter">PropertyParameter</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="278.html" class="newsxmm" title="Queryable">Queryable</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="279.html" class="newsxmm" title="RDF">RDF</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="123.html" class="newsxmm" title="Service">Service</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="117.html" class="newsxmm" title="SideEffectFor">SideEffectFor</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="113.html" class="newsxmm" title="SideEffects">SideEffects</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="282.html" class="newsxmm" title="Structure">Structure</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="124.html" class="newsxmm" title="This">This</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c88">
+            </td>
+   <td class="c15">
+                        <a href="109.html" class="newsxmm" title="Uses">Uses</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="99.html" class="newsxmm" title="Composite">Composite</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="100.html" class="newsxmm" title="EntityComposite">EntityComposite</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="101.html" class="newsxmm" title="ServiceComposite">ServiceComposite</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="108.html" class="newsxmm" title="ValueComposite">ValueComposite</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="287.html" class="newsxmm" title="TransientComposite">TransientComposite</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="105.html" class="newsxmm" title="TransientBuilderFactory">TransientBuilderFactory</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="106.html" class="newsxmm" title="TransientBuilder">TransientBuilder</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="107.html" class="newsxmm" title="ServiceComposite">ServiceComposite</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="188.html" class="newsxmm" title="ObjectBuilderFactory">ObjectBuilderFactory</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="112.html" class="newsxmm" title="ObjectBuilder">ObjectBuilder</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="181.html" class="newsxmm" title="Property">Property</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="184.html" class="newsxmm" title="Association">Association</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="185.html" class="newsxmm" title="ManyAssociation">ManyAssociation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="189.html" class="newsxmm" title="EntitySession">EntitySession</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="190.html" class="newsxmm" title="EntitySessionFactory">EntitySessionFactory</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="191.html" class="newsxmm" title="Constraint">Constraint</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="196.html" class="newsxmm" title="ConstraintViolation">ConstraintViolation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="197.html" class="newsxmm" title="CompositeContext">CompositeContext</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="72.html" class="newsxmm" title="Extension SPIs">Extension SPIs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="73.html" class="newsxmm" title="Runtime Bootstrap API">Runtime Bootstrap API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="36.html" class="newsxmm" title="Persistence">Persistence</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="query.html" class="newsxmm" title="Query API">Query API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="43.html" class="newsxmm" title="Indexing">Indexing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="33.html" class="newsxmm" title="Concepts">Concepts</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="42.html" class="newsxmm" title="References">References</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="139.html" class="newsxmm" title="Extensions">Extensions</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="226.html" class="newsxmm" title="Libraries">Libraries</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000852" ><div class="c58" id="svid10_6f43db4e123f11b409580002815">
+<div class="c84" id="svid10_6f43db4e123f11b409580004470">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580002361" ><div id="Intro"><!-- Intro --></div><div class="c32" id="svid12_6f43db4e123f11b409580003841">
+<div id="Heading"><!-- Heading --></div><div id="h-interfaceConcerns" class="sv-inline"><!-- interface @Concerns --></div><h1 class="heading">interface @Concerns</h1></div>
+<div id="svid12_6f43db4e123f11b409580004063">
+<div id="Abstract"><!-- Abstract --></div><span class="normal">The @Concerns annotation defines which Concerns should be considered for inclusion in the Invocation Stacks. They are typically defined on the Composite declaration, but can be declared on MixinTypes and MixinImplementations as well.</span></div>
+</div><!-- Page content stops here --></div>
+<div id="svid10_6f43db4e123f11b409580004690">
+<div class="c84" id="svid12_6f43db4e123f11b409580004759">
+<div id="DescriptionHeading"><!-- DescriptionHeading --></div><div id="h-Description" class="sv-inline"><!-- Description --></div><h2 class="subheading">Description</h2></div>
+</div>
+<div class="c85" id="svid10_6f43db4e123f11b409580004507">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580002080" ><div id="Description"><!-- Description --></div><div id="svid12_6f43db4e123f11b409580003980">
+<div id="Description-0"><!-- Description --></div><span class="normal">A Concern is an interceptor of one or more methods. The @Concerns annotation declares which Concern classes should be put up as candidates for each method in the Invocation Stack. </span><p><!-- empty --></p><div id="h-Ordering" class="sv-inline"><!-- Ordering --></div><h2 class="subheading">Ordering</h2><br /><span class="normal">The order of the declarations are important. They are evaluated from left to right, from current class to the superclasses, and superclasses are in the order declared in the "extends" clause left-to-right. It is also known as "breadth-first".</span><br /><span class="normal">It means that a Concern that is declared more to the left, will be placed higher in the interceptor stack.</span><p><span class="normal">Inclusion</span><br /><span class="normal">A Concern declared via the @Concerns annotation is only a candidate. The decision if it is included in the Invocation Stack for each method is determined by;</span></p><ul><li><span class="normal">Does the Concern implement the method or is the Concern a generic InvocationHandler? If not, exclude the Concern.</span></li><li><span class="normal">Does the Concern specify an @AppliesTo and @AppliesTo referencing a AppliesToFilter, call the filter and see if the method fulfill the requirement. If it doesn't evaluate to true, exclude the Concern.</span></li><li><span class="normal">Does the Concern specify an @AppliesTo and @AppliesTo referencing an annotation, check that the MixinType method or class has the annotation. If not, exclude the Concern.</span></li><li><span class="normal">Does the Concern specify an @AppliesTo and @AppliesTo referencing an interface, check that the Mixin Implementation implements that interface. If not, exclude the Concern.\</span></li><li><span class="normal">Otherwise, include the Concern candidate for the method.</span></li></ul></div>
+</div><!-- Page content stops here --></div>
+<div class="c86" id="svid10_6f43db4e123f11b409580004589">
+<div class="c84" id="svid12_6f43db4e123f11b409580004754">
+<div id="DeclarationHeading"><!-- DeclarationHeading --></div><div id="h-Declaration" class="sv-inline"><!-- Declaration --></div><h2 class="subheading">Declaration</h2></div>
+</div>
+<div class="c85" id="svid10_6f43db4e123f11b409580004691">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b40958000882" ><div id="Declaration"><!-- Declaration --></div><div class="c73" id="svid12_6f43db4e123f11b409580003764">
+<div id="DeclarationCode"><!-- Declaration Code --></div><span class="javaxcode">package org.qi4j.api.concern;</span><p><span class="javaxcode">import org.qi4j.api.concern.internal.ConcernFor;</span></p><p><span class="javaxcode">/**</span><br /><span class="javaxcode"> * Base class for Concerns. </span><br /><span class="javaxcode"> * &lt;p&gt;It introduces a typed "next" pointer</span><br /><span class="javaxcode"> * that Concerns can use to invoke the next Concern (or mixin) in</span><br /><span class="javaxcode"> * the chain.</span><br /><span class="javaxcode"> * &lt;/p&gt;</span><br /><span class="javaxcode"> * &lt;p&gt;</span><br /><span class="javaxcode"> * Generic Concerns should subclass {@link GenericConcern} instead.</span><br /><span class="javaxcode"> * &lt;/p&gt;</span><br /><span class="javaxcode"> */</span><br /><span class="javaxcode">public abstract class ConcernOf&lt;T&gt;</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;/**</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* The "next" pointer. This points to</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* the next concern in the chain or the mixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* to be invoked.</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;final @ConcernFor protected T next = null;</span><br /><span class="javaxcode">}</span></p></div>
+</div><!-- Page content stops here --></div>
+<div id="svid10_6f43db4e123f11b409580004460">
+<div class="c84" id="svid12_6f43db4e123f11b409580004785">
+<div id="ExampleHeading"><!-- Example Heading --></div><div id="h-Example" class="sv-inline"><!-- Example --></div><h2 class="subheading">Example</h2></div>
+</div>
+<div class="c72" id="svid10_6f43db4e123f11b409580004585">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580002186" ><div id="ExampleArea"><!-- Example Area --></div><div id="svid12_6f43db4e123f11b409580004136">
+<div id="Example"><!-- Example --></div><span class="normal">To declare the standard ValidationConcern, which operates together with Constraints, just include that in the Composite declaration like this;</span></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580004428">
+<div id="ExampleCode"><!-- Example Code --></div><span class="javaxcode">import org.qi4j.entity.EntityComposite;</span><br /><span class="javaxcode">import org.qi4j.library.auth.AuthorizationConcern;</span><p><span class="javaxcode">@Concerns( { AuthorizationConcern.class } )</span><br /><span class="javaxcode">public interface BankAccountEntity extends BankAccount, EntityComposite</span><br /><span class="javaxcode">{}</span></p><p class="c77"><span class="javaxcode">import org.qi4j.library.auth.RequiresPermission;</span></p><p><span class="javaxcode">public interface BankAccount</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@RequiresPermission</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Money checkBalance();</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@RequiresPermission</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;void transfer( BankAccount toAccount, Money amount );</span><br /><span class="javaxcode">}</span></p><p class="c77"><span class="javaxcode">public class BankAccountMixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements BankAccount</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@This private BankAccountBalance accountBalance;</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public Money checkBalance()</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return accountBalance.amount().get();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p><p><span class="javaxcode">public interface BankAccountBalance</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Property&lt;Money&gt; amount();</span><br /><span class="javaxcode">}</span></p></div>
+<div id="svid12_6f43db4e123f11b409580003198">
+<div id="Text-0"><!-- Text --></div><span class="normal">The domain developer don't need to know how the authorization is happening. And it can be changed without going back and modifying potentially hundreds or even thousands of entity types.</span><p><span class="normal">The Authorization library contains the building blocks to hook in any authentication and authorization mechanism, but the AuthorizationConcern defined in the EntityComposite above stays the same.</span></p></div>
+</div><!-- Page content stops here --></div>
+</div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

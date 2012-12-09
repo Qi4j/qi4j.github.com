@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>What's an Object anyway?    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="146.html" title="" class="breadcrumb c48" >Tutorials &amp; HowTOs</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >What's an Object anyway?</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="351.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="145.html" class="newsxmm" title="Composite Tutorial">Composite Tutorial</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="351.html" class="navigationxxactivex" title="What's an Object anyway?">What's an Object anyway?</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="322.html" class="newsxmm" title="HowTo : Create an Entity">HowTo : Create an Entity</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="323.html" class="newsxmm" title="HowTo : Configure a Service">HowTo : Configure a Service</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="327.html" class="newsxmm" title="HowTo : Assemble an Application">HowTo : Assemble an Application</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="348.html" class="newsxmm" title="HowTo : Use Qi4j Logging">HowTo : Use Qi4j Logging</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="349.html" class="newsxmm" title="HowTo : Use contextual fragments">HowTo : Use contextual fragments</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000912" ><div class="c53" id="svid10_6f43db4e123f11b409580004222">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_38c6b4cb1249ac3d5d5800081" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_38c6b4cb1249ac3d5d5800082">
+<div id="Heading"><!-- Heading --></div><div id="h-WhatsanObjectanyway" class="sv-inline"><!-- What's an Object anyway? --></div><h1 class="heading">What's an Object anyway?</h1></div>
+<div class="c52"></div>
+<div id="svid12_38c6b4cb1249ac3d5d5800083">
+<div id="Content"><!-- Content --></div><span class="normal">In OOP the main idea is that we should model our reality by creating </span><span class="normal">Objects. Objects have state, and they have methods. Methods in an object </span><span class="normal">are used to operate on the internal state and understands the domain </span><span class="normal">that is being modeled.</span><p><span class="normal">By contrast, in procedural programming the focus is on algorithms, which </span><span class="normal">can use several data structures to perform some task. The focus is on </span><span class="normal">what is going on, rather than the "objects" involved.</span></p><p><span class="normal">With OOP it becomes more difficult to "read" algorithms, as they are </span><span class="normal">spread out in many objects that interact. With procedural programming it </span><span class="normal">becomes difficult to encapsulate and reuse functionality. Both represent </span><span class="normal">extremes, neither of which is "correct". The tendency to create anemic </span><span class="normal">domain models is an indication that we have lost the algorithmic view in </span><span class="normal">OOP, and there is a need for it.</span></p><p><span class="normal">The main flaw of OOP, which COP addresses, is the answer to the </span><span class="normal">fundamental question "What methods should an object have?". In </span><span class="normal">traditional OOP, which really should be called "class oriented </span><span class="normal">programming", the classes tend to have a rather narcissistic point of </span><span class="normal">view. Classes are allowed to dictate what methods are in there - </span><span class="normal">regardless of the algorithms which they are part of - and algorithms </span><span class="normal">then need to be aware of these classes when object instances collaborate </span><span class="normal">in an algorithm. Why? This seems like complete madness to me!! Keep in </span><span class="normal">mind that if there were no algorithms, there would be no need for </span><span class="normal">methods at all!! Algorithms, then, are primary, and objects are what we </span><span class="normal">use as helper structures. In philosophical terms, if there is noone </span><span class="normal">around to observe the universe, there would be no need for the universe </span><span class="normal">itself!</span></p><p><span class="normal">In COP the responsibility for defining the methods is reversed: </span><span class="normal">algorithms which implement interactions between objects get to declare </span><span class="normal">what roles it needs the objects to implement, and the composites can </span><span class="normal">then implement these. For each role there will be an interface, and for </span><span class="normal">each composite wanting to implement a role there will be a mixin in that </span><span class="normal">composite. This mixin can be specific for that composite implementation, </span><span class="normal">or it can be generic and reused. The key point is that it is the </span><span class="normal">OBSERVER of the object, meaning, the algorithm, that gets to decide what </span><span class="normal">the object should be able to do.</span></p><p><span class="normal">This is the same in real life. I don't get to decide how I communicate </span><span class="normal">with you. I have to use english, and I have to use email, and I have to </span><span class="normal">send it to a specific mailing list. It is the algorithm of the </span><br /><span class="normal">interaction between us, the Qi4j dev mailing list, that has set these </span><span class="normal">rules, not *I* as a participant in this interaction. The same should, </span><span class="normal">obviously, be the case for objects.</span></p><p><span class="normal">So, with the understanding that algorithms should define roles for </span><span class="normal">collaborating objects, and objects should then implement these in order </span><span class="normal">to participate in these algorithms, it should be trivial to realize that </span><span class="normal">what has passed for OOP so far, in terms of "class oriented </span><span class="normal">programming", where this role-focus of objects is difficult to achieve, </span><span class="normal">if not even impossible, is just plain wrong. I mean seriously, </span><br /><span class="normal">catastrophically, terminally wrong.</span></p><p><span class="normal"><strong>Let that sink in.</strong></span></p><p><span class="normal">The method that has been used so far to get around this has been the </span><span class="normal">composite pattern, where one object has been designated as </span><span class="normal">"coordinator", which then delegates to a number of other objects in </span><br /><span class="normal">order to implement the various roles. This "solution", which is caused </span><span class="normal">by this fundamental flaw in "class oriented programming", is essentially </span><span class="normal">a hack, and causes a number of other problems, such as the "self </span><span class="normal">schizophrenia" problem, whereby there is no way to tell where the object </span><span class="normal">really is. There is no "this" pointer that has any relevant meaning.</span></p><p><span class="normal">The Composite pattern, as implemented in COP and Qi4j, gets around this </span><span class="normal">by simply saying that the composite, as a whole, is an object. Tada, we </span><span class="normal">now have a "this" pointer, and a coherent way to deal with the object </span><span class="normal">graph as though it was a single object. We are now able to get back to </span><span class="normal">the strengths of the procedural approach, which allows the implementer </span><span class="normal">of the algorithm to define the roles needed for the algorithm. The roles </span><span class="normal">can either be specific to an algorithm, or they can be shared between a </span><span class="normal">number of algorithms if there is a generic way for them to be expressed. </span></p><p><span class="normal"><strong>Goodness!</strong></span></p><p><span class="normal">The question now becomes: how can we use this insight to structure our </span><span class="normal">composites, so that what is part of the algorithm is not too tightly </span><span class="normal">encoded in the composites, thereby making the algorithms more reusable, </span><span class="normal">and making it less necessary to read composite code when trying to </span><span class="normal">understand algorithms. The assumption here is that we are going to write </span><span class="normal">more algorithms than composites, therefore it has to be easy to ready </span><span class="normal">algorithms, and only when necessary dive down into composite code.</span></p><p><span class="normal">When talking about Composites as Objects in Qi4j it is most relevant to </span><span class="normal">look at Entities, since these represent physical objects in a model, </span><span class="normal">rather than algorithms or services, or other non-instance-oriented things.</span></p><p><span class="normal">If Entities should implement roles, via mixins, in order to interact </span><span class="normal">with each other through algorithms, then the majority of their behaviour </span><span class="normal">should be put into those role-mixins. These are exposed publically for </span><span class="normal">clients to use. However, the state that is required to implement these </span><span class="normal">roles should not be exposed publically, as they represent implementation </span><span class="normal">details that may change over time, may be different depending on role </span><span class="normal">implementation, and usually has a lot of rules regarding how it may be </span><span class="normal">changed. In short, the state needs to be private to the composite.</span></p><p><span class="normal">This leads us to this typical implementation of an Entity</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_38c6b4cb1249ac3d5d5800084">
+<div id="Text-0"><!-- Text --></div><span class="javaxcode">@Mixins(SomeMixin.class)</span><br /><span class="javaxcode">interface MyEntity</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;extends Some, Other, EntityComposite</span><br /><span class="javaxcode">{}</span></div>
+<div class="c52"></div>
+<div id="svid12_38c6b4cb1249ac3d5d5800085">
+<div id="Text1"><!-- Text 1 --></div><span class="normal">where </span><span class="javaxcode">Some</span><span class="normal"> and </span><span class="javaxcode">Other</span><span class="normal"> are role interfaces defined by one or more algorithms. </span><span class="javaxcode">SomeMixin</span><span class="normal"> is the implementation of the </span><span class="javaxcode">Some</span><span class="normal"> interface. There is NO interface that is defined by the author of </span><span class="javaxcode">MyEntity</span><span class="normal">. Algorithms first, objects second!</span><p><span class="normal">The state needed for these mixins would then be put into separate interfaces, referred to by using the </span><span class="javaxcode">@This</span><span class="normal"> injection in the mixins.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_38c6b4cb1249ac3d5d5800086">
+<div id="Text2"><!-- Text 2 --></div><span class="javaxcode">interface SomeState</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;Property&lt;String&gt; someProperty();</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_38c6b4cb1249ac3d5d5800087">
+<div id="Text3"><!-- Text 3 --></div><span class="normal">These interfaces will pretty much ONLY contain state declarations. There </span><span class="normal">might be some methods in there, but I can't see right now what they </span><span class="normal">would be.</span><p><span class="normal">In order to be able to get an overview of all the state being </span><span class="normal">implemented by the Entity we introduce a "superstate" interface:</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_38c6b4cb1249ac3d5d5800088">
+<div id="Text4"><!-- Text 4 --></div><span class="javaxcode">interface MyState</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;extends SomeState, OtherState, ...</span><br /><span class="javaxcode">{}</span></div>
+<div class="c52"></div>
+<div id="svid12_38c6b4cb1249ac3d5d5800089">
+<div id="Text5"><!-- Text 5 --></div><span class="normal">This lets us see the totality of all the state that the Entity has, and </span><span class="normal">can be used in the builder phase:</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_38c6b4cb1249ac3d5d5800090">
+<div id="Text6"><!-- Text 6 --></div><span class="javaxcode">EntityBuilder&lt;MyEntity&gt; builder = uow.newEntityBuilder(MyEntity.class);</span><br /><span class="javaxcode">MyState state = builder.instanceFor(MyState.class);</span><p><span class="javaxcode">... init state ...</span></p><p><span class="javaxcode">MyEntity instance = builder.newInstance();</span></p></div>
+<div class="c52"></div>
+<div id="svid12_38c6b4cb1249ac3d5d5800091">
+<div id="Text7"><!-- Text 7 --></div><span class="normal">This lets us divide our Entity into two parts: the internal state and </span><span class="normal">the external roles of the domain that the object takes part in. Due to </span><span class="normal">the support for private mixins the state is not unnecessarily exposed, </span><span class="normal">and the mixin support in general allow our role-oriented approach to </span><span class="normal">modeling. The role interfaces are strongly reusable, the mixins are </span><span class="normal">generally reusable, and the state interfaces are usually reusable. This </span><span class="normal">minimizes the need for us to go into the mixin code and read it. If we </span><span class="normal">have read the mixin code once, and the same mixin is reused between </span><span class="normal">objects, then this makes it easier for us to understand it the next time </span><span class="normal">we see it being used in another algorithm.</span><p><span class="normal">To summarize thus far, we have looked at why OOP so far has not worked </span><span class="normal">out, why this is the case, and how COP deals with it, and how we can </span><span class="normal">implement a better solution of Entities using Qi4j. All is well!</span></p><p><span class="normal">The next step is to start using these Entities in algorithms. Algorithms </span><span class="normal">are usually stateless, or at least they don't have any state that </span><span class="normal">survives the execution of the algorithm. There is input, some </span><span class="normal">calculation, and then output. In other words, our notion of services fit </span><span class="normal">perfectly here!</span></p><p><span class="normal">Algorithms, then, should(/could?) be modeled using services. If an </span><span class="normal">algorithm needs other algorithms to compute something, that is, if a </span><span class="normal">service needs another service to do something, we can accomplish this </span><span class="normal">using dependency injection, so that the user of the initial algorithm </span><span class="normal">does not have to know about this implementation detail.</span></p><p><span class="normal">In a "Getting Things Done" domain model, with Projects and Actions, you </span><span class="normal">might then have an algorithm like so for task delegation:</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_38c6b4cb1249ac3d5d5800092">
+<div id="Text8"><!-- Text 8 --></div><span class="javaxcode">void delegate(TaskExecutor from, Completable completable, TaskExecutor to)</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;to.inbox().createTask( createDelegatedTask( completable ) );</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;completable.complete(); // Delegated task is considered done</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;from.inbox().createTask( createWaitingTask( completable ) );</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_38c6b4cb1249ac3d5d5800093">
+<div id="Text9"><!-- Text 9 --></div><span class="normal">In the above I don't know if "</span><span class="javaxcode">from</span><span class="normal">" and "</span><span class="javaxcode">to</span><span class="normal">" are human users or systems that automatically execute tasks. I also don't know if </span><span class="javaxcode">Completable</span><span class="normal"> is an entire </span><span class="javaxcode">Project</span><span class="normal"> or a single </span><span class="javaxcode">Action</span><span class="normal">. From the point of view of the algorithm I don't need to know! All the algorithm cares about is that the roles it needs are fulfilled somehow. This means that I will be able to extend my domain model later on, and have it be a part of these kinds of algorithms, without having to change my algorithms. And as long as my composites implement the role interfaces, such as </span><span class="javaxcode">TaskExecutor</span><span class="normal"> and </span><span class="javaxcode">Completable</span><span class="normal">, they can participate in many different algorithms that use these as a way to interact with the domain objects.</span><p><span class="normal">This shows the place of services, as points of contact between objects in a domain model, or more generally, "interactions". These will change often, and will increase in number as the system grows, so it is important that they are easy to read, and that they are easy to participate in. With a focus on roles, rather than classes, this becomes much easier to accomplish!</span></p><p><span class="normal">With the responsibilities of entities, as objects, and services, as algorithms, more clearly defined, the last part to deal with is how these are put together. The services, with the methods now being role-oriented, can obviously be applied to a wide variety of entities, but we now go from general to specific. In our software each general algorithm is typically applied to specific objects in specific use-cases. </span></p><p><span class="normal"><strong>How is this done?</strong></span></p><p><span class="normal">This is done by implementing context objects, which pick specific objects and pass them into algorithms. This is typically a UI-centric thing, and as such is difficult to encapsulate into a single method. With the previous example we would need to get the three objects involved, and cast them to the specific roles we are interested in. The "</span><span class="javaxcode">TaskExecutor from</span><span class="normal">" could be the user running the application, the "</span><span class="javaxcode">Completable completable</span><span class="normal">" could be the currently selected item in a list, and "</span><span class="javaxcode">TaskExecutor to</span><span class="normal">" could be a user designated from a popup dialog. These three are then taken by the context and used to execute the "delegate" interaction, which performs all the steps necessary.</span></p><p><span class="normal">The interaction method "</span><span class="javaxcode">delegate</span><span class="normal">" is testable, both with mocks of the input, and with specific instances of the various roles. The implementations are also testable, and if the same mixin is used over and over for the implementation, then only one set of tests is needed for each role interface.</span></p><p><span class="normal">To summarize we have in COP/Qi4j a way to get the best from procedural and object-oriented programming. As we have seen the functionality falls into three categories, the entities implementing objects, the services implementing interactions, and the user interface implementing the context. This also maps well to the ideas of ModelViewController, which in turn maps well to the new ideas from Mr Reenskaug (inventor of MVC) called DCI: Data-Context-Interaction. As a side-effect of this discussion we have therefore also seen how COP/Qi4j can be used to implement DCI, which is an important next step in understanding objects and their interactions, the fundamentals of which (I believe) are captured on this page.</span></p><p><span class="normal">That's it. Well done if you've read this far :-)</span></p><p><span class="normal">Comments and thoughts to qi4j-dev@lists.ops4j.org on this are highly appreciated. This is very very important topics, and crucial to understanding/explaining why COP/Qi4j is so great! :-)</span></p></div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

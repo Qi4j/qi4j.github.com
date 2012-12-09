@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Application    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="15.html" title="" class="breadcrumb c48" >Documentation</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="31.html" title="" class="breadcrumb c48" >Qi4j - The Complete Manual</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="209.html" title="" class="breadcrumb c48" >Composition</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="34.html" title="" class="breadcrumb c48" >Structure</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >Application</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="66.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="31.html" class="newsxmm" title="Qi4j - The Complete Manual">Qi4j - The Complete Manual</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="32.html" class="newsxmm" title="Overview">Overview</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="209.html" class="newsxmm" title="Composition">Composition</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="266.html" class="newsxmm" title="Fragments">Fragments</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="267.html" class="newsxmm" title="Composite Meta Types">Composite Meta Types</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="34.html" class="newsxmm" title="Structure">Structure</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="66.html" class="navigationxxactivex" title="Application">Application</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="68.html" class="newsxmm" title="Layer">Layer</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="69.html" class="newsxmm" title="Module">Module</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="70.html" class="newsxmm" title="Assembly">Assembly</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="35.html" class="newsxmm" title="Core System API">Core System API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="73.html" class="newsxmm" title="Runtime Bootstrap API">Runtime Bootstrap API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="36.html" class="newsxmm" title="Persistence">Persistence</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="query.html" class="newsxmm" title="Query API">Query API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="43.html" class="newsxmm" title="Indexing">Indexing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="33.html" class="newsxmm" title="Concepts">Concepts</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="42.html" class="newsxmm" title="References">References</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="139.html" class="newsxmm" title="Extensions">Extensions</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="226.html" class="newsxmm" title="Libraries">Libraries</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000912" ><div class="c53" id="svid10_6f43db4e123f11b409580004222">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580002047" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_6f43db4e123f11b409580002746">
+<div id="Heading"><!-- Heading --></div><div id="h-Application" class="sv-inline"><!-- Application --></div><h1 class="heading">Application</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004272">
+<div id="Content"><!-- Content --></div><span class="normal">There is one and only one Application instance per Qi4j runtime instance. But there is nothing preventing code to create additional Qi4j Runtime instances inside the same JVM. However, these runtimes are isolated from each other.</span><p><span class="normal">The main purpose of the Application structure artifact is to keep everything in the same box, and allowing us to navigate the Structure. So, from a client code perspective, the Application is of no use, other than being part of bring Qi4j to life. Qi4j doesn't start automatically and can be run in most environments, by requiring that the bootstrapping of Qi4j is done by client code. We call this the Bootstrap Phase. The code in the custom bootstrapper will need to access additional Jars from the regular domain code, and we strongly recommend that you make this separation in your project as well.</span></p><p><!-- empty --></p><div id="h-Assembly" class="sv-inline"><!-- Assembly --></div><h2 class="subheading">Assembly</h2><br /><span class="normal">Assembly is the part of the bootstrap phase where the application Structure is declared (programmatically). The Assembly will be consumed by the ApplicationBuilder, which produces an ApplicationInstance. This instance does not contain any custom objects, and is fully serializable. All the application structure has been built, all the layers and modules been wired up, and all the sub-composite structures are in place to quickly instantiate the various parts of the application.</span><p><!-- empty --></p><div id="h-Initialization" class="sv-inline"><!-- Initialization --></div><h2 class="subheading">Initialization</h2><p><span class="normal">At this point, where an ApplicationInstance exists, it is possible to initialize the application components with instances created in, data computed in or received from, the controlling bootstrap code.</span></p><p><!-- empty --></p><div id="h-Activation" class="sv-inline"><!-- Activation --></div><h2 class="subheading">Activation</h2><p><span class="normal">Once the initialization phase is complete, the bootstrap controller will call the ApplicationInstance.activate() method to start things up.</span></p><p><!-- empty --></p><div id="h-BootstrapPhaseSummary" class="sv-inline"><!-- Bootstrap Phase Summary --></div><h2 class="subheading">Bootstrap Phase Summary</h2><p><span class="normal">Recap of sequence;</span></p><ul><li><span class="normal">Create, obtain or lookup Assemblers.</span></li><li><span class="normal">Establish the application structures.</span></li><li><span class="normal">Create a Qi4j Runtime instance.</span></li><li><span class="normal">Create an ApplicationAssemblyFactory.</span></li><li><span class="normal">Create an ApplicationFactory.</span></li><li><span class="normal">Call ApplicationFactory.newApplication() to create an ApplicationContext.</span></li><li><span class="normal">Call ApplicationContext.newApplicationInstance() to create an ApplicationInstance.</span></li><li><span class="normal">Do the initialization of the application.</span></li><li><span class="normal">Call activate() on the ApplicationInstance.</span></li></ul><p><!-- empty --></p><div id="h-SingletonAssembler" class="sv-inline"><!-- Singleton Assembler --></div><h2 class="subheading">Singleton Assembler</h2><p><span class="normal">For really small applications, demos, testcases and so forth, it doesn't make sense to create a elaborate Application structure. For this purpose, there is a convenient short-cut to establish a single Layer, single Module application. The full code looks like this;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003048">
+<div id="StartExampleCode1"><!-- Start Example Code1 --></div><span class="javaxcode">SingletonAssembler qi4j = new SingletonAssembler()</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public void assemble( ModuleAssembly assembly )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throws AssemblyException</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addComposite( MyStuffComposite.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004147">
+<div id="Text2"><!-- Text 2 --></div><div id="h-SingleModuleLayering" class="sv-inline"><!-- Single Module Layering --></div><h2 class="subheading">Single Module Layering</h2><p><span class="normal">Behind the scenes of the SingletonAssembler a little bit more elaborate bootstrap sequence is happening. The code below shows what is the actual required sequence to start up Qi4j.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580004074">
+<div id="StartExampleCode"><!-- Start Example Code --></div><span class="javaxcode">Qi4j is = new Energy4Java();</span><br /><span class="javaxcode">ApplicationAssemblyFactory assemblyFactory = new ApplicationAssemblyFactory();</span><br /><span class="javaxcode">ApplicationFactory factory = new ApplicationFactory( is, assemblyFactory );</span><br /><span class="javaxcode">Assembler assembler = ...; </span><br /><span class="javaxcode">ApplicationContext context = factory.newApplication( assembler );</span><br /><span class="javaxcode">ApplicationInstance application = context.newInstance( appTitle );</span><p><span class="javaxcode">// initialize the Structure</span><br /><span class="javaxcode">:</span></p><p><span class="javaxcode">// activate the application</span><br /><span class="javaxcode">application.activate()</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003334">
+<div id="Text-0"><!-- Text --></div><span class="normal">In the above example we are only creating an Application with a single Layer and a single Module in that Layer. This is derived from the fact that the </span><span class="javaxcode">factory.newApplication()</span><span class="normal"> method takes a single </span><span class="javaxcode">Assembler</span><span class="normal"> argument.</span><p><span class="normal">The </span><span class="javaxcode">Assembler.assemble( ModuleAssembly assembly )</span><span class="normal"> method is called when the Qi4j Runtime needs to populate the </span><span class="javaxcode">ModuleAssembly</span><span class="normal"> with its Composites, Objects, Services and other information.</span></p><p><!-- empty --></p><div id="h-PancakeLayering" class="sv-inline"><!-- "Pancake" Layering --></div><h2 class="subheading">"Pancake" Layering</h2><p><span class="normal">Another standard setup is applications consisting of a small number of Layers that are directly on top of each other (with out bypassing, forking and converging Layers), you can supply a </span><span class="javaxcode">Assembler[][][]</span><span class="normal">, with Layer in the first index, Module in the second index and any number of </span><span class="javaxcode">Assembler</span><span class="normal"> instances in the last index. This will look like;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003159">
+<div id="StartExampleCode2"><!-- Start Example Code2 --></div><br /><span class="javaxcode">Assembler[][][] assemblers = </span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{ // web layer</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ // Customer Module</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customerListEditAssembler,</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customerEditAssembler,</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customerSearchAssembler</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ // Accounts Module</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accountsListEditAssembler,</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accountsEditAssembler,</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accountsSearchAssembler</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;},</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{ // domain layer</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ // Customer Module</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customerDomainAssembler,</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ // Accounts Module</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accountsDomainAssembler,</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}; </span><br /><span class="javaxcode">ApplicationContext context = factory.newApplication( assemblers );</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003389">
+<div id="Text1"><!-- Text 1 --></div><span class="normal">The array initialization feature in Java is used to give us a semi-visual idea of the actual application structure. It has been commented to highlight this further. Also note that one can pass any number of </span><span class="javaxcode">Assembler</span><span class="normal"> instances to each Module. This is an important aspect of subsystem creation and re-use.</span><p><!-- empty --></p><div id="h-FullLayering" class="sv-inline"><!-- Full Layering --></div><h2 class="subheading">Full Layering</h2><p><span class="normal">Finally, we can assemble the Application by manually building up the Modules and Layers. This allow for a totally free structure, as long as the rules for no cyclic reference of the Layers are kept.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003830">
+<div id="StartExampleCode3"><!-- Start Example Code3 --></div><br /><span class="javaxcode">public class Main</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private static Main instance;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private Qi4jRuntime runtime;</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public static void Main( String[] args )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance = new Main();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance.setUp();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// assuming some code has a non-daemon thread.</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private void setUp()</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qi4jRuntime is = new Energy4Java();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;runtime = is;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationAssemblyFactory assemblyFactory = </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new ApplicationAssemblyFactory();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationFactory factory = </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new ApplicationFactory( runtime, assemblyFactory );</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationAssembly app = createAssembly( assemblyFactory );</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationContext context = factory.newApplication( assembly );</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String applicationName = "Example Application";</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationInstance instance =</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.newApplicationInstance( applicationName );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private ApplicationAssembly createAssembly(</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationAssemblyFactory factory )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationAssembly app = factory.newApplicationAssembly();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LayerAssembly webLayer = createWebLayer( app );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LayerAssembly domainLayer = createDomainLayer( app );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LayerAssembly infraLayer = createInfrastructureLayer( app );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webLayer.uses( domainLayer );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webLayer.uses( infraLayer );&nbsp;&nbsp;// Accesses the WebService</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;domainLayer.uses( infraLayer ); // For persistence</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return app;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private LayerAssembly createWebLayer( </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationAssembly application )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LayerAssembly layer = application.newLayerAssembly();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createCustomerWebModule( layer );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return layer;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private LayerAssembly createDomainLayer( </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationAssembly application )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LayerAssembly layer = application.newLayerAssembly();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createCustomerDomainModule( layer );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// :</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// :</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return layer;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private LayerAssembly createInfrastructureLayer(</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplicationAssembly application )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LayerAssembly layer = application.newLayerAssembly();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createWebServiceModule( layer );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createPersistenceModule( layer );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return layer;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private void createCustomerWebModule( LayerAssembly layer )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ModuleAssembly assembly = layer.newModuleAssembly();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addComposites( CustomerViewComposite.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addComposites( CustomerEditComposite.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addComposites( CustomerListViewComposite.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addComposites( CustomerSearchComposite.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private void createCustomerDomainModule( LayerAssembly layer )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ModuleAssembly assembly = layer.newModuleAssembly();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addEntities( CustomerEntity.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addEntities( CountryEntity.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addComposites( AddressComposite.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private void createWebServiceModule( LayerAssembly layer )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ModuleAssembly assembly = layer.newModuleAssembly();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Someone has created an assembler for a Jetty Web Service.</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JettyAssembler jetty = new JettyAssembler( 8080 );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addAssembler( neo );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;private void createPersistenceModule( LayerAssembly layer )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ModuleAssembly assembly = layer.newModuleAssembly();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Someone has created an assembler for the Neo EntityStore</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NeoAssembler neo = new NeoAssembler( "./neostore" );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assembly.addAssembler( neo );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p></div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

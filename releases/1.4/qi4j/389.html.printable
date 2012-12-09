@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Release 1.0    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="downloads.html" title="" class="breadcrumb c48" >Download</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >Release 1.0</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="389.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="441.html" class="newsxmm" title="Release 1.4">Release 1.4</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="439.html" class="newsxmm" title="Release 1.3">Release 1.3</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="399.html" class="newsxmm" title="Release 1.2">Release 1.2</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="390.html" class="newsxmm" title="Release 1.1">Release 1.1</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="389.html" class="navigationxxactivex" title="Release 1.0">Release 1.0</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="320.html" class="newsxmm" title="Pre-releases">Pre-releases</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b409580001823" ><div class="c51" id="svid10_6f43db4e123f11b409580003195">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_24b706fd12696de71a78000667" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_24b706fd12696de71a78000668">
+<div id="Heading"><!-- Heading --></div><div id="h-Release10" class="sv-inline"><!-- Release 1.0 --></div><h1 class="heading">Release 1.0</h1></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000669">
+<div id="Content"><!-- Content --></div></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000690">
+<div id="SDK"><!-- SDK --></div><div id="h-Qi4jSDK" class="sv-inline"><!-- Qi4j SDK --></div><h2 class="subheading">Qi4j SDK</h2><br /><span class="normal">We are working towards a useful SDK for Qi4j development, suitable for non-Maven users. This work has not been highest on the list and we are generally lagging in the release of the SDK in comparison to the Maven artifact releases. We strive to change this in the future.</span><br /><p><span class="normal"><strong> 1.0</strong></span><span class="normal">, signed by Niclas Hedhman, PGP ID: 33D70FC3</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="javaxcode" title="Link to Zip download. (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.zip">qi4j-sdk-1.0-bin.zip<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</span><a class="javaxcode" title="Link to Zip download's MD5 checksum (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.zip.md5">md5<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">)(</span><a class="javaxcode" title="Link to Zip Download's SHA1 checksum. (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.zip.sha">sha1<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">)(</span><a class="javaxcode" title="Link to Zip Download's PGP signature. (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.zip.asc">asc<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">)</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="javaxcode" title="Link to TAR/BZIP2 Download (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.tar.bz2">qi4j-sdk-1.0-bin.tar.bz2<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode"> (</span><a class="javaxcode" title="Link to TAR/BZIP2 Download's MD5 checksum. (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.tar.bz2.md5">md5<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">)(</span><a class="javaxcode" title="Link to TAR/BZIP2 Download's SHA1 checksum. (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.tar.bz2.sha">sha1<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">)(</span><a class="javaxcode" title="Link to TAR/BZIP2 Download's PGP signature. (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.tar.bz2.asc">asc<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">)</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="javaxcode" title="Link to TAR/GZ Download (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.tar.gz">qi4j-sdk-1.0-bin.tar.gz<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">&nbsp;&nbsp;(</span><a class="javaxcode" title="Link to TAR/GZ Download MD5 checksum. (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.tar.gz.md5">md5<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">)(</span><a class="javaxcode" title="Link to TAR/GZ Download's SHA1 checksum. (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.tar.gz.sha">sha1<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">)(</span><a class="javaxcode" title="Link to TAR/GZ Download's PGP signature. (external link)" href="http://dist.qi4j.org/releases/sdk/1.0/qi4j-sdk-1.0-bin.tar.gz.asc">asc<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="javaxcode">)</span></p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000705">
+<div id="Artifacts"><!-- Artifacts --></div><div id="h-MavenArtifacts" class="sv-inline"><!-- Maven Artifacts --></div><h2 class="subheading">Maven Artifacts</h2><br /><span class="normal">Due to a server mishap at OPS4J community, Maven artifacts for 1.0 was lost. We will look into re-building these in the near future. If possible, use version 1.1 instead.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000706">
+<div id="ReleaseNotes"><!-- Release Notes --></div><div id="h-ReleaseNotes" class="sv-inline"><!-- Release Notes --></div><h2 class="subheading">Release Notes</h2><p><span class="normal"><strong>New Feature</strong></span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-67">QI-67<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Query support for Association and Joins</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-84">QI-84<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Implement named queries</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-87">QI-87<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Implement entitystore based on REST</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-89">QI-89<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - EntityStore implementation connecting to ReST/Atom/RDF remote provider.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-100">QI-100<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Definition of TransientComposites</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-101">QI-101<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Remove ability to use Composite archetype directly.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-102">QI-102<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Implement ImmutableAssociation</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-110">QI-110<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Application visualizer</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-141">QI-141<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Add feature QueryExpressions#eq( Association&lt;T&gt; association, T value )</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-143">QI-143<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Typed properties</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-150">QI-150<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Aggregates</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-152">QI-152<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Cast of Behavior</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-157">QI-157<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Schema conversion hook</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-159">QI-159<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Named/Native query support</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-160">QI-160<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Need mechanism to list all entity types.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-203">QI-203<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Refactor Qi4j to use BASE principles for persistence</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-208">QI-208<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Re-index Support</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-215">QI-215<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Named Query SPI</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-216">QI-216<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - NamedEntityFinder that parses SparQL text, provided to it at bootstrap</span></p><p><span class="normal"><strong>Improvement</strong></span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-57">QI-57<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Use RDF/XML as format for RESTful Access API.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-194">QI-194<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Breaking apart the project into smaller release artifacts.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-199">QI-199<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - @Uses should do instance reuse on automatic creation</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-206">QI-206<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Refactor Query API to not require UoW for creating a query builder</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-210">QI-210<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Remove the Event-based UnitOfWork &amp; EntityStore SPIs.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-212">QI-212<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Removal of using hashes to identified Entity Types.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-217">QI-217<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - ValueComposite should be indexed as a node structure</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-224">QI-224<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Lifecycle should not be exposed in EntityComposite</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-235">QI-235<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - EntityStoreUnitOfWork is needed in EntityStoreVisitors.</span></p><p><span class="normal"><strong>Bug</strong></span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-44">QI-44<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - [CompositeInputStream] and [CompositeOutputStream] do not handle objects of type service, and structure properly</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-128">QI-128<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Neo4j entity store does not properly persist Associations to the same entity</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-137">QI-137<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Exception thrown when deserializing immutable property + constraints.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-138">QI-138<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - EntityStore should store composite references as state</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-146">QI-146<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - AppliesTo on Mixin implementation methods does not work.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-181">QI-181<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Serialization of values doesn't do Type-&gt;Composite lookup/replacement.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-195">QI-195<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - SPI API need to be updated to reflect the change on the core</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-204">QI-204<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - JDBM store doesn't retain data across JVM invocations.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-205">QI-205<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Indexing is producing incorrect results</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-218">QI-218<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - non-Optional not respected in UnitOfWork.newEntity()</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-219">QI-219<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - ValueComposite properties in Entity creation doesn't work.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-220">QI-220<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - On ServiceComposite you can do metaInfo(type) whereas on ServiceReference you can get the MetaInfo object itself through metaInfo(). These should be aligned, either way.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-221">QI-221<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Check nested UnitOfWork code so that it works properly.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-222">QI-222<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Remove refresh() from UoW. It's too weird.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-223">QI-223<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - ServiceComposites needs additional types mapped</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-225">QI-225<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Value composite with subclassed Property doesn't evaluate equals() correctly.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-226">QI-226<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Query on Collection gives NPE</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-227">QI-227<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Query of Collection doesn't work for where(), first() and max()</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-228">QI-228<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Stack Overflow in recursive calls.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-229">QI-229<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Exception in passivate() halts the passivation process.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-230">QI-230<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Qi4j.dereference() does not work inside Concerns/SideEffects, if Concern added withConcerns() in bootstrap.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-231">QI-231<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Cast problems in AssociationDecoratorTest</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-233">QI-233<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Query.iterator().next() returns null if no hasNext() has been executed.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-236">QI-236<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Querying on subtyped Properties do not work</span></p><p><span class="normal"><strong>Task</strong></span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-133">QI-133<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Tracking of OSGi-support</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-136">QI-136<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Make Library jar files OSGi bundles.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-213">QI-213<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Indexing and Query improvements before 1.0 can be released.</span></p><p><span class="normal"><strong>Sub-task</strong></span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-88">QI-88<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Create the RDF+Atom entity generator/parsers in library-rdf.</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-106">QI-106<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - GZip encoding of result data</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-108">QI-108<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Client-side cache of data</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-109">QI-109<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - BASIC auth for access</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-112">QI-112<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Drop shadows on the boxes</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-113">QI-113<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Edges need to be drawn better</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-115">QI-115<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Linking between Composites</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-116">QI-116<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Show Service dependencies</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-117">QI-117<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Change pane layout</span><br /><span class="normal">[</span><a class="normal" title=" (external link)" href="http://issues.ops4j.org/browse/QI-167">QI-167<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">] - Update the Tutorials</span></p></div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

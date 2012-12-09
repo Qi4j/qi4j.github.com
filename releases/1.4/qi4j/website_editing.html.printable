@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Website Editing    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="17.html" title="" class="breadcrumb c48" >Community</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >Website Editing</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="website_editing.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="codebase.html" class="newsxmm" title="Codebase">Codebase</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="437.html" class="newsxmm" title="Build System">Build System</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="contributors.html" class="newsxmm" title="Contributors">Contributors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="26.html" class="newsxmm" title="Mailing Lists">Mailing Lists</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="27.html" class="newsxmm" title="Participate">Participate</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="28.html" class="newsxmm" title="Playing Field">Playing Field</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="29.html" class="newsxmm" title="RoadMap">RoadMap</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="30.html" class="newsxmm" title="RSS Feed">RSS Feed</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="website_editing.html" class="navigationxxactivex" title="Website Editing">Website Editing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b409580001823" ><div class="c51" id="svid10_6f43db4e123f11b409580003195">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_24b706fd12696de71a78000256" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_24b706fd12696de71a78000257">
+<div id="Heading"><!-- Heading --></div><div id="h-WebsiteEditing" class="sv-inline"><!-- Website Editing --></div><h1 class="heading">Website Editing</h1></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000258">
+<div id="Content"><!-- Content --></div><span class="normal">Qi4j uses Sitevision as the Content Management System and website. This is an application that Rickard Öberg wrote years ago, and where the idea of Composite Oriented Programming was first tested. The success of Sitevision's codebase directly resulted in the creation of Qi4j, and we therefor find it natural to use it as our primary documentation and website tool. Special thanks to Senselogic AB for providing us with a full license (all features).</span><p><span class="normal">For our community members, Sitevision can feel somewhat overwhelming at first. Its features are staggering, but the basics are fairly simple and straight forward, especially if you only need to add a paragraph or create a new page. It is beyond this tutorial to go through all the features of Sitevision, and we kindly ask you to check the official site for such details. Only intend to cover the most simple bits here, so you can get started with adding and editing the content of the Qi4j website.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000260">
+<div id="Text-0"><!-- Text --></div><div id="h-Requirements" class="sv-inline"><!-- Requirements --></div><h2 class="subheading">Requirements</h2></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000261">
+<div id="Text1"><!-- Text 1 --></div><span class="normal">Sitevision is a full WYSIWYG editor, meaning it will continuously render the full HTML/CSS as it will be shown to the end consumer of the content. Yet, it is not a simple AJAX/JS editor, but a combination of Java and HTML/CSS view.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000316">
+<div id="Table"><!-- Table --></div>
+<table summary="" class="c109" cellpadding="2">
+<caption class="normal c110" >Known Compatibility</caption>
+   <tr>
+      <th class="c111" id="header3161"><span class="tools"><strong> </strong></span>
+      </th>
+      <th class="c112" id="header3162"><span class="tools"><strong>Linux</strong></span>
+      </th>
+      <th class="c112" id="header3163"><span class="tools"><strong>Mac OS X</strong></span>
+      </th>
+      <th class="c112" id="header3164"><span class="tools"><strong>Windows</strong></span>
+      </th>
+   </tr>
+   <tr>
+      <td class="c113" headers="header3161"><span class="tools">Chromium 5</span>
+      </td>
+      <td class="c114" headers="header3162"><span class="tools">Yes</span>
+      </td>
+      <td class="c114" headers="header3163"><span class="tools">No (beta)</span>
+      </td>
+      <td class="c114" headers="header3164"><span class="tools">&nbsp;</span>
+      </td>
+   </tr>
+   <tr>
+      <td class="c113" headers="header3161"><span class="tools">Firefox 3.5</span>
+      </td>
+      <td class="c114" headers="header3162"><span class="tools">&nbsp;</span>
+      </td>
+      <td class="c114" headers="header3163"><span class="tools">No</span>
+      </td>
+      <td class="c114" headers="header3164"><span class="tools">&nbsp;</span>
+      </td>
+   </tr>
+   <tr>
+      <td class="c113" headers="header3161"><span class="tools">Firefox 3.6</span>
+      </td>
+      <td class="c114" headers="header3162"><span class="tools">Yes</span>
+      </td>
+      <td class="c114" headers="header3163"><span class="normal">&nbsp;</span>
+      </td>
+      <td class="c114" headers="header3164"><span class="tools">&nbsp;</span>
+      </td>
+   </tr>
+   <tr>
+      <td class="c113" headers="header3161"><span class="tools">Safari 4</span>
+      </td>
+      <td class="c114" headers="header3162"><span class="tools">&nbsp;</span>
+      </td>
+      <td class="c114" headers="header3163"><span class="tools">Yes</span>
+      </td>
+      <td class="c114" headers="header3164"><span class="tools">&nbsp;</span>
+      </td>
+   </tr>
+   <tr>
+      <td class="c113" headers="header3161"><span class="tools">Opera 10</span>
+      </td>
+      <td class="c114" headers="header3162"><span class="tools">Slow</span>
+      </td>
+      <td class="c114" headers="header3163"><span class="tools">Yes</span>
+      </td>
+      <td class="c114" headers="header3164"><span class="tools">&nbsp;</span>
+      </td>
+   </tr>
+   <tr>
+      <td class="c113" headers="header3161"><span class="tools">Konqueror 4.4</span>
+      </td>
+      <td class="c114" headers="header3162"><span class="tools">No</span>
+      </td>
+      <td class="c114" headers="header3163"><span class="tools">&nbsp;</span>
+      </td>
+      <td class="c114" headers="header3164"><span class="tools">&nbsp;</span>
+      </td>
+   </tr>
+</table>
+</div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000317">
+<div id="Text24"><!-- Text 24 --></div><span class="normal">Please forward known working and non-working combinations to general@lists.ops4j.org.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000262">
+<div id="Text2"><!-- Text 2 --></div><div id="h-Login" class="sv-inline"><!-- Login --></div><h2 class="subheading">Login</h2></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000265">
+<div id="Text3"><!-- Text 3 --></div><span class="normal">If you are a Content Editor, the first thing you need to do is to "Login". This is done from the menu on the left, bottom item. See screenshot below.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000263">
+<div id="Image"><!-- Image --></div><img alt="Login Menu Screenshot" class="c4" src="../images/18.24b706fd12696de71a78000264/Picture+1.png" /><p class="sv-portlet-image-caption c92" >Login Menu Screenshot</p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000266">
+<div id="Text4"><!-- Text 4 --></div><span class="normal">That will bring you to a normal Login page. Fill in your credentials (ask the browser to remember them), and you will simply be brought to home page. But there is a small but incredibly important difference. There is a green ball in the lower right corner in the browser.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000267">
+<div id="Image1"><!-- Image 1 --></div><img alt="Green Ball Screenshot" class="c4" src="../images/18.24b706fd12696de71a78000268/Picture+2.png" /><p class="sv-portlet-image-caption c92" >Green Ball Screenshot</p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000269">
+<div id="Text5"><!-- Text 5 --></div><span class="normal">This is your "entry" into Sitevision. Click on it, and you will start up the Sitevision editor. Depending on your connection speed, it may take some time, as the full Java app is downloaded to your machine. On a modern broadband it shouldn't take more than a minute. You are probably also asked to verify the application certificate for the Java applet. It should be issued by Senselogic AB.</span><p><span class="normal">Once the editor is loaded, you get to the main Qi4j editing view.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000277">
+<div id="Image2"><!-- Image 2 --></div><img alt="Main Editor View" class="c4" src="../images/18.24b706fd12696de71a78000271/Picture+3.png" /><p class="sv-portlet-image-caption c92" >Main Editor View</p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000278">
+<div id="Text6"><!-- Text 6 --></div><span class="normal">At the top we have a toolbar, populated with a set of actions, including 3 drop-down boxes of "portlets" that are available. The "Navigator" is a sitemap of how all the pages are organized, and the "Content" panel at the bottom left is showing the tree structure of the page, which can be seen on the lower right (main area).</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000295">
+<div id="Text17"><!-- Text 17 --></div><div id="h-Portlets" class="sv-inline"><!-- Portlets --></div><h1 class="heading">Portlets</h1></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000294">
+<div id="Text16"><!-- Text 16 --></div><span class="normal">Sitevision works with so called "portlets". This is a central concept that needs to be understood. Every piece of content is contained in a portlet. This could be a simple text, an image or something really complex like a forum. Portlets are organized in a tree structure on a page (seen in the "Content" panel), and can have enclosing layouts. Absolute positioning is supported but should be avoided.</span><p><span class="normal">The Qi4j website designer have already provided the overall look and feel, so there is very little to worry about to make everything look Ok. When a page is created, all the L&amp;F is in place, including a "Heading" and a "content" text paragraphs on the page.</span></p><p><span class="normal">Most portlets can be rendered during editing, although for some that is optional and turned off by default. If you move your mouse over a portlet on the right, it will be "boxed" if it can be edited, and if you double-click on it, you will open it for editing. Below is a screenshot of section from higher up on this page...</span></p></div>
+<div class="c52"></div>
+<div class="c115" id="svid12_24b706fd12696de71a78000281">
+<div id="Image3"><!-- Image 3 --></div><img alt="Boxed Highlight" class="c4" src="../images/18.24b706fd12696de71a78000282/Picture+5.png" /><p class="sv-portlet-image-caption c92" >Boxed Highlight</p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000283">
+<div id="Text7"><!-- Text 7 --></div><span class="normal">If you right-click on a Portlet, you get a context menu with various choices, such as Delete, Copy and Properties. The Properties allows you to set various rendering attributes, but should in most cases be left un-touched.</span><p><span class="normal">A single-click will "Select" the portlet. This is important when you create a new portlet, since it will be created just after the selected portlet.</span></p><p><span class="normal">All of the above is also possible to do in the "Content" panel, for each of the Portlets. Additionally, it is possible to "Move" the portlets around by dragging it in the "Content" panel, while holding down the Shift key. Note that many/most Portlets can act as containers for other portlets.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000284">
+<div id="Text8"><!-- Text 8 --></div><div id="h-TextPortlet" class="sv-inline"><!-- Text Portlet --></div><h2 class="subheading">Text Portlet</h2></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000288">
+<div id="Text10"><!-- Text 10 --></div><div id="h-" class="sv-inline"><!--  --></div><h2 class="subheading"></h2><span class="normal">The text portlet is the most common one, and you create one by single-clicking on the "A" icon in the toolbar. This will create a text portlet after the currently selected portlet, and bring up the text portlet editor.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000285">
+<div id="Image4"><!-- Image 4 --></div><img alt="Insert Text Screenshot" class="c4" src="../images/18.24b706fd12696de71a78000286/Picture+6.png" /><p class="sv-portlet-image-caption c92" >Insert Text Screenshot</p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000287">
+<div id="Text9"><!-- Text 9 --></div><span class="normal">The text in the Text Editor can be formatted to some extent. To ensure consistent use of fonts and other factors, we work with "Styles", and the Qi4j community has only defined a small set of styles, most importantly the "Java Code", which effectively only sets the font and size. To enable the 'gray box' that surrounds code snippets, you also need to "Apply Decoration" on the portlet itself, i.e. right-click on the portlet and you find the menu choice. Select "Java Code" from the available decorations.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000289">
+<div id="Text11"><!-- Text 11 --></div><div id="h-ImagePortlet" class="sv-inline"><!-- Image Portlet --></div><h2 class="subheading">Image Portlet</h2></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000290">
+<div id="Text12"><!-- Text 12 --></div><span class="normal">The creation of Image portlet is found in the toolbar next to the Text portlet. When it is invoked, a image selection editor will show up. Note that there is a "Image Archive" and a "Page Images" separately. The former is for cross-site images, whereas the latter is for images on a single page. Use your own best judgment of where images should be stored. To add an image, click on "New Image", select it from your local storage, then edit the Image description and settings.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000291">
+<div id="Text13"><!-- Text 13 --></div><div id="h-OtherPortlets" class="sv-inline"><!-- Other Portlets --></div><h2 class="subheading">Other Portlets</h2></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000292">
+<div id="Text14"><!-- Text 14 --></div><span class="normal">It is beyond this introduction to go through the many available portlets and all the exact behavior of each. Go to the Senselogic website for more information.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000293">
+<div id="Text15"><!-- Text 15 --></div><div id="h-CreatingaPage" class="sv-inline"><!-- Creating a Page --></div><h1 class="heading">Creating a Page</h1></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000296">
+<div id="Text18"><!-- Text 18 --></div><span class="normal">You can create a page by either right-clicking on an existing page and selecting "New" followed by "Page", or by selecting a page and then press the "New" action in the toolbar.</span></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000297">
+<div id="Image5"><!-- Image 5 --></div><img alt="New Action Screenshot" class="c4" src="../images/18.24b706fd12696de71a78000298/Picture+7.png" /><p class="sv-portlet-image-caption c92" >New Action Screenshot</p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000299">
+<div id="Text19"><!-- Text 19 --></div><span class="normal">This will bring up the dialog where new pages, links, archives and many other site objects can be created. You can mostly ignore these for now.</span><p><span class="normal">What is important are the various templates that has been prepared for Qi4j. "Community" is for all pages that are not directly related to the Documentation effort. If you are writing documentation sitting under the "Documentation" page, you use that template. The others can be ignored.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000300">
+<div id="Image6"><!-- Image 6 --></div><img alt="New Page Screenshot" class="c4" src="../images/18.24b706fd12696de71a78000301/Picture+8.png" /><p class="sv-portlet-image-caption c92" >New Page Screenshot</p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000302">
+<div id="Text20"><!-- Text 20 --></div><div id="h-SaveandPublishaPage" class="sv-inline"><!-- Save and Publish a Page --></div><h1 class="heading">Save and Publish a Page</h1></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000303">
+<div id="Text21"><!-- Text 21 --></div><span class="normal">While you are editing the page, it is not saved nor published.</span><p><span class="normal">Saving the page will persist it on the Qi4j server, so we recommend you to do that "often" to avoid loosing any content in case something goes terribly wrong. You will be able to pick up and continue from the last point of Save. To save a page, click on the "Save" action in the toolbar.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000304">
+<div id="Image7"><!-- Image 7 --></div><img alt="Save Action Screenshot" class="c4" src="../images/18.24b706fd12696de71a78000305/Picture+9.png" /><p class="sv-portlet-image-caption c92" >Save Action Screenshot</p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000306">
+<div id="Text22"><!-- Text 22 --></div><span class="normal">There are markers on the Page icon in the Navigator panel to help you see if a page has been saved, published and is locked.</span><p><span class="normal">To make the new page, or changes to an existing page, visible to the general public, you must also "Publish" the page, by pressing the "Publish" action in the toolbar.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000307">
+<div id="Image8"><!-- Image 8 --></div><img alt="Publish Action Screenshot" class="c4" src="../images/18.24b706fd12696de71a78000308/Picture+10.png" /><p class="sv-portlet-image-caption c92" >Publish Action Screenshot</p></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000309">
+<div id="Text23"><!-- Text 23 --></div><span class="normal">If the page has not been saved, you will be asked to save it first. It will then go through a small wizard, where you can select when the page should become available, if you should be notified that the content is getting stale, add additional meta data and finally make a check that the page is following W3C standards.</span><p><span class="normal">This concludes this introduction to Sitevision at Qi4j. For more information, either check the Senselogic website or ask the Qi4j community on qi4j-dev@lists.ops4j.org. Happy Editing.</span></p></div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

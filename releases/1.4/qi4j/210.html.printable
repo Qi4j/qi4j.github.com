@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Mixin    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="15.html" title="" class="breadcrumb c48" >Documentation</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="31.html" title="" class="breadcrumb c48" >Qi4j - The Complete Manual</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="209.html" title="" class="breadcrumb c48" >Composition</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="266.html" title="" class="breadcrumb c48" >Fragments</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >Mixin</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="210.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="31.html" class="newsxmm" title="Qi4j - The Complete Manual">Qi4j - The Complete Manual</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="32.html" class="newsxmm" title="Overview">Overview</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="209.html" class="newsxmm" title="Composition">Composition</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="266.html" class="newsxmm" title="Fragments">Fragments</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="263.html" class="newsxmm" title="Composite Type">Composite Type</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="210.html" class="navigationxxactivex" title="Mixin">Mixin</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="262.html" class="newsxmm" title="Concern">Concern</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="265.html" class="newsxmm" title="Constraint">Constraint</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c57">
+            </td>
+   <td class="c15">
+                        <a href="264.html" class="newsxmm" title="Side Effect">Side Effect</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="267.html" class="newsxmm" title="Composite Meta Types">Composite Meta Types</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c56">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="34.html" class="newsxmm" title="Structure">Structure</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="70.html" class="newsxmm" title="Assembly">Assembly</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="35.html" class="newsxmm" title="Core System API">Core System API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="73.html" class="newsxmm" title="Runtime Bootstrap API">Runtime Bootstrap API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="36.html" class="newsxmm" title="Persistence">Persistence</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="query.html" class="newsxmm" title="Query API">Query API</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="43.html" class="newsxmm" title="Indexing">Indexing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="33.html" class="newsxmm" title="Concepts">Concepts</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c55">
+            </td>
+   <td class="c15">
+                        <a href="42.html" class="newsxmm" title="References">References</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="139.html" class="newsxmm" title="Extensions">Extensions</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="226.html" class="newsxmm" title="Libraries">Libraries</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000912" ><div class="c53" id="svid10_6f43db4e123f11b409580004222">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580001851" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_6f43db4e123f11b409580004003">
+<div id="Heading"><!-- Heading --></div><div id="h-Mixin" class="sv-inline"><!-- Mixin --></div><h1 class="heading">Mixin</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003883">
+<div id="Content"><!-- Content --></div><span class="normal">Mixins are the state-carrying part of a Composite instance. The other Fragments can not retain state between method invocations as they are shared across Composite instances.</span></div>
+<div class="c52"></div>
+<div class="c32" id="svid12_6f43db4e123f11b409580004433">
+<div id="HeadingCompositeType"><!-- Heading - CompositeType --></div><div id="h-MixinType" class="sv-inline"><!-- Mixin Type --></div><h2 class="subheading">Mixin Type</h2></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004247">
+<div id="CompositeTypeContent1"><!-- CompositeType - Content 1 --></div><span class="normal">The Mixin Type is the interface that declares the Mixin methods. Each Mixin implementation (the classes defined in the @Mixins annotation of a Composite declaration) implements one or more methods from one or more Mixin Types.</span><p><span class="normal">Mixin Type can be very simple, like;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003579">
+<div id="Text-0"><!-- Text --></div><span class="javaxcode">public interface BankAccount</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Money checkBalance();</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004271">
+<div id="Text1"><!-- Text 1 --></div><span class="normal">Or contain hundreds of methods, subclassed from dozens of super interfaces.</span><p><span class="normal">The Mixin Types of a Composite are ;</span></p><ul><li><span class="normal">all the aggregated interfaces of the Composite Type, minus Composite meta-type interfaces, and</span></li><li><span class="normal">all private mixin referenced types.</span></li></ul><p><span class="normal">There is not a 1:1 correlation between Mixin Type and Mixin implementation. One can't even know if there are more or less of one over the other. That is because a Mixin implementation can implement less than one, one, or more than one Mixin Type.</span></p><p><span class="normal">It is also entirely possible that multiple implementation methods exists for a Mixin Type method. The mixin method resolution algorithm will provide a deterministic behavior of which implementation of a method is chosen. The algorithm is as follows;</span></p><p><span class="normal">For each declared method of all Mixin Types of a Composite;</span></p><ul class="c87"><li><span class="normal">Iterate all Mixin types declared from left to right in the declaration,</span></li><li><span class="normal">Iterate all Mixin types of super-interfaces from left to right in the 'extends' clause,</span></li><li><span class="normal">Iterate all Mixin types within one interface before succeeding to the next interface,</span></li><li><span class="normal">Iterate all super-interface Mixin types before proceeding to the super-interfaces of those,</span></li><li><span class="normal">Iterate all Typed Mixin implementations of all super-interfaces, before repeating the algorithm for Generic Mixin implementations,</span></li></ul><p><span class="normal">This means that one Mixin implementation can 'override' a single method that a larger mixin implementation implements together with many other methods. So, just because a mixin implements MixinTypeA.method1() and has an implementation of MixinTypeA.method2(), doesn't mean that method2() is mapped to that mixin. This is very important to remember. The Envisage tool is capable of visualizing how Mixin Type methods are mapped to implementations.</span></p></div>
+<div class="c52"></div>
+<div class="c32" id="svid12_6f43db4e123f11b409580002686">
+<div id="HeadingPublicMixins"><!-- Heading - Public Mixins --></div><div id="h-PublicMixins" class="sv-inline"><!-- Public Mixins --></div><h2 class="subheading">Public Mixins</h2></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002935">
+<div id="PublicMixinsContent1"><!-- Public Mixins - Content 1 --></div><span class="normal">Mixins are the state holders of the composite instance. Public Mixins are the mixins that are exposed to the outside world via the CompositeType interface.</span><p><span class="normal">Each method in the CompositeType interface MUST be backed by a mixin class.</span></p><p><span class="normal">Mixins are declared as annotations on the CompositeType interface.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580004038">
+<div id="Text2"><!-- Text 2 --></div><span class="javaxcode">@Mixins( SomethingMixin.class )</span><br /><span class="javaxcode">public interface SomethingComposite extends Something, Composite</span><br /><span class="javaxcode">{}</span><p><span class="javaxcode">public class SomethingMixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements Something</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;// State is allowed.</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public void doSomething()</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// do stuff...</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002964">
+<div id="Text3"><!-- Text 3 --></div><span class="normal">In the above sample, the </span><span class="javaxcode">SomethingMixin</span><span class="normal"> will be made part of the </span><span class="javaxcode">SomethingComposite</span><span class="normal"> CompositeType.</span><p><span class="normal">If we have many interfaces defining many methods, that all must be backed by a mixin implementation, we simply list all the mixins required.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003099">
+<div id="Text4"><!-- Text 4 --></div><span class="javaxcode">@Mixins( { StartMixin.class, VehicleMixin.class } )</span><br /><span class="javaxcode">public interface CarComposite extends Startable, Vehicle, Composite</span><br /><span class="javaxcode">{}</span><p><span class="javaxcode">public interface Startable</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;boolean start();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;void stop();</span><br /><span class="javaxcode">}</span></p><p><span class="javaxcode">public interface Vehicle</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;void turn( float angle );</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;void accelerate( float acceleration );</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;// more methods</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004176">
+<div id="Text5"><!-- Text 5 --></div><span class="normal">In the example above, the VehicleMixin would need to deal with all methods defined in the Vehicle interface. That interface could be very large, and could be totally independent concerns. So, instead we should use abstract mixins, which are ordinary mixins but are lacking some methods. This is simply done by declaring the class abstract.</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003559">
+<div id="Text6"><!-- Text 6 --></div><span class="javaxcode">@( { StartMixin.class, SpeedMixin.class, CrashResultMixin.class } )</span><br /><span class="javaxcode">public interface CarComposite extends Startable, Vehicle, Composite</span><br /><span class="javaxcode">{}</span><p><span class="javaxcode">public interface Vehicle extends SpeedLocation, Crashable</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">}</span></p><p><span class="javaxcode">public interface SpeedLocation</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;void turn( float angle );</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;void accelerate( float acceleration );</span><br /><span class="javaxcode">}</span></p><p><span class="javaxcode">public abstract class SpeedMixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements SpeedLocation</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;// state for speed</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public void accelerate( float acceleration )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// logic</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002842">
+<div id="Text7"><!-- Text 7 --></div><span class="normal">Above the SpeedMixin only implements the accelerate() method, and Qi4j will only map that method to this mixin. The other method of the SpeedLocation interface is not satisfied as the example is written and will generate a runtime exception.</span></div>
+<div class="c52"></div>
+<div class="c32" id="svid12_6f43db4e123f11b409580003892">
+<div id="HeadingPrivateMixins"><!-- Heading - Private Mixins --></div><div id="h-PrivateMixins" class="sv-inline"><!-- Private Mixins --></div><h2 class="subheading">Private Mixins</h2></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002823">
+<div id="PrivateMixinsContent1"><!-- Private Mixins - Content 1 --></div><span class="normal">Public mixins expose their methods in the CompositeType, and this is not always desirable. Qi4j supports Private Mixins, which are only visible within the composite itself. That means that other fragments in the composite can see/use it, but it is not visible to the clients of the CompositeType.</span><p><span class="normal">Private Mixins are handled automatically. When Qi4j detects a @This annotation referring to a type that is not defined in the Composite Type interface, then that is a Private Mixin. The Mixin implementation class, however, must exist in the list of Mixins in the @Mixins annotation. But often, the Private Mixin only list internal Property methods in the Mixin Type, which will be satisfied by the standard PropertyMixin and hence always available.</span></p><p><span class="normal">This is particularly useful in Domain Driven Design, where you only want to expose domain methods, which are defined by the context where they are used. But the state of the Mixin should not be exposed out at all. For instance, if we have the Cargo interface like;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003743">
+<div id="Text10"><!-- Text 10 --></div><span class="javaxcode">public interface Cargo</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Location origin();</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Location destination();</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;void changeDestination( Location newDestination );</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004410">
+<div id="Text11"><!-- Text 11 --></div><span class="normal">The interface is defined by its context, and not really exposing the internal state. So in the implementation we probably do something like;</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580004133">
+<div id="Text12"><!-- Text 12 --></div><span class="javaxcode">public class CargoMixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements Cargo</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@This private CargoState state;</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public Location origin()</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return state.origin().get();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public Location destination()</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return state.destination().get();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public void changeDestination( Location newDestination )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state.destination().set( newDestination );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p><p class="c77"><span class="javaxcode">public interface CargoState</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Property&lt;Location&gt; origin();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Property&lt;Location&gt; destination();</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004427">
+<div id="Text14"><!-- Text 14 --></div><span class="normal">And the CargoComposite to bind it all together;</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580004217">
+<div id="Text15"><!-- Text 15 --></div><span class="javaxcode">@Mixins( CargoMixin.class )</span><br /><span class="javaxcode">public interface CargoEntity extends Cargo, EntityComposite</span><br /><span class="javaxcode">{}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003046">
+<div id="Text16"><!-- Text 16 --></div><span class="normal">So, in this typical case, we don't need to declare the Mixin for the CargoState, as it only defines Property methods, which are handled by the standard PropertyMixin always present.</span></div>
+<div class="c52"></div>
+<div id="svid12_38c6b4cb1249ac3d5d5800094">
+<div id="Text17"><!-- Text 17 --></div><div id="h-TypedMixinvsGenericMixinimplementations" class="sv-inline"><!-- Typed Mixin vs Generic Mixin implementations --></div><h2 class="subheading">Typed Mixin vs Generic Mixin implementations</h2></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003118">
+<div id="Text13"><!-- Text 13 --></div>
+</div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003315">
+<div id="Text9"><!-- Text 9 --></div><span class="normal"><em>Mixins</em></span><span class="normal">, </span><span class="normal"><em>Concerns</em></span><span class="normal"> and </span><span class="normal"><em>SideEffects</em></span><span class="normal"> can either be "</span><span class="normal"><strong>typed</strong></span><span class="normal">" or "</span><span class="normal"><strong>generic</strong></span><span class="normal">". A </span><span class="normal"><em>Typed Mixin</em></span><span class="normal"> implementation implements one or more Mixin Type interfaces, and one or more of the methods of those interfaces. A </span><span class="normal"><em>Generic Mixin</em></span><span class="normal"> implementation implements java.lang.reflect.InvocationHandler, and can therefor be matched to any method of any interface. Typically, </span><span class="javaxcode">AppliesTo</span><span class="normal"> annotation is used to filter the methods that such </span><span class="normal"><em>Generic Mixin</em></span><span class="normal"> implementation is mapped against, and sometimes </span><span class="normal"><em>Generic Mixin</em></span><span class="normal"> implementations are "last resort".</span><p><span class="normal">Experience shows that Generic Mixin implementations are rare, and should only be used in extreme cases. They are less frequent than Generic Concern or Generic SideEffect implementations, but inside the Qi4j API are a couple of Generic Mixin implementations that are always present to make the life of the developer easier, such as PropertyMixin, AssociationMixin, ManyAssociationMixin, NoopMixin. The first 3 are declared on the Composite and EntityComposite interfaces and automatically included if needed. They also serve as excellent example of what they can be used for.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003897">
+<div id="GenericMixinexample"><!-- Generic Mixin example --></div><span class="javaxcode">@AppliesTo( { PropertyMixin.PropertyFilter.class } )</span><br /><span class="javaxcode">public final class PropertyMixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements InvocationHandler</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@State private StateHolder state;</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public Object invoke( Object proxy, Method method, Object[] args )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throws Throwable</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return state.getProperty( method );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public static class PropertyFilter</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;implements AppliesToFilter, Serializable</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public boolean appliesTo( Method method, Class&lt;?&gt; mixin, </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Class&lt;?&gt; compositeType, </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Class&lt;?&gt; modifierClass )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return Property.class.isAssignableFrom( method.getReturnType() );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_38c6b4cb1249ac3d5d5800095">
+<div id="Text8"><!-- Text 8 --></div><span class="normal">Other examples that we have come across;</span><ul><li><span class="normal">Mapping from </span><span class="javaxcode">Property&lt;</span><span class="javaxcode"><em>type</em></span><span class="javaxcode">&gt;</span><span class="normal"> to POJO style "properties".</span></li><li><span class="normal">Remote Service delegation.</span></li><li><span class="normal">Scripting delegation, where a script will implement the Mixin Type.</span></li></ul><p><span class="normal">which seems to indicate that Generic Mixin implementations are likely to be used in integration of other technologies.</span></p><p><span class="normal">Typed Mixin implementations are much preferred in general business logic, as they will be first-class citizens of the IDE as well, for navigation, find usage, refactoring and many other common tasks. This is one of the main advantages of the Qi4j way of doing AOP compared to AspectJ et al, where "weaving" is something bolted onto an application's classes via regular expressions and known naming conventions, which can change in an instance by a developer being unaware of which PointCuts applies to his code.</span></p></div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

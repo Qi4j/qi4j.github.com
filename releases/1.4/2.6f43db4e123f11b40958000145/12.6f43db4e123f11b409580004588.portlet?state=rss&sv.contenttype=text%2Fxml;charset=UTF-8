@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+   <channel>
+      <title>Qi4j news</title>
+      <link>http://www.qi4j.org/qi4j/2.html</link>
+      <description>News from the Qi4j project</description>
+      <language>en</language>
+      <generator>SiteVision 2.6.2</generator>
+      <item>
+         
+      
+      
+
+               
+      
+      
+
+                 <pubDate>Sat, 06 Aug 2011 03:48:49 +0000</pubDate>
+
+               
+      
+      
+
+                 <description>Shanghai, 5 Aug 2011 - The Qi4j community today announced Release 1.4 of the innovative Java framework, Qi4j. This release is a consolidation release of the 1.x development branch, as development focus now is directed towards 2.0. The main new features in version 1.4 is Named Associations and inclusion of an industrial automation inspired alarm system.</description>
+               
+      
+      
+
+                 <link>http://www.qi4j.org/qi4j/440.html</link>
+         
+         
+         
+      </item>
+      <item>
+         
+      
+      
+
+               
+      
+      
+
+                 <pubDate>Fri, 15 Apr 2011 09:50:42 +0000</pubDate>
+
+               
+      
+      
+
+                 <description>Kuala Lumpur, 15 April 2011 - The Qi4j community today announced Release 1.3 of the innovative Java framework, Qi4j. This release is significant for several customers, moving to deploy Qi4j in business critical 24/7 systems. &quot;We now feel that the core features of Qi4j are as stable as software systems ever get. Qi4j is now being deployed at a major investment bank in the risk pricing domain.&quot;, said Niclas Hedhman, co-inventor of Qi4j together with Rickard Öberg, who added &quot;Qi4j has really proved itself in StreamFlow, and I am convinced that many of our paradigms will stand the test of time.&quot;</description>
+               
+      
+      
+
+                 <link>http://www.qi4j.org/qi4j/438.html</link>
+         
+         
+         
+      </item>
+   </channel>
+</rss>

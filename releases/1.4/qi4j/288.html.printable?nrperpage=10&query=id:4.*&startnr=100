@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Latest Changes    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >Latest Changes</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="288.html.printable?nrperpage=10&amp;query=id:4.*&amp;startnr=100">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigationxxactivex" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000912" ><div class="c53" id="svid10_6f43db4e123f11b409580004222">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580001613" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_6f43db4e123f11b409580004438">
+<div id="Heading"><!-- Heading --></div><div id="h-LatestChanges" class="sv-inline"><!-- Latest Changes --></div><h1 class="heading">Latest Changes</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003629">
+<div id="Text-0"><!-- Text --></div><span class="normal">Below are time sorted list of changes to this website.</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003989">
+<div id="Search-0"><!-- Search --></div>
+	   <p class="normal">
+      Result: 101-110 of 250
+   </p>
+   <p class="normal c59" >
+               <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=90&amp;nrperpage=10" title="Previous">&laquo; Previous</a>
+                                               <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=0&amp;nrperpage=10" title="Page 1">1</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=10&amp;nrperpage=10" title="Page 2">2</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=20&amp;nrperpage=10" title="Page 3">3</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=30&amp;nrperpage=10" title="Page 4">4</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=40&amp;nrperpage=10" title="Page 5">5</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=50&amp;nrperpage=10" title="Page 6">6</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=60&amp;nrperpage=10" title="Page 7">7</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=70&amp;nrperpage=10" title="Page 8">8</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=80&amp;nrperpage=10" title="Page 9">9</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=90&amp;nrperpage=10" title="Page 10">10</a>
+                                                                                                                                                                                                                                                                           <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=110&amp;nrperpage=10" title="Next">Next &raquo;</a>
+         </p>
+<ol start="101" class="c61">
+   <li class="c62">
+      <p class="svhidden">Hit number: 101</p>
+      <a class="normal" href="29.html">RoadMap</a>
+                                             <br />
+              <p class="normal c59" >Road Map A wise man once said; Release Early, Release Often. It means, by releasing early one get very valuable feedback very soon, and can adjust to such feedback. Releasing early is also dangerous, since everything may not be finished, operational or may contain bugs, and therefor we should respon...</p>
+            <p class="normal c59" >Last modified:&nbsp;February 13, 2010&nbsp;-&nbsp;Size:&nbsp;4 kB
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="17.html" title="Community">Community</a>
+                   / <a class="normal c60"  href="29.html" title="RoadMap">RoadMap</a>
+                    </p>
+   </li>
+   <li class="c62">
+      <p class="svhidden">Hit number: 102</p>
+      <a class="normal" href="160.html">Background</a>
+                                             <br />
+              <p class="normal c59" >Background Qi4j is the first Composite Oriented Programming implementation leveraging the Java 5 platform, so that everything you know from Java 5 still applies. You can mix Qi4j with your ordinary Java code as much as you want. All your existing Java tools works just like before, and Qi4j does not ...</p>
+            <p class="normal c59" >Last modified:&nbsp;January 11, 2010&nbsp;-&nbsp;Size:&nbsp;9 kB
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="introduction.html" title="Introduction to Qi4j">Introduction&nbsp;to&nbsp;Qi4j</a>
+                   / <a class="normal c60"  href="160.html" title="Background">Background</a>
+                    </p>
+   </li>
+   <li class="c62">
+      <p class="svhidden">Hit number: 103</p>
+      <a class="normal" href="262.html">Concern</a>
+                                             <br />
+              <p class="normal c59" >Concern Concerns are the equivalent of "around advice" in Aspect Oriented Programming. They are chained into an invocation stack for each Mixin Type method and invoked after the Constraints have been executed. Since they are sitting "around" the Mixin implementation method, they also have a chance t...</p>
+            <p class="normal c59" >Last modified:&nbsp;January 05, 2010&nbsp;-&nbsp;Size:&nbsp;1 kB
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="15.html" title="Documentation">Documentation</a>
+                   / <a class="normal c60"  href="31.html" title="Qi4j - The Complete Manual">Qi4j&nbsp;-&nbsp;The&nbsp;Complete&nbsp;Manual</a>
+                   / <a class="normal c60"  href="209.html" title="Composition">Composition</a>
+                   / <a class="normal c60"  href="266.html" title="Fragments">Fragments</a>
+                   / <a class="normal c60"  href="262.html" title="Concern">Concern</a>
+                    </p>
+   </li>
+   <li class="c62">
+      <p class="svhidden">Hit number: 104</p>
+      <a class="normal" href="210.html">Mixin</a>
+                                             <br />
+              <p class="normal c59" >Mixin Mixins are the state-carrying part of a Composite instance. The other Fragments can not retain state between method invocations as they are shared across Composite instances. Mixin Type The Mixin Type is the interface that declares the Mixin methods. Each Mixin implementation (the classes defi...</p>
+            <p class="normal c59" >Last modified:&nbsp;January 05, 2010&nbsp;-&nbsp;Size:&nbsp;22 kB
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="15.html" title="Documentation">Documentation</a>
+                   / <a class="normal c60"  href="31.html" title="Qi4j - The Complete Manual">Qi4j&nbsp;-&nbsp;The&nbsp;Complete&nbsp;Manual</a>
+                   / <a class="normal c60"  href="209.html" title="Composition">Composition</a>
+                   / <a class="normal c60"  href="266.html" title="Fragments">Fragments</a>
+                   / <a class="normal c60"  href="210.html" title="Mixin">Mixin</a>
+                    </p>
+   </li>
+   <li class="c62">
+      <p class="svhidden">Hit number: 105</p>
+      <a class="normal" href="351.html">What's an Object anyway?</a>
+                                             <br />
+              <p class="normal c59" >What's an Object anyway. In OOP the main idea is that we should model our reality by creating Objects. Objects have state, and they have methods. Methods in an object are used to operate on the internal state and understands the domain that is being modeled. By contrast, in procedural programming th...</p>
+            <p class="normal c59" >Last modified:&nbsp;January 05, 2010&nbsp;-&nbsp;Size:&nbsp;19 kB
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="146.html" title="Tutorials &amp; HowTOs">Tutorials&nbsp;&&nbsp;HowTOs</a>
+                   / <a class="normal c60"  href="351.html" title="What's an Object anyway?">What's&nbsp;an&nbsp;Object&nbsp;anyway?</a>
+                    </p>
+   </li>
+   <li class="c62">
+      <p class="svhidden">Hit number: 106</p>
+      <a class="normal" href="225.html">Login</a>
+                                             <br />
+              <p class="normal c59" > Login Content editors can login here. Login Username : Password : ...</p>
+            <p class="normal c59" >Last modified:&nbsp;June 05, 2008&nbsp;-&nbsp;Size:&nbsp;1 kB
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="225.html" title="Login">Login</a>
+                    </p>
+   </li>
+   <li class="c62">
+      <p class="svhidden">Hit number: 107</p>
+      <a class="normal" href="158.html">Search</a>
+                                             <br />
+              <p class="normal c59" > Search Search ...</p>
+            <p class="normal c59" >Last modified:&nbsp;November 22, 2007&nbsp;-&nbsp;Size:&nbsp;867 bytes
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="158.html" title="Search">Search</a>
+                    </p>
+   </li>
+   <li class="c62">
+      <p class="svhidden">Hit number: 108</p>
+      <a class="normal" href="288.html">Latest Changes</a>
+                                             <br />
+              <p class="normal c59" >Latest Changes Below are time sorted list of changes to this website. Result: 1-10 of 216 1 2 3 4 5 6 7 8 9 10 Next &raquo; Hit number: 1 Support Support &amp; Services The Qi4j community will support users on a best effort basis. See the Mailing Lists page on information about how to subscribe and ...</p>
+            <p class="normal c59" >Last modified:&nbsp;December 18, 2008&nbsp;-&nbsp;Size:&nbsp;15 kB
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="288.html" title="Latest Changes">Latest&nbsp;Changes</a>
+                    </p>
+   </li>
+   <li class="c62">
+      <p class="svhidden">Hit number: 109</p>
+      <a class="normal" href="support.html">Support</a>
+                                             <br />
+              <p class="normal c59" >Support &amp; Services The Qi4j community will support users on a best effort basis. See the Mailing Lists page on information about how to subscribe and post messages. Commercial Support &amp; Services The Qi4j community encourages companies to offer commercial support and services. Those who do ca...</p>
+            <p class="normal c59" >Last modified:&nbsp;December 27, 2008&nbsp;-&nbsp;Size:&nbsp;2 kB
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="support.html" title="Support">Support</a>
+                    </p>
+   </li>
+   <li class="c62">
+      <p class="svhidden">Hit number: 110</p>
+      <a class="normal" href="92.html">Senselogic AB</a>
+                                             <br />
+              <p class="normal c59" > Senselogic AB Senselogic delivers a secure, reliable and scalable portal and content management system called SiteVision for web sites, intranets and extranets. ...</p>
+            <p class="normal c59" >Last modified:&nbsp;December 17, 2007&nbsp;-&nbsp;Size:&nbsp;975 bytes
+              <br />
+                           / <a class="normal c60"  href="2.html" title="www.qi4j.org">www.qi4j.org</a>
+                   / <a class="normal c60"  href="sponsors.html" title="Sponsors">Sponsors</a>
+                   / <a class="normal c60"  href="92.html" title="Senselogic AB">Senselogic&nbsp;AB</a>
+                    </p>
+   </li>
+</ol><br />	   <p class="normal">
+      Result: 101-110 of 250
+   </p>
+   <p class="normal c59" >
+               <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=90&amp;nrperpage=10" title="Previous">&laquo; Previous</a>
+                                               <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=0&amp;nrperpage=10" title="Page 1">1</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=10&amp;nrperpage=10" title="Page 2">2</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=20&amp;nrperpage=10" title="Page 3">3</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=30&amp;nrperpage=10" title="Page 4">4</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=40&amp;nrperpage=10" title="Page 5">5</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=50&amp;nrperpage=10" title="Page 6">6</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=60&amp;nrperpage=10" title="Page 7">7</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=70&amp;nrperpage=10" title="Page 8">8</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=80&amp;nrperpage=10" title="Page 9">9</a>
+                                                              <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=90&amp;nrperpage=10" title="Page 10">10</a>
+                                                                                                                                                                                                                                                                           <a class="normal c60"  href="288.html?query=id:4.*&amp;startnr=110&amp;nrperpage=10" title="Next">Next &raquo;</a>
+         </p>
+</div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>HowTo : Configure a Service    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="146.html" title="" class="breadcrumb c48" >Tutorials &amp; HowTOs</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >HowTo : Configure a Service</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="323.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="145.html" class="newsxmm" title="Composite Tutorial">Composite Tutorial</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="351.html" class="newsxmm" title="What's an Object anyway?">What's an Object anyway?</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="322.html" class="newsxmm" title="HowTo : Create an Entity">HowTo : Create an Entity</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="323.html" class="navigationxxactivex" title="HowTo : Configure a Service">HowTo : Configure a Service</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="327.html" class="newsxmm" title="HowTo : Assemble an Application">HowTo : Assemble an Application</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="348.html" class="newsxmm" title="HowTo : Use Qi4j Logging">HowTo : Use Qi4j Logging</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="349.html" class="newsxmm" title="HowTo : Use contextual fragments">HowTo : Use contextual fragments</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000912" ><div class="c53" id="svid10_6f43db4e123f11b409580004222">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b40958000860" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_6f43db4e123f11b409580004424">
+<div id="Heading"><!-- Heading --></div><div id="h-HowToConfigureaService" class="sv-inline"><!-- HowTo : Configure a Service --></div><h1 class="heading">HowTo : Configure a Service</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004210">
+<div id="Content"><!-- Content --></div><span class="normal">Qi4j supports a Configuration system for services. The configuration instance itself is an Entity and is therefor readable, writeable and queryable, just like other Entities. This should make Configuration management much simpler, since you can easily build GUI tools to allow editing of these in runtime. However, to simplify the initial values of the Configuration instance, Qi4j also does the initial bootstrapping of the Configuration entity for you. This HowTo is going to show how.</span><p><!-- empty --></p><div id="h-WeneedaService" class="sv-inline"><!-- We need a Service --></div><h2 class="subheading">We need a Service</h2><br /><span class="normal">To illustrate these features we create an TravelPlan service, which allows clients to find and make Reservations to Destinations. For the sake of simplicity, we are leaving out the domain details...</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003120">
+<div id="Text-0"><!-- Text --></div><span class="javaxcode">public interface TravelPlan</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;// Domain methods, which are beyond the discussion at hand.</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002903">
+<div id="Text1"><!-- Text 1 --></div><span class="normal">So, then there is the ServiceComposite...</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580002754">
+<div id="Text2"><!-- Text 2 --></div><span class="javaxcode"># The package is relevant to the Initial Values discussed later.</span><br /><span class="javaxcode">package org.niclas.hedhman.travel;</span><p><span class="javaxcode">@Mixins( { TravelPlanMixin.class } )</span><br /><span class="javaxcode">public interface TravelPlanService extends TravelPlan, ServiceComposite</span><br /><span class="javaxcode">{}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002934">
+<div id="Text3"><!-- Text 3 --></div><span class="normal">And then in the Mixin we actually need to connect to a foreign system to obtain the various details that the service can provide to the clients. For instance, it needs a host name and port and a protocol to use. We put these into a configuration interface.</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003146">
+<div id="Text4"><!-- Text 4 --></div><span class="javaxcode">public interface TravelPlanConfiguration</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Hostname hostName();</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;PortNumber portNumber();</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Protocol protocol();</span><br /><span class="javaxcode">}</span></p><p><span class="javaxcode">public interface HostName extends Property&lt;String&gt;</span><br /><span class="javaxcode">{}</span></p><p><span class="javaxcode">@Range( min=0, max=65535 )</span><br /><span class="javaxcode">public interface PortNumber extends Property&lt;Integer&gt;</span><br /><span class="javaxcode">{}</span></p><p><span class="javaxcode">@Matches( "(ssh|rlogin|telnet)" )</span><br /><span class="javaxcode">public interface Protocol extends Property&lt;String&gt;</span><br /><span class="javaxcode">{}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003435">
+<div id="Text5"><!-- Text 5 --></div><span class="normal">We used the recommended type-safe Property subtype pattern, and for each PortNumber and Protocol we have defined a Constraint required.</span><p><span class="normal">Now we can access this configuration in the TravelPlanMixin like this;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003656">
+<div id="Text6"><!-- Text 6 --></div><span class="javaxcode">import org.qi4j.api.configuration.Configuration;</span><p><span class="javaxcode">public class TravelPlanMixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements TravelPlan</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@This Configuration&lt;TravelPlanConfiguration&gt; config;</span></p><p><span class="javaxcode">&nbsp;&nbsp;:</span><br /><span class="javaxcode">&nbsp;&nbsp;:</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TravelPlanConfiguration tpConf = config.configuration();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String hostName = tpConf.hostName().get();</span><br /><span class="javaxcode">&nbsp;&nbsp;:</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003782">
+<div id="Text7"><!-- Text 7 --></div><span class="normal">And from the Service point of view, it doesn't need to worry about where the configuration really comes from. But it may want to control when the Configuration should be refreshed, to ensure that atomic changes are happening. This is done with the </span><span class="javaxcode">refresh()</span><span class="normal"> method in the </span><span class="javaxcode">Configuration</span><span class="normal"> interface;</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580004000">
+<div id="Text8"><!-- Text 8 --></div><span class="javaxcode">public void doSomething()</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;// Refresh Configuration before reading it.</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;config.refresh()</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;TravelPlanConfiguration tpConf = config.configuration();</span><br /><span class="javaxcode">&nbsp;&nbsp;:</span><br /><span class="javaxcode">&nbsp;&nbsp;:</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003426">
+<div id="Text16"><!-- Text 16 --></div><span class="normal">This ensures that any updates to the Configuration that has occurred will be retrieved and available to the Service. Since Configuration instance is an Entity, the UnitOfWork system will ensure that the Configuration is consistent and not in the middle of value changes.</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004324">
+<div id="Text9"><!-- Text 9 --></div><div id="h-InitialValues" class="sv-inline"><!-- Initial Values --></div><h2 class="subheading">Initial Values</h2></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000313">
+<div id="Text19"><!-- Text 19 --></div><span class="normal">The initial Configuration instance will be created automatically behind the scenes, by reading a properties file and create an Entity with the same identity as the identity of the service. That was a handful. Services are, as we know, singletons and have an identity specified at assembly. Even if it is not provided, one will automatically be assigned.</span><br /><span class="normal">The service's "identifiedBy" will be used as the identifier for the Configuration entity and stored in the visible EntityStore. This identity is also used to locate a properties file in the same package as the ServiceComposite belongs to.</span><p><span class="normal">So, we create a properties file, where the keys are the names of the properties in </span><span class="javaxcode">TravelPlanConfiguration</span><span class="normal">.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580002802">
+<div id="Text10"><!-- Text 10 --></div><span class="javaxcode"># Hostname to the TravelPlan service</span><br /><span class="javaxcode">hostName=niclas.hedhman.org</span><p><span class="javaxcode"># Port number to use for the connection</span><br /><span class="javaxcode">portNumber=5439</span></p><p><span class="javaxcode"># Protocol to use; Valid options "ssh", "rlogin", "telnet"</span><br /><span class="javaxcode">protocol=ssh</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003025">
+<div id="Text11"><!-- Text 11 --></div><span class="javaxcode"><strong>&nbsp;&nbsp;&nbsp;&nbsp;File: org/hedhman/niclas/travel/TravelPlanService.properties</strong></span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003648">
+<div id="Text12"><!-- Text 12 --></div><span class="normal">Note that the file resides in the directory equivalent to the package name of the </span><span class="javaxcode">TravelPlanService</span><span class="normal">.</span><p><span class="normal">And this would work with the standard assembly.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003844">
+<div id="Text13"><!-- Text 13 --></div><span class="javaxcode">public void assemble( ModuleAssembly module )</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;module.addServices( TravelPlanService.class ).instantiateOnStartup();</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004051">
+<div id="Text14"><!-- Text 14 --></div><div id="h-NondefaultIdentity" class="sv-inline"><!-- Non-default Identity --></div><h2 class="subheading">Non-default Identity</h2></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000315">
+<div id="Text21"><!-- Text 21 --></div><div id="h-" class="sv-inline"><!--  --></div><h2 class="subheading"></h2><span class="normal">If you need to use multiple instances of the same service, or that the service has a non-default Identity, then you need to name the properties file according to the Identity of the service declaration, but the file will still need to be in the same package as the </span><span class="javaxcode">ServiceComposite</span><span class="normal"> sub type, the </span><span class="javaxcode">TravelPlanService</span><span class="normal"> in the above example. For instance;</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003919">
+<div id="Text17"><!-- Text 17 --></div><span class="javaxcode">public void assemble( ModuleAssembly module )</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;module.addServices( TravelPlanService.class )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.instantiateOnStartup()</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.identifiedBy( "ExpediaService" );</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;module.addServices( TravelPlanService.class )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.instantiateOnStartup()</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.identifiedBy( "OrbitzService" );</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004145">
+<div id="Text18"><!-- Text 18 --></div><span class="normal">And the two files for configuration,</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003457">
+<div id="Copy1ofText10"><!-- Copy (1) of Text 10 --></div><span class="javaxcode"># Hostname to the TravelPlan service</span><br /><span class="javaxcode">hostName=expedia.hedhman.org</span><p><span class="javaxcode"># Port number to use for the connection</span><br /><span class="javaxcode">portNumber=9251</span></p><p><span class="javaxcode"># Protocol to use; Valid options "ssh", "rlogin", "telnet"</span><br /><span class="javaxcode">protocol=ssh</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004358">
+<div id="Copy1ofText11"><!-- Copy (1) of Text 11 --></div><span class="javaxcode"><strong>&nbsp;&nbsp;&nbsp;&nbsp;File: org/hedhman/niclas/travel/ExpediaService.properties</strong></span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580002839">
+<div id="Copy2ofText10"><!-- Copy (2) of Text 10 --></div><span class="javaxcode"># Hostname to the TravelPlan service</span><br /><span class="javaxcode">hostName=orbitz.hedhman.org</span><p><span class="javaxcode"># Port number to use for the connection</span><br /><span class="javaxcode">portNumber=7412</span></p><p><span class="javaxcode"># Protocol to use; Valid options "ssh", "rlogin", "telnet"</span><br /><span class="javaxcode">protocol=rlogin</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003249">
+<div id="Copy2ofText11"><!-- Copy (2) of Text 11 --></div><span class="javaxcode"><strong>&nbsp;&nbsp;&nbsp;&nbsp;File: org/hedhman/niclas/travel/OrbitzService.properties</strong></span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004279">
+<div id="Text15"><!-- Text 15 --></div><div id="h-ChangingConfigurationinruntime" class="sv-inline"><!-- Changing Configuration in runtime --></div><h2 class="subheading">Changing Configuration in runtime</h2></div>
+<div class="c52"></div>
+<div id="svid12_24b706fd12696de71a78000314">
+<div id="Text20"><!-- Text 20 --></div><div id="h--0" class="sv-inline"><!--  --></div><h2 class="subheading"></h2><span class="normal">Unlike most frameworks, the Configuration in Qi4j is an active Entity, and once the properties file has been read once at the first(!) startup, it no longer serves any purpose. The Configuration will always be retrieved from the EntityStore. Changes to the properties file are not taken into consideration if the Configuration entity is found in the entity store.</span><p><span class="normal">But that also means that applications should not cache the configuration values, and instead read them from the Configuration instance every time needed, and do a </span><span class="javaxcode">refresh()</span><span class="normal"> method call when it is safe to update the Configuration Entity with new values.</span></p></div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

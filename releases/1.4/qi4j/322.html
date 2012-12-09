@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>HowTo : Create an Entity    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(../2.6f43db4e123f11b40958000145/0/1964/print/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />       
+          
+        <a href="146.html" title="" class="breadcrumb c48" >Tutorials &amp; HowTOs</a>
+    </li>
+  <li  class="breadcrumb c7"> <img alt="" src="../images/18.6f43db4e123f11b409580002965/breadcrumb.gif" class="c48" />         <span class="c48" >HowTo : Create an Entity</span>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="322.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b40958000836" ><div id="svid10_6f43db4e123f11b409580003677">
+<div class="c13" id="svid10_6f43db4e123f11b409580004666"><div class="c14" id="svid12_6f43db4e123f11b409580004536">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003861/navi-expand-no.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="145.html" class="newsxmm" title="Composite Tutorial">Composite Tutorial</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="351.html" class="newsxmm" title="What's an Object anyway?">What's an Object anyway?</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="322.html" class="navigationxxactivex" title="HowTo : Create an Entity">HowTo : Create an Entity</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="323.html" class="newsxmm" title="HowTo : Configure a Service">HowTo : Configure a Service</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="327.html" class="newsxmm" title="HowTo : Assemble an Application">HowTo : Assemble an Application</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="348.html" class="newsxmm" title="HowTo : Use Qi4j Logging">HowTo : Use Qi4j Logging</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c49">
+ <tr>
+  <td class="c50">
+            </td>
+   <td class="c15">
+                        <a href="349.html" class="newsxmm" title="HowTo : Use contextual fragments">HowTo : Use contextual fragments</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004771">
+<div id="Text"><!-- Text --></div></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000904">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c5" id="svid10_6f43db4e123f11b409580004744"><div id="svid94_6f43db4e123f11b40958000912" ><div class="c53" id="svid10_6f43db4e123f11b409580004222">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b409580001887" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_6f43db4e123f11b409580002942">
+<div id="Heading"><!-- Heading --></div><div id="h-HowToCreateanEntity" class="sv-inline"><!-- HowTo : Create an Entity --></div><h1 class="heading">HowTo : Create an Entity</h1></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003133">
+<div id="Content"><!-- Content --></div><span class="normal">One of the most common tasks in Qi4j is the management of the life cycle of Entities. Since Qi4j is capable of delivering much higher performance than traditional Object-Relational Mapping technologies, we also expect that people use Entities more frequently in Qi4j applications, so it is a very important topic to cover.</span><p><!-- empty --></p><div id="h-BasicsFirst" class="sv-inline"><!-- Basics First --></div><h2 class="subheading">Basics First</h2><br /><span class="normal">All Entity operations MUST be done within a UnitOfWork. UnitOfWorks can be nested and if underlying UnitOfWorks are not completed (method </span><span class="javaxcode">complete()</span><span class="normal">) or at least applied (method </span><span class="javaxcode">apply()</span><span class="normal">), then none of the operations will be persisted permanently.</span><p><span class="normal">Entity composites are subtypes of the EntityComposite interface.</span></p><p><span class="normal">Domain code typically don't need to know of the EntityComposite types directly, and is instead using the domain specific interface. The Visibility rules will be applied to associate the right EntityComposite when a domain type is requested. Ambiguities are not accepted and will result in runtime exceptions.</span></p><p><span class="normal">Qi4j supports that each entity instance can have more than one entity type, and it is managed per instance. This feature is beyond the scope of this HowTO and will be covered subsequently.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003829">
+<div id="Text25"><!-- Text 25 --></div><div id="h-GoodPractice" class="sv-inline"><!-- Good Practice --></div><h2 class="subheading">Good Practice</h2><br /><span class="normal">We have made the observation that it is good practice to separate the internal state from the observable behavior. By this we mean that it is not a good practice to allow client code to manipulate or even view the internal states of objects, which is such a common (bad) practice in the so called POJO world.</span><p><span class="normal">Instead, we recommend that the programmer defines the client requirement of what each participant within the client context needs to conform to, and then create composites accordingly and hide all the state internal to the composite in private mixins. By doing so, the same entity can participate in multiple contexts with different behavioral requirements but using the same internal state.</span></p><p><span class="normal">We recommend limited use of primitive types for Properties and instead subtype the Property. </span></p><p><span class="normal">And try to use ValueComposites instead of Entities.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004160">
+<div id="Text3"><!-- Text 3 --></div><div id="h-TheEntity" class="sv-inline"><!-- The Entity --></div><h2 class="subheading">The Entity</h2><br /><span class="normal">We need an entity to illustrate how we recommend to separate internal state from public behavior and observable state. We will for the sake of simplicity use a trivial example. Please refer to other (possibly future) HowTos on patterns on Entity management.</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580004322">
+<div id="Text4"><!-- Text 4 --></div><span class="javaxcode">public interface Car</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@Immutable</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Association&lt;Manufacturer&gt; manufacturer();</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@Immutable</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;ModelProperty model();</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;AccidentHistory accidents();</span><br /><span class="javaxcode">}</span></p><p><span class="javaxcode">public interface ModelProperty extends Property&lt;String&gt;</span><br /><span class="javaxcode">{}</span></p><p><span class="javaxcode">public interface Manufacturer</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;NameProperty name();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;CountryProperty country();</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@UseDefaults</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;QuantityProperty carsProduced();</span><br /><span class="javaxcode">}</span></p><p><span class="javaxcode">public interface QuantityProperty extends Property&lt;Long&gt;</span><br /><span class="javaxcode">{}</span></p><p><span class="javaxcode">public interface NameProperty extends Property&lt;String&gt;</span><br /><span class="javaxcode">{}</span></p><p><span class="javaxcode">public interface CountryProperty extends Property&lt;String&gt;</span><br /><span class="javaxcode">{}</span></p><p><span class="javaxcode">public interface AccidentHistory extends ManyAssociation&lt;Accident&gt;</span><br /><span class="javaxcode">{}</span></p><p><span class="javaxcode">public interface Accident extends Value</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;DescriptionProperty description();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;PointInTimeProperty occured();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;PointInTimeProperty repaired();</span><br /><span class="javaxcode">}</span></p><p><span class="javaxcode">public interface DescriptionProperty extends Property&lt;String&gt;</span><br /><span class="javaxcode">{}</span></p><p><span class="javaxcode">public interface PointInTimeProperty extends Property&lt;Date&gt;</span><br /><span class="javaxcode">{}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002752">
+<div id="Text5"><!-- Text 5 --></div><span class="normal">Above we define a Car domain object, which is of a particular Manufacturer (also an Entity), a model and a record of Accidents.</span><p><span class="normal">We are using explicit types for properties, so that instead of saying </span><span class="javaxcode">Property&lt;String&gt; model()</span><span class="normal">, we make it explicit that the Property is a </span><span class="javaxcode">ModelProperty</span><span class="normal">, which is useful when passing the Model property instance around for processing and similar. It very effectively communicates intent in a typesafe manner.</span></p><p><span class="normal">We will also need to define the composites for the above domain structure;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003515">
+<div id="Text6"><!-- Text 6 --></div><span class="javaxcode">public interface CarEntity extends Car, EntityComposite</span><br /><span class="javaxcode">{}</span><p><span class="javaxcode">public interface ManufacturerEntity extends Manufacturer, EntityComposite</span><br /><span class="javaxcode">{}</span></p><p><span class="javaxcode">public interface AccidentValue extends Accident, ValueComposite</span><br /><span class="javaxcode">{}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003628">
+<div id="Text26"><!-- Text 26 --></div><span class="normal">For this case, we define both the Car and the Manufacturer as Entities, whereas the Accident is a Value, since it is an immutable event that can not be modified.</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003083">
+<div id="Text8"><!-- Text 8 --></div><div id="h-Assembly" class="sv-inline"><!-- Assembly --></div><h2 class="subheading">Assembly</h2><br /><span class="normal">All of the above must also be declared in the assembly. We MUST associate the EntityComposites with a relevant Module. We must also assemble an EntityStore for the entire application, but that is outside the scope of this HowTo.</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580002872">
+<div id="Text7"><!-- Text 7 --></div><span class="javaxcode">public class MyAssembler</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements Assembler</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public void assemble( ModuleAssembly module )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;module.addEntities( CarEntity.class, </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ManufacturerEntity.class );</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;module.addValues( AccidentEntity.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003100">
+<div id="Text9"><!-- Text 9 --></div><span class="normal">We have no other Composites involved yet, so we can proceed to look at the usage code.</span><p><span class="normal">We recommend that the life cycle management of entities is placed inside </span><span class="normal"><strong>domain factories</strong></span><span class="normal">, one for each type and made available as services.</span></p><p><!-- empty --></p><div id="h-TheEntityFactory" class="sv-inline"><!-- The Entity Factory --></div><h2 class="subheading">The Entity Factory</h2><br /><span class="normal">The entity factory is something you need to write yourself, but as with most things in Qi4j it will end up being a fairly small implementation. So how is that done?</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003733">
+<div id="Text12"><!-- Text 12 --></div><span class="javaxcode">public interface CarEntityFactory</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Car create( Manufacturer manufacturer, String model );</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004245">
+<div id="Text13"><!-- Text 13 --></div><span class="normal">That is just the domain interface. We now need to make the service interface, which Qi4j needs to identify services and make it possible for the service injection later.</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580002700">
+<div id="Text14"><!-- Text 14 --></div><span class="javaxcode">@Mixins( { CarEntityFactoryMixin.class } )</span><br /><span class="javaxcode">public interface CarEntityFactoryService </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;extends CarEntityFactory, ServiceComposite</span><br /><span class="javaxcode">{}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003562">
+<div id="Text11"><!-- Text 11 --></div><span class="normal">Then we need an implementation of the mixin.</span><br /><span class="normal">And doing that, first of all we need to request Qi4j runtime to give us the UnitOfWorkFactory associated with the Module that our code belongs to, and the UnitOfWork current context the execution is happening in.</span><p><span class="normal">Injections that are related to the Visibility rules are handled by the @Structure annotation. And the easiest way for us to obtain a UnitOfWorkFactory is simply to;</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003413">
+<div id="Text-0"><!-- Text --></div><span class="javaxcode">public class CarEntityFactoryMixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements CarEntityFactory</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@Structure UnitOfWorkFactory uowf;</span><p><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003620">
+<div id="Text1"><!-- Text 1 --></div><span class="normal">Here Qi4j will inject the member </span><span class="javaxcode">uowf</span><span class="normal"> with the correct UnitOfWorkFactory. In case we only need the UnitOfWorkFactory during the construction, we can also request it in the same manner as constructor argument.</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003916">
+<div id="Text2"><!-- Text 2 --></div><span class="javaxcode">public class CarEntityFactoryMixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements CarEntityFactory</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public CarEntityFactoryMixin( @Structure UnitOfWorkFactory uowf ) </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003326">
+<div id="Text10"><!-- Text 10 --></div><span class="normal">This is important to know, since the injected member will not be available until AFTER the constructor has been completed.</span><p><span class="normal">We then need to provide the implementation for the </span><span class="javaxcode">create()</span><span class="normal"> method.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003243">
+<div id="Text15"><!-- Text 15 --></div><span class="javaxcode">public Car create( Manufacturer manufacturer, String model )</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;UnitOfWork uow = uowf.currentUnitOfWork();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;EntityBuilder&lt;Car&gt; builder = uow.newEntityBuilder( Car.class );</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Car prototype = builder.instance();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;prototype.manufacturer().set( manufacturer );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;prototype.model().set( model );</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;return builder.newInstance();</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580002958">
+<div id="Text16"><!-- Text 16 --></div><span class="normal">So far so good. But how about the Manufacturer input into the create() method?</span><p><span class="normal">DDD promotes the use of Repositories. They are the type-safe domain interfaces into locating entities without getting bogged down with querying infrastructure details. And one Repository per Entity type, so we keep it nice, tidy and re-usable. So let's create one for the Manufacturer type.</span></p></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580002763">
+<div id="Text17"><!-- Text 17 --></div><span class="javaxcode">public interface ManufacturerRepository</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Manufacturer findByIdentity( String identity );</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;Manufacturer findByName( String name );</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004312">
+<div id="Text18"><!-- Text 18 --></div><span class="normal">And then we repeat the process for creating a Service and a Mixin that implements it...</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580004054">
+<div id="Text19"><!-- Text 19 --></div><span class="javaxcode">@Mixins( { ManfacturerRepositoryMixin.class } )</span><br /><span class="javaxcode">public interface ManufacturerRepositoryService </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;extends ManufacturerRepository, ServiceComposite</span><br /><span class="javaxcode">{}</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003695">
+<div id="Text20"><!-- Text 20 --></div><br /><span class="javaxcode">import static org.qi4j.api.query.QueryExpressions.eq;</span><br /><span class="javaxcode">import static org.qi4j.api.query.QueryExpressions.templateFor;</span><p><span class="javaxcode">public class ManufacturerRepositoryMixin</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements ManufacturerRepository</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;@Structure private UnitOfWorkFactory uowf;</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public Manufacturer findByIdentity( String identity )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UnitOfWork uow = uowf.currentUnitOfWork();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return uow.find( identity, Manufacturer.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public Manufacturer findByName( String name )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UnitOfWork uow = uowf.currentUnitOfWork();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QueryBuilderFactory qbf = uow.queryBuilderFactory();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QueryBuilder&lt;Manufacturer&gt; builder = </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qbf.newQueryBuilder( Manufacturer.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manufacturer template = templateFor( Manufacturer.class );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.where( eq( template.name(), name ) );</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query&lt;Manufacturer&gt; query = builder.newQuery();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iterator&lt;Manufacturer&gt; iterator = query.iterator();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if( iterator.hasNext() )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return query.iterator().next();</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003456">
+<div id="Text21"><!-- Text 21 --></div><span class="normal">But now we have introduced 2 services that also are required to be declared in the assembly. In this case, we want the Services to be available to the application layer above, and not restricted to within this domain model.</span></div>
+<div class="c52"></div>
+<div class="c73" id="svid12_6f43db4e123f11b409580003446">
+<div id="Text22"><!-- Text 22 --></div><span class="javaxcode">public class MyAssembler</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;implements Assembler</span><br /><span class="javaxcode">{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;public void assemble( ModuleAssembly module )</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;{</span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;module.addEntities( CarEntity.class, </span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ManufacturerEntity.class );</span><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;module.addValues( AccidentEntity.class );</span></p><p><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javaxcode"><strong>module.addServices( </strong></span><br /><span class="javaxcode"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ManufacturerRepositoryService.class,</strong></span><br /><span class="javaxcode"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CarEntityFactoryService.class</strong></span><br /><span class="javaxcode"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;).visibleIn( Visibility.application );</strong></span><br /><span class="javaxcode">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br /><span class="javaxcode">}</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580004374">
+<div id="Text24"><!-- Text 24 --></div><div id="h-TheUnitOfWork" class="sv-inline"><!-- The UnitOfWork --></div><h2 class="subheading">The UnitOfWork</h2><br /><span class="normal">If you notice, there is a couple of calls to </span><span class="javaxcode">UnitOfWorkFactory.currentUnitOfWork()</span><span class="normal">, but what is current UnitOfWork, and who is setting that up?</span><p><span class="normal">Well, the domain layer should not worry about UoW, it is probably the responsibility of the application layer sitting on top. That could be a web application creating and completing a UoW per request, or some other co-ordinator doing long-running UnitOfWorks.</span></p></div>
+<div class="c52"></div>
+<div id="svid12_6f43db4e123f11b409580003214">
+<div id="Text23"><!-- Text 23 --></div><span class="normal">There are of course a lot more details to get all this completed, but that is beyond the scope of this HowTo.</span></div>
+</div><!-- Page content stops here --></div>
+</div></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

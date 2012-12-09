@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>www.qi4j.org    - www.qi4j.org</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="robots" content="noindex, nofollow"  />
+      <meta http-equiv="imagetoolbar" content="no" />
+      <meta name="DC.Identifier" scheme="URL" content="http://www.qi4j.org" />
+      <meta name="DC.Language" scheme="RFC1766" content="en" />
+      <meta name="DC.Format" scheme="IMT" content="text/html" />
+      <meta name="DC.Type" content="text" />
+      <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+      <style type="text/css" media="braille,embossed,handheld,print,projection,screen,speech,tty,tv">
+         @import url(http://www.qi4j.org/2.6f43db4e123f11b40958000145/0/1964/SiteVision.css);
+         @import url(../2.6f43db4e123f11b40958000145/auto-1-126/1964/SiteVision.css);
+      </style>
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-mod.css" />
+      <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="/sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1-ie.css" /><![endif]-->
+      <link rel="stylesheet" type="text/css" media="screen" href="../sitevision/ajax/jquery/plugins/rating/jquery.rating.css" />
+      <script type="text/javascript" src="../sitevision/util/externallinks.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/rating/jquery.rating.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/metadata/jquery.metadata.min.js"></script>
+      <script type="text/javascript">
+         var $svjq = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/pngfix/jquery.pngFix.pack.js"></script>
+      <script type="text/javascript" src="../sitevision/ajax/jquery/plugins/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+   </head>
+
+   <body class="c0">
+
+
+
+<div  id="svid10_6f43db4e123f11b409580001291"><div class="c1" id="svid10_6f43db4e123f11b409580002977">
+<div class="c2" id="svid10_6f43db4e123f11b409580004453">
+<div id="svid10_6f43db4e123f11b409580004781">
+<div class="c3" id="svid12_6f43db4e123f11b409580001845"><div id="Qi4jlogo"><!-- Qi4j logo --></div><a title="Return to Qi4j homepage" href="2.html"><img alt="Qi4j" class="c4" src="../images/18.6f43db4e123f11b409580003681/logo-box.jpg" /></a></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580004581"><div id="Multilevellink1"><!-- Multilevellink 1 --></div>
+
+<ul class="c6">
+  <li  class="breadcrumb c7">      
+          
+        <a href="2.html" title="" class="breadcrumb c8" >Home</a>
+    </li>
+</ul>
+</div>
+<div class="c9" id="svid12_6f43db4e123f11b409580004814"><div id="Search"><!-- Search --></div><form method="get" action="158.html" class="c19">
+   <div>
+      <label for="search12_6f43db4e123f11b409580004814" class="svhidden">Search</label>
+      <input id="search12_6f43db4e123f11b409580004814" class="search c8"  type="text" name="query" size="20" value="Search here" onclick="if (this.value = 'Search here') this.value='';" onkeypress="" />
+      <input type="submit" class="search c8" name="submit" value="Go"  />
+   </div>
+</form>
+</div>
+<div class="c10" id="svid12_6f43db4e123f11b409580004806"><div id="Printversion"><!-- Printversion --></div>
+
+  <a class="breadcrumb" title="Printer friendly version" rel="nofollow" href="2.html.printable">
+
+  Print |
+</a></div>
+<div class="c11"></div>
+</div>
+</div>
+<div class="ielayoutfix c12"  id="svid10_6f43db4e123f11b409580004723">
+<div id="svid94_6f43db4e123f11b409580001012" ><div id="svid10_6f43db4e123f11b409580002891">
+<div class="c13" id="svid10_6f43db4e123f11b409580004672"><div class="c14" id="svid12_6f43db4e123f11b409580002290">
+<div id="Expandingmenu"><!-- Expanding menu --></div><table summary="" cellspacing="1" cellpadding="0" class="c15">
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="17.html" class="navigation" title="Community">Community</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="9.html" class="navigation" title="News">News</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="21.html" class="navigation" title="Licensing">Licensing</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="downloads.html" class="navigation" title="Download">Download</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="introduction.html" class="navigation" title="Introduction to Qi4j">Introduction to Qi4j</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="146.html" class="navigation" title="Tutorials &amp; HowTOs">Tutorials &amp; HowTOs</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="15.html" class="navigation" title="Documentation">Documentation</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="333.html" class="navigation" title="Sandbox">Sandbox</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="336.html" class="navigation" title="Samples">Samples</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+                  <img class="c18" alt="" src="../images/18.6f43db4e123f11b409580003636/navi-expand.gif" />
+              </td>
+   <td class="c15">
+                        <a href="sponsors.html" class="navigation" title="Sponsors">Sponsors</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="support.html" class="navigation" title="Support">Support</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>
+   <table summary="" class="c16">
+ <tr>
+  <td class="c17">
+            </td>
+   <td class="c15">
+                        <a href="288.html" class="navigation" title="Latest Changes">Latest Changes</a>
+           </td>
+  </tr>
+</table>
+</td></tr>
+
+</table>
+</div>
+<div class="c20" id="svid12_6f43db4e123f11b409580004791">
+<div id="Text"><!-- Text --></div></div>
+<div id="svid10_6f43db4e123f11b409580004760">
+<!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b40958000224" ><div id="Updates"><!-- Updates --></div><div class="c21" id="svid10_6f43db4e123f11b40958000769">
+<div class="c22" id="svid12_6f43db4e123f11b409580003855">
+<div id="Text6"><!-- Text 6 --></div><span class="updatesxtitle">Updates</span></div>
+<div class="c23" id="svid12_6f43db4e123f11b409580003933">
+<div id="Search-0"><!-- Search --></div><ol start="1" class="c24">
+   <li class="c25">
+      <p class="svhidden">Hit number: 1</p>
+      <a class="newsxlink" href="codebase.html">Codebase</a>
+                                             <br />
+      <p class="newsxdd c26" >Last modified:&nbsp;May 03, 2012
+              <br />
+            </p>
+   </li>
+   <li class="c25">
+      <p class="svhidden">Hit number: 2</p>
+      <a class="newsxlink" href="320.html">Pre-releases</a>
+                                             <br />
+      <p class="newsxdd c26" >Last modified:&nbsp;April 20, 2009
+              <br />
+            </p>
+   </li>
+   <li class="c25">
+      <p class="svhidden">Hit number: 3</p>
+      <a class="newsxlink" href="389.html">Release 1.0</a>
+                                             <br />
+      <p class="newsxdd c26" >Last modified:&nbsp;June 20, 2010
+              <br />
+            </p>
+   </li>
+   <li class="c25">
+      <p class="svhidden">Hit number: 4</p>
+      <a class="newsxlink" href="390.html">Release 1.1</a>
+                                             <br />
+      <p class="newsxdd c26" >Last modified:&nbsp;July 17, 2010
+              <br />
+            </p>
+   </li>
+   <li class="c25">
+      <p class="svhidden">Hit number: 5</p>
+      <a class="newsxlink" href="399.html">Release 1.2</a>
+                                             <br />
+      <p class="newsxdd c26" >Last modified:&nbsp;October 23, 2010
+              <br />
+            </p>
+   </li>
+   <li class="c25">
+      <p class="svhidden">Hit number: 6</p>
+      <a class="newsxlink" href="439.html">Release 1.3</a>
+                                             <br />
+      <p class="newsxdd c26" >Last modified:&nbsp;April 15, 2011
+              <br />
+            </p>
+   </li>
+</ol></div>
+<div class="ielayoutfix c27"  id="svid10_6f43db4e123f11b409580003462">
+<div class="c28" id="svid12_6f43db4e123f11b409580004539"><div id="UpdatesArrow"><!-- Updates Arrow --></div><img alt="View more changes" class="c4" src="../images/18.6f43db4e123f11b409580003082/updates-more.gif" /></div>
+<div class="c5" id="svid12_6f43db4e123f11b409580003169"><div id="Morechanges"><!-- More changes... --></div><a class="navigation" title="View all the latest changes" href="288.html">More Changes...</a></div>
+<div class="c11"></div>
+</div>
+</div>
+</div><!-- Page content stops here --></div>
+<div class="c29" id="svid12_58e87b6312cf378e76d8000905">
+<div id="HTML"><!-- HTML --></div>
+
+
+</div>
+</div>
+<div class="c31" id="svid10_6f43db4e123f11b409580004651"><!-- Page content starts here --><div class="pagecontent" id="svid94_6f43db4e123f11b40958000550" ><div id="Centercolumn"><!-- Center column --></div><div class="c32" id="svid12_6f43db4e123f11b409580002671">
+<div id="Welcome"><!-- Welcome --></div><div id="h-WelcometoQi4j" class="sv-inline"><!-- Welcome to Qi4j™ --></div><h1 class="heading">Welcome to Qi4j™</h1></div>
+<div class="c33"></div>
+<div class="c34" id="svid12_6f43db4e123f11b409580001488">
+<div id="Hidden"><!-- Hidden!! --></div><span class="normal">hafskghwafibwqkhjvcbqajkbchvabcjvna</span></div>
+<div class="c33"></div>
+<div id="svid12_6f43db4e123f11b409580001080">
+<div id="Keepforlateruse"><!-- Keep for later use --></div></div>
+<div class="c33"></div>
+<div id="svid10_6f43db4e123f11b409580001886">
+<div class="c35" id="svid10_6f43db4e123f11b409580003283"><div class="c36" id="svid12_6f43db4e123f11b409580004647">
+<div id="LatestNews"><!-- Latest News --></div><span class="newsxtab">Latest News</span></div>
+<div class="c37" id="svid12_6f43db4e123f11b409580004588">
+<div id="News"><!-- News --></div>   
+      
+      
+      
+
+         
+      
+      
+      
+
+                       <span class="newsxdd">2011-Aug-06 03:48</span>
+   
+      <span class="newsxdd"><br /></span>
+   
+
+         
+      
+      
+      
+
+                                   <span class="newsxabstract">Shanghai, 5 Aug 2011 - The Qi4j community today announced Release 1.4 of the innovative Java framework, Qi4j. This release is a consolidation release of the 1.x development branch, as development focus now is directed towards 2.0. The main new features in version 1.4 is Named Associations and inclusion of an industrial automation inspired alarm system.</span>
+         
+         <span class="newsxabstract"><br /></span>
+   
+         
+      
+      
+      
+
+                    
+   <a class="newsxlink" href="440.html" title="">
+
+   Read more
+         <img alt="" src="../images/18.6f43db4e123f11b409580003182/news-more.gif" class="c4" />
+   
+   </a>
+
+   
+   
+         
+      
+      
+      
+
+                 
+   
+   <img alt="" src="../images/18.6f43db4e123f11b409580003409/news-divider.gif" class="c4" />
+
+      <br />
+   
+                       <div class="c11"></div>
+   
+      
+      
+      
+
+         
+      
+      
+      
+
+                       <span class="newsxdd">2011-Apr-15 09:50</span>
+   
+      <span class="newsxdd"><br /></span>
+   
+
+         
+      
+      
+      
+
+                                   <span class="newsxabstract">Kuala Lumpur, 15 April 2011 - The Qi4j community today announced Release 1.3 of the innovative Java framework, </span><span class="newsxabstract"><strong>Qi4j</strong></span><span class="newsxabstract">. This release is significant for several customers, moving to deploy Qi4j in business critical 24/7 systems. "We now feel that the core features of Qi4j are as stable as software systems ever get. Qi4j is now being deployed at a major investment bank in the risk pricing domain.", said Niclas Hedhman, co-inventor of Qi4j together with Rickard Öberg, who added "Qi4j has really proved itself in StreamFlow, and I am convinced that many of our paradigms will stand the test of time."</span>
+         
+         <span class="newsxabstract"><br /></span>
+   
+         
+      
+      
+      
+
+                    
+   <a class="newsxlink" href="438.html" title="">
+
+   Read more
+         <img alt="" src="../images/18.6f43db4e123f11b409580003182/news-more.gif" class="c4" />
+   
+   </a>
+
+   
+   
+         
+      
+      
+      
+
+                 
+   
+   <img alt="" src="../images/18.6f43db4e123f11b409580003409/news-divider.gif" class="c4" />
+
+      <br />
+   
+            <div class="c11"></div>
+
+
+</div>
+<div class="c38" id="svid12_6f43db4e123f11b409580004554">
+<div id="RSSFeed"><!-- RSS Feed --></div><a class="normal" title="Subscribe to Qi4j latest news RSS feed (external link)" href="../2.6f43db4e123f11b40958000145/12.6f43db4e123f11b409580004588.portlet?state=rss&amp;sv.contenttype=text%252Fxml%3Bcharset=UTF-8">RSS Feed<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a></div>
+</div>
+<div class="c11"></div>
+</div>
+<div class="c33"></div>
+<div class="c32" id="svid12_6f43db4e123f11b409580001490">
+<div id="WhatisQi4j"><!-- What is Qi4j --></div><div id="h-WhatisQi4j" class="sv-inline"><!-- What is Qi4j™? --></div><h1 class="heading">What is Qi4j™?</h1></div>
+<div class="c33"></div>
+<div id="svid12_6f43db4e123f11b409580001761">
+<div id="Text-0"><!-- Text --></div><span class="normal">The short answer is that Qi4j™ is a framework for domain centric application development, including evolved concepts from AOP, DI and DDD.</span><p><span class="normal">Qi4j™ is an implementation of Composite Oriented Programming, using the standard Java 5 platform, without the use of any pre-processors or new language elements. Everything you know from Java 5 still applies and you can leverage both your experience and toolkits to become more productive with Composite Oriented Programming today.</span></p></div>
+<div class="c33"></div>
+<div class="c40" id="svid10_6f43db4e123f11b409580001973">
+<div class="c41" id="svid12_6f43db4e123f11b409580004107">
+<div id="QiImage"><!-- Qi Image --></div><img alt="Qi" class="c4" src="../images/18.6f43db4e123f11b409580002920/intro-qi.gif" /></div>
+<div class="c42" id="svid12_6f43db4e123f11b409580004395">
+<div id="Text1"><!-- Text 1 --></div><div id="h-IntroducingQi4j" class="sv-inline"><!-- Introducing Qi4j™ --></div><h2 class="subheading">Introducing Qi4j™</h2><br /><span class="normal">Qi4j™ is pronounced "chee for jay". This website is out of scope to explain the many facets and history of Qi, so we refer the interested to read the </span><a class="normal" title="Link to Qi explaination. (external link)" href="http://en.wikipedia.org/wiki/qi">lengthy article<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal"> at Wikipedia. For us, Qi is the force/energy within the body, in this case the Java platform. Something that makes Java so much better, if it is found and channeled into a greater good.</span><p><span class="normal">We strongly recommend the </span><a class="normal" title="Background" href="160.html">background article</a><span class="normal"> found in the </span><a class="normal" title="Introduction to Qi4j" href="introduction.html">introduction</a><span class="normal">.</span></p></div>
+</div>
+<div class="c33"></div>
+<div id="svid12_6f43db4e123f11b409580001461">
+<div id="Text3"><!-- Text 3 --></div><div id="h-Principles" class="sv-inline"><!-- Principles --></div><h2 class="subheading">Principles</h2><p><span class="normal">Composite Oriented Programming builds on some principles that are not addressed by Object Oriented Programming at all.</span></p><ul><li><span class="normal">Behavior depends on Context</span></li><li><span class="normal">Decoupling is a virtue</span></li><li><span class="normal">Business Rules matters more.</span></li><li><span class="normal">Classes are dead, long live </span><span class="normal"><strong><em>interfaces</em></strong></span><span class="normal">.</span></li></ul><p><!-- empty --></p><div id="h-BehaviorDependsonContext" class="sv-inline"><!-- Behavior Depends on Context --></div><h2 class="subheading">Behavior Depends on Context</h2><p><span class="normal">Many objects has life cycles that are more extensive than the simple model that Object Oriented Programming model wants us to believe. A few simple examples;</span></p><ul><li><span class="normal">An egg becomes a chicken which in turn becomes food.</span></li><li><span class="normal">I am a programmer at work, a father+husband at home, a victim in a traffic accident and hunter and pray in the jungle.</span></li></ul><p><span class="normal">But it is more to it than that. The composition of the object may change over time. My home now has a garage and my car have different kind of problems with their own state related to it. </span><br /><span class="normal">In the programming world, we are constantly faced with change of requirements. These changes are often not related to any real world changes, but people coming to new insights of the problem domain. OOP makes those changes a big deal, and often we have to tear up large chunks of the model and redo the work.</span></p><p><span class="normal">But wait, there is more.</span></p><p><span class="normal">Some objects traverses different scope boundaries to the extreme. For instance, a Person will have its attributes changing slightly over time, new abilities be learnt and so forth, that is mentioned above. But the Person will eventually die, but that doesn't mean that the Person object should be deleted from a system, since the "memory of" that Person may live on for a long time. In a OOP system, we would need to transfer some of the state from a LivingPerson class to a DeadPerson class. In Composite Oriented Programming, it is the same object with different behavior.</span></p><p><span class="normal">We think that one of the the main flaws in OOP is that it is not object oriented at all, but in fact class oriented. Class is the first class citizen that objects are derived from. Not objects being the first-class citizen to which one or many classes are assigned.</span></p><p><!-- empty --></p><div id="h-DecouplingisVirtue" class="sv-inline"><!-- Decoupling is Virtue --></div><h2 class="subheading">Decoupling is Virtue</h2><p><span class="normal">Decoupling is more important than developers in general think. If you could have every OOP class decoupled from all other classes, it is easy to re-use that class. But when that class references another class and the chain never ends, your chances of re-use diminishes quickly.</span><br /><span class="normal">Object Oriented Programming is suffering a lot from this, and many mechanisms have been introduced over time to counter this problem. But in reality, the best we can manage is subsystems of functionality, which client code can re-use. And these subsystems tend to be infrastructure related, since domain models are less prone to be similar enough from one project to the next, and since OOP in reality constrains the the re-use of individual domain classes, we need to re-do the domain model from scratch ever time.</span></p><p><!-- empty --></p><div id="h-BusinessRulesmattersmore" class="sv-inline"><!-- Business Rules matters more --></div><h2 class="subheading">Business Rules matters more</h2><p><span class="normal">Smart developers often think that low-level, infrastructure and framework code is more important and more cool to work with, than the </span><span class="normal"><em>simple</em></span><span class="normal"> domain model. But in reality, it is the Domain Model that reflects </span><span class="normal"><strong><em>the actual need</em></strong></span><span class="normal">&nbsp;&nbsp;and pays the bills. Infrastructure is just a necessary evil to get things done.</span></p><p><span class="normal">If most developers could focus on the Business Rules and Domain Model, and not having to worry about any infrastructure issues, such as persistence, transactions, security or the framework housing it all, the productivity would surge. Eric Evans has written an excellent book about Domain Driven Design, where he goes through the real process that makes the money for companies. However, it is very hard to follow that book, since one is constantly caught up in constraints irrelevant to the domain model, introduced by the underlying framework, from the so called </span><span class="normal"><em>smart developers</em></span><span class="normal">.</span></p></div>
+<div class="c33"></div>
+<div class="c43" id="svid12_6f43db4e123f11b409580002331">
+<div id="Image"><!-- Image --></div><img alt="Classes are dead, Long live interfaces." class="c4" src="../images/18.6f43db4e123f11b409580004139/classes-are-dead.gif" /></div>
+<div class="c33"></div>
+<div id="svid12_6f43db4e123f11b409580001957">
+<div id="Text2"><!-- Text 2 --></div><span class="normal">Qi4j™ is trying to address the flaws of OOP and introduce Composite Oriented Programming to the world, without introducing new programming languages, or awkward constructs. Heck, we don't even use any XML. </span><br /><span class="normal">Qi4j™ is not a framework. It is a new way to write code. Other people might create frameworks using Qi4j™, or create a framework optimized for Qi4j™, but here at Qi4j™ we concentrate to make Qi4j™ behave well in existing frameworks, application servers, platforms and environments.</span><p><span class="normal">You are to embark on a new journey. Enjoy!</span></p></div>
+</div><!-- Page content stops here --></div>
+<div class="c11"></div>
+</div>
+</div></div>
+<div class="c44" id="svid10_6f43db4e123f11b409580004680">
+<div class="c45" id="svid12_6f43db4e123f11b409580004800">
+<div id="TrademarkNotice"><!-- Trademark Notice --></div><br /><span class="normal">Qi4j and the Qi4j logo are trademarks of Richard Öberg, Niclas Hedhman and the members of the Qi4j Core Team. See </span><a class="normal" title="Link to licensing." href="21.html">Qi4j licensing</a><span class="normal"> for more information.</span></div>
+<div class="c46" id="svid12_6f43db4e123f11b409580004768">
+<div id="Poweredby"><!-- Powered by --></div><span class="normal">Powered by </span><a class="normal" title="SiteVision official page (external link)" href="http://www.sitevision.se/">SiteVision<img alt="external link" src="../sitevision/util/images/externallink.png" class="c39" /></a><span class="normal">.</span></div>
+<div class="c47" id="svid12_6f43db4e123f11b409580004801">
+<div id="HTML-0"><!-- HTML --></div><script>
+</script>
+<script type="text/javascript">
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">parent.print();</script><noscript><!-- Starts a printout of this page --></noscript>
+
+
+  
+ 
+
+
+
+   </body>
+</html>

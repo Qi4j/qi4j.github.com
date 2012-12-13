@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core Bootstrap</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="_core.html" title="Core" /><link rel="prev" href="core-api-metrics.html" title="Metrics API" /><link rel="next" href="core-spi.html" title="Core Extension SPI" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core Bootstrap</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="core.html" title="Core" /><link rel="prev" href="core-api.html" title="Core API" /><link rel="next" href="core-testsupport.html" title="Core Test Support" />
 
 
 <!-- favicon -->
@@ -71,7 +71,7 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="_core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="_core.html#core-api">Core API</a></span></dt><dt><span class="section"><a href="core-api-metrics.html">Metrics API</a></span></dt><dt><span class="section"><span xmlns="" href="core-bootstrap-assembly.html">Core Bootstrap</span></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><a href="core-io.html">Core I/O API</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt></dl></div></div><div class="section" title="Core Bootstrap"><div class="titlepage"><div><div><h3 class="title"><a id="core-bootstrap-assembly"></a>Core Bootstrap</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>Qi4j has a distinct bootstrap phase, also known as the <span class="emphasis"><em>Assembly</em></span> of an application, where the applications structure
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><a href="core-api.html">Core API</a></span></dt><dt><span class="section"><span xmlns="" href="core-bootstrap-assembly.html">Core Bootstrap</span></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><a href="core-io.html">Core I/O API</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt></dl></div></div><div class="section" title="Core Bootstrap"><div class="titlepage"><div><div><h3 class="title"><a id="core-bootstrap-assembly"></a>Core Bootstrap</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>Qi4j has a distinct bootstrap phase, also known as the <span class="emphasis"><em>Assembly</em></span> of an application, where the applications structure
 is defined programmatically. Once all the layers, modules and all the composite types in each module have been defined
 the model is instantiated into an application. This enables the entire <span class="emphasis"><em>structure</em></span> system in Qi4j, where types "belongs"
 to a module and visibility rules define default behaviors, enforcement of architectural integrity and much more.</p><p>The <span class="emphasis"><em>assembly</em></span> is preceeded by the creation of the <span class="emphasis"><em>Qi4j Runtime</em></span>. The <span class="emphasis"><em>assembly</em></span> can be declared fully by defining
@@ -86,13 +86,74 @@ Add additional interfaces to composites dynamically.
 </li><li class="listitem">
 Add concerns, mixins, constraints and side effects dynamically.
 </li><li class="listitem">
-Set <span class="emphasis"><em>meta information</em></span> on composite types.
+Set <span class="emphasis"><em>meta information</em></span> on defined types.
 </li><li class="listitem">
 Import external services to be available as Qi4j services.
 </li><li class="listitem">
 Tag services with markers
-    *
-</li></ul></div><div class="section" title="Defining Services"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_services"></a>Defining Services</h4></div></div></div><p>TODO</p></div><div class="section" title="Defining Values"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_values"></a>Defining Values</h4></div></div></div><p>TODO</p></div><div class="section" title="Defining Transients"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_transients"></a>Defining Transients</h4></div></div></div><p>TODO</p></div><div class="section" title="Defining Entities"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_entities"></a>Defining Entities</h4></div></div></div><p>TODO</p></div><div class="section" title="Using Assemblers"><div class="titlepage"><div><div><h4 class="title"><a id="_using_assemblers"></a>Using Assemblers</h4></div></div></div><p>Many <a class="link" href="libraries.html" title="Libraries">libraries</a> and <a class="link" href="extensions.html" title="Extensions">extensions</a> provides a cookie-cutter <span class="emphasis"><em>Assembler</em></span>, to simplify the set up
+</li></ul></div><div class="section" title="Defining Objects"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_objects"></a>Defining Objects</h4></div></div></div><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+        throws AssemblyException
+{
+    module.objects( MyObject.class ).visibleIn( Visibility.layer );
+}
+</pre></div><div class="section" title="Defining Transients"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_transients"></a>Defining Transients</h4></div></div></div><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+        throws AssemblyException
+{
+    module.transients( MyTransient.class ).visibleIn( Visibility.layer );
+}
+</pre></div><div class="section" title="Defining Values"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_values"></a>Defining Values</h4></div></div></div><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+        throws AssemblyException
+{
+    module.values( MyValue.class ).visibleIn( Visibility.layer );
+}
+</pre></div><div class="section" title="Defining Entities"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_entities"></a>Defining Entities</h4></div></div></div><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+        throws AssemblyException
+{
+    module.entities( MyEntity.class ).visibleIn( Visibility.layer );
+}
+</pre></div><div class="section" title="Defining Services"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_services"></a>Defining Services</h4></div></div></div><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+        throws AssemblyException
+{
+    module.services( MyService.class ).visibleIn( Visibility.layer );
+}
+</pre><div class="section" title="Tagging Services"><div class="titlepage"><div><div><h5 class="title"><a id="_tagging_services"></a>Tagging Services</h5></div></div></div><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+    throws AssemblyException
+{
+    module.services( MyService.class ).taggedWith( "foo", "bar" );
+}
+</pre></div><div class="section" title="Importing external Services"><div class="titlepage"><div><div><h5 class="title"><a id="_importing_external_services"></a>Importing external Services</h5></div></div></div><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+    throws AssemblyException
+{
+    module.importedServices( MyService.class ).
+        importedBy( InstanceImporter.class ).
+        setMetaInfo( new MyService() );
+
+    // OR
+
+    module.objects( MyService.class );
+    module.importedServices( MyService.class ).
+        importedBy( NewObjectImporter.class );
+}
+</pre></div></div><div class="section" title="Defining default values for Properties"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_default_values_for_properties"></a>Defining default values for Properties</h4></div></div></div><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+    throws AssemblyException
+{
+    module.values( MyValue.class );
+    MyValue myValueDefaults = module.forMixin( MyValue.class ).declareDefaults();
+    myValueDefaults.foo().set( "bar" );
+
+    module.entities( MyEntity.class );
+    MyEntity myEntityDefaults = module.forMixin( MyEntity.class ).declareDefaults();
+    myEntityDefaults.cathedral().set( "bazar" );
+}
+</pre></div><div class="section" title="Adding additional interfaces to composites"><div class="titlepage"><div><div><h4 class="title"><a id="_adding_additional_interfaces_to_composites"></a>Adding additional interfaces to composites</h4></div></div></div></div><div class="section" title="Adding concerns, mixins, constraints and side effects"><div class="titlepage"><div><div><h4 class="title"><a id="_adding_concerns_mixins_constraints_and_side_effects"></a>Adding concerns, mixins, constraints and side effects</h4></div></div></div></div><div class="section" title="Setting meta information on assembled types"><div class="titlepage"><div><div><h4 class="title"><a id="_setting_meta_information_on_assembled_types"></a>Setting meta information on assembled types</h4></div></div></div></div><div class="section" title="Facilities"><div class="titlepage"><div><div><h4 class="title"><a id="_facilities"></a>Facilities</h4></div></div></div><div class="section" title="Assembly Specifications"><div class="titlepage"><div><div><h5 class="title"><a id="_assembly_specifications"></a>Assembly Specifications</h5></div></div></div></div><div class="section" title="Class Scanner"><div class="titlepage"><div><div><h5 class="title"><a id="_class_scanner"></a>Class Scanner</h5></div></div></div></div></div><div class="section" title="Using Assemblers"><div class="titlepage"><div><div><h4 class="title"><a id="_using_assemblers"></a>Using Assemblers</h4></div></div></div><p>Many <a class="link" href="libraries.html" title="Libraries">libraries</a> and <a class="link" href="extensions.html" title="Extensions">extensions</a> provides a cookie-cutter <span class="emphasis"><em>Assembler</em></span>, to simplify the set up
 of such component. Often these are suitable, but sometimes they won’t fit the application in hand, in which case the
 source code at least provides information of what is needed for the component to be used.</p><p>Assemblers are typically just instantiated and then call the assemble() method with the ModuleAssembly instance,
 such as;</p><pre class="programlisting brush: java">@Override
@@ -103,10 +164,10 @@ public void assemble( ModuleAssembly module )
     assembler.assemble( module );
 }
 </pre></div><div class="section" title="Defining an Entity Store"><div class="titlepage"><div><div><h4 class="title"><a id="_defining_an_entity_store"></a>Defining an Entity Store</h4></div></div></div><p>Defining an <span class="emphasis"><em>Entity Store</em></span> is in principle as simple as defining a ServiceComposite implementing the EntityStore
-interface. The problem is that most Entity Stores require <a class="xref" href="_core.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a>, and configuration requires an
+interface. The problem is that most Entity Stores require <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a>, and configuration requires an
 Entity Store. This chicken-and-egg problem is resolved by having an entity store available that does not require any
-<a class="xref" href="_core.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a>. Many <span class="emphasis"><em>Assemblers</em></span> for entity store implementations uses the MemoryEntityStore, and
-effectively leaves the configuration in the properties file where <a class="xref" href="_core.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a> bootstraps from. It is
+<a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a>. Many <span class="emphasis"><em>Assemblers</em></span> for entity store implementations uses the MemoryEntityStore, and
+effectively leaves the configuration in the properties file where <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a> bootstraps from. It is
 possible to chain this, so that for instance the Neo4J Entity Store uses the Preferences Entity Store for its
 configuration, and the Preferences Entity Store uses the Memory Entity Store (i.e. the properties file).</p><p>The point is that the entity store used for the configuration of the primary entity store used in the application is
 that it must not be visible to the application itself. Sometimes it is easiest to put a Memory Entity Store in the

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core I/O API</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="_core.html" title="Core" /><link rel="prev" href="core-functional.html" title="Core Functional API" /><link rel="next" href="core-testsupport.html" title="Core Test Support" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Core I/O API</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="core.html" title="Core" /><link rel="prev" href="core-functional.html" title="Core Functional API" /><link rel="next" href="core-spi.html" title="Core Extension SPI" />
 
 
 <!-- favicon -->
@@ -71,7 +71,7 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="_core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="_core.html#core-api">Core API</a></span></dt><dt><span class="section"><a href="core-api-metrics.html">Metrics API</a></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><span xmlns="" href="core-io.html">Core I/O API</span></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt></dl></div></div><div class="section" title="Core I/O API"><div class="titlepage"><div><div><h3 class="title"><a id="core-io"></a>Core I/O API</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-beta">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The Qi4j Core I/O API is completely generic and not tied to the Qi4j programming model as a whole. It can be used
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><a href="core-api.html">Core API</a></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><span xmlns="" href="core-io.html">Core I/O API</span></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt></dl></div></div><div class="section" title="Core I/O API"><div class="titlepage"><div><div><h3 class="title"><a id="core-io"></a>Core I/O API</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-beta">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The Qi4j Core I/O API is completely generic and not tied to the Qi4j programming model as a whole. It can be used
 independently of Qi4j, together with the Qi4j Core Functional API, which the Core I/O API depends on.</p><p>The Qi4j Core I/O API tries to address the problem around shuffling data around from various I/O inputs and outputs,
 possibly with transformations and filtering along the way. It was identified that there is a general mix-up of concerns
 in the stereotypical I/O handling codebases that people deal with all the time. The reasoning around this, can be found
@@ -106,7 +106,7 @@ likewise is the ultimate "receiver".</p><p>So, then, the method transferTo() con
 (ReceiverThrowable) which the transferTo() method may also throw as the data may not be accepted and such exception
 will bubble up to the transferTo() method (the client’s view of the transfer).</p></div><div class="section" title="org.qi4j.io.Output"><div class="titlepage"><div><div><h4 class="title"><a id="_org_qi4j_io_output"></a>org.qi4j.io.Output</h4></div></div></div><p>The output interface is likewise fairly simple;</p><pre class="programlisting brush: java">public interface Output&lt;T, ReceiverThrowableType extends Throwable&gt;
 {
-  [...snip...]
+[...snip...]
 
     &lt;SenderThrowableType extends Throwable&gt; void receiveFrom( Sender&lt;? extends T, SenderThrowableType&gt; sender )
         throws ReceiverThrowableType, SenderThrowableType;
@@ -209,7 +209,7 @@ as every 1000 items. This may not be what you think a ProgressLog should look li
 how you can combine the general principles found in the Qi4j Core API package.</p></div><div class="section" title="How to write a filter specification?"><div class="titlepage"><div><div><h4 class="title"><a id="_how_to_write_a_filter_specification"></a>How to write a filter specification?</h4></div></div></div><p>The filter transform takes a specification implementation which has a very simple method, isSatisfiedBy() (read more
 about that in <a class="xref" href="core-functional.html" title="Core Functional API">Function</a>.</p><pre class="programlisting brush: java">public interface Specification&lt;T&gt;
 {
-  [...snip...]
+[...snip...]
 
     boolean satisfiedBy( T item );
 }
@@ -247,7 +247,7 @@ sources and destinations.</p></div><div class="section" title="org.qi4j.io.Input
  * @return Input that provides lines from the textfiles as strings
  */
 public static Input&lt;String, IOException&gt; text( final File source )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -261,7 +261,7 @@ public static Input&lt;String, IOException&gt; text( final File source )
  * @return Input that provides lines from the textfiles as strings
  */
 public static Input&lt;String, IOException&gt; text( final File source, final String encoding )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -276,7 +276,7 @@ public static Input&lt;String, IOException&gt; text( final File source, final St
  * @return Input that provides lines from the textfiles as strings
  */
 public static Input&lt;String, IOException&gt; text( final URL source )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -288,7 +288,7 @@ public static Input&lt;String, IOException&gt; text( final URL source )
  * @return
  */
 public static Input&lt;ByteBuffer, IOException&gt; byteBuffer( final File source, final int bufferSize )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -300,7 +300,7 @@ public static Input&lt;ByteBuffer, IOException&gt; byteBuffer( final File source
  * @return
  */
 public static Input&lt;ByteBuffer, IOException&gt; byteBuffer( final InputStream source, final int bufferSize )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -314,7 +314,7 @@ public static Input&lt;ByteBuffer, IOException&gt; byteBuffer( final InputStream
  * @return
  */
 public static &lt;T, SenderThrowableType extends Throwable&gt; Input&lt;T, SenderThrowableType&gt; combine( final Iterable&lt;Input&lt;T, SenderThrowableType&gt;&gt; inputs )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -326,7 +326,7 @@ public static &lt;T, SenderThrowableType extends Throwable&gt; Input&lt;T, Sende
  * @return
  */
 public static &lt;T&gt; Input&lt;T, RuntimeException&gt; iterable( final Iterable&lt;T&gt; iterable )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -354,7 +354,7 @@ public static Input&lt;ByteBuffer, IOException&gt; output( final Visitor&lt;Outp
  * @return an Output for storing text in a file
  */
 public static Output&lt;String, IOException&gt; text( final File file )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -368,7 +368,7 @@ public static Output&lt;String, IOException&gt; text( final File file )
  * @return an Output for storing text in a file
  */
 public static Output&lt;String, IOException&gt; text( final File file, final String encoding )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -378,7 +378,7 @@ public static Output&lt;String, IOException&gt; text( final File file, final Str
  * @return an Output for storing text in a Writer
  */
 public static Output&lt;String, IOException&gt; text( final Writer writer )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -388,7 +388,7 @@ public static Output&lt;String, IOException&gt; text( final Writer writer )
  * @return an Output for storing text in a StringBuilder
  */
 public static Output&lt;String, IOException&gt; text( final StringBuilder builder )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -400,7 +400,7 @@ public static Output&lt;String, IOException&gt; text( final StringBuilder builde
  * @return
  */
 public static &lt;T&gt; Output&lt;ByteBuffer, IOException&gt; byteBuffer( final File file )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -412,7 +412,7 @@ public static &lt;T&gt; Output&lt;ByteBuffer, IOException&gt; byteBuffer( final 
  * @return
  */
 public static &lt;T&gt; Output&lt;ByteBuffer, IOException&gt; byteBuffer( final OutputStream stream )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -425,7 +425,7 @@ public static &lt;T&gt; Output&lt;ByteBuffer, IOException&gt; byteBuffer( final 
  * @return
  */
 public static &lt;T&gt; Output&lt;byte[], IOException&gt; bytes( final File file, final int bufferSize )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -436,7 +436,7 @@ public static &lt;T&gt; Output&lt;byte[], IOException&gt; bytes( final File file
  * @return
  */
 public static &lt;T&gt; Output&lt;T, RuntimeException&gt; noop()
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -449,7 +449,7 @@ public static &lt;T&gt; Output&lt;T, RuntimeException&gt; noop()
  * @return
  */
 public static &lt;T, ReceiverThrowableType extends Throwable&gt; Output&lt;T, ReceiverThrowableType&gt; withReceiver( final Receiver&lt;T, ReceiverThrowableType&gt; receiver )
-  [...snip...]
+[...snip...]
 
 
 /**
@@ -458,14 +458,14 @@ public static &lt;T, ReceiverThrowableType extends Throwable&gt; Output&lt;T, Re
  * @return
  */
 public static Output&lt;Object, RuntimeException&gt; systemOut()
-  [...snip...]
+[...snip...]
 
 
 /**
  * Write objects to System.err.println.
  */
 public static Output&lt;Object, RuntimeException&gt; systemErr()
-  [...snip...]
+[...snip...]
 
 
 /**

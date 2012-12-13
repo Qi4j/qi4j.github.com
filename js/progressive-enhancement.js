@@ -75,10 +75,12 @@ $( document ).ready( function($){
         }
 
         // Add Nabble forum
-        $section.append('<iframe id="qi4j-dev-iframe" class="qi4j-iframe"\
-                src="http://qi4j-dev.23929.n6.nabble.com/"\
-                frameborder="0" scrolling="no" allowtransparency="true">\
-        </iframe>');
+        if( false ) { // DEACTIVATED
+            $section.append('<iframe id="qi4j-dev-iframe" class="qi4j-iframe"\
+                    src="http://qi4j-dev.23929.n6.nabble.com/"\
+                    frameborder="0" scrolling="no" allowtransparency="true">\
+            </iframe>');
+        }
 
     }
 
@@ -220,18 +222,22 @@ $( document ).ready( function($){
     $("a.ulink[href^='https:']").attr('target','_blank');
 
     // Add links to different versions
-    if( false ) { // DEACTIVATED
+    if( true ) { // DEACTIVATED
         $("div.logo").append('\
             <p style="margin-top:2em; text-align: center"> \
                 <select style="font-size: 0.5em">\
-                    <option value="2.0" selected="selected">2.0-DEV</option>\
-                    <option value="1.4">1.4-STABLE</option>\
+                    <option value="2.0-SNAPSHOT" selected="selected">2.0-SNAPSHOT</option>\
+                    <option value="1.4">1.4</option>\
                 </select>\
             </p>');
         $("div.logo select").change(function() {
             switch( $(this).val() ) {
+                case "2.0-SNAPSHOT":
+                    window.location = "http://qi4j.org/";
+                    break;
                 case "1.4":
-                    window.location = "http://www2.qi4j.org/";
+                    window.location = "http://qi4j.org/releases/1.4/";
+                    break;
             }
         });
     }

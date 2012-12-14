@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>JClouds EntityStore</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-es-hazelcast.html" title="Hazelcast EntityStore" /><link rel="next" href="extension-es-jdbm.html" title="JDBM EntityStore" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://qi4j.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://qi4j.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/qi4j.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Version Switcher -->
+
+<script type="text/javascript" src="js/versionswitcher.js"></script>
+
+<!-- Qi4j WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3118496-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><a href="downloads.html">Downloads</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="extensions.html#_overview_6">Overview</a></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-gae.html">Google AppEngine EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><span xmlns="" href="extension-es-jclouds.html">JClouds EntityStore</span></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-leveldb.html">LevelDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-neo4j.html">Neo4j EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-sql.html">SQL EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-voldemort.html">Voldemort EntityStore</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-rdf.html">OpenRDF Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-yammer.html">Yammer Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section" title="JClouds EntityStore"><div class="titlepage"><div><div><h3 class="title"><a id="extension-es-jclouds"></a>JClouds EntityStore</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>EntityStore service backed by a <a class="ulink" href="http://www.jclouds.org/" target="_top">JClouds</a> BlobStore.</p><p>It means you get access to a growing list of providers available at the
+<a class="ulink" href="http://www.jclouds.org/" target="_top">JClouds</a> website that includes Amazon, VMWare, Azure,
+and Rackspace.</p><p>For testing purpose theses providers are supported too:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+Transient
+</li><li class="listitem">
+Filesystem
+</li></ul></div><div class="section" title="Assembly"><div class="titlepage"><div><div><h4 class="title"><a id="_assembly_8"></a>Assembly</h4></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">new JCloudsMapEntityStoreAssembler().withConfigIn( config, Visibility.layer ).assemble( module );
+</pre></div><div class="section" title="Configuration"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_6"></a>Configuration</h4></div></div></div><p>Here are the configuration properties for the JClouds EntityStore:</p><pre class="programlisting brush: java">/**
+ * Name of the JClouds provider to use. Defaults to 'transient'.
+ */
+@Optional Property&lt;String&gt; provider();
+@UseDefaults Property&lt;String&gt; identifier();
+@UseDefaults Property&lt;String&gt; credential();
+/**
+ * Use this to fine tune your provider implementation according to JClouds documentation.
+ */
+@UseDefaults Property&lt;Map&lt;String, String&gt;&gt; properties();
+/**
+ * Name of the JClouds container to use. Defaults to 'qi4j-entities'.
+ */
+@Optional Property&lt;String&gt; container();
+</pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>ReST Client</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="libraries.html" title="Libraries" /><link rel="prev" href="library-rdf.html" title="RDF" /><link rel="next" href="library-rest-client-primer.html" title="ReST - HATEOAS Primer" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://qi4j.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://qi4j.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/qi4j.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Version Switcher -->
+
+<script type="text/javascript" src="js/versionswitcher.js"></script>
+
+<!-- Qi4j WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3118496-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><a href="downloads.html">Downloads</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><span xmlns="" href="libraries.html">Libraries</span></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="libraries.html#_overview_4">Overview</a></span></dt><dt><span class="section"><a href="library-alarm.html">Alarms</a></span></dt><dt><span class="section"><a href="library-caching.html">Caching</a></span></dt><dt><span class="section"><a href="library-circuitbreaker.html">Circuit Breaker</a></span></dt><dt><span class="section"><a href="library-constraints.html">Constraints</a></span></dt><dt><span class="section"><a href="library-conversion.html">Conversion</a></span></dt><dt><span class="section"><a href="library-cxf.html">CXF WebService</a></span></dt><dt><span class="section"><a href="library-eventsourcing.html">Event Sourcing</a></span></dt><dt><span class="section"><a href="library-eventsourcing-jdbm.html">Event Sourcing - JDBM</a></span></dt><dt><span class="section"><a href="library-eventsourcing-rest.html">Event Sourcing - ReST</a></span></dt><dt><span class="section"><a href="library-fileconfig.html">FileConfig</a></span></dt><dt><span class="section"><a href="library-http.html">HTTP</a></span></dt><dt><span class="section"><a href="library-jmx.html">JMX</a></span></dt><dt><span class="section"><a href="library-locking.html">Locking</a></span></dt><dt><span class="section"><a href="library-logging.html">Logging</a></span></dt><dt><span class="section"><a href="library-neo4j.html">Neo4j</a></span></dt><dt><span class="section"><a href="library-osgi.html">OSGi</a></span></dt><dt><span class="section"><a href="library-rdf.html">RDF</a></span></dt><dt><span class="section"><span xmlns="" href="library-rest-client.html">ReST Client</span></span></dt><dt><span class="section"><a href="library-rest-client-primer.html">ReST - HATEOAS Primer</a></span></dt><dt><span class="section"><a href="library-rest-common.html">ReST Common</a></span></dt><dt><span class="section"><a href="library-rest-server.html">ReST Server</a></span></dt><dt><span class="section"><a href="library-scheduler.html">Scheduler</a></span></dt><dt><span class="section"><a href="library-script-beanshell.html">Beanshell Scripting</a></span></dt><dt><span class="section"><a href="library-script-groovy.html">Groovy Scripting</a></span></dt><dt><span class="section"><a href="library-script-javascript.html">Javascript Scripting</a></span></dt><dt><span class="section"><a href="library-script-jruby.html">JRuby Scripting</a></span></dt><dt><span class="section"><a href="lang-scala.html">Scala Support</a></span></dt><dt><span class="section"><a href="library-servlet.html">Servlet</a></span></dt><dt><span class="section"><a href="library-shiro.html">Shiro Security</a></span></dt><dt><span class="section"><a href="library-shiro-web.html">Shiro Web Security</a></span></dt><dt><span class="section"><a href="library-spring.html">Spring Integration</a></span></dt><dt><span class="section"><a href="library-sql.html">SQL</a></span></dt><dt><span class="section"><a href="library-struts-codebehind.html">Struts - Code Behind</a></span></dt><dt><span class="section"><a href="library-struts-convention.html">Struts - Convention</a></span></dt><dt><span class="section"><a href="library-struts-plugin.html">Struts - Plugin</a></span></dt><dt><span class="section"><a href="library-uid.html">UID</a></span></dt><dt><span class="section"><a href="library-uowfile.html">UoWFile</a></span></dt></dl></div></div><div class="section" title="ReST Client"><div class="titlepage"><div><div><h3 class="title"><a id="library-rest-client"></a>ReST Client</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-some">tests</p><p>Rickard sent a very interesting <a class="xref" href="library-rest-client-primer.html" title="ReST - HATEOAS Primer"> HATEOAS Primer</a> to the mailing list in October 2011, as the starting
+point for the renovation of the ReST Client Library. You should read that to get the full background on the choices
+made in this library.</p><div class="section" title="Usage"><div class="titlepage"><div><div><h4 class="title"><a id="_usage_2"></a>Usage</h4></div></div></div><p>This library leverages the <a class="ulink" href="http://restlet.org" target="_top">Restlet library</a>, so keep its documentation nearby as well.</p><p>This library expects the client code to build up handlers on how to react to resources and errors.
+It is a more declarative approach than a typical ReST client application, which often isn’t HATEOAS at all, and
+<a class="ulink" href="http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven" target="_top">Roy Fielding is upset that ReST now means something else</a> than it was originally intended.
+We try to be true to Dr. Fielding’s intentions.</p><div class="section" title="Establish Client"><div class="titlepage"><div><div><h5 class="title"><a id="_establish_client"></a>Establish Client</h5></div></div></div><p>The first thing that must be done is to create a ContextResourceClient.
+Let’s walk through the different steps typically needed.</p><pre class="programlisting brush: java">Client client =   new Client( Protocol.HTTP );
+
+ContextResourceClientFactory contextResourceClientFactory = module.newObject( ContextResourceClientFactory.class, client );
+contextResourceClientFactory.setAcceptedMediaTypes( MediaType.APPLICATION_JSON );
+</pre><p>Above we create the Client instance and a ContextResourceClientFactory, which takes a client via @Uses annotation. We
+also set the accepted media type to JSON.</p><p>We then create the global handler, which will be set to all ContextResourceClient instances that this factory creates.</p><pre class="programlisting brush: java">contextResourceClientFactory.setErrorHandler( new ErrorHandler().onError( ErrorHandler.AUTHENTICATION_REQUIRED, new ResponseHandler()
+{
+    boolean tried = false;
+
+    @Override
+    public HandlerCommand handleResponse( Response response, ContextResourceClient client )
+    {
+            if (tried)
+                throw new ResourceException( response.getStatus() );
+
+            tried = true;
+            client.getContextResourceClientFactory().getInfo().setUser( new User("rickard", "secret") );
+
+            // Try again
+            return refresh();
+    }
+} ).onError( ErrorHandler.RECOVERABLE_ERROR, new ResponseHandler()
+{
+    @Override
+    public HandlerCommand handleResponse( Response response, ContextResourceClient client )
+    {
+        // Try to restart
+        return refresh();
+    }
+} ) );
+</pre><p>Above, we try to handle that autheorization is required by setting user credentials and then try again. The client
+could do a pop-up box instead, have its own cached entries, contact a credentials server or many other things.</p><p>We also added another handler that does a <span class="emphasis"><em>refresh()</em></span> on any recoverable error.</p><p>Note that the ErrorHandler.AUTHENTICATION_REQUIRED and ErrorHandler.RECOVERABLE_ERROR are not enums or constants, but
+Specifications and it is possible to implement your own.</p><p>We then simply proceed to create the <span class="emphasis"><em>ContextResourceClient</em></span>, by giving the factory the bookmarkable reference of the
+ReST API.</p><pre class="programlisting brush: java">Reference ref = new Reference( "http://localhost:8888/" );
+crc = contextResourceClientFactory.newClient( ref );
+</pre></div><div class="section" title="Using ContextClientResource"><div class="titlepage"><div><div><h5 class="title"><a id="_using_contextclientresource"></a>Using ContextClientResource</h5></div></div></div><p>Once we have the ContextResourceClient, we can proceed with using it.
+The general approach is to register handlers for potential results when invoking the method on the ReST resource.</p></div><div class="section" title="Query without Value"><div class="titlepage"><div><div><h5 class="title"><a id="_query_without_value"></a>Query without Value</h5></div></div></div><pre class="programlisting brush: java">crc.onResource( new ResultHandler&lt;Resource&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( Resource result, ContextResourceClient client )
+    {
+        return query( "querywithoutvalue" );
+    }
+} ).
+onQuery( "querywithoutvalue", new ResultHandler&lt;TestResult&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( TestResult result, ContextResourceClient client )
+    {
+        Assert.assertThat( result.xyz().get(), CoreMatchers.equalTo( "bar" ) );
+        return null;
+    }
+} );
+
+crc.start();
+</pre></div><div class="section" title="Query and Command"><div class="titlepage"><div><div><h5 class="title"><a id="_query_and_command"></a>Query and Command</h5></div></div></div><pre class="programlisting brush: java">crc.onResource( new ResultHandler&lt;Resource&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( Resource result, ContextResourceClient client )
+    {
+        return query( "querywithvalue", null );
+    }
+} ).onProcessingError( "querywithvalue", new ResultHandler&lt;TestQuery&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( TestQuery result, ContextResourceClient client )
+    {
+        ValueBuilder&lt;TestQuery&gt; builder = module.newValueBuilderWithPrototype( result );
+
+        builder.prototype().abc().set( "abc" + builder.prototype().abc().get() );
+
+        return query( "querywithvalue", builder.newInstance() );
+    }
+} ).onQuery( "querywithvalue", new ResultHandler&lt;TestResult&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( TestResult result, ContextResourceClient client )
+    {
+        return command( "commandwithvalue", null );
+    }
+} ).onProcessingError( "commandwithvalue", new ResultHandler&lt;Form&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( Form result, ContextResourceClient client )
+    {
+        result.set( "abc", "right" );
+
+        return command( "commandwithvalue", result );
+    }
+} );
+
+crc.start();
+</pre></div><div class="section" title="Query List and Command"><div class="titlepage"><div><div><h5 class="title"><a id="_query_list_and_command"></a>Query List and Command</h5></div></div></div><pre class="programlisting brush: java">crc.onResource( new ResultHandler&lt;Resource&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( Resource result, ContextResourceClient client )
+    {
+        return query( "commandwithvalue" );
+    }
+} ).onQuery( "commandwithvalue", new ResultHandler&lt;Links&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( Links result, ContextResourceClient client )
+    {
+        Link link = LinksUtil.withId( "right", result );
+
+        return command( link );
+    }
+} ).onCommand( "commandwithvalue", new ResponseHandler()
+{
+    @Override
+    public HandlerCommand handleResponse( Response response, ContextResourceClient client )
+    {
+        System.out.println( "Done" );
+        return null;
+    }
+} );
+
+crc.start();
+[...snip...]
+
+crc.onResource( new ResultHandler&lt;Resource&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( Resource result, ContextResourceClient client )
+    {
+        return query( "commandwithvalue" ).onSuccess( new ResultHandler&lt;Links&gt;()
+        {
+            @Override
+            public HandlerCommand handleResult( Links result, ContextResourceClient client )
+            {
+                Link link = LinksUtil.withId( "right", result );
+
+                return command( link ).onSuccess( new ResponseHandler()
+                {
+                    @Override
+                    public HandlerCommand handleResponse( Response response, ContextResourceClient client )
+                    {
+                        System.out.println( "Done" );
+                        return null;
+                    }
+                } );
+            }
+        } );
+    }
+} );
+
+crc.start();
+</pre></div><div class="section" title="Query List and Command Progressive"><div class="titlepage"><div><div><h5 class="title"><a id="_query_list_and_command_progressive"></a>Query List and Command Progressive</h5></div></div></div><pre class="programlisting brush: java">crc.onResource( new ResultHandler&lt;Resource&gt;()
+{
+    @Override
+    public HandlerCommand handleResult( Resource result, ContextResourceClient client )
+    {
+        return query( "commandwithvalue" ).onSuccess( new ResultHandler&lt;Links&gt;()
+        {
+            @Override
+            public HandlerCommand handleResult( Links result, ContextResourceClient client )
+            {
+                Link link = LinksUtil.withId( "right", result );
+
+                return command( link ).onSuccess( new ResponseHandler()
+                {
+                    @Override
+                    public HandlerCommand handleResponse( Response response, ContextResourceClient client )
+                    {
+                        System.out.println( "Done" );
+                        return null;
+                    }
+                } );
+            }
+        } );
+    }
+} );
+
+crc.start();
+</pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

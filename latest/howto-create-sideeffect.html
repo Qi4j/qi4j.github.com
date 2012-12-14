@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Create a SideEffect</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tutorials.html" title="Tutorials" /><link rel="prev" href="howto-create-concern.html" title="Create a Concern" /><link rel="next" href="howto-leverage-properties.html" title="Leverage Properties" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://qi4j.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://qi4j.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/qi4j.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Version Switcher -->
+
+<script type="text/javascript" src="js/versionswitcher.js"></script>
+
+<!-- Qi4j WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3118496-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><a href="downloads.html">Downloads</a></span></dt><dt><span class="section"><span xmlns="" href="tutorials.html">Tutorials</span></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="tutorials.html#_overview">Overview</a></span></dt><dt><span class="section"><a href="two-minutes-intro.html">Qi4j in 2 minutes</a></span></dt><dt><span class="section"><a href="ten-minutes-intro.html">Qi4j in 10 minutes</a></span></dt><dt><span class="section"><a href="thirty-minutes-intro.html">Qi4j in 30 minutes</a></span></dt><dt><span class="section"><a href="two-hours-intro.html">Qi4j in 2 hours</a></span></dt><dt><span class="section"><a href="introduction-background.html">Background</a></span></dt><dt><span class="section"><a href="what-is-cop.html">What is COP?</a></span></dt><dt><span class="section"><a href="qi4j-cop.html">COP with Java and Qi4j</a></span></dt><dt><span class="section"><a href="state-modeling.html">Qi4j and state modeling</a></span></dt><dt><span class="section"><a href="what-s-an-object-anyway.html">What’s an Object anyway?</a></span></dt><dt><span class="section"><a href="tut-composites.html">Transient Composites Tutorial</a></span></dt><dt><span class="section"><a href="tut-services.html">Services Composites Tutorial</a></span></dt><dt><span class="section"><a href="howto-depend-on-qi4j.html">Depend on Qi4j in your build</a></span></dt><dt><span class="section"><a href="howto-assemble-application.html">Assemble an Application</a></span></dt><dt><span class="section"><a href="howto-configure-service.html">Configure a Service</a></span></dt><dt><span class="section"><a href="howto-create-entity.html">Create an Entity</a></span></dt><dt><span class="section"><a href="howto-create-constraint.html">Create a Constraint</a></span></dt><dt><span class="section"><a href="howto-create-concern.html">Create a Concern</a></span></dt><dt><span class="section"><span xmlns="" href="howto-create-sideeffect.html">Create a SideEffect</span></span></dt><dt><span class="section"><a href="howto-leverage-properties.html">Leverage Properties</a></span></dt><dt><span class="section"><a href="howto-contextual-fragments.html">Use contextual fragments</a></span></dt><dt><span class="section"><a href="howto-use-io.html">Use I/O API</a></span></dt><dt><span class="section"><a href="related.html">Related publications &amp; projects</a></span></dt></dl></div></div><div class="section" title="Create a SideEffect"><div class="titlepage"><div><div><h3 class="title"><a id="howto-create-sideeffect"></a>Create a SideEffect</h3></div></div></div><p>SideEffects are defined in <a class="xref" href="glossary.html#def-sideeffect">SideEffect</a>.</p><div class="section" title="Typed SideEffect"><div class="titlepage"><div><div><h4 class="title"><a id="_typed_sideeffect"></a>Typed SideEffect</h4></div></div></div><p>A typed SideEffect is a Java class that implements the MixinType it can be used on:</p><pre class="programlisting brush: java">public abstract class MailNotifySideEffect extends SideEffectOf&lt;Confirmable&gt;
+    implements Confirmable
+{
+    @Service
+    private MailService mailer;
+
+    @This
+    private HasLineItems hasItems;
+
+    @This
+    private HasCustomer hasCustomer;
+
+    @Override
+    public void confirm()
+    {
+        StringBuilder builder = new StringBuilder();
+        builder.append( "An Order has been made.\n\n\n" );
+        builder.append( "Customer:" );
+        builder.append( hasCustomer.name().get() );
+        builder.append( "\n\nItems ordered:\n" );
+        for( LineItem item : hasItems.lineItems().get() )
+        {
+            builder.append( item.name().get() );
+            builder.append( " : " );
+            builder.append( item.quantity().get() );
+            builder.append( "\n" );
+        }
+        mailer.send( "sales@mycompany.com", builder.toString() );
+    }
+}
+</pre><p>The MailNotifySideEffect is implemented as an abstract class, since we are not interested in the many other methods in
+the Confirmable interface. Extending the SideEffectOf is a convenience mechanism, instead of an explicit @SideEffectFor
+annotation on a private field, which can be used in rare occasions when you are not able to extend. This base class
+defines the next field, which is set up by the Qi4j runtime and points to the next fragment in the call stack. We can
+also see that the MailService, HasLineItems and HasCustomer are provided to the side-effect, which is done with
+dependency injection. Qi4j also supports dependency injection via constructors and methods.</p><p>It can be used as follows;</p><pre class="programlisting brush: java">@SideEffects( MailNotifySideEffect.class )
+public interface OrderEntity
+    extends Order, HasSequenceNumber, HasCustomer,
+            HasLineItems, Confirmable, EntityComposite
+{
+}</pre><p>Methods of the SideEffect Fragment will be called after the Mixin invocation.</p></div><div class="section" title="Generic SideEffect"><div class="titlepage"><div><div><h4 class="title"><a id="_generic_sideeffect"></a>Generic SideEffect</h4></div></div></div><p>A generic SideEffect is a Java class that implements java.lang.reflect.InvocationHandler which allows it to be used on any
+arbitrary MixinType.</p><pre class="programlisting brush: java">public class MyGenericSideEffect extends GenericSideEffect
+{
+    public Object invoke(...)
+    {
+        // Do whatever you want
+        return next.invoke( ... );
+    }
+}</pre><p>It can be used as follows;</p><pre class="programlisting brush: java">@Concerns( MyGenericSideEffect.class )
+public interface AnyMixinType
+{
+    :
+    :
+}</pre><p>Methods of the SideEffect Fragment will be called before the Mixin invocation.</p><div class="section" title="AppliesTo"><div class="titlepage"><div><div><h5 class="title"><a id="_appliesto_2"></a>AppliesTo</h5></div></div></div><p>For generic SideEffects that should only trigger on methods with specific annotations or fulfilling some expression, add
+@AppliesTo annotation to the SideEffect class which points to either triggering annotation(s), or to AppliesToFilter
+implementation(s).</p><p>The SideEffect is invoked if one of the triggering annotations is found or one of the AppliesToFilter accepts the
+invocation. In other words the AppliesTo arguments are OR’ed.</p><p>Here is how the declaration goes ;</p><pre class="programlisting brush: java">@AppliesTo( { MyAnnotation.class, MyAppliesToFilter.class } )
+public class MyGenericSideEffect extends GenericSideEffect
+{
+    public Object invoke(...)
+    {
+        // Do whatever you want
+        return next.invoke( ... );
+    }
+}</pre><p>And how to use the annotation ;</p><pre class="programlisting brush: java">@Concerns( MyGenericSideEffect.class )
+public interface AnyMixinType
+{
+    @MyAnnotation
+    void doSomething();
+    void doSomethingElse();
+    :
+    :
+}</pre><p>Here only the doSomething() method will see the SideEffect applied whereas the doSomethingElse() method won’t.</p><p>Finally here is how to implement an AppliesToFilter:</p><pre class="programlisting brush: java">public class MyAppliesToFilter implements AppliesToFilter
+{
+    public boolean appliesTo( Method method, Class&lt;?&gt; mixin, Class&lt;?&gt; compositeType, Class&lt;?&gt; modifierClass )
+    {
+        boolean appliesTo; // Do whatever you want
+        return appliesTo;
+    }
+}</pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

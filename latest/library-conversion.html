@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Conversion</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="libraries.html" title="Libraries" /><link rel="prev" href="library-constraints.html" title="Constraints" /><link rel="next" href="library-cxf.html" title="CXF WebService" />
+
+
+<!-- favicon -->
+
+<link rel="shortcut icon" href="http://qi4j.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://qi4j.org/favicon.ico" type="image/x-icon" />
+
+<!-- style -->
+
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<link href="css/qi4j.css" rel="stylesheet" type="text/css" />
+
+<!-- Syntax Highlighter -->
+
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJava.js"></script>
+<script type="text/javascript" src="js/shBrushScala.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushBash.js"></script>
+<script type="text/javascript" src="js/shBrushPlain.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript" src="js/shBrushGroovy.js"></script>
+<script type="text/javascript" src="js/shBrushPython.js"></script>
+<script type="text/javascript" src="js/shBrushRuby.js"></script>
+<script type="text/javascript" src="js/shBrushCSharp.js"></script>
+
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['tab-size'] = 4;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>
+
+<!-- JQuery -->
+
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+
+<!-- Image Scaler -->
+
+<script type="text/javascript" src="js/imagescaler.js"></script>
+
+<!-- Table Styler -->
+
+<script type="text/javascript" src="js/tablestyler.js"></script>
+
+<!-- Version Switcher -->
+
+<script type="text/javascript" src="js/versionswitcher.js"></script>
+
+<!-- Qi4j WebSite Progressive Enhancement -->
+
+<link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.2.js"></script>
+<script type="text/javascript" src="js/progressive-enhancement.js"></script>
+
+<!-- Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3118496-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Home</a></span></dt><dt><span class="section"><a href="news.html">News</a></span></dt><dt><span class="section"><a href="downloads.html">Downloads</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><span xmlns="" href="libraries.html">Libraries</span></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt><dt><span class="section"><a href="community.html">Community</a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="libraries.html#_overview_4">Overview</a></span></dt><dt><span class="section"><a href="library-alarm.html">Alarms</a></span></dt><dt><span class="section"><a href="library-caching.html">Caching</a></span></dt><dt><span class="section"><a href="library-circuitbreaker.html">Circuit Breaker</a></span></dt><dt><span class="section"><a href="library-constraints.html">Constraints</a></span></dt><dt><span class="section"><span xmlns="" href="library-conversion.html">Conversion</span></span></dt><dt><span class="section"><a href="library-cxf.html">CXF WebService</a></span></dt><dt><span class="section"><a href="library-eventsourcing.html">Event Sourcing</a></span></dt><dt><span class="section"><a href="library-eventsourcing-jdbm.html">Event Sourcing - JDBM</a></span></dt><dt><span class="section"><a href="library-eventsourcing-rest.html">Event Sourcing - ReST</a></span></dt><dt><span class="section"><a href="library-fileconfig.html">FileConfig</a></span></dt><dt><span class="section"><a href="library-http.html">HTTP</a></span></dt><dt><span class="section"><a href="library-jmx.html">JMX</a></span></dt><dt><span class="section"><a href="library-locking.html">Locking</a></span></dt><dt><span class="section"><a href="library-logging.html">Logging</a></span></dt><dt><span class="section"><a href="library-neo4j.html">Neo4j</a></span></dt><dt><span class="section"><a href="library-osgi.html">OSGi</a></span></dt><dt><span class="section"><a href="library-rdf.html">RDF</a></span></dt><dt><span class="section"><a href="library-rest-client.html">ReST Client</a></span></dt><dt><span class="section"><a href="library-rest-client-primer.html">ReST - HATEOAS Primer</a></span></dt><dt><span class="section"><a href="library-rest-common.html">ReST Common</a></span></dt><dt><span class="section"><a href="library-rest-server.html">ReST Server</a></span></dt><dt><span class="section"><a href="library-scheduler.html">Scheduler</a></span></dt><dt><span class="section"><a href="library-script-beanshell.html">Beanshell Scripting</a></span></dt><dt><span class="section"><a href="library-script-groovy.html">Groovy Scripting</a></span></dt><dt><span class="section"><a href="library-script-javascript.html">Javascript Scripting</a></span></dt><dt><span class="section"><a href="library-script-jruby.html">JRuby Scripting</a></span></dt><dt><span class="section"><a href="lang-scala.html">Scala Support</a></span></dt><dt><span class="section"><a href="library-servlet.html">Servlet</a></span></dt><dt><span class="section"><a href="library-shiro.html">Shiro Security</a></span></dt><dt><span class="section"><a href="library-shiro-web.html">Shiro Web Security</a></span></dt><dt><span class="section"><a href="library-spring.html">Spring Integration</a></span></dt><dt><span class="section"><a href="library-sql.html">SQL</a></span></dt><dt><span class="section"><a href="library-struts-codebehind.html">Struts - Code Behind</a></span></dt><dt><span class="section"><a href="library-struts-convention.html">Struts - Convention</a></span></dt><dt><span class="section"><a href="library-struts-plugin.html">Struts - Plugin</a></span></dt><dt><span class="section"><a href="library-uid.html">UID</a></span></dt><dt><span class="section"><a href="library-uowfile.html">UoWFile</a></span></dt></dl></div></div><div class="section" title="Conversion"><div class="titlepage"><div><div><h3 class="title"><a id="library-conversion"></a>Conversion</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-some">tests</p><p>The Conversion Library provides support for converting composite types.</p><div class="section" title="Entities to Values"><div class="titlepage"><div><div><h4 class="title"><a id="_entities_to_values"></a>Entities to Values</h4></div></div></div><p>To convert Entities to Values, use the EntityToValueService. It is easily assembled:</p><pre class="programlisting brush: java">module.services( EntityToValueService.class );
+</pre><p>Let’s say we have an interface defining state:</p><pre class="programlisting brush: java">public interface PersonState
+{
+
+    Property&lt;String&gt; firstName();
+
+    Property&lt;String&gt; lastName();
+
+    Property&lt;Date&gt; dateOfBirth();
+
+}
+</pre><p>An EntityComposite using the state as a Private Mixin:</p><pre class="programlisting brush: java">@Mixins( PersonMixin.class )
+public interface PersonEntity
+    extends EntityComposite
+{
+
+    String firstName();
+
+    String lastName();
+
+    Integer age();
+
+    @Optional
+    Association&lt;PersonEntity&gt; spouse();
+
+    ManyAssociation&lt;PersonEntity&gt; children();
+
+}
+[...snip...]
+
+public static abstract class PersonMixin
+    implements PersonEntity
+{
+
+    @This
+    private PersonState state;
+    [...snip...]
+
+}
+</pre><p>And a ValueComposite extending this very same state;</p><pre class="programlisting brush: java">public interface PersonValue
+    extends PersonState, ValueComposite
+{
+
+    @Optional
+    Property&lt;String&gt; spouse();
+
+    @Optional
+    Property&lt;List&lt;String&gt;&gt; children();
+
+}
+</pre><p>Here is how to convert an EntityComposite to a ValueComposite:</p><pre class="programlisting brush: java">EntityToValueService conversion = module.findService( EntityToValueService.class ).get();
+PersonValue value = conversion.convert( PersonValue.class, entity );
+</pre><p>Associations are converted to Identity strings.</p><p>If your Entities and Values cannot use the same state type, you can annotate the Value that is the target of the
+conversion with the <code class="literal">@Unqualified</code> annotation. Then, the lookup of the Value Property will be performed using the
+<span class="strong"><strong>unqualified</strong></span> name only, and not via the default of the full qualified name. In other words, this means that the
+Property may be declared in the different interfaces and still be matched.</p><p>Here is an example:</p><pre class="programlisting brush: java">@Unqualified
+public interface PersonValue2
+    extends ValueComposite
+{
+
+    Property&lt;String&gt; firstName();
+
+    Property&lt;String&gt; lastName();
+
+    Property&lt;Date&gt; dateOfBirth();
+
+    @Optional
+    Property&lt;String&gt; spouse();
+
+    @Optional
+    Property&lt;List&lt;String&gt;&gt; children();
+
+}
+</pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

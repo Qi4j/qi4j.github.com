@@ -1,0 +1,13 @@
+# See https://github.com/mojombo/jekyll/wiki/Configuration
+
+safe:        false
+auto:        true
+url:         http://qi4j.org
+production_url: http://qi4j.org
+
+future:      true
+lsi:         false
+pygments:    false
+markdown:    maruku
+permalink:   date
+

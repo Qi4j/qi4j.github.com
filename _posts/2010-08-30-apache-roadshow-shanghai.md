@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Qi4j @ Apache Readshow Shanghai
 ---
 ## Qi4j @ Apache Roadshow Shanghai

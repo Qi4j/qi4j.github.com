@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Qi4j @ JavaZone 2008 - Composite Oriented Programming with Qi4j
 ---
 ## Qi4j @ JavaZone 2008 - Composite Oriented Programming with Qi4j

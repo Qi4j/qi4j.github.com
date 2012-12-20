@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: New Qi4j website!
 ---
 ## New Qi4j website!

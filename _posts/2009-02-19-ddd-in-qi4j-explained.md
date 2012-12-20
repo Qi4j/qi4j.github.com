@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: DDD support in Qi4j explained
 ---
 ## DDD support in Qi4j explained

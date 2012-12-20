@@ -1,6 +1,6 @@
 # See https://github.com/mojombo/jekyll/wiki/Configuration
 
-safe:        false
+safe:        true
 auto:        true
 url:         http://qi4j.org
 production_url: http://qi4j.org

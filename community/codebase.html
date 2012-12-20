@@ -1,0 +1,275 @@
+---
+title: Qi4j Codebase
+layout: default
+---
+<div class="page-header">
+    <h1>Codebase</h1>
+    <p class="lead">Qi4j codebase is hosted at Github and follow the git-flow development model.</p>
+</div>
+<div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+        <p>
+            After the first 3 years of depending on the OPS4J project, the Qi4j community finally moved to GitHub on
+            the 1 November 2010. This should simplify the learning, as not only does developers have plenty of
+            experience with GitHub external link and the tools it provides, but also there are endless amount of
+            documentation and user forums to support each individual, off-loading some of that burden from us.
+            This page only contain rudimentary information.
+        </p>
+        <h2>Public Access Repository</h2>
+        <p>
+            Qi4j differs slightly from the regular project, due to our specific needs and style of development. the main
+            differences are;
+        </p>
+        <ul>
+            <li>
+                Qi4j uses the <code>develop</code> branch for the day to day changes to the project. The
+                <code>master</code> branch is used for the latest releases. See below about the 'Git Development Model'.
+            </li>
+            <li>
+                Qi4j uses a social contract to limit access to different areas of the project, instead of ACLs. The
+                driving point is to relax the contribution criteria in less critical parts, to encourage a wider
+                participation that otherwise would not be possible.
+            </li>
+        </ul>
+        <p>
+            Qi4j used to have many repositories to accommodate for the authorization issue above, but eventually
+            settled with a single GitHub repository, and now only have 2 repositories;
+        </p>
+        <ul>
+            <li><code>qi4j-sdk</code></li>
+            <li><code>qi4j-sandbox</code></li>
+        </ul>
+        <p>
+            The sandbox is where experimental code goes, and modules that are not ready to be shipped, or can not be
+            shipped due to licensing restrictions (e.g. Oracle doesn't provide Coherence as automatic download for our
+            testing, so can't really ship the coherence extension). The sandbox is a normal GitHub repository available
+            to clone as; <code>git clone git://github.com/Qi4j/qi4j-sandbox.git</code>
+        </p>
+        <p>
+            The Qi4j SDK is the main development codebase, and to start working with it you simply clone it;
+            <code>git clone git://github.com/Qi4j/qi4j-sdk.git</code>
+        </p>
+
+        <h2>Web Access</h2>
+        <p>
+            The two repositories can be browsed here;
+        </p>
+        <ul>
+            <li><a href="http://github.com/Qi4j/qi4j-sdk">http://github.com/Qi4j/qi4j-sdk</a></li>
+            <li><a href="http://github.com/Qi4j/qi4j-sandbox">http://github.com/Qi4j/qi4j-sandbox</a></li>
+        </ul>
+
+        <h2>Committer Access</h2>
+        <p class="lead">
+            Qi4j has a 3 level committer access system. The groups are "Core", "Platform" and "Community" and the roles
+            are very clear.
+        </p>
+
+        <h3>Core Developers</h3>
+        <p>
+            These are the guardians and stewards of the core technology and ultimate rulers of what is going on. The
+            hope is that a small group of benevolent dictators will manage to make Qi4j the best platform out there,
+            and not listen in on the voices of features and changes that derails the vision and principles of Qi4j.
+        </p>
+        <div class="well">
+            <p>
+                Over the course of Qi4j's history, there have been several occasions where brilliant developers got
+                caught up in 'feature improvements' which went against the fibers of Qi4j philosophy and technological
+                direction. IF we would have had an 'open door' policy to changes in Core, these 'improvements' would
+                have degraded the excellence of Qi4j, and we are not likely to invite anyone to the Core Developer
+                team, unless the individual shows remarkable understanding of the inner workings of Qi4j, the
+                philosophy that drives Qi4j and prudence in working on highly sensitive codebases. In return we will
+                strive for making the Qi4j Core as small as possible, having most features in libraries and extensions.
+                We welcome any suggestions that breaks out pluggable functionality.
+            </p>
+            <p>
+                We apologize in advance if this comes across as elitist, but the purpose is to ensure a high quality
+                Qi4j Runtime, stable over time and not bloating with unnecessary features. Thanks for understanding.
+            </p>
+        </div>
+
+        <h3>Platform Developers</h3>
+        <p>
+            These form the work force of Qi4j. They will work on the Extensions and Libraries, which eventually will
+            make Qi4j the most efficient way of programming in Java.
+        </p>
+
+        <h3>Community Developers</h3>
+        <p>
+            Any person who is interested in helping out with Qi4j will be granted access to Sandbox, Tests, IDE
+            support, Tutorials, Samples, HowTos, documentation and other (i.e. not Core, Libraries and Extensions).
+            This will gauge their abilities and commitment to the project, with an aim to make them Platform Developers.
+        </p>
+
+        <h3>Independents</h3>
+        <p>
+            Of course, Git's distributed nature also allows anyone to fork our repositories, and have the patches find
+            their way back to Qi4j's official repository. And GitHub's pull-request system makes the management of this
+            a lot easier, and something that we encourage.
+        </p>
+
+        <h3>How to Join?</h3>
+        <p>
+            To become a Community Developer, just subscribe to the qi4j-dev at Google Group and request it together
+            with your GitHub user id. For Community Developer, the bar is really, really low and nothing more than a
+            desire to help is required.
+        </p>
+        <p>
+            Community Developers who are active and keep contributing feedback, patches and/or documentation are likely
+            to be invited as Platform Developers, who has access to everything except the delicate qi4j-core, which we
+            intend to keep a lot more clean and stable than a free-for-all repository has a tendency to become over
+            time.
+        </p>
+
+        <h3>How to get Access to the writable central repositories?</h3>
+        <p>
+            Once you have commit access to a repository, you will access it differently. This is the clone command
+            needed, and after that you will need to do the same as above for pubic access;
+        </p>
+        <pre><code>git clone git@github.com:Qi4j/qi4j-sdk.git
+cd qi4j-sdk</code></pre>
+
+        <h2>Commit Policy</h2>
+        <p class="lead">
+            Qi4j generally uses a Commit-Then-Review policy on most changes. This allows a reasonable high velocity of
+            development.
+        </p>
+        <p>
+            Commits are visible at GitHub and active contributors should review all incoming commits to ensure quality
+            of contributions and avoidance of mistakes.
+        </p>
+        <p>
+            For any given commit, any member of the community may raise concern(s) on the qi4j-dev forum at Google
+            Groups. We encourage as many people as possible to review the changes that are occurring. "With enough
+            eyeballs every bug is shallow." wrote Eric S. Raymond in "The Cathedral and The Bazaar" about open source.
+        </p>
+        <p>
+            Special rules applies to changes in the Core Test suite. Adding new tests are CTR, but modifying existing
+            tests, either to accommodate for code changes in Core or to tighten the constraints of them, MUST be
+            discussed on the qi4j-dev forum at Google Groups, prior to committing them to the 'develop' branch. We
+            recommend that a different branch is used for these changes, unless simply codesnippets are pasted to mail.
+            This exists to ensure that we have a stable evolution of Qi4j Runtime, and no surprises will occur in
+            existing applications with new versions.
+        </p>
+
+        <h2>Git Development Model</h2>
+        <p>
+            Courtesy of Vincent Driessen, we borrowed the Git branching model from this web page;
+            <a href="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model/</a>
+        </p>
+
+        image:git-model.png["Git Development Model"]
+
+        <p>
+            The most important part of that excellent article can be found below.
+        </p>
+
+        <h3>Git Branching Model used at Qi4j</h3>
+        <p>
+            It looks more complicated than it is. Here are the guidelines;
+        </p>
+        <ul>
+            <li>Never commit to the 'master' branch while developing!!</li>
+            <li>The 'develop' branch is the equivalent of trunk in subversion.</li>
+            <li>Any changes that are not trivial, start a feature branch.</li>
+            <li>
+                The following names are reserved for not feature branches; <code>master</code>, <code>develop</code>,
+                <code>hotfix/*</code>, <code>release/*</code>
+            </li>
+        </ul>
+        <p>
+            Day-to-day development revolves around the develop branch and it is this branch that you typically clone
+            from our repository if you intend to contribute to Qi4j itself. If you create a new feature, or make some
+            larger piece of refactoring, then please create a 'feature branch' (see article for details).
+        </p>
+        <p>
+            Please try to remember the <code>--no-fast-forward</code> option during merge, so the feature branch is
+            preserved in one piece and can be rolled back easily if needed.
+        </p>
+        <p>
+            The <code>release/*</code> and <code>hotfix/*</code> branches are for release management only, and doesn't
+            affect most contributors from a commit perspective. Release Managers - Check the article for the details.
+        </p>
+        <p>
+            For convenience you should install and use the gitflow git extension that implement this branching model
+            by adding git commands. See the gitflow web page;
+            <a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a>
+        </p>
+
+        <h3>What happened to the <code>master</code> branch?</h3>
+        <p>
+            In case you missed it above, check the model that we used for development. The intent is that the
+            <code>master</code> branch is always in a good state and the <code>HEAD</code> is at a formal release
+            (and has a tag for that).
+        </p>
+        <p>
+            Patches only enters the 'master' branch either from a <code>hotfix/*</code> or a <code>release/*</code>
+            branch, never directly from <code>develop</code> or  <code>feature/*</code> branches.
+        </p>
+
+        <h2>How do I do my first commit?</h2>
+        <p class="lead">
+            We strongly encourage people to read up on Git basics at <a href="http://git-scm.com/">git-scm.com</a>.
+        </p>
+        <p>
+            But some basic commands are discussed here.
+        </p>
+        <pre><code>git status</code></pre>
+        <p>
+            shows you what has not been committed.
+        </p>
+        <pre><code>git add &lt;filename&gt;</code></pre>
+        <p>
+            all files(!) must be added. Directories are not considered and generally ignored. You can add with
+            wildcards, even if some files have already been added.
+        </p>
+        <pre><code>git commit -a -m "&lt;some message&gt;"</code></pre>
+        <p>
+            This commits the current branch to the local repository. The <code>-a</code> means commit all files, and
+            not only the ones that are explicitly mentioned on this command. The message should be informative as it
+            will follow the patch 'forever'.
+        </p>
+        <pre><code>git push origin develop</code></pre>
+        <p>
+            Pushes the local commits back to the <code>origin</code>, i.e. the place the clone came from, or to the
+            location that you have moved the <code>origin</code> to be instead (see above).
+        </p>
+        <pre><code>git pull origin develop</code></pre>
+        <p>
+            Pulls/downloads the changes of the <code>develop</code> branch from the <code>origin</code> of your local
+            clone. In subversion terms, this roughly corresponds to a <code>svn update</code> of the trunk.
+        </p>
+        <pre><code>git branch</code></pre>
+        <p>
+            Shows which branch we are working on.
+        </p>
+        <pre><code>git checkout -b feature/my_new_feature_branch</code></pre>
+        <p>
+            Creates a new branch with the given name, unless one already exist, and make the 'current' branch to be the
+            <code>feature/my_new_feature_branch</code>.
+        </p>
+        <p>
+            When you do a checkout of a branch, the local changes in the current branch that are not committed are not
+            lost, but are also 'moved along' to the new branch. And if those changes are then committed in the
+            <code>feature/my_new_feature_branch</code> and one switch back the changes are not there, now sitting in
+            the <code>feature/my_new_feature_branch</code> only. This is very handy if one forgets to create and move
+            to a branch before modifying the <code>develop</code> branch.
+        </p>
+
+        <h3>Using Github Pull Requests</h3>
+        <p>
+            Pull requests let you tell others about changes you've pushed to a GitHub repository. Once a pull request
+            is sent, interested parties can review the set of changes, discuss potential modifications, and even push
+            follow-up commits if necessary.
+        </p>
+        <p>
+            Github's guide to Pull Requests walks through the process of sending a hypothetical pull request and using
+            the various code review and management tools to take the change to completion. This guide can be found here;
+            <a href="https://help.github.com/articles/using-pull-requests">https://help.github.com/articles/using-pull-requests</a>
+        </p>
+
+    </div>
+    <div class="span2"></div>
+</div>
+

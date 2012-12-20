@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Qi4j @Øredev 2007 - Composite Oriented Programming
 ---
 ## Qi4j @Øredev 2007 - Composite Oriented Programming

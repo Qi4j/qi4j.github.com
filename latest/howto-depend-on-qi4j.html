@@ -102,6 +102,12 @@ add other repositories to your build scripts accordingly.</p></div><p>Release ar
         &lt;version&gt;QI4J_VERSION&lt;/version&gt;
         &lt;scope&gt;runtime&lt;/scope&gt;
     &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.qi4j.core&lt;/groupId&gt;
+        &lt;artifactId&gt;org.qi4j.core.testsupport&lt;/artifactId&gt;
+        &lt;version&gt;QI4J_VERSION&lt;/version&gt;
+        &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
     &lt;!-- ... --&gt;
 &lt;/dependencies&gt;
 &lt;!-- ... --&gt;</pre><p>Where <code class="literal">QI4J_VERSION</code> is the Qi4j version you want to use.</p></div><div class="section" title="Using Gradle"><div class="titlepage"><div><div><h4 class="title"><a id="_using_gradle"></a>Using Gradle</h4></div></div></div><p>First you need to register the Qi4j repositories:</p><pre class="programlisting brush: groovy">// ...
@@ -116,6 +122,7 @@ dependencies {
     // ...
     compile "org.qi4j.core:org.qi4j.core.bootstrap:QI4J_VERSION"
     runtime "org.qi4j.core:org.qi4j.core.runtime:QI4J_VERSION"
+    test    "org.qi4j.core:org.qi4j.core.testsupport:QI4J_VERSION"
     // ...
 }
 // ...</pre><p>Where <code class="literal">QI4J_VERSION</code> is the Qi4j version you want to use.</p></div><div class="section" title="Using Buildr"><div class="titlepage"><div><div><h4 class="title"><a id="_using_buildr"></a>Using Buildr</h4></div></div></div><p>First you need to register the Qi4j repositories:</p><pre class="programlisting brush: ruby"># ...
@@ -124,6 +131,7 @@ repositories.remote &lt;&lt; 'https://repository-qi4j.forge.cloudbees.com/snapsh
 # ...</pre><p>After that you can declare dependencies on Qi4j artifacts:</p><pre class="programlisting brush: ruby"># ...
 compile.with 'org.qi4j.core:org.qi4j.core.bootstrap:QI4J_VERSION'
 package(:war).with :libs =&gt; 'org.qi4j.core:org.qi4j.core.runtime:QI4J_VERSION'
+test.with 'org.qi4j.core:org.qi4j.core.testsupport:QI4J_VERSION'
 # ...</pre><p>Where <code class="literal">QI4J_VERSION</code> is the Qi4j version you want to use.</p></div><div class="section" title="Using SBT"><div class="titlepage"><div><div><h4 class="title"><a id="_using_sbt"></a>Using SBT</h4></div></div></div><p>First you need to register the Qi4j repositories:</p><pre class="programlisting brush: scala">// ...
 resolvers += "qi4j-releases" at "https://repository-qi4j.forge.cloudbees.com/release/"
 resolvers += "qi4j-snapshots" at "https://repository-qi4j.forge.cloudbees.com/snapshot/"
@@ -133,6 +141,9 @@ libraryDependencies += \
     withSources() withJavadoc()
 libraryDependencies += \
     "org.qi4j.core" % "org.qi4j.core.runtime" % "QI4J_VERSION" % "runtime" \
+    withSources() withJavadoc()
+libraryDependencies += \
+    "org.qi4j.core" % "org.qi4j.core.testsupport" % "QI4J_VERSION" % "test" \
     withSources() withJavadoc()
 // ...</pre><p>Where <code class="literal">QI4J_VERSION</code> is the Qi4j version you want to use.</p></div><div class="section" title="Using Ivy"><div class="titlepage"><div><div><h4 class="title"><a id="_using_ivy"></a>Using Ivy</h4></div></div></div><p>First you need to register the Qi4j repositories in a <code class="literal">ivysettings.xml</code> file:</p><pre class="programlisting brush: xml">&lt;ivysettings&gt;
     &lt;settings defaultResolver="chain"/&gt;
@@ -154,6 +165,8 @@ libraryDependencies += \
                     rev="QI4J_VERSION"  conf="default" /&gt;
         &lt;dependency org="org.qi4j.core" name="org.qi4j.core.runtime"
                     rev="QI4J_VERSION"  conf="runtime" /&gt;
+        &lt;dependency org="org.qi4j.core" name="org.qi4j.core.testsupport"
+                    rev="QI4J_VERSION"  conf="test" /&gt;
         &lt;!-- ... --&gt;
     &lt;/dependencies&gt;
     &lt;!-- ... --&gt;

@@ -79,19 +79,37 @@ $( document ).ready( function( $ )
                 container.appendChild( well );
 
                 // Fetch issues count - The Jira rest api does not provide a roadmap view ...
+                //
+                // issuesUnresolved
+                // issuesFixedCount
+                // issuesAffectedCount
+                //
+                // if ( unresolved > 0 ) {
+                //   data.issuesUnresolved
+                // }Êelse {
+                //   data.issuesFixedCount
+                // }
+                //
                 var version_url = version.self;
-                $.getJSON( version_url + '/unresolvedIssueCount?jsonp-callback=?&callback=?', function(data) {
-                    var $issues = $( '#' + data.self.substring( data.self.lastIndexOf( '/' ) + 1 ) + '-issues' );
-                    if (data.issuesUnresolvedCount) {
+                if ( version.archived || version.released )
+                {
+                    $.getJSON( version_url + '/relatedIssueCounts?jsonp-callback=?&callback=?', function(data)
+                    {
+                        var $issues = $( '#' + data.self.substring( data.self.lastIndexOf( '/' ) + 1 ) + '-issues' );
+                        if( data.issuesFixedCount )
+                        {
+                            $issues.append('<p>' + data.issuesFixedCount + ' fixed issue(s).</p>');
+                        }
+                    });
+                }
+                else
+                {
+                    $.getJSON( version_url + '/unresolvedIssueCount?jsonp-callback=?&callback=?', function(data)
+                    {
+                        var $issues = $( '#' + data.self.substring( data.self.lastIndexOf( '/' ) + 1 ) + '-issues' );
                         $issues.append('<p>' + data.issuesUnresolvedCount + ' unresolved issue(s).</p>');
-                    }
-                });
-                $.getJSON( version_url + '/relatedIssueCounts?jsonp-callback=?&callback=?', function(data) {
-                    var $issues = $( '#' + data.self.substring( data.self.lastIndexOf( '/' ) + 1 ) + '-issues' );
-                    if(data.issuesFixedCount) {
-                        $issues.append('<p>' + data.issuesFixedCount + ' fixed issue(s).</p>');
-                    }
-                });
+                    });
+                }
             }
         }
 

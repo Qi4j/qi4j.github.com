@@ -29,8 +29,9 @@ layout: default
             <li>For changes in the 1st version digit, for instance from 1.3.1 to 2.0, incompatibilities have been introduced.</li>
         </ul>
         <p>
-            However, this will only be true for the Qi4j API, i.e. the classes found in qi4j-core-api JAR. For SPI and
-            especially the runtime, we reserve the right of incompatible changes between releases in the second digit.
+            However, this will only be true for the Qi4j API, i.e. the classes found in org.qi4j.core.api JAR.
+            For SPI and especially the Runtime, we reserve the right of incompatible changes between releases in the
+            second digit.
         </p>
         <p>
             Qi4j also has dependencies on other systems. We reserve the right that these dependencies may change
@@ -39,12 +40,21 @@ layout: default
         </p>
 
         <h2>Qi4j SDK Releases</h2>
+
         <p>
             The Qi4j SDK is split in two downloads: binaries and sources. Both downloads are available in the zip and
             tar.gz formats. The source code is also available on <a href="http://github.com/qi4j/qi4j-sdk">Github</a>.
         </p>
+        <p class="lead">
+            The binaries distributions contains Qi4j artifacts only to keep the download size small.
+        </p>
         <p>
-            In the binaries distribution you'll find 
+            Each Qi4j artifact comes with a file prefixed <code>..-runtime-deps.txt</code> that contains the list of
+            its dependencies.
+            Moreover, at the SDK root you'll find a <a href="http://en.wikipedia.org/wiki/Metalink">Metalink</a> file
+            named <code>qi4j-sdk-runtime-deps.metalink</code> that you can use to download all needed dependencies
+            jars. Metalink files can be downloaded using curl, aria2 and a lot of other download tools. Support in wget
+            is coming.
         </p>
 
         {% include releases/1.4.1.html %}

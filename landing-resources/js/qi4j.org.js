@@ -10,6 +10,18 @@ $( document ).ready( function( $ )
     var $content = $( "#content" );
 
     /**
+     * Downloads.
+     */
+    function downloads()
+    {
+        // Add package icons
+        $content.find( "table.table-striped tr" ).each( function( idx, download_row )
+        {
+            $( download_row ).find("a:first").prepend( '<img src="http://team.ops4j.org/images/icons/package_24.gif" /> ' );
+        } );
+    }
+
+    /**
      * Community/Roadmap.
      */
     function roadmap()
@@ -267,6 +279,9 @@ $( document ).ready( function( $ )
     // Section specific enhancements
     switch( document.title )
     {
+        case "Qi4j Downloads":
+            downloads();
+            break;
         case "Qi4j Continuous Integration":
             continuous_integration();
             break;

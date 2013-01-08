@@ -78,12 +78,11 @@ terms.</p><p>So in Qi4j, instead of writing;</p><pre class="programlisting brush
     String getTitle();
     String getAuthor();
 }
-</pre><pre class="programlisting brush: java">Traceback (most recent call last):
-  File "/Users/niclas/.asciidoc/filters/snippet/snippet.py", line 86, in &lt;module&gt;
-    for line in snippet(**configuration(indata)):
-  File "/Users/niclas/.asciidoc/filters/snippet/snippet.py", line 69, in snippet
-    raise ValueError('Missing snippet for tag "' + tag + '" in file "' + source + '".')
-ValueError: Missing snippet for tag "book" in file "manual/src/main/java/org/niclas/hedhman/tutorials/properties/pojo/MutableBook.java".
+</pre><pre class="programlisting brush: java">public interface MutableBook extends Book
+{
+    void setTitle( String title );
+    void setAuthor( String author );
+}
 </pre><p>where we need the MutableBook to be able to initialize it (known as Type 2 Dependency Injection) on creation. From our
 point of view, this has many flaws. If we refactor the "Title" property, our IDE need to understand the getters and
 setters concept. The good news now is that they all do, but how about meta information about the property itself. For

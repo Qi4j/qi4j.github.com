@@ -72,7 +72,7 @@
  </script>
 
   </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Qi4j</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="core-api.html">Core API</span></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><a href="core-io.html">Core I/O API</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section" title="Core API"><div class="titlepage"><div><div><h3 class="title"><a id="core-api"></a>Core API</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The Qi4j Core API is the primary interface for client application code during the main execution phase, i.e. after the
-application has been activated.</p><div class="table"><a id="idp140568337306320"></a><p class="title"><strong>Table 1. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+application has been activated.</p><div class="table"><a id="idp140187711558352"></a><p class="title"><strong>Table 1. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
 the ability to assemble (compose) objects from smaller pieces, called Fragments.
 </li><li class="listitem">
 the construction of applications by assembling Composites into Modules and Modules into Layers.
@@ -104,16 +104,18 @@ Transient - Short-lived composites that are not persistable. Equals/hashCode/toS
       Mixin Type declaring those methods explicitly.
 </li></ul></div><p>In versions of Qi4j prior to 2.0, composite types had to extend one of these 4 meta types, but in 2.0 and later, the
 meta type interface is added dynamically during <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a>.
-We can therefor get rid of a lot of additional types, and use Qi4j-free interfaces directly;</p><pre class="programlisting brush: java">@Mixins({BalanceCheckMixin.class, .... } )
+We can therefor get rid of a lot of additional types, and use Qi4j-free interfaces directly;</p><pre class="programlisting brush: java">@Mixins( { BalanceCheckMixin.class } )
 public interface BankAccount
 {
     Money checkBalance();
-    :
-    :
-}</pre><p>and declare it with;</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
+      [...snip...]
+
+}
+</pre><p>and declare it with;</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
 {
     module.entities( BankAccount.class );
-}</pre></div></div><div class="section" title="Structure"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-structure"></a>Structure</h4></div></div></div><p>Qi4j promotes a conventional view of application structure, that computer science has been using for decades.</p><p>The definition is as follows;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+}
+</pre></div></div><div class="section" title="Structure"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-structure"></a>Structure</h4></div></div></div><p>Qi4j promotes a conventional view of application structure, that computer science has been using for decades.</p><p>The definition is as follows;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 One Application per Qi4j runtime instance.
 </li><li class="listitem">
 One or more Layers per Application.
@@ -414,25 +416,30 @@ interfaces and automatically included if needed. They also serve as excellent ex
 public final class PropertyMixin
     implements InvocationHandler
 {
-    @State private StateHolder state;
+    @State
+    private StateHolder state;
 
+    @Override
     public Object invoke( Object proxy, Method method, Object[] args )
         throws Throwable
     {
-        return state.getProperty( method );
+        return state.propertyFor( method );
     }
 
+    /**
+     * Filter Property methods to apply generic Property Mixin.
+     */
     public static class PropertyFilter
-        implements AppliesToFilter, Serializable
+        implements AppliesToFilter
     {
-        public boolean appliesTo( Method method, Class&lt;?&gt; mixin,
-                                  Class&lt;?&gt; compositeType,
-                                  Class&lt;?&gt; modifierClass )
+        @Override
+        public boolean appliesTo( Method method, Class&lt;?&gt; mixin, Class&lt;?&gt; compositeType, Class&lt;?&gt; modifierClass )
         {
             return Property.class.isAssignableFrom( method.getReturnType() );
         }
     }
-}</pre><p>Other examples that we have come across;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+}
+</pre><p>Other examples that we have come across;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 Mapping from Property&lt;type&gt; to POJO style "properties".
 </li><li class="listitem">
 Remote Service delegation.

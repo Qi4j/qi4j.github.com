@@ -75,21 +75,27 @@
 independently of Qi4j, together with the Qi4j Core Functional API, which the Core I/O API depends on.</p><p>The Qi4j Core I/O API tries to address the problem around shuffling data around from various I/O inputs and outputs,
 possibly with transformations and filtering along the way. It was identified that there is a general mix-up of concerns
 in the stereotypical I/O handling codebases that people deal with all the time. The reasoning around this, can be found
-in the <a class="xref" href="howto-use-io.html" title="Use I/O API">Use I/O API</a>, and is recommended reading.</p><div class="table"><a id="idp140568337686672"></a><p class="title"><strong>Table 5. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.io</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="The Problem"><div class="titlepage"><div><div><h4 class="title"><a id="_the_problem"></a>The Problem</h4></div></div></div><p>Why does I/O operations in Java have to be so complicated, with nested try/catch/finally and loops? Don’t you wish
+in the <a class="xref" href="howto-use-io.html" title="Use I/O API">Use I/O API</a>, and is recommended reading.</p><div class="table"><a id="idp140187711939472"></a><p class="title"><strong>Table 5. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.io</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="The Problem"><div class="titlepage"><div><div><h4 class="title"><a id="_the_problem"></a>The Problem</h4></div></div></div><p>Why does I/O operations in Java have to be so complicated, with nested try/catch/finally and loops? Don’t you wish
 that the operations could be expressed in a more natural way, such as;</p><pre class="programlisting brush: java">File source = ...
 File destination = ...
 source.copyTo( destination );</pre><p>It seems natural to do, yet it is not present for us. We need to involve FileInputStream/FileOutputStream, wrap them
-in Buffered versions of it, do out own looping, close the streams afterwards and what not. So, the java.io.File does
+in Buffered versions of it, do our own looping, close the streams afterwards and what not. So, the java.io.File does
 not have this simple feature and in the Qi4j Core API, we need to work around this limitation. We also want to
 make the abstraction a little bit more encompassing than "just" files. So how does that look like then?</p></div><div class="section" title="First Examples"><div class="titlepage"><div><div><h4 class="title"><a id="_first_examples"></a>First Examples</h4></div></div></div><p>The most common inputs and outputs are collected in the org.qi4j.io.Inputs and org.qi4j.io.Outputs classes as static
-factory methods, but you can create your (more about that later).</p><p>So, we want to read a text file and write the content into another text file, right? This is how it is done;</p><pre class="programlisting brush: java">File source = ...
-File destination = ...
-Inputs.text( source ).transferTo( Outputs.text(destination) );</pre><p>Pretty much self-explanatory, wouldn’t you say? But what happened to the handling of exceptions and closing of
-resources? It is all handled inside the Qi4j Core I/O API. There is nothing you can forget to do.</p><p>Another simple example, where we want to count the number of lines in the text;</p><pre class="programlisting brush: java">File source = ...
-File destination = ...
-Counter&lt;String&gt; counter = new Counter&lt;String&gt;();
-Inputs.text( source ).transferTo( Transforms.map(counter, Outputs.text(destination) ));
-System.out.println( "Lines: " + counter.getCount() );</pre><p>The Counter is a <a class="xref" href="core-functional.html" title="Core Functional API">Function</a> which gets injected into the transfer.</p></div><div class="section" title="The 3 Parts"><div class="titlepage"><div><div><h4 class="title"><a id="_the_3_parts"></a>The 3 Parts</h4></div></div></div><p>Ok, so we have seen that the end result can become pretty compelling. How does it work?</p><p>I/O is defined as a process of moving data from an Input, via one or more Transforms to an Output. The Input could
+factory methods, but you can create your (more about that later).</p><p>So, we want to read a text file and write the content into another text file, right? This is how it is done;</p><pre class="programlisting brush: java">File source = new File( "source.txt" );
+File destination = new File( "destination.txt" );
+Inputs.text( source ).transferTo( Outputs.text( destination ) );
+</pre><p>Pretty much self-explanatory, wouldn’t you say? But what happened to the handling of exceptions and closing of
+resources? It is all handled inside the Qi4j Core I/O API. There is nothing you can forget to do.</p><p>Another simple example, where we want to count the number of lines in the text;</p><pre class="programlisting brush: java">import org.qi4j.io.Transforms.Counter;
+import static org.qi4j.io.Transforms.map;
+  [...snip...]
+
+            File source = new File( "source.txt" );
+            File destination = new File( "destination.txt" );
+            Counter&lt;String&gt; counter = new Counter&lt;String&gt;();
+            Inputs.text( source ).transferTo( map(counter, Outputs.text(destination) ));
+            System.out.println( "Lines: " + counter.getCount() );
+</pre><p>The Counter is a <a class="xref" href="core-functional.html" title="Core Functional API">Function</a> which gets injected into the transfer.</p></div><div class="section" title="The 3 Parts"><div class="titlepage"><div><div><h4 class="title"><a id="_the_3_parts"></a>The 3 Parts</h4></div></div></div><p>Ok, so we have seen that the end result can become pretty compelling. How does it work?</p><p>I/O is defined as a process of moving data from an Input, via one or more Transforms to an Output. The Input could
 be a File or a String, the transformation could be a filter, conversion or a function and finally the Output
 destination could be a File, String or an OutputStream. It is important to note that there is a strong separation of
 concern between them. Let’s look at the on at a time.</p></div><div class="section" title="org.qi4j.io.Input"><div class="titlepage"><div><div><h4 class="title"><a id="_org_qi4j_io_input"></a>org.qi4j.io.Input</h4></div></div></div><p>This interface simply has a transferTo() method, which takes an Output. The formal definition is;</p><pre class="programlisting brush: java">public interface Input&lt;T, SenderThrowableType extends Throwable&gt;

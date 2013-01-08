@@ -75,7 +75,7 @@
 independently of Qi4j, together with the Qi4j Core Functional API, which the Core I/O API depends on.</p><p>The Qi4j Core I/O API tries to address the problem around shuffling data around from various I/O inputs and outputs,
 possibly with transformations and filtering along the way. It was identified that there is a general mix-up of concerns
 in the stereotypical I/O handling codebases that people deal with all the time. The reasoning around this, can be found
-in the <a class="xref" href="howto-use-io.html" title="Use I/O API">Use I/O API</a>, and is recommended reading.</p><div class="table"><a id="idp6055504"></a><p class="title"><strong>Table 5. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.io</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="The Problem"><div class="titlepage"><div><div><h4 class="title"><a id="_the_problem"></a>The Problem</h4></div></div></div><p>Why does I/O operations in Java have to be so complicated, with nested try/catch/finally and loops? Don’t you wish
+in the <a class="xref" href="howto-use-io.html" title="Use I/O API">Use I/O API</a>, and is recommended reading.</p><div class="table"><a id="idp140270704632368"></a><p class="title"><strong>Table 5. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.io</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="The Problem"><div class="titlepage"><div><div><h4 class="title"><a id="_the_problem"></a>The Problem</h4></div></div></div><p>Why does I/O operations in Java have to be so complicated, with nested try/catch/finally and loops? Don’t you wish
 that the operations could be expressed in a more natural way, such as;</p><pre class="programlisting brush: java">File source = ...
 File destination = ...
 source.copyTo( destination );</pre><p>It seems natural to do, yet it is not present for us. We need to involve FileInputStream/FileOutputStream, wrap them
@@ -106,7 +106,7 @@ likewise is the ultimate "receiver".</p><p>So, then, the method transferTo() con
 (ReceiverThrowable) which the transferTo() method may also throw as the data may not be accepted and such exception
 will bubble up to the transferTo() method (the client’s view of the transfer).</p></div><div class="section" title="org.qi4j.io.Output"><div class="titlepage"><div><div><h4 class="title"><a id="_org_qi4j_io_output"></a>org.qi4j.io.Output</h4></div></div></div><p>The output interface is likewise fairly simple;</p><pre class="programlisting brush: java">public interface Output&lt;T, ReceiverThrowableType extends Throwable&gt;
 {
-[...snip...]
+  [...snip...]
 
     &lt;SenderThrowableType extends Throwable&gt; void receiveFrom( Sender&lt;? extends T, SenderThrowableType&gt; sender )
         throws ReceiverThrowableType, SenderThrowableType;
@@ -209,7 +209,7 @@ as every 1000 items. This may not be what you think a ProgressLog should look li
 how you can combine the general principles found in the Qi4j Core API package.</p></div><div class="section" title="How to write a filter specification?"><div class="titlepage"><div><div><h4 class="title"><a id="_how_to_write_a_filter_specification"></a>How to write a filter specification?</h4></div></div></div><p>The filter transform takes a specification implementation which has a very simple method, isSatisfiedBy() (read more
 about that in <a class="xref" href="core-functional.html" title="Core Functional API">Function</a>.</p><pre class="programlisting brush: java">public interface Specification&lt;T&gt;
 {
-[...snip...]
+  [...snip...]
 
     boolean satisfiedBy( T item );
 }
@@ -247,7 +247,7 @@ sources and destinations.</p></div><div class="section" title="org.qi4j.io.Input
  * @return Input that provides lines from the textfiles as strings
  */
 public static Input&lt;String, IOException&gt; text( final File source )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -261,7 +261,7 @@ public static Input&lt;String, IOException&gt; text( final File source )
  * @return Input that provides lines from the textfiles as strings
  */
 public static Input&lt;String, IOException&gt; text( final File source, final String encoding )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -276,7 +276,7 @@ public static Input&lt;String, IOException&gt; text( final File source, final St
  * @return Input that provides lines from the textfiles as strings
  */
 public static Input&lt;String, IOException&gt; text( final URL source )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -288,7 +288,7 @@ public static Input&lt;String, IOException&gt; text( final URL source )
  * @return
  */
 public static Input&lt;ByteBuffer, IOException&gt; byteBuffer( final File source, final int bufferSize )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -300,7 +300,7 @@ public static Input&lt;ByteBuffer, IOException&gt; byteBuffer( final File source
  * @return
  */
 public static Input&lt;ByteBuffer, IOException&gt; byteBuffer( final InputStream source, final int bufferSize )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -314,7 +314,7 @@ public static Input&lt;ByteBuffer, IOException&gt; byteBuffer( final InputStream
  * @return
  */
 public static &lt;T, SenderThrowableType extends Throwable&gt; Input&lt;T, SenderThrowableType&gt; combine( final Iterable&lt;Input&lt;T, SenderThrowableType&gt;&gt; inputs )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -326,7 +326,7 @@ public static &lt;T, SenderThrowableType extends Throwable&gt; Input&lt;T, Sende
  * @return
  */
 public static &lt;T&gt; Input&lt;T, RuntimeException&gt; iterable( final Iterable&lt;T&gt; iterable )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -354,7 +354,7 @@ public static Input&lt;ByteBuffer, IOException&gt; output( final Visitor&lt;Outp
  * @return an Output for storing text in a file
  */
 public static Output&lt;String, IOException&gt; text( final File file )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -368,7 +368,7 @@ public static Output&lt;String, IOException&gt; text( final File file )
  * @return an Output for storing text in a file
  */
 public static Output&lt;String, IOException&gt; text( final File file, final String encoding )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -378,7 +378,7 @@ public static Output&lt;String, IOException&gt; text( final File file, final Str
  * @return an Output for storing text in a Writer
  */
 public static Output&lt;String, IOException&gt; text( final Writer writer )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -388,7 +388,7 @@ public static Output&lt;String, IOException&gt; text( final Writer writer )
  * @return an Output for storing text in a StringBuilder
  */
 public static Output&lt;String, IOException&gt; text( final StringBuilder builder )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -400,7 +400,7 @@ public static Output&lt;String, IOException&gt; text( final StringBuilder builde
  * @return
  */
 public static &lt;T&gt; Output&lt;ByteBuffer, IOException&gt; byteBuffer( final File file )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -412,7 +412,7 @@ public static &lt;T&gt; Output&lt;ByteBuffer, IOException&gt; byteBuffer( final 
  * @return
  */
 public static &lt;T&gt; Output&lt;ByteBuffer, IOException&gt; byteBuffer( final OutputStream stream )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -425,7 +425,7 @@ public static &lt;T&gt; Output&lt;ByteBuffer, IOException&gt; byteBuffer( final 
  * @return
  */
 public static &lt;T&gt; Output&lt;byte[], IOException&gt; bytes( final File file, final int bufferSize )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -436,7 +436,7 @@ public static &lt;T&gt; Output&lt;byte[], IOException&gt; bytes( final File file
  * @return
  */
 public static &lt;T&gt; Output&lt;T, RuntimeException&gt; noop()
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -449,7 +449,7 @@ public static &lt;T&gt; Output&lt;T, RuntimeException&gt; noop()
  * @return
  */
 public static &lt;T, ReceiverThrowableType extends Throwable&gt; Output&lt;T, ReceiverThrowableType&gt; withReceiver( final Receiver&lt;T, ReceiverThrowableType&gt; receiver )
-[...snip...]
+  [...snip...]
 
 
 /**
@@ -458,14 +458,14 @@ public static &lt;T, ReceiverThrowableType extends Throwable&gt; Output&lt;T, Re
  * @return
  */
 public static Output&lt;Object, RuntimeException&gt; systemOut()
-[...snip...]
+  [...snip...]
 
 
 /**
  * Write objects to System.err.println.
  */
 public static Output&lt;Object, RuntimeException&gt; systemErr()
-[...snip...]
+  [...snip...]
 
 
 /**

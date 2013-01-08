@@ -72,7 +72,7 @@
  </script>
 
   </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Qi4j</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="core-api.html">Core API</span></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><a href="core-io.html">Core I/O API</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section" title="Core API"><div class="titlepage"><div><div><h3 class="title"><a id="core-api"></a>Core API</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The Qi4j Core API is the primary interface for client application code during the main execution phase, i.e. after the
-application has been activated.</p><div class="table"><a id="idp5675136"></a><p class="title"><strong>Table 1. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+application has been activated.</p><div class="table"><a id="idp140270704252000"></a><p class="title"><strong>Table 1. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
 the ability to assemble (compose) objects from smaller pieces, called Fragments.
 </li><li class="listitem">
 the construction of applications by assembling Composites into Modules and Modules into Layers.
@@ -173,7 +173,7 @@ public void assemble( ModuleAssembly module )
     throws AssemblyException
 {
     ServiceDeclaration service = module.addServices( MyDemoService.class );
-    [...snip...]
+      [...snip...]
 
     service.taggedWith( "Important", "Drain" );
 </pre><p>Tags are useful inside the application code to locate a particular service instance, in case we have many. For instance;</p><pre class="programlisting brush: java">@Service
@@ -219,12 +219,12 @@ public void sendMail( @Email String to, @MinLength( 8 ) String subject, String b
     MailServiceConfiguration conf = config.get();
     String hostName = conf.hostName().get();
     int port = conf.port().get();
-    [...snip...]
+      [...snip...]
 
 }
 </pre></div><div class="section" title="Modifying Configuration"><div class="titlepage"><div><div><h5 class="title"><a id="_modifying_configuration"></a>Modifying Configuration</h5></div></div></div><p>Configuration is modifiable, and after the modifications have been made, the save() method on the Configuration type
 must be called. Example;</p><pre class="programlisting brush: java">    void changeExternalMailService( String hostName, int port );
-    [...snip...]
+      [...snip...]
 
         @Override
         public void changeExternalMailService( String hostName, int port )
@@ -234,7 +234,7 @@ must be called. Example;</p><pre class="programlisting brush: java">    void cha
             conf.port().set( port );
             config.save();
         }
-        [...snip...]
+          [...snip...]
 
     }
 }
@@ -485,7 +485,7 @@ handling.</p><p>A Gauge can represent anything, for instance, thread pool levels
 useful to have separate gauges for percentage (%) and absolute numbers of the same resource. Operations are mainly
 interested in being alerted when threshold are reach as a percentage, as it is otherwise too many numbers to keep
 track of.</p><p>To create a Gauge, you do something like;</p><pre class="programlisting brush: java">final BlockingQueue queue = new LinkedBlockingQueue( 20 );
-[...snip...]
+  [...snip...]
 
 MetricsGaugeFactory gaugeFactory = provider.createFactory( MetricsGaugeFactory.class );
 MetricsGauge&lt;Integer&gt; gauge = gaugeFactory.registerGauge( getClass(), "Sample Gauge", new MetricsGauge&lt;Integer&gt;()

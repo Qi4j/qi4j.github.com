@@ -78,32 +78,43 @@ terms.</p><p>So in Qi4j, instead of writing;</p><pre class="programlisting brush
     String getTitle();
     String getAuthor();
 }
-public interface MutableBook extends Book
-{
-    void setTitle( String title );
-    void setAuthor( String author );
-}</pre><p>where we need the MutableBook to be able to initialize it (known as Type 2 Dependency Injection) on creation. From our
+</pre><pre class="programlisting brush: java">Traceback (most recent call last):
+  File "/Users/niclas/.asciidoc/filters/snippet/snippet.py", line 86, in &lt;module&gt;
+    for line in snippet(**configuration(indata)):
+  File "/Users/niclas/.asciidoc/filters/snippet/snippet.py", line 69, in snippet
+    raise ValueError('Missing snippet for tag "' + tag + '" in file "' + source + '".')
+ValueError: Missing snippet for tag "book" in file "manual/src/main/java/org/niclas/hedhman/tutorials/properties/pojo/MutableBook.java".
+</pre><p>where we need the MutableBook to be able to initialize it (known as Type 2 Dependency Injection) on creation. From our
 point of view, this has many flaws. If we refactor the "Title" property, our IDE need to understand the getters and
 setters concept. The good news now is that they all do, but how about meta information about the property itself. For
 instance, how to define a system where a UI can get an Icon for "Author" in a generic way? All kinds of system has been
 added, such as one can create a BookBean for some metadata, and then MBeans for management. Where will it end?</p><p>We think we have a much better solution, and are bold enough to abandon the getters/setters and POJOs. The above looks
 like this;</p><pre class="programlisting brush: java">public interface Book
 {
-    @Immutable Property&lt;String&gt; title();
-    @Immutable Property&lt;String&gt; author();
-}</pre><p>There is more to this than meets the eye.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+    @Immutable
+    Property&lt;String&gt; title();
+
+    @Immutable
+    Property&lt;String&gt; author();
+}
+</pre><p>There is more to this than meets the eye.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 @Immutable annotation signals that this can’t change.
 </li><li class="listitem">
 Property still have a set() method, which can be used during the initialization only.
 </li><li class="listitem">
 Metadata about each Property can be declared as <a class="xref" href="glossary.html#def-metainfo">MetaInfo</a>.
-</li></ul></div><pre class="programlisting brush: java">TransientBuilder&lt;Book&gt; builder = module.newTransientBuilder( Book.class );
-Book prototype = builder.prototype();
-prototype.title().set( "The Death of POJOs" );
-prototype.author().set( "Niclas Hedhman" );
-Book book = builder.newInstance();
-String title = book.title().get();     // Retrieves the title.
-book.title().set( "Long Live POJOs" ); // throws a PropertyVetoException</pre><div class="section" title="Persistence"><div class="titlepage"><div><div><h4 class="title"><a id="_persistence"></a>Persistence</h4></div></div></div><p>The Property concept also allows a much better defined persistence model. In Qi4j, only Property and Association
+</li></ul></div><pre class="programlisting brush: java">@Structure
+Module module;
+  [...snip...]
+
+    TransientBuilder&lt;Book&gt; builder = module.newTransientBuilder( Book.class );
+    Book prototype = builder.prototype();
+    prototype.title().set( "The Death of POJOs" );
+    prototype.author().set( "Niclas Hedhman" );
+    Book book = builder.newInstance();
+    String title = book.title().get();     // Retrieves the title.
+    book.title().set( "Long Live POJOs" ); // throws an IllegalStateException
+</pre><div class="section" title="Persistence"><div class="titlepage"><div><div><h4 class="title"><a id="_persistence"></a>Persistence</h4></div></div></div><p>The Property concept also allows a much better defined persistence model. In Qi4j, only Property and Association
 instances are persisted, and that makes the semantics around the persistence system very clear.</p><p>Properties reference values only, and these values must be Serializable, which means that Properties can not contain
 Entities, since Entities are not Serializable. Associations are the opposite, as they must only reference Entities and
 nothing else.</p></div><div class="section" title="MetaInfo"><div class="titlepage"><div><div><h4 class="title"><a id="_metainfo"></a>MetaInfo</h4></div></div></div><p>Properties can also have typed, custom meta information associated with them. Meta information is declared once per
@@ -111,10 +122,20 @@ Property per Module. A Property is identified by its method name and the interfa
 actual domain model. Such Swing client will utilize a SwingInfo property info if it is available.</p><pre class="programlisting brush: java">public interface SwingInfo
 {
     Icon icon( Rectangle size );
+
     String displayName( Locale locale );
-}</pre><p>Our generic Swing UI will be mainly reflective in nature, but when it gets hold of a Property, it can simply do;</p><pre class="programlisting brush: java">private void addProperty( JPanel panel, Property&lt;?&gt; property )
-{
-    SwingInfo info = property.metaInfo( SwingInfo.class );
-    panel.add( new Label( info.displayName( this.locale ) );
-    panel.add( info.icon( this.iconSize ) );
-}</pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>
+}
+</pre><p>Our generic Swing UI will be mainly reflective in nature, but when it gets hold of a Property, it can simply do;</p><pre class="programlisting brush: java">    @Structure
+    private Qi4j api;
+      [...snip...]
+
+    private void addProperty( JPanel panel, Property&lt;?&gt; property )
+    {
+        SwingInfo info = api.getPropertyDescriptor( property ).metaInfo( SwingInfo.class );
+        Icon icon = info.icon( SIZE_32_32 );
+        panel.add(  new JLabel(info.displayName( this.locale ), icon, JLabel.CENTER) );
+    }
+      [...snip...]
+
+}
+</pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

@@ -82,7 +82,7 @@ Destinations. For the sake of simplicity, we are leaving out the domain details�
 }
 </pre><p>So, then there is the ServiceComposite…</p><pre class="programlisting brush: java">// The package is relevant to the Initial Values discussed later.
 package org.niclas.hedhman.travel;
-[...snip...]
+  [...snip...]
 
 @Mixins( { TravelPlanMixin.class } )
 public interface TravelPlanService extends TravelPlan, ServiceComposite
@@ -113,7 +113,7 @@ public class TravelPlanMixin implements TravelPlan
         String hostName = tpConf.hostName().get();
         // ...
     }
-    [...snip...]
+      [...snip...]
 
 }
 </pre><p>And from the Service point of view, it doesn’t need to worry about where the configuration really comes from. But it may

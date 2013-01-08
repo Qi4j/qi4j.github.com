@@ -79,7 +79,7 @@ Shiro website.</p><p>Altough Apache Shiro can be used as-is with Qi4j Applicatio
 handy. If your use case do not fit any of theses integrations, look at their respective code. You should find out
 pretty easily how to compose the provided code to write your integration. Don’t hesitate to contribute interesting
 integrations to this very library.</p><p>We invite you to read the comprehensive <a class="ulink" href="http://shiro.apache.org/documentation.html" target="_top">Apache Shiro documentation</a>, we will
-mostly discuss Qi4j related matters here.</p><div class="table"><a id="idp6887648"></a><p class="title"><strong>Table 35. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.shiro-core</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Basic usage"><div class="titlepage"><div><div><h4 class="title"><a id="_basic_usage"></a>Basic usage</h4></div></div></div><p>For standalone applications, you can use plain Shiro easily. The only thing to do is to register a configured
+mostly discuss Qi4j related matters here.</p><div class="table"><a id="idp140270705446480"></a><p class="title"><strong>Table 35. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.shiro-core</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Basic usage"><div class="titlepage"><div><div><h4 class="title"><a id="_basic_usage"></a>Basic usage</h4></div></div></div><p>For standalone applications, you can use plain Shiro easily. The only thing to do is to register a configured
 SecurityManager when activating your Qi4j Application. It can be done outside the application, before its activation,
 "à là" by-hand ;</p><pre class="programlisting brush: java">IniSecurityManagerFactory factory = new IniSecurityManagerFactory( "classpath:standalone-shiro.ini" );
 SecurityManager securityManager = factory.getInstance();
@@ -106,14 +106,14 @@ in the laters.</p><p>Once started you must remember to register the SecurityMana
 @Service
 private IniSecurityManagerService securityManagerService;
 
-[...snip...]
+  [...snip...]
 
 public void interactionBegins()
 {
     ThreadContext.bind( securityManagerService.getSecurityManager() );
 }
 
-[...snip...]
+  [...snip...]
 
 public void interactionEnds()
 {
@@ -148,7 +148,7 @@ public interface MyRealmService
 {
 }
 
-[...snip...]
+  [...snip...]
 
 public class MyRealmMixin
         extends SimpleAccountRealm
@@ -173,7 +173,7 @@ public class MyRealmMixin
         addAccount( "foo", passwordService.encryptPassword( "bar" ) );
     }
 
-    [...snip...]
+      [...snip...]
 
 
 }
@@ -182,12 +182,12 @@ public class MyRealmMixin
 public void assemble( ModuleAssembly module )
         throws AssemblyException
 {
-[...snip...]
+  [...snip...]
 
     new StandaloneShiroAssembler().withConfig( configModule ).assemble( module );
     module.services( MyRealmService.class );
 
-    [...snip...]
+      [...snip...]
 
 }
 
@@ -207,7 +207,7 @@ UserFactory too. Note that the factory uses the PasswordService implemented by t
 {
 }
 
-[...snip...]
+  [...snip...]
 
 @Mixins( UserFactoryMixin.class )
 public interface UserFactory
@@ -217,7 +217,7 @@ public interface UserFactory
 
 }
 
-[...snip...]
+  [...snip...]
 
 public static class UserFactoryMixin
         implements UserFactory
@@ -246,7 +246,7 @@ entity and its factory:</p><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
         throws AssemblyException
 {
-[...snip...]
+  [...snip...]
 
     new StandaloneShiroAssembler().withConfig( configModule ).assemble( module );
     new PasswordDomainAssembler().withConfig( configModule ).assemble( module );
@@ -254,13 +254,13 @@ public void assemble( ModuleAssembly module )
     module.entities( User.class );
     module.services( UserFactory.class );
 
-    [...snip...]
+      [...snip...]
 
 }
 
 </pre><p>And finally here is how to create a new user and below how to perform a login:</p><pre class="programlisting brush: java">User user = userFactory.createNewUser( "foo", "bar" );
 
-[...snip...]
+  [...snip...]
 
 Subject currentUser = SecurityUtils.getSubject();
 currentUser.login( new UsernamePasswordToken( "foo", "bar" ) );
@@ -298,7 +298,7 @@ role.assignTo( user );
 
 uow.complete();
 
-[...snip...]
+  [...snip...]
 
 uow = module.newUnitOfWork();
 
@@ -313,7 +313,7 @@ if ( !currentUser.isPermitted( "permission-one" ) ) {
     fail( "User 'foo' must have 'permission-one' permission." );
 }
 
-[...snip...]
+  [...snip...]
 
 uow.discard();
 </pre></div></div><div class="section" title="Other authentication mecanisms"><div class="titlepage"><div><div><h4 class="title"><a id="_other_authentication_mecanisms"></a>Other authentication mecanisms</h4></div></div></div><p>For other authentication mecanisms you can leverage Shiro extensions available in the Shiro distribution or as external

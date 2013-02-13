@@ -94,6 +94,7 @@ In this case, return a String with the content "Hello, World!".</p><pre class="p
 </pre><p>So far so good. We now need to make this into something that can run. This can be done like this;</p><pre class="programlisting brush: java">public class Main
 {
     public static void main( String[] args )
+        throws Exception
     {
         SingletonAssembler assembler = new SingletonAssembler() // &lt;1&gt;
         {

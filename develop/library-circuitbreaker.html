@@ -96,37 +96,37 @@ tripping it should be possible to expose this to other Qi4j services.
 There is a standard implementation of the Availability interface that
 delegates to a circuit breaker and the Enabled configuration flag, which
 is what we’d suspect will be used in most cases where external systems
-are invoked.</p><div class="table"><a id="idp140187712143952"></a><p class="title"><strong>Table 10. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.circuitbreaker</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Direct usage"><div class="titlepage"><div><div><h4 class="title"><a id="_direct_usage"></a>Direct usage</h4></div></div></div><p>The CircuitBreaker can be used directly, even without using anything else from the Qi4j SDK.</p><p>Here is a code snippet that demonstrate how to create a CircuitBreaker and how it behave:</p><pre class="programlisting brush: java">// Create a CircuitBreaker with a threshold of 3, a 250ms timeout, allowing IllegalArgumentExceptions
+are invoked.</p><div class="table"><a id="idp6423040"></a><p class="title"><strong>Table 10. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.circuitbreaker</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Direct usage"><div class="titlepage"><div><div><h4 class="title"><a id="_direct_usage"></a>Direct usage</h4></div></div></div><p>The CircuitBreaker can be used directly, even without using anything else from the Qi4j SDK.</p><p>Here is a code snippet that demonstrate how to create a CircuitBreaker and how it behave:</p><pre class="programlisting brush: java">// Create a CircuitBreaker with a threshold of 3, a 250ms timeout, allowing IllegalArgumentExceptions
 CircuitBreaker cb = new CircuitBreaker( 3, 250, CircuitBreakers.in( IllegalArgumentException.class ) );
 
-  [...snip...]
+[...snip...]
 
 // Service levels goes down but does not cause a trip
 cb.throwable( new IOException() );
 
-  [...snip...]
+[...snip...]
 
 // Service level goes down and causes a trip
 cb.throwable( new IOException() );
 cb.throwable( new IOException() );
 
-  [...snip...]
+[...snip...]
 
 // Turn on the CB again
 cb.turnOn();
 
-  [...snip...]
+[...snip...]
 
 // Service levels goes down and causes a trip
 cb.throwable( new IOException() );
 cb.throwable( new IOException() );
 cb.throwable( new IOException() );
 
-  [...snip...]
+[...snip...]
 
 // Wait until timeout
 
-  [...snip...]
+[...snip...]
 
 // CircuitBreaker is back on
 
@@ -142,7 +142,7 @@ update the circuit breaker on annotated methods invocation success and thrown ex
 {
     module.services( TestService.class ).setMetaInfo( new CircuitBreaker() );
 }
-  [...snip...]
+[...snip...]
 
 public interface TestService
         extends AbstractBreakOnThrowable, ServiceComposite
@@ -154,7 +154,7 @@ public interface TestService
     @BreaksCircuitOnThrowable
     void throwingMethod();
 
-      [...snip...]
+    [...snip...]
 
 }
 </pre><p>Remember to annotate methods which when they throw throwables should cause circuit breakers to trip and go back on
@@ -163,7 +163,7 @@ Note that if you already extends <code class="literal">AbstractBreakOnThrowable<
 <code class="literal">ServiceCircuitBreaker</code>.</p><p>Here is how it goes:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
         throws AssemblyException
 {
-  [...snip...]
+[...snip...]
 
     module.importedServices( MBeanServer.class ).importedBy( MBeanServerImporter.class ); // JMX Library
     module.services( CircuitBreakerManagement.class ).instantiateOnStartup(); // CircuitBreakers in JMX

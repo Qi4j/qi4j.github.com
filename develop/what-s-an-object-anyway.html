@@ -112,22 +112,26 @@ However, the state that is required to implement these roles should not be expos
 implementation details that may change over time, may be different depending on role implementation, and usually has a
 lot of rules regarding how it may be changed. In short, the state needs to be private to the composite.</p><p>This leads us to this typical implementation of an Entity</p><pre class="programlisting brush: java">@Mixins(SomeMixin.class)
 interface MyEntity
-   extends Some, Other, EntityComposite
-{}</pre><p>where Some and Other are role interfaces defined by one or more algorithms. SomeMixin is the implementation of the Some
+        extends Some, Other, EntityComposite
+{}
+</pre><p>where Some and Other are role interfaces defined by one or more algorithms. SomeMixin is the implementation of the Some
 interface. There is NO interface that is defined by the author of MyEntity. Algorithms first, objects second!</p><p>The state needed for these mixins would then be put into separate interfaces, referred to by using the @This injection
 in the mixins.</p><pre class="programlisting brush: java">interface SomeState
 {
-   Property&lt;String&gt; someProperty();
-}</pre><p>These interfaces will pretty much ONLY contain state declarations. There might be some methods in there, but I can’t
+    Property&lt;String&gt; someProperty();
+}
+</pre><p>These interfaces will pretty much ONLY contain state declarations. There might be some methods in there, but I can’t
 see right now what they would be.</p><p>In order to be able to get an overview of all the state being implemented by the Entity we introduce a "superstate"
 interface:</p><pre class="programlisting brush: java">interface MyState
-   extends SomeState, OtherState, ...
-{}</pre><p>This lets us see the totality of all the state that the Entity has, and can be used in the builder phase:</p><pre class="programlisting brush: java">EntityBuilder&lt;MyEntity&gt; builder = uow.newEntityBuilder(MyEntity.class);
+        extends SomeState, OtherState //, ...
+{}
+</pre><p>This lets us see the totality of all the state that the Entity has, and can be used in the builder phase:</p><pre class="programlisting brush: java">EntityBuilder&lt;MyEntity&gt; builder = uow.newEntityBuilder(MyEntity.class);
 MyState state = builder.instanceFor(MyState.class);
 
-... init state ...
+//... init state ...
 
-MyEntity instance = builder.newInstance();</pre><p>This lets us divide our Entity into two parts: the internal state and the external roles of the domain that the object
+MyEntity instance = builder.newInstance();
+</pre><p>This lets us divide our Entity into two parts: the internal state and the external roles of the domain that the object
 takes part in. Due to the support for private mixins the state is not unnecessarily exposed, and the mixin support in
 general allow our role-oriented approach to modeling. The role interfaces are strongly reusable, the mixins are
 generally reusable, and the state interfaces are usually reusable. This minimizes the need for us to go into the mixin

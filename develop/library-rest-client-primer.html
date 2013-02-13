@@ -86,24 +86,26 @@ circumstances, and then simply perform one operation: "refresh". This will trigg
 and after that the handlers will do all the work, based on the result. A handler may continue the work by invoking new
 requests, or it may abort. "refresh" does not return any value, and usually does not throw any exceptions.</p><p>Example:</p><pre class="programlisting brush: java">crc.onResource( new ResultHandler&lt;Resource&gt;()
 {
-   @Override
-   public void handleResult( Resource result, ContextResourceClient client )
-   {
-       // This may throw IAE if no link with relation
-       // "querywithoutvalue" is found in the Resource
-       client.query( "querywithoutvalue", null );
-   }
+    @Override
+    public HandlerCommand handleResult( Resource result, ContextResourceClient client )
+    {
+        // This may throw IAE if no link with relation
+        // "querywithoutvalue" is found in the Resource
+        return query( "querywithoutvalue", null );
+    }
 } ).
-onQuery( "querywithoutvalue", TestResult.class, new ResultHandler&lt;TestResult&gt;()
+onQuery( "querywithoutvalue", new ResultHandler&lt;TestResult&gt;()
 {
-   @Override
-   public void handleResult( TestResult result, ContextResourceClient client )
-   {
-       Assert.assertThat( result.xyz().get(), CoreMatchers.equalTo( "bar" ) );
-   }
+    @Override
+    public HandlerCommand handleResult( TestResult result, ContextResourceClient client )
+    {
+        Assert.assertThat(result.xyz().get(), CoreMatchers.equalTo("bar"));
+        return null;
+    }
 } );
 
-crc.refresh();</pre><p>The client first builds up the set of handlers, and describe what they should react to. The client then invokes
+crc.start();
+</pre><p>The client first builds up the set of handlers, and describe what they should react to. The client then invokes
 "refresh" which will trigger the first GET on the bookmark URL. This will return a representation of that context as a
 Resource, and the handler for that is invoked. This then invokes the link with relation "querywithoutvalue" with no
 input (no request parameters needed). The result of that is then handled by another handler, and the invocation of
@@ -111,41 +113,42 @@ input (no request parameters needed). The result of that is then handled by anot
 client.query("querywithoutvalue, null) as it cannot be assumed what happens next. All you know is that you are
 following a link.</p><p>On crc (ContextResourceClient) it is also possible to registers handlers that are always applied, such as error
 handlers. Here is the setup of crc:</p><pre class="programlisting brush: java">// Create Restlet client and bookmark Reference
-Client client = new Client( Protocol.HTTP );
-Reference ref = new Reference( "http://localhost:8888/" );
-ContextResourceClientFactory contextResourceClientFactory = module.newObject( ContextResourceClientFactory.class, client, new NullResponseHandler() );
-contextResourceClientFactory.setAcceptedMediaTypes( MediaType.APPLICATION_JSON );
+    Client client = new Client( Protocol.HTTP );
+    Reference ref = new Reference( "http://localhost:8888/" );
+    ContextResourceClientFactory contextResourceClientFactory = module.newObject( ContextResourceClientFactory.class, client, new NullResponseHandler() );
+    contextResourceClientFactory.setAcceptedMediaTypes( MediaType.APPLICATION_JSON );
 
 // Handle logins
-contextResourceClientFactory.setErrorHandler( new ErrorHandler().onError( ErrorHandler.AUTHENTICATION_REQUIRED, new ResponseHandler()
-{
-   // Only try to login once
-   boolean tried = false;
+    contextResourceClientFactory.setErrorHandler( new ErrorHandler().onError( ErrorHandler.AUTHENTICATION_REQUIRED, new ResponseHandler()
+    {
+        // Only try to login once
+        boolean tried = false;
 
-   @Override
-   public void handleResponse( Response response, ContextResourceClient client )
-   {
-           // If we have already tried to login, fail!
-           if (tried)
-               throw new ResourceException( response.getStatus() );
+        @Override
+        public HandlerCommand handleResponse( Response response, ContextResourceClient client )
+        {
+            // If we have already tried to login, fail!
+            if (tried)
+                throw new ResourceException( response.getStatus() );
 
-           tried = true;
-           client.getContextResourceClientFactory().getInfo().setUser( new User("rickard", "secret") );
+            tried = true;
+            client.getContextResourceClientFactory().getInfo().setUser( new User("rickard", "secret") );
 
-           // Try again
-           client.refresh();
-   }
-} ).onError( ErrorHandler.RECOVERABLE_ERROR, new ResponseHandler()
-{
-   @Override
-   public void handleResponse( Response response, ContextResourceClient client )
-   {
-       // Try to restart this scenario
-       client.refresh();
-   }
-} ) );
+            // Try again
+            return refresh();
+        }
+    } ).onError( ErrorHandler.RECOVERABLE_ERROR, new ResponseHandler()
+    {
+        @Override
+        public HandlerCommand handleResponse( Response response, ContextResourceClient client )
+        {
+            // Try to restart this scenario
+            return refresh();
+        }
+    } ) );
 
-crc = contextResourceClientFactory.newClient( ref );</pre><p>These general handlers cover what to do for login and error handling, for example.
+    crc = contextResourceClientFactory.newClient( ref );
+</pre><p>These general handlers cover what to do for login and error handling, for example.
 In the traditional REST client this is not as easy to do, as you are more or less assuming a "happy path" all the time.
 In the above scenario there could be any number of steps between doing "refresh" and getting to the meat of the use
 case, such as doing a signup for the website, login, redirects to other servers, error handling and retries, etc.

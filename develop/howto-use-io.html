@@ -109,9 +109,10 @@ transfer is being done.</p><p>4) receives the data and writes it down. In this c
 could do so by changing the 2 and 4 parts to read/write multiple lines at a time.</p><div class="section" title="The API"><div class="titlepage"><div><div><h4 class="title"><a id="_the_api"></a>The API</h4></div></div></div><p>Once this was identified it was mostly just a matter of putting interfaces on these pieces, and making sure they can be
 easily used in many different situations. The result is as follows.</p><p>To start with we have Input:</p><pre class="programlisting brush: java">public interface Input&lt;T, SenderThrowableType extends Throwable&gt;
 {
-    &lt;ReceiverThrowableType extends Throwable&gt; void transferTo( Output&lt;T,ReceiverThrowableType&gt; output )
+    &lt;ReceiverThrowableType extends Throwable&gt; void transferTo( Output&lt;? super T, ReceiverThrowableType&gt; output )
         throws SenderThrowableType, ReceiverThrowableType;
-}</pre><p>Inputs, like Iterables, can be used over and over again to initiate transfers of data from one place to another, in
+}
+</pre><p>Inputs, like Iterables, can be used over and over again to initiate transfers of data from one place to another, in
 this case an Output. Since I want this to be generic the type of things that is sent is T, so can be anything
 (byte[], String, EntityState, MyDomainObject). I also want the sender and receiver of data to be able to throw their
 own exceptions, and this is marked by declaring these as generic exception types. For example, the input may want to
@@ -119,29 +120,39 @@ throw SQLException and the output IOException, if anything goes wrong. This shou
 and receiver must know when either side screws up, so that they can recover properly and close any resources they have
 opened.</p><p>On the receiving side we then have Output:</p><pre class="programlisting brush: java">public interface Output&lt;T, ReceiverThrowableType extends Throwable&gt;
 {
-    &lt;SenderThrowableType extends Throwable&gt; void receiveFrom(Sender&lt;T, SenderThrowableType&gt; sender)
-            throws ReceiverThrowableType, SenderThrowableType;
-}</pre><p>When receiveFrom is invoked by an Input, as a result of invoking transferTo on the Input, the Output should open
+[...snip...]
+
+    &lt;SenderThrowableType extends Throwable&gt; void receiveFrom( Sender&lt;? extends T, SenderThrowableType&gt; sender )
+        throws ReceiverThrowableType, SenderThrowableType;
+}
+</pre><p>When receiveFrom is invoked by an Input, as a result of invoking transferTo on the Input, the Output should open
 whatever resources it needs to write to, and then expect data to come from a Sender. Both the Input and Output must
 have the same type T, so that they agree on what is being sent. We will see later how this can be handled if this is
 not the case.</p><p>Next we have Sender:</p><pre class="programlisting brush: java">public interface Sender&lt;T, SenderThrowableType extends Throwable&gt;
 {
-    &lt;ReceiverThrowableType extends Throwable&gt; void sendTo(Receiver&lt;T, ReceiverThrowableType&gt; receiver)
+[...snip...]
+
+    &lt;ReceiverThrowableType extends Throwable&gt; void sendTo( Receiver&lt;? super T, ReceiverThrowableType&gt; receiver )
         throws ReceiverThrowableType, SenderThrowableType;
-}</pre><p>The Output invokes sendTo and passes in a Receiver that the Sender will use to send individual items. The sender at
+}
+</pre><p>The Output invokes sendTo and passes in a Receiver that the Sender will use to send individual items. The sender at
 this point can start transferring data of type T to the receiver, one at a time. The Receiver looks like this:</p><pre class="programlisting brush: java">public interface Receiver&lt;T, ReceiverThrowableType extends Throwable&gt;
 {
-    void receive(T item)
+[...snip...]
+
+    void receive( T item )
         throws ReceiverThrowableType;
-}</pre><p>When the receiver gets the individual items from the sender it can either immediately write them to its underlying
+}
+</pre><p>When the receiver gets the individual items from the sender it can either immediately write them to its underlying
 resource, or batch them up. Since the receiver will know when the transfer is done (sendTo returns) it can write the
 remaining batches properly and close any resource it holds.</p><p>This simple pattern, with two interfaces on the sending side and two on the receiving side, gives us the potential to
 do scalable, performant and fault-tolerant transfers of data.</p></div><div class="section" title="Standard Inputs and Outputs"><div class="titlepage"><div><div><h4 class="title"><a id="_standard_inputs_and_outputs"></a>Standard Inputs and Outputs</h4></div></div></div><p>So now that the above API defines the contract of sending and receiving data, I can then create a couple of standard
 inputs and outputs. Let’s say, reading lines of text from a file, and writing lines of text to a file. These
 implementations I can then put in static methods so they are easy to use. In the end, to make a copy of a text file
-looks like this:</p><pre class="programlisting brush: java">File source = ...
-File destination = ...
-Inputs.text( source ).transferTo( Outputs.text(destination) );</pre><p>One line of code that handles the reading, the writing, the cleaning up, buffering, and whatnot. Pretty nifty! The
+looks like this:</p><pre class="programlisting brush: java">File source = new File("source.txt");
+File destination = new File("destination.txt");
+Inputs.text( source ).transferTo( Outputs.text( destination ) );
+</pre><p>One line of code that handles the reading, the writing, the cleaning up, buffering, and whatnot. Pretty nifty! The
 transferTo method will throw IOException, which I can catch if I want to present any errors to the user. But actually
 dealing with those errors, i.e. closing the files and potentially deleting the destination if the transfer failed, is
 already handled by the Input and Output. I will never have to deal with the details of reading text from a file ever

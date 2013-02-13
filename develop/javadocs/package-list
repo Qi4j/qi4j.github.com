@@ -1,4 +1,3 @@
-org.json
 org.qi4j.api
 org.qi4j.api.activation
 org.qi4j.api.association
@@ -14,7 +13,6 @@ org.qi4j.api.dataset.iterable
 org.qi4j.api.entity
 org.qi4j.api.injection
 org.qi4j.api.injection.scope
-org.qi4j.api.json
 org.qi4j.api.metrics
 org.qi4j.api.mixin
 org.qi4j.api.object
@@ -78,10 +76,11 @@ org.qi4j.index.sql.assembly
 org.qi4j.index.sql.internal
 org.qi4j.index.sql.support.api
 org.qi4j.index.sql.support.common
+org.qi4j.index.sql.support.derby
 org.qi4j.index.sql.support.postgresql
 org.qi4j.index.sql.support.skeletons
+org.qi4j.index.sql.support.sqlite
 org.qi4j.io
-org.qi4j.io.docsupport
 org.qi4j.library.alarm
 org.qi4j.library.cache
 org.qi4j.library.circuitbreaker
@@ -176,6 +175,7 @@ org.qi4j.spi.entitystore.helpers
 org.qi4j.spi.metrics
 org.qi4j.spi.query
 org.qi4j.spi.uuid
+org.qi4j.spi.value
 org.qi4j.test
 org.qi4j.test.entity
 org.qi4j.test.indexing
@@ -184,5 +184,7 @@ org.qi4j.test.indexing.model.entities
 org.qi4j.test.mock
 org.qi4j.test.mock.internal
 org.qi4j.test.util
+org.qi4j.test.value
 org.qi4j.tools.model.descriptor
 org.qi4j.tools.model.util
+org.qi4j.valueserialization.orgjson

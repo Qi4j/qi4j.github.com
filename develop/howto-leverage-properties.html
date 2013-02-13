@@ -104,7 +104,7 @@ Property still have a set() method, which can be used during the initialization 
 Metadata about each Property can be declared as <a class="xref" href="glossary.html#def-metainfo">MetaInfo</a>.
 </li></ul></div><pre class="programlisting brush: java">@Structure
 Module module;
-  [...snip...]
+[...snip...]
 
     TransientBuilder&lt;Book&gt; builder = module.newTransientBuilder( Book.class );
     Book prototype = builder.prototype();
@@ -126,15 +126,15 @@ actual domain model. Such Swing client will utilize a SwingInfo property info if
 }
 </pre><p>Our generic Swing UI will be mainly reflective in nature, but when it gets hold of a Property, it can simply do;</p><pre class="programlisting brush: java">    @Structure
     private Qi4j api;
-      [...snip...]
+    [...snip...]
 
     private void addProperty( JPanel panel, Property&lt;?&gt; property )
     {
-        SwingInfo info = api.getPropertyDescriptor( property ).metaInfo( SwingInfo.class );
+        SwingInfo info = api.propertyDescriptorFor( property ).metaInfo( SwingInfo.class );
         Icon icon = info.icon( SIZE_32_32 );
         panel.add(  new JLabel(info.displayName( this.locale ), icon, JLabel.CENTER) );
     }
-      [...snip...]
+    [...snip...]
 
 }
 </pre></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

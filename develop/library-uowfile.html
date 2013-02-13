@@ -76,9 +76,9 @@ Composites, mostly EntityComposites, so that if the UoW gets discarded, changes
 to files are discarded too. Concurrent modifications are properly handled.</p><p>Note that it has a performance impact relative to the files size as it
 duplicates the file to keep a backup for eventual rollback. However, the API
 provides a way to get non-managed handles on the attached files to keep your
-read-only operations fast.</p><p>The location of files is left to the developer using a private mixin.</p><div class="table"><a id="idp140187713088784"></a><p class="title"><strong>Table 47. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.uowfile</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Logging"><div class="titlepage"><div><div><h4 class="title"><a id="_logging_6"></a>Logging</h4></div></div></div><p>The SLF4J Logger used by this library is named "org.qi4j.library.uowfile".</p></div><div class="section" title="Add an attached file to an Entity"><div class="titlepage"><div><div><h4 class="title"><a id="_add_an_attached_file_to_an_entity"></a>Add an attached file to an Entity</h4></div></div></div><p>Let’s say you have the following Entity:</p><pre class="programlisting brush: java">public interface TestedEntity
+read-only operations fast.</p><p>The location of files is left to the developer using a private mixin.</p><div class="table"><a id="idp7367216"></a><p class="title"><strong>Table 47. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.uowfile</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Logging"><div class="titlepage"><div><div><h4 class="title"><a id="_logging_6"></a>Logging</h4></div></div></div><p>The SLF4J Logger used by this library is named "org.qi4j.library.uowfile".</p></div><div class="section" title="Add an attached file to an Entity"><div class="titlepage"><div><div><h4 class="title"><a id="_add_an_attached_file_to_an_entity"></a>Add an attached file to an Entity</h4></div></div></div><p>Let’s say you have the following Entity:</p><pre class="programlisting brush: java">public interface TestedEntity
         extends EntityComposite,
-          [...snip...]
+        [...snip...]
 
 {
 
@@ -102,7 +102,7 @@ read-only operations fast.</p><p>The location of files is left to the developer 
     File attachedFile();
 
     File managedFile();
-      [...snip...]
+    [...snip...]
 
 }
 </pre><p>Next you need to write the UoWFileLocator mixin:</p><pre class="programlisting brush: java">public static abstract class TestedFileLocatorMixin
@@ -125,7 +125,7 @@ read-only operations fast.</p><p>The location of files is left to the developer 
     new UoWFileAssembler().assemble( module );
 
     module.entities( TestedEntity.class ).withMixins( TestedFileLocatorMixin.class );
-      [...snip...]
+    [...snip...]
 
 }
 </pre><p>You can now use the following methods on your EntityComposite:</p><pre class="programlisting brush: java">File attachedFile = entity.attachedFile();
@@ -133,7 +133,7 @@ File managedFile = entity.managedFile();
 </pre></div><div class="section" title="Going plural"><div class="titlepage"><div><div><h4 class="title"><a id="_going_plural"></a>Going plural</h4></div></div></div><p>Now if you want to attach several files to one entity, this library provides a
 simple mechanism allowing you to use any enum as discriminator.</p><p>Let’s say you have the following Entity:</p><pre class="programlisting brush: java">public interface TestedEntity
         extends EntityComposite,
-          [...snip...]
+        [...snip...]
 
 {
 
@@ -173,7 +173,7 @@ public interface TestedEntity
     File managedFile( T key );
 
     Iterable&lt;File&gt; managedFiles();
-      [...snip...]
+    [...snip...]
 
 }
 </pre><p>Next you need to write the UoWFileLocator mixin:</p><pre class="programlisting brush: java">public static abstract class TestedFilesLocatorMixin
@@ -206,7 +206,7 @@ public interface TestedEntity
     new UoWFileAssembler().assemble( module );
 
     module.entities( TestedEntity.class ).withMixins( TestedFilesLocatorMixin.class );
-      [...snip...]
+    [...snip...]
 
 }
 </pre><p>You can now use the following methods on your EntityComposite:</p><pre class="programlisting brush: java">File attachedFileTwo = entity.attachedFile( MyEnum.fileTwo );

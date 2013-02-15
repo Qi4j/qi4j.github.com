@@ -225,20 +225,23 @@ $( document ).ready( function( $ )
                             var health_data = job.healthReport[ idx_health ];
                             health += '<p><img src="' + ci_images_url + health_data.iconUrl + '"/>' + health_data.description + '</p>';
                         }
-                        if( job.lastCompletedBuild && job.lastCompletedBuild.artifacts && job.lastCompletedBuild.artifacts.length > 0 )
+                        var links = '';
+                        if( job.lastCompletedBuild )
                         {
-                            health += '<p><strong>Build artifacts:</strong></p><ul>';
-                            for( var idx_artifacts = 0; idx_artifacts < job.lastCompletedBuild.artifacts.length; idx_artifacts++ )
+                            if( job.lastCompletedBuild.artifacts && job.lastCompletedBuild.artifacts.length > 0 )
                             {
-                                var artifact = job.lastCompletedBuild.artifacts[ idx_artifacts ];
-                                health += '<li><a href="'+job.lastCompletedBuild.url+'artifact/'+artifact.relativePath+'">'+artifact.fileName+'</a></li>';
+                                health += '<p><strong>Build artifacts:</strong></p><ul>';
+                                for( var idx_artifacts = 0; idx_artifacts < job.lastCompletedBuild.artifacts.length; idx_artifacts++ )
+                                {
+                                    var artifact = job.lastCompletedBuild.artifacts[ idx_artifacts ];
+                                    health += '<li><a href="'+job.lastCompletedBuild.url+'artifact/'+artifact.relativePath+'">'+artifact.fileName+'</a></li>';
+                                }
+                                health += '</ul>';
                             }
-                            health += '</ul>';
+                            var last = new Date(job.lastCompletedBuild.timestamp * 1000);
+                            links += '<p class="small">Latest <strong>completed</strong> build <a href="' + job.lastCompletedBuild.url + '" target="_blank">#' + job.lastCompletedBuild.number + '</a> on ' + last + '</p>';
+                            links += '<p style="text-align: right"><a href="' + job.url + '" target="_blank" class="btn btn-mini"><i class="icon-eye-open"></i> Open</a></p>';
                         }
-
-                        var last = new Date(job.lastCompletedBuild.timestamp * 1000);
-                        var links = '<p class="small">Latest <strong>completed</strong> build <a href="' + job.lastCompletedBuild.url + '" target="_blank">#' + job.lastCompletedBuild.number + '</a> on ' + last + '</p>';
-                        links += '<p style="text-align: right"><a href="' + job.url + '" target="_blank" class="btn btn-mini"><i class="icon-eye-open"></i> Open</a></p>';
 
                         well.innerHTML = title + health + links;
                         ciContainer.appendChild( well );

@@ -225,7 +225,7 @@ $( document ).ready( function( $ )
                             var health_data = job.healthReport[ idx_health ];
                             health += '<p><img src="' + ci_images_url + health_data.iconUrl + '"/>' + health_data.description + '</p>';
                         }
-                        if( job.lastCompletedBuild.artifacts.length > 0 )
+                        if( job.lastCompletedBuild.artifacts && job.lastCompletedBuild.artifacts.length > 0 )
                         {
                             health += '<p><strong>Build artifacts:</strong></p><ul>';
                             for( var idx_artifacts = 0; idx_artifacts < job.lastCompletedBuild.artifacts.length; idx_artifacts++ )

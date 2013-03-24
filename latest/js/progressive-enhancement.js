@@ -50,15 +50,20 @@ $( document ).ready( function($){
     // Add links to different versions
     var versions =
     {
-        'develop':
-        {
-            'url': 'http://qi4j.org/develop',
-            'relpath': '../develop'
-        },
         'latest':
         {
             'url': 'http://qi4j.org/latest',
             'relpath': '../latest'
+        },
+        '2.0-RC1':
+        {
+            'url': 'http://qi4j.org/2.0-RC1',
+            'relpath': '../2.0-RC1'
+        },
+        'develop':
+        {
+            'url': 'http://qi4j.org/develop',
+            'relpath': '../develop'
         },
         '<=1.4.x':
         {
@@ -75,6 +80,8 @@ $( document ).ready( function($){
         selected = "develop";
     else if ( endsWith( stripedHref, 'latest' ) )
         selected = "latest";
+    else if ( endsWith( stripedHref, '2.0-RC1' ) )
+        selected = "2.0-RC1";
     else if ( endsWith( stripedHref, '1.4' ) )
         selected = "<=1.4.x";
     // --

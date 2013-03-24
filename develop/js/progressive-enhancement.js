@@ -60,6 +60,11 @@ $( document ).ready( function($){
             'url': 'http://qi4j.org/latest',
             'relpath': '../latest'
         },
+        '2.0-RC1':
+        {
+            'url': 'http://qi4j.org/2.0-RC1',
+            'relpath': '../2.0-RC1'
+        },
         '<=1.4.x':
         {
             'url': 'http://qi4j.org/1.4',

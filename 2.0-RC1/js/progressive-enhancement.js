@@ -50,6 +50,11 @@ $( document ).ready( function($){
     // Add links to different versions
     var versions =
     {
+        '2.0-RC1':
+        {
+            'url': 'http://qi4j.org/2.0-RC1',
+            'relpath': '../2.0-RC1'
+        },
         'develop':
         {
             'url': 'http://qi4j.org/develop',
@@ -77,6 +82,8 @@ $( document ).ready( function($){
         selected = "latest";
     else if ( endsWith( stripedHref, '1.4' ) )
         selected = "<=1.4.x";
+    else if ( endsWith( stripedHref, '2.0-RC1' ) )
+        selected = "2.0-RC1";
     // --
     var switcher_html ='<p style="margin-top:2em; text-align: center"><select style="font-size: 0.5em">';
     var ifselect = function( candidate ) {

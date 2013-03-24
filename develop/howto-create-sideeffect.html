@@ -111,43 +111,67 @@ public interface OrderEntity
     extends Order, HasSequenceNumber, HasCustomer,
             HasLineItems, Confirmable, EntityComposite
 {
-}</pre><p>Methods of the SideEffect Fragment will be called after the Mixin invocation.</p></div><div class="section" title="Generic SideEffect"><div class="titlepage"><div><div><h4 class="title"><a id="_generic_sideeffect"></a>Generic SideEffect</h4></div></div></div><p>A generic SideEffect is a Java class that implements java.lang.reflect.InvocationHandler which allows it to be used on any
+}
+</pre><p>Methods of the SideEffect Fragment will be called after the Mixin invocation.</p></div><div class="section" title="Generic SideEffect"><div class="titlepage"><div><div><h4 class="title"><a id="_generic_sideeffect"></a>Generic SideEffect</h4></div></div></div><p>A generic SideEffect is a Java class that implements java.lang.reflect.InvocationHandler which allows it to be used on any
 arbitrary MixinType.</p><pre class="programlisting brush: java">public class MyGenericSideEffect extends GenericSideEffect
 {
-    public Object invoke(...)
+    @Override
+    public Object invoke( Object proxy, Method method, Object[] args )
+        throws Throwable
     {
-        // Do whatever you want
-        return next.invoke( ... );
+        // Do whatever you need...
+
+        try
+        {
+            // It is possible to obtain the returned values by using 'result' member;
+            Object returnedValue = result.invoke( proxy, method, args );
+        } catch( NumberFormatException e )
+        {
+            // And Exception will be thrown accordingly, in case you need to know.
+            throw new IllegalArgumentException(); // But any thrown exceptions are ignored.
+        }
+        return 23; // Return values will also be ignored.
     }
-}</pre><p>It can be used as follows;</p><pre class="programlisting brush: java">@Concerns( MyGenericSideEffect.class )
+}
+</pre><p>It can be used as follows;</p><pre class="programlisting brush: java">@Concerns( MyGenericSideEffect.class )
 public interface AnyMixinType
 {
-    :
-    :
-}</pre><p>Methods of the SideEffect Fragment will be called before the Mixin invocation.</p><div class="section" title="AppliesTo"><div class="titlepage"><div><div><h5 class="title"><a id="_appliesto_2"></a>AppliesTo</h5></div></div></div><p>For generic SideEffects that should only trigger on methods with specific annotations or fulfilling some expression, add
+[...snip...]
+
+}
+</pre><p>Methods of the SideEffect Fragment will be called before the Mixin invocation.</p><div class="section" title="AppliesTo"><div class="titlepage"><div><div><h5 class="title"><a id="_appliesto_2"></a>AppliesTo</h5></div></div></div><p>For generic SideEffects that should only trigger on methods with specific annotations or fulfilling some expression, add
 @AppliesTo annotation to the SideEffect class which points to either triggering annotation(s), or to AppliesToFilter
 implementation(s).</p><p>The SideEffect is invoked if one of the triggering annotations is found or one of the AppliesToFilter accepts the
 invocation. In other words the AppliesTo arguments are OR’ed.</p><p>Here is how the declaration goes ;</p><pre class="programlisting brush: java">@AppliesTo( { MyAnnotation.class, MyAppliesToFilter.class } )
 public class MyGenericSideEffect extends GenericSideEffect
 {
-    public Object invoke(...)
-    {
-        // Do whatever you want
-        return next.invoke( ... );
-    }
-}</pre><p>And how to use the annotation ;</p><pre class="programlisting brush: java">@Concerns( MyGenericSideEffect.class )
+[...snip...]
+
+}
+</pre><p>And how to use the annotation ;</p><pre class="programlisting brush: java">@Concerns( MyGenericSideEffect.class )
 public interface AnyMixinType
 {
+
     @MyAnnotation
     void doSomething();
+
     void doSomethingElse();
-    :
-    :
-}</pre><p>Here only the doSomething() method will see the SideEffect applied whereas the doSomethingElse() method won’t.</p><p>Finally here is how to implement an AppliesToFilter:</p><pre class="programlisting brush: java">public class MyAppliesToFilter implements AppliesToFilter
+
+}
+[...snip...]
+
+</pre><p>Here only the doSomething() method will see the SideEffect applied whereas the doSomethingElse() method won’t.</p><p>Finally here is how to implement an AppliesToFilter:</p><pre class="programlisting brush: java">public class MyAppliesToFilter implements AppliesToFilter
 {
     public boolean appliesTo( Method method, Class&lt;?&gt; mixin, Class&lt;?&gt; compositeType, Class&lt;?&gt; modifierClass )
     {
-        boolean appliesTo; // Do whatever you want
+        boolean appliesTo = evaluate(method); // Do whatever you want
         return appliesTo;
     }
-}</pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>
+
+    [...snip...]
+
+    private boolean evaluate( Method method )
+    {
+        return true;
+    }
+</pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

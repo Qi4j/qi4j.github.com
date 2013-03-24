@@ -73,7 +73,9 @@
 
   </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Qi4j</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><a href="core-api.html">Core API</a></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><a href="core-io.html">Core I/O API</a></span></dt><dt><span class="section"><span xmlns="" href="core-spi.html">Core Extension SPI</span></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section" title="Core Extension SPI"><div class="titlepage"><div><div><h3 class="title"><a id="core-spi"></a>Core Extension SPI</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-brief">docs</p><p class="devstatus-tests-good">tests</p><p>The Qi4j Core Runtime has a number of extension points, which we call the <span class="emphasis"><em>Qi4j Core Extension SPI</em></span>. These are defined
 interfaces used <span class="strong"><strong>only</strong></span> by the Core Runtime and <span class="strong"><strong>never</strong></span> directly by application code. <a class="xref" href="extensions.html" title="Extensions">Extensions</a> are assembled in
-applications during the bootstrap phase.</p><div class="table"><a id="idp140187712015216"></a><p class="title"><strong>Table 6. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.spi</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><p>There are currently 4 Core SPI extensions;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+applications during the bootstrap phase.</p><div class="table"><a id="idp6273104"></a><p class="title"><strong>Table 6. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.spi</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><p>There are currently 5 Core SPI extensions;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+ValueSerialization SPI
+</li><li class="listitem">
 EntityStore SPI
 </li><li class="listitem">
 Cache SPI
@@ -84,4 +86,37 @@ Metrics SPI
 </li></ul></div><p>Qi4j Runtime Extensions implementations may depend on Qi4j Libraries, but Libraries are NOT ALLOWED to depend on
 Extensions. Applications code is NOT ALLOWED to depend on extensions. And application code SHOULD NOT depend on the
 Core Extension SPI. If you think that is needed, please contact qi4j-dev forum at Google Groups, to see if your usecase
-can be solved in a support manner, or that we need to extend the Core API to support it.</p><p>include::metrics.txt[]</p></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>
+can be solved in a support manner, or that we need to extend the Core API to support it.</p><div class="section" title="ValueSerialization SPI"><div class="titlepage"><div><div><h4 class="title"><a id="core-spi-valueserialization"></a>ValueSerialization SPI</h4></div></div></div><p>Simply implement ValueSerialization to create an extension for the ValueSerialization SPI.
+The Core SPI module provides adapters to create pull-parsing capable ValueSerializers and pull-parsing and tree-parsing
+capable ValueDeserializers.</p><p>The behaviour described here apply to all ValueSerialization services implemented using the Core SPI adapters. Note that
+nothing stops you from implementing an extension for the ValueSerialization SPI without relying on theses adapters.</p><p>Theses adapters are tailored for serialization mechanisms that support the following two structures that can be nested:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+an collection of name/value pairs. In various languages, this is realized as an object, record, struct,
+      dictionary, hash table, keyed list, or associative array,
+</li><li class="listitem">
+an ordered list of values. In most languages, this is realized as an array, vector, list, or sequence ;
+</li></ul></div><p>in other words, a JSON-like structure.</p><p>Special attention is taken when dealing with Maps. They are serialized as an ordered list of collections of
+name/value pairs to keep the Map order for least surprise. That way, even when the underlying serialization mechanism
+do not keep the collection of name/value pairs order we can rely on it being kept.</p><p>Here is a sample Map with two entries in JSON notation to make things clear:</p><pre class="programlisting brush: javascript">[
+    { "key": "foo",       "value": "bar"   },
+    { "key": "cathedral", "value": "bazar" }
+]</pre><p>Among Plain Values (see the <a class="link" href="core-api.html#core-api-value" title="ValueComposite">ValueSerialization API</a> section) some are considered primitives to
+underlying serialization mechanisms and by so handed/come without conversion to/from implementations.</p><p>Primitive values can be one of:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+String,
+</li><li class="listitem">
+Boolean or boolean,
+</li><li class="listitem">
+Integer or int,
+</li><li class="listitem">
+Long or long,
+</li><li class="listitem">
+Short or short,
+</li><li class="listitem">
+Byte or byte,
+</li><li class="listitem">
+Float or float,
+</li><li class="listitem">
+Double or double.
+</li></ul></div><p>Serialization is always done in a streaming manner using a pull-parsing based approach.</p><p>Deserialization is done in a streaming manner using a pull-parsing based approach except when encountering a
+ValueComposite. ValueComposite types are deserialized using a tree-parsing based approach.</p><p>All this means that you can serialize and deserialize large collections of values without filling the heap.</p></div><div class="section" title="Metrics SPI"><div class="titlepage"><div><div><h4 class="title"><a id="core-spi-metrics"></a>Metrics SPI</h4></div></div></div><p>It is very easy to create an extension for the Metrics SPI, simply by implementing the MetricsProvider. If only a
+subset of the factories/types are supported, there is a convenience adapter call MetricsProviderAdapter in the Metrics
+SPI package.</p></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

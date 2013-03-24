@@ -105,45 +105,59 @@ public interface Order
 {
     void addLineItem( LineItem item );
     void removeLineItem( LineItem item );
-    :
-    :
-}</pre><p>Methods of the Concern Fragment will be called before the Mixin invocation.</p></div><div class="section" title="Generic Concern"><div class="titlepage"><div><div><h4 class="title"><a id="_generic_concern"></a>Generic Concern</h4></div></div></div><p>A generic Concern is a Java class that implements java.lang.reflect.InvocationHandler which allows it to be used on any
+
+    [...snip...]
+
+</pre><p>Methods of the Concern Fragment will be called before the Mixin invocation.</p></div><div class="section" title="Generic Concern"><div class="titlepage"><div><div><h4 class="title"><a id="_generic_concern"></a>Generic Concern</h4></div></div></div><p>A generic Concern is a Java class that implements java.lang.reflect.InvocationHandler which allows it to be used on any
 arbitrary MixinType.</p><pre class="programlisting brush: java">public class MyGenericConcern extends GenericConcern
 {
-    public Object invoke(...)
+    @Override
+    public Object invoke( Object proxy, Method method, Object[] args )
+        throws Throwable
     {
         // Do whatever you want
-        return next.invoke( ... );
-    }
-}</pre><p>It can be used as follows;</p><pre class="programlisting brush: java">@Concerns( MyGenericConcern.class )
+
+        [...snip...]
+
+</pre><p>It can be used as follows;</p><pre class="programlisting brush: java">@Concerns( MyGenericConcern.class )
 public interface AnyMixinType
 {
-    :
-    :
-}</pre><p>Methods of the Concern Fragment will be called before the Mixin invocation.</p><div class="section" title="AppliesTo"><div class="titlepage"><div><div><h5 class="title"><a id="_appliesto"></a>AppliesTo</h5></div></div></div><p>For generic Concerns that should only trigger on methods with specific annotations or fulfilling some expression, add
+
+[...snip...]
+
+    @MyAnnotation
+    void doSomething();
+
+    void doSomethingElse();
+
+</pre><p>Methods of the Concern Fragment will be called before the Mixin invocation.</p><div class="section" title="AppliesTo"><div class="titlepage"><div><div><h5 class="title"><a id="_appliesto"></a>AppliesTo</h5></div></div></div><p>For generic Concerns that should only trigger on methods with specific annotations or fulfilling some expression, add
 @AppliesTo annotation to the Concern class which points to either triggering annotation(s), or to AppliesToFilter
 implementation(s).</p><p>The Concern is invoked if one of the triggering annotations is found or one of the AppliesToFilter accepts the
 invocation. In other words the AppliesTo arguments are OR’ed.</p><p>Here is how the declaration goes ;</p><pre class="programlisting brush: java">@AppliesTo( { MyAnnotation.class, MyAppliesToFilter.class } )
 public class MyGenericConcern extends GenericConcern
 {
-    public Object invoke(...)
-    {
-        // Do whatever you want
-        return next.invoke( ... );
-    }
-}</pre><p>And how to use the annotation ;</p><pre class="programlisting brush: java">@Concerns( MyGenericConcern.class )
+</pre><p>And how to use the annotation ;</p><pre class="programlisting brush: java">@Concerns( MyGenericConcern.class )
 public interface AnyMixinType
 {
+
     @MyAnnotation
     void doSomething();
+
     void doSomethingElse();
-    :
-    :
-}</pre><p>Here only the doSomething() method will see the Concern applied whereas the doSomethingElse() method won’t.</p><p>Finally here is how to implement an AppliesToFilter:</p><pre class="programlisting brush: java">public class MyAppliesToFilter implements AppliesToFilter
+
+}
+</pre><p>Here only the doSomething() method will see the Concern applied whereas the doSomethingElse() method won’t.</p><p>Finally here is how to implement an AppliesToFilter:</p><pre class="programlisting brush: java">public class MyAppliesToFilter implements AppliesToFilter
 {
     public boolean appliesTo( Method method, Class&lt;?&gt; mixin, Class&lt;?&gt; compositeType, Class&lt;?&gt; modifierClass )
     {
-        boolean appliesTo; // Do whatever you want
+        boolean appliesTo = evaluate(method); // Do whatever you want
         return appliesTo;
     }
-}</pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>
+
+    [...snip...]
+
+    private boolean evaluate( Method method )
+    {
+        return true;
+    }
+</pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

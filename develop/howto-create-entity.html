@@ -132,7 +132,7 @@ We must also assemble an EntityStore for the entire application, but that is out
                 ManufacturerEntity.class );
 
         module.values( AccidentValue.class );
-          [...snip...]
+        [...snip...]
 
     }
 }
@@ -140,8 +140,10 @@ We must also assemble an EntityStore for the entire application, but that is out
 available as services.</p></div><div class="section" title="The Entity Factory"><div class="titlepage"><div><div><h4 class="title"><a id="_the_entity_factory"></a>The Entity Factory</h4></div></div></div><p>The entity factory is something you need to write yourself, but as with most things in Qi4j it will end up being a
 fairly small implementation. So how is that done?</p><pre class="programlisting brush: java">public interface CarEntityFactory
 {
-    Car create( Manufacturer manufacturer, String model );
-}</pre><p>That is just the domain interface. We now need to make the service interface, which Qi4j needs to identify services and
+    Car create(Manufacturer manufacturer, String model);
+}
+
+</pre><p>That is just the domain interface. We now need to make the service interface, which Qi4j needs to identify services and
 make it possible for the service injection later.</p><pre class="programlisting brush: java">@Mixins( { CarEntityFactoryMixin.class } )
 public interface CarEntityFactoryService
         extends CarEntityFactory, ServiceComposite

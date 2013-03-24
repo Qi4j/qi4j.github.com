@@ -79,7 +79,7 @@ clear view of what is going on in a plant.</p><p>The enterprise software has alw
 don’t. Very little thought has been spent on what happens when many independent systems interact and what the
 consequences are to other systems when one fails. The <span class="emphasis"><em>Alarm Point</em></span> concepts becomes a natural fit for the enterprise
 world of today, where <span class="emphasis"><em>Alarm Points</em></span> allows for fine-grained notification and view into the health of one or more
-systems.</p><p>In Qi4j, we are building upon this powerful abstraction, from decades of field experience.</p><div class="table"><a id="idp140187712059920"></a><p class="title"><strong>Table 8. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.alarm</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Overview"><div class="titlepage"><div><div><h4 class="title"><a id="_overview_5"></a>Overview</h4></div></div></div><p>An <span class="emphasis"><em>Alarm Point</em></span> is of an <span class="emphasis"><em>Alarm Class</em></span> and of an <span class="emphasis"><em>Alarm Category</em></span>. The <span class="emphasis"><em>Alarm Class</em></span> defines the <span class="strong"><strong>severity</strong></span> of the
+systems.</p><p>In Qi4j, we are building upon this powerful abstraction, from decades of field experience.</p><div class="table"><a id="idp6339024"></a><p class="title"><strong>Table 8. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.alarm</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Overview"><div class="titlepage"><div><div><h4 class="title"><a id="_overview_5"></a>Overview</h4></div></div></div><p>An <span class="emphasis"><em>Alarm Point</em></span> is of an <span class="emphasis"><em>Alarm Class</em></span> and of an <span class="emphasis"><em>Alarm Category</em></span>. The <span class="emphasis"><em>Alarm Class</em></span> defines the <span class="strong"><strong>severity</strong></span> of the
 <span class="emphasis"><em>Alarm Point</em></span> and the <span class="emphasis"><em>Alarm Category</em></span> defines which <span class="strong"><strong>part</strong></span> of the system it belongs to. <span class="emphasis"><em>Alarm Category</em></span> can be
 extended by the developer, and the package contains the <span class="emphasis"><em>SimpleAlarmCategory</em></span> as an example, where a Description
 property has been added.</p><p>An <span class="emphasis"><em>Alarm Point</em></span> also has a <span class="emphasis"><em>System Name</em></span>, which should be the subsystem or application name.</p><p><span class="emphasis"><em>Alarm Points</em></span> are <span class="strong"><strong>triggered</strong></span> and an <span class="emphasis"><em>Alarm Trigger</em></span> may cause the <span class="emphasis"><em>Alarm Status</em></span> to change. IF, and only if, the
@@ -93,18 +93,18 @@ provide an <span class="emphasis"><em>Identity</em></span> of the Alarm, which m
 private AlarmProxy.Factory factory;
 
 private AlarmProxy myAlarmPoint;
-  [...snip...]
+[...snip...]
 
 @Override
 public void assemble( ModuleAssembly module )
     throws AssemblyException
 {
     new AlarmSystemAssembler().assemble( module );
-      [...snip...]
+    [...snip...]
 
         myAlarmPoint = factory.create( "This Alarm Identity", "ProActiveCRM", "Sales", AlarmClass.B );
         myAlarmPoint.history().maxSize().set( 20 );
-          [...snip...]
+        [...snip...]
 
         myAlarmPoint.activate();
 </pre></div><div class="section" title="Alarm Models"><div class="titlepage"><div><div><h4 class="title"><a id="_alarm_models"></a>Alarm Models</h4></div></div></div><p>The Qi4j Alarm library comes with 3 <span class="emphasis"><em>Alarm Models</em></span> which should be sufficient for most uses. These are based on decades

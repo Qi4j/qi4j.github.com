@@ -81,8 +81,8 @@ Destinations. For the sake of simplicity, we are leaving out the domain details�
     // Domain methods, which are beyond the discussion at hand.
 }
 </pre><p>So, then there is the ServiceComposite…</p><pre class="programlisting brush: java">// The package is relevant to the Initial Values discussed later.
-package org.niclas.hedhman.travel;
-  [...snip...]
+package org.qi4j.manual.travel;
+[...snip...]
 
 @Mixins( { TravelPlanMixin.class } )
 public interface TravelPlanService extends TravelPlan, ServiceComposite
@@ -113,7 +113,7 @@ public class TravelPlanMixin implements TravelPlan
         String hostName = tpConf.hostName().get();
         // ...
     }
-      [...snip...]
+    [...snip...]
 
 }
 </pre><p>And from the Service point of view, it doesn’t need to worry about where the configuration really comes from. But it may
@@ -166,7 +166,7 @@ portNumber=9251
 
 # Protocol to use; Valid options "ssh", "rlogin", "telnet"
 protocol=ssh
-</pre><p>File: org/hedhman/niclas/travel/ExpediaService.properties</p><pre class="programlisting brush: bash"># Hostname to the TravelPlan service
+</pre><p>File: org/qi4j/manual/travel/ExpediaService.properties</p><pre class="programlisting brush: bash"># Hostname to the TravelPlan service
 hostName=orbitz.hedhman.org
 
 # Port number to use for the connection
@@ -174,7 +174,7 @@ portNumber=7412
 
 # Protocol to use; Valid options "ssh", "rlogin", "telnet"
 protocol=rlogin
-</pre><p>File: org/hedhman/niclas/travel/OrbitzService.properties</p></div><div class="section" title="Changing Configuration in runtime"><div class="titlepage"><div><div><h4 class="title"><a id="_changing_configuration_in_runtime"></a>Changing Configuration in runtime</h4></div></div></div><p>Unlike most frameworks, the Configuration in Qi4j is an active Entity, and once the properties file has been read once
+</pre><p>File: org/qi4j/manual/travel/OrbitzService.properties</p></div><div class="section" title="Changing Configuration in runtime"><div class="titlepage"><div><div><h4 class="title"><a id="_changing_configuration_in_runtime"></a>Changing Configuration in runtime</h4></div></div></div><p>Unlike most frameworks, the Configuration in Qi4j is an active Entity, and once the properties file has been read once
 at the first(!) startup, it no longer serves any purpose. The Configuration will always be retrieved from the
 EntityStore. Changes to the properties file are not taken into consideration if the Configuration entity is found in the
 entity store.</p><p>But that also means that applications should not cache the configuration values, and instead read them from the

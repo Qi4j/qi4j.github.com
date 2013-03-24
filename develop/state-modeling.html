@@ -86,11 +86,13 @@ concepts more explicitly.
 We have EntityComposites and ValueComposites, each with different ways of creating them and managing them.
 Both EntityComposites and ValueComposites can then have Properties, as first-class objects, but Properties in
 ValueComposites are always immutable.</p><div class="section" title="Entities"><div class="titlepage"><div><div><h4 class="title"><a id="_entities"></a>Entities</h4></div></div></div><p>Here’s an example of how you could define an EntityComposite:</p><pre class="programlisting brush: java">interface PersonEntity
-  extends EntityComposite
+        extends EntityComposite
 {
-  Property&lt;String&gt; givenName();
-  Property&lt;String&gt; surName();
-}</pre><p>With these few lines you have done what would have taken a whole lot more effort using POJOs, and what you want to
+    Property&lt;String&gt; givenName();
+    Property&lt;String&gt; surName();
+}
+
+</pre><p>With these few lines you have done what would have taken a whole lot more effort using POJOs, and what you want to
 express is very explicit.
 To define a property you would have had to write a field and two accessors, and if you use interfaces then those
 accessors would have to be duplicated.</p><p>The EntityComposite base interface also includes an identity property for you, as that’s an intrinsic feature of
@@ -102,13 +104,14 @@ modeling (which has roundtrip problems), DSL modeling (which lose tools support)
 just one role that a Person has to play, and since Composite Oriented Programming is all about using roles and
 context instead of classes you would probably do something like this instead:</p><pre class="programlisting brush: java">interface Nameable
 {
-   @UseDefaults Property&lt;String&gt; givenName();
-   @UseDefaults @Optional Property&lt;String&gt; surName();
+    @UseDefaults Property&lt;String&gt; givenName();
+    @UseDefaults @Optional Property&lt;String&gt; surName();
 }
 
 interface PersonEntity
-extends Nameable, EntityComposite
-{}</pre><p>I’ve extracted the ability to be Named to its own interface, and let my domain Entity extend it.
+        extends Nameable, EntityComposite
+{}
+</pre><p>I’ve extracted the ability to be Named to its own interface, and let my domain Entity extend it.
 This way client code can check for "x instanceof Nameable" rather than "x instanceof PersonEntity", and then do
 something intelligent with it.
 By doing this, not only has Nameable become a reusable interface, but the client code that understands it has also
@@ -129,16 +132,17 @@ We prefer @Optional to @Nullable since it better expresses the intent from a dom
 Avoiding technical terms as much as possible is a another goal (which is damn hard to reach!).</p></div><div class="section" title="Values"><div class="titlepage"><div><div><h4 class="title"><a id="_values"></a>Values</h4></div></div></div><p>If you want to get really picky about it, not even the above would be a real example.
 You may want to encapsulate the two properties into one value instead, so that you can more easily perform validation
 checks when they are updated. What you want are ValueComposites:</p><pre class="programlisting brush: java">interface NameValue
-   extends ValueComposite
+        extends ValueComposite
 {
-   @UseDefaults Property&lt;String&gt; givenName();
-   @UseDefaults @Optional Property&lt;String&gt; surName();
+    @UseDefaults Property&lt;String&gt; givenName();
+    @UseDefaults @Optional Property&lt;String&gt; surName();
 }
 
 interface Nameable
 {
-   Property&lt;NameValue&gt; name();
-}</pre><p>Normally if you want a property to be immutable, meaning, you can set an initial value but not change it later, you
+    Property&lt;NameValue&gt; name();
+}
+</pre><p>Normally if you want a property to be immutable, meaning, you can set an initial value but not change it later, you
 would have to mark the Property as @Immutable.
 But since NameValue extends ValueComposite, which itself is marked with @Immutable, this is implicit for all subtypes
 of ValueComposite, and there’s no way to "opt out" of it.</p><p>By introducing one more level in the state model you have created an easy way to access the name as a whole and hand
@@ -158,25 +162,31 @@ How can we use this for state modeling?
 What you’d want to do is to model the state of an Entity as a private mixin, which is hidden from clients, and then
 you write role mixins which map domain methods to that internal state. Here’s an example:</p><pre class="programlisting brush: java">@Mixins(ListablePersonMixin.class)
 interface PersonEntity
-   extends Listable, EntityComposite {}
+        extends Listable, EntityComposite {}
 
 interface PersonState
-   extends Nameable {}
+        extends Nameable {}
 
 public class ListablePersonMixin
-   implements Listable
+        implements Listable
 {
-   @This PersonState person;
+    @This PersonState person;
 
-   @Override
-   public String listName()
-   {
-      String fullName = person.name().get().givenName().get();
-      String sn = name().get().surName().get();
-      if (sn != null) fullName += " "+sn;
-      return fullName;
-   }
-}</pre><p>Neat huh?
+    @Override
+    public String listName()
+    {
+        String fullName = person.name().get().givenName().get();
+        String sn = person.name().get().surName().get();
+        if (sn != null) fullName += " "+sn;
+        return fullName;
+    }
+}
+
+interface Listable
+{
+    public String listName();
+}
+</pre><p>Neat huh?
 @This is a dependency injection annotation, but rather than the usual generic annotations like "@Inject" and friends,
 this one actually has a meaningful scope, that is, it requires that "this Entity" implements PersonState.
 The reference, as it is not extended by PersonEntity, is not visible to clients of the Entity and is hence a
@@ -192,18 +202,20 @@ Entity doesn’t need the "Listable" interface the mixin will never be instantia
 There is also support for associations and many-associations, the notion of aggregates, and a complete pluggable
 system for persistence and indexing/querying of data.
 To end with, here’s a sample of how some other state modeling concepts can be expressed in Qi4j:</p><pre class="programlisting brush: java">interface PersonEntity
-   extends EntityComposite
+        extends EntityComposite
 {
-   Association&lt;PersonEntity&gt; father();
-   @Optional Association&lt;PersonEntity&gt; spouse();
-   SetAssociation&lt;PersonEntity&gt; children();
-   @Aggregated ListAssociation&lt;BookNoteEntity&gt; favouriteBooks();
+    Association&lt;PersonEntity&gt; father();
+    @Optional Association&lt;PersonEntity&gt; spouse();
+    ManyAssociation&lt;PersonEntity&gt; children();
+    @Aggregated ManyAssociation&lt;BookNoteEntity&gt; favouriteBooks();
 }
 
 interface BookNoteEntity
-   extends EntityComposite
+        extends EntityComposite
 {
-  Property&lt;String&gt; note();
-  Association&lt;BookEntity&gt; book();
-}</pre><p>I hope they are self-explanatory.</p><p>My hope is that with Composite Oriented Programming and Qi4j we can come one step closer to being able to express our
+    Property&lt;String&gt; note();
+    Association&lt;BookEntity&gt; book();
+}
+
+</pre><p>I hope they are self-explanatory.</p><p>My hope is that with Composite Oriented Programming and Qi4j we can come one step closer to being able to express our
 domain as clearly as possible in code.</p></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

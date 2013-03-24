@@ -99,8 +99,11 @@ that are both the top and bottom.</p></div><div class="section" title="Modules">
 Layer, and for each Module you declare the Composite and Object types for that Module, together with a Visibility rule,
 one of; application, layer, module.</p></div><div class="section" title="Visibility"><div class="titlepage"><div><div><h4 class="title"><a id="_visibility"></a>Visibility</h4></div></div></div><p>The Visibility rules are perhaps the most powerful aspect of the above. Visibility is a mechanism that kicks in whenever
 a Composite type need to be looked up. It defines both the scoping rules of the client as well as the provider. A lookup
-is either a direct reference, such as</p><pre class="programlisting brush: java">EntityBuilderFactory factory = ...;
-PersonEntity p = factory.newEntity( PersonEntity.class );</pre><p>or an indirect lookup, such as</p><pre class="programlisting brush: java">Person p = factory.newEntity( Person.class );</pre><p>where it will first map the Person to a reachable PersonEntity.
+is either a direct reference, such as</p><pre class="programlisting brush: java">UnitOfWork unitOfWork = module.currentUnitOfWork();
+PersonEntity person = unitOfWork.newEntity( PersonEntity.class );
+</pre><p>or an indirect lookup, such as</p><pre class="programlisting brush: java">UnitOfWork unitOfWork = module.currentUnitOfWork();
+Person person = unitOfWork.newEntity( Person.class );
+</pre><p>where it will first map the Person to a reachable PersonEntity.
 The algorithm is as follows;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 Look in the callers Module, if there is one and only one Composite type matching, use it. If there are two or more
       Composite types matching, then throw an ambiguity exception. If there are zero, proceed to the next step.
@@ -167,7 +170,7 @@ modules. See picture below.</p><p>Image of Example of Layers</p><p>Figure 1. Exa
         application.activate();
     }
 
-      [...snip...]
+    [...snip...]
 
 }
 

@@ -72,7 +72,7 @@
  </script>
 
   </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Qi4j</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="core-api.html">Core API</span></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><a href="core-io.html">Core I/O API</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section" title="Core API"><div class="titlepage"><div><div><h3 class="title"><a id="core-api"></a>Core API</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The Qi4j Core API is the primary interface for client application code during the main execution phase, i.e. after the
-application has been activated.</p><div class="table"><a id="idp140187711558352"></a><p class="title"><strong>Table 1. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+application has been activated.</p><div class="table"><a id="idp5673776"></a><p class="title"><strong>Table 1. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
 the ability to assemble (compose) objects from smaller pieces, called Fragments.
 </li><li class="listitem">
 the construction of applications by assembling Composites into Modules and Modules into Layers.
@@ -108,7 +108,7 @@ We can therefor get rid of a lot of additional types, and use Qi4j-free interfac
 public interface BankAccount
 {
     Money checkBalance();
-      [...snip...]
+    [...snip...]
 
 }
 </pre><p>and declare it with;</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
@@ -126,7 +126,22 @@ Zero, one or more Assemblies per Module.
 </li></ul></div><p>The principle of this Structure is to assist the programmer to create well modularized applications, that are easily
 extended and maintained. Qi4j will restrict access between Modules, so that code can only reach Composites and Objects
 in Modules (including itself) of the same or lower Layers.</p><p>Each Layer has to be declared which lower Layer(s) it uses, and it is not allowed that a lower Layer uses a higher
-Layer, i.e. cyclic references.</p></div><div class="section" title="ValueComposite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-value"></a>ValueComposite</h4></div></div></div><p>Usage of value objects is one of the most ignored and best return-on-investment the programmer can do. Values are
+Layer, i.e. cyclic references.</p></div><div class="section" title="Application"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-application"></a>Application</h4></div></div></div><p>Every Qi4j runtime has <span class="emphasis"><em>one and only one</em></span> Application in it. It is possible to run multiple Qi4j runtimes in the same
+JVM, and it is even possible to embed a Qi4j runtime within a Qi4j Application, but there can only be one Application
+in a Qi4j runtime.</p><p>An Application is then broken into layers and modules are placed within those layers. Composites are placed within
+modules. This forms the Application Structure and is enforced by the Qi4j runtime.</p></div><div class="section" title="Layer"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-layer"></a>Layer</h4></div></div></div><p>A Qi4j Application must consist of at least one layer. More layers are common, often dividing the application along the
+common architectural diagrams used on whiteboards, perhaps with a UI layer at the top, followed by a service or application
+layer, then with a domain layer and finally some persistence layer at the bottom.</p><p>Qi4j enforces this layering by requiring the <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a> to declare which layer uses which other layer. And
+<a class="xref" href="core-api.html#core-api-visibility" title="Visibility">Visibility</a> rules define that layers below can not locate composites in layers above. Also, defining that
+"Layer1 uses Layer2" and "Layer2 uses Layer3" does NOT imply that Layer1 has <a class="xref" href="core-api.html#core-api-visibility" title="Visibility">Visibility</a> to Layer3. If that
+is wanted, then it must be declared explicitly.</p></div><div class="section" title="Module"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-module"></a>Module</h4></div></div></div><p>Modules are logical compartments to assist developers in creating and maintaining well modularized code. A Module only
+belongs to a single Layer, but many Modules can exist in the same Layer. Composite access is limited to;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+Composites within the same Module, with Visibility set to Visibility.module (default).
+</li><li class="listitem">
+Composites from Modules in the same Layer, with Visibility set to Visibility.layer
+</li><li class="listitem">
+Composites from Modules in Layers below, with Visibility set to Visibility.application
+</li></ul></div><p>Modules contains a lot of the Qi4j infrastructure, which are the enforcers of these wise modularization principles.</p><p>It is not possible to modify the Modules, their resolution nor binding in any way after the application starts.</p></div><div class="section" title="Visibility"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-visibility"></a>Visibility</h4></div></div></div></div><div class="section" title="ValueComposite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-value"></a>ValueComposite</h4></div></div></div><p>Usage of value objects is one of the most ignored and best return-on-investment the programmer can do. Values are
 immutable and can be compared by value instead of memory reference. Concurrency is suddenly not an issue, since either
 the value exists or it doesn’t, no need for synchronization. Values are typically very easy to test and very robust to
 refactoring.</p><p>Qi4j defines values as a primary meta type through the ValueComposite, as we think the benefits of values are great.
@@ -136,8 +151,205 @@ It is Immutable.
 </li><li class="listitem">
 Its equals/hashCode works on the values of the ValueComposite.
 </li><li class="listitem">
-Can be used as Property types, but will not be indexed and searchable.
-</li></ul></div></div><div class="section" title="Service Composite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-service"></a>Service Composite</h4></div></div></div><p>Any service added, via the ModuleAssembly.addServices(), ModuleAssembly.services() and ModuleAssembly.importServices()
+Can be used as Property types.
+</li></ul></div><div class="section" title="Value Serialization"><div class="titlepage"><div><div><h5 class="title"><a id="_value_serialization"></a>Value Serialization</h5></div></div></div><p>Value objects can be serialized and deserialized using the ValueSerialization API which is a Service API implemented
+by SPI and extensions.</p><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p><code class="literal">ValueSerialization extends ValueSerializer, ValueDeserializer</code>. See the <a class="xref" href="javadocs.html" title="Javadoc"> JavaDocs</a> for interfaces detail.</p></div><p>The ValueSerialization mechanism apply to the following object types :</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+ValueComposite,
+</li><li class="listitem">
+EntityReference,
+</li><li class="listitem">
+Iterable,
+</li><li class="listitem">
+Map,
+</li><li class="listitem">
+Plain Value.
+</li></ul></div><p>Nested Plain Values, EntityReferences, Iterables, Maps, ValueComposites are supported.
+EntityComposites and EntityReferences are serialized as their identity string.</p><p>Plain Values can be one of :</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+String,
+</li><li class="listitem">
+Boolean or boolean,
+</li><li class="listitem">
+Integer or int,
+</li><li class="listitem">
+Long or long,
+</li><li class="listitem">
+Short or short,
+</li><li class="listitem">
+Byte or byte,
+</li><li class="listitem">
+Float or float,
+</li><li class="listitem">
+Double or double,
+</li><li class="listitem">
+BigInteger,
+</li><li class="listitem">
+BigDecimal,
+</li><li class="listitem">
+Date,
+</li><li class="listitem">
+DateTime (JodaTime),
+</li><li class="listitem">
+LocalDateTime (JodaTime),
+</li><li class="listitem">
+LocalDate (JodaTime).
+</li></ul></div><p>Values of unknown types and all arrays are considered as <code class="literal">java.io.Serializable</code> and by so are (de)serialized to (from)
+base64 encoded bytes using pure Java serialization. If it happens that the value is not Serializable or the input to
+deserialize is invalid, a <code class="literal">ValueSerializationException</code> is thrown.</p><p>Methods of <code class="literal">ValueSerializer</code> allow to specify if the serialized state should contain extra type information about the
+serialized value. Having type information in the serialized payload allows to keep actual ValueComposite types and by so
+circumvent <code class="literal">AmbiguousTypeException</code> when deserializing.</p><p>Core Runtime provides a default ValueSerialization system based on the
+<a class="ulink" href="https://github.com/douglascrockford/JSON-java" target="_top">org.json</a> Java library producing and consuming JSON.</p><p>Let’s see how it works in practice.</p><pre class="programlisting brush: java">public interface SomeValue // (1)
+{
+
+    Property&lt;String&gt; foo();
+}
+
+@Override
+public void assemble( ModuleAssembly module )
+    throws AssemblyException
+{
+    module.values( SomeValue.class ); // (2)
+    [...snip...]
+
+}
+[...snip...]
+
+public void defaultValueSerialization()
+{
+    SomeValue someValue = someNewValueInstance( module ); // (3)
+    String json = someValue.toString(); // (4)
+    SomeValue someNewValue = module.newValueFromSerializedState( SomeValue.class, json ); // (5)
+    [...snip...]
+
+}
+</pre><p>Reading this first example step by step we ;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+declare a ValueComposite,
+</li><li class="listitem">
+assemble it,
+</li><li class="listitem">
+create a new Value instance,
+</li><li class="listitem">
+use the <code class="literal">ValueComposite#toString()</code> method to get a JSON representation of the Value,
+</li><li class="listitem">
+and finally, use the <code class="literal">Module#newValueFromSerializedState()</code> method to create a new Value instance from the JSON
+      state.
+</li></ol></div><p><code class="literal">ValueComposite#toString()</code> method leverage Value Serialization and by so provide JSON based representation. The Module
+API allows to create new Value instances from serialized state.</p><p>On top of that, Application assemblies can register different implementation of ValueSerialization as Services to
+support more formats, see the <a class="xref" href="extensions.html" title="Extensions">Extensions</a> section. Note that the default behaviour described above is overriden if a
+ValueSerialization Service is visible.</p><p>Let’s see how to use the ValueSerialization Services.</p><pre class="programlisting brush: java">public interface SomeValue // (1)
+{
+
+    Property&lt;String&gt; foo();
+}
+
+@Override
+public void assemble( ModuleAssembly module )
+    throws AssemblyException
+{
+    module.values( SomeValue.class ); // (2)
+    new OrgJsonValueSerializationAssembler().assemble( module ); // (3)
+}
+[...snip...]
+
+@Service
+private ValueSerializer valueSerializer; // (4)
+@Service
+private ValueDeserializer valueDeserializer; // (4)
+
+[...snip...]
+
+public void assembledDefaultServiceSerialization()
+{
+    SomeValue someValue = someNewValueInstance( module ); // (5)
+    String json = valueSerializer.serialize( someValue ); // (6)
+    SomeValue someNewValue = valueDeserializer.deserialize( SomeValue.class, json ); // (7)
+    [...snip...]
+
+}
+</pre><p>In this second example, we ;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+declare a ValueComposite,
+</li><li class="listitem">
+assemble it,
+</li><li class="listitem">
+assemble a ValueSerialization Service backed by the <code class="literal">org.json</code> package,
+</li><li class="listitem">
+get the <code class="literal">ValueSerializer</code> and <code class="literal">ValueDeserializer</code> Services injected,
+</li><li class="listitem">
+create a new Value instance,
+</li><li class="listitem">
+use the <code class="literal">ValueSerializer#serialize()</code> method to get a JSON representation of the Value,
+</li><li class="listitem">
+and finally, use the <code class="literal">ValueDeserializer#eserialize()</code> method to create a new Value instance from the JSON state.
+</li></ol></div><p>Many applications need to stream data. The ValueSerialization API support such use cases in two ways.</p><p>The first one use classic streams.</p><pre class="programlisting brush: java">public void assembledServiceStreamingSerialization()
+{
+[...snip...]
+
+    // (1)
+    Iterable&lt;AcmeValue&gt; data = dataSource; // Eg. Entities converted to Values
+    OutputStream output = targetStream; // Eg. streaming JSON over HTTP
+
+    // (2)
+    valueSerializer.serialize( data, output );
+    [...snip...]
+
+    // (3)
+    InputStream input = sourceStream; // Eg. reading incoming JSON
+
+    // (4)
+    List&lt;AcmeValue&gt; values = valueDeserializer.deserialize( CollectionType.listOf( AcmeValue.class ), input );
+    [...snip...]
+
+}
+</pre><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+get a handle on a source of values and an <code class="literal">OutputStream</code>,
+</li><li class="listitem">
+serialize data into the <code class="literal">OutputStream</code>,
+</li><li class="listitem">
+get a handle on an <code class="literal">InputStream</code>,
+</li><li class="listitem">
+deserialize data from the <code class="literal">InputStream</code>.
+</li></ol></div><p>The second one use the <a class="xref" href="core-io.html" title="Core I/O API">I/O API</a>:</p><pre class="programlisting brush: java">public void assembledServiceIOSerialization()
+    throws IOException
+{
+[...snip...]
+
+    // (1)
+    Iterable&lt;AcmeValue&gt; queryResult = dataSource; // Eg. Entities converted to Values
+    Writer writer = outputWriter; // Eg. to pipe data to another process or to a file
+
+    // (2)
+    Function&lt;AcmeValue, String&gt; serialize = valueSerializer.serialize();
+
+    // (3)
+    Inputs.iterable( queryResult ).transferTo( Transforms.map( serialize, Outputs.text( writer ) ) );
+    [...snip...]
+
+    // (4)
+    Reader reader = inputReader;
+    List&lt;AcmeValue&gt; values = new ArrayList&lt;AcmeValue&gt;();
+
+    // (5)
+    Function&lt;String, AcmeValue&gt; deserialize = valueDeserializer.deserialize( AcmeValue.class );
+
+    // Deserialization of a collection of AcmeValue from a String.
+    // One serialized AcmeValue per line.
+    // (6)
+    Inputs.text( reader ).transferTo( Transforms.map( deserialize, Outputs.collection( values ) ) );
+    [...snip...]
+
+}
+</pre><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+get a handle on a source of values and a <code class="literal">Writer</code>,
+</li><li class="listitem">
+prepare the serialization <code class="literal">Function</code>,
+</li><li class="listitem">
+serialize a collection of values, one serialized value per line,
+</li><li class="listitem">
+get a handle on a serialized values <code class="literal">Reader</code> and create a new empty <code class="literal">List</code> of values,
+</li><li class="listitem">
+prepare the deserialization <code class="literal">Function</code>,
+</li><li class="listitem">
+deserialize a collection of values from read lines.
+</li></ol></div></div></div><div class="section" title="Service Composite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-service"></a>Service Composite</h4></div></div></div><p>Any service added, via the ModuleAssembly.addServices(), ModuleAssembly.services() and ModuleAssembly.importServices()
 methods, will have the ServiceComposite meta type added to it. In Qi4j, when we speak of <span class="emphasis"><em>Services</em></span> we mean instances
 of <span class="emphasis"><em>ServiceComposite</em></span>.</p><p>Most programmers are familiar with the term "Service", and after the failure of Object Oriented Programming’s promise
 to encapsulate all the behavior together with the object’s state, programmers learned that the only way to deal with
@@ -175,7 +387,7 @@ public void assemble( ModuleAssembly module )
     throws AssemblyException
 {
     ServiceDeclaration service = module.addServices( MyDemoService.class );
-      [...snip...]
+    [...snip...]
 
     service.taggedWith( "Important", "Drain" );
 </pre><p>Tags are useful inside the application code to locate a particular service instance, in case we have many. For instance;</p><pre class="programlisting brush: java">@Service
@@ -221,12 +433,12 @@ public void sendMail( @Email String to, @MinLength( 8 ) String subject, String b
     MailServiceConfiguration conf = config.get();
     String hostName = conf.hostName().get();
     int port = conf.port().get();
-      [...snip...]
+    [...snip...]
 
 }
 </pre></div><div class="section" title="Modifying Configuration"><div class="titlepage"><div><div><h5 class="title"><a id="_modifying_configuration"></a>Modifying Configuration</h5></div></div></div><p>Configuration is modifiable, and after the modifications have been made, the save() method on the Configuration type
 must be called. Example;</p><pre class="programlisting brush: java">    void changeExternalMailService( String hostName, int port );
-      [...snip...]
+    [...snip...]
 
         @Override
         public void changeExternalMailService( String hostName, int port )
@@ -236,7 +448,7 @@ must be called. Example;</p><pre class="programlisting brush: java">    void cha
             conf.port().set( port );
             config.save();
         }
-          [...snip...]
+        [...snip...]
 
     }
 }
@@ -260,7 +472,26 @@ It is typically persisted.
 It can only be referenced by an Association or ManyAssociation.
 </li><li class="listitem">
 Its CRUD operations are bound by a UnitOfWork.
-</li></ul></div></div><div class="section" title="TransientComposite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-transient"></a>TransientComposite</h4></div></div></div><p>TransientComposite is a Composite meta type for all other cases. The main characteristics are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+</li></ul></div></div><div class="section" title="Unit Of Work"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-unitofwork"></a>Unit Of Work</h4></div></div></div><p>A UnitOfWork is a bounded group of operations performed, typically on entities, where these operations are not visible
+to other threads until the UnitOfWork is completed. It is also possible to discard these operations, as if they were
+never executed.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>UnitOfWork has many similarities with the Transaction concept used with RDBMSes. But since Qi4j introduced several deviations to the common definitions of Transactions, we chose to use a different term.</p></div><p>There are several key characteristics of UnitOfWork;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+They are limited to a single thread.
+</li><li class="listitem">
+They have an associated use-case.
+</li><li class="listitem">
+They can be paused and resumed.
+</li><li class="listitem">
+They have a notification mechanism (used to trigger Indexing for instance).
+</li><li class="listitem">
+They can be long-running, as they don’t tie up underlying transactions or other expensive resources.
+</li></ul></div><p>At the moment, they are exclusively used to manipulate <a class="xref" href="core-api.html#core-api-entity" title="EntityComposite">EntityComposite</a> composites. All entity operations MUST be
+done via UnitOfWork, and in fact it is not possible to get this wrong.</p><div class="section" title="UnitOfWork Propagation"><div class="titlepage"><div><div><h5 class="title"><a id="_unitofwork_propagation"></a>UnitOfWork Propagation</h5></div></div></div><p>UnitOfWork is associated with a thread, and can only be transferred to another thread by a relatively complex operation
+of pausing a UnitOfWork in one thread, then hand over the UnitOfWork to the other thread and resume it there. Don’t do it!</p><p>UnitOfWork is available from the <span class="emphasis"><em><a class="xref" href="core-api.html#core-api-module" title="Module">Module</a>, and from the Module you request either a new UnitOfWork or asking
+for the _current</em></span> one. <span class="emphasis"><em>Current UnitOfWork</em></span> means the UnitOfWork that was created earlier within the same thread. So,
+typically most entity manipulation code only request the current UnitOfWork and the management of creating, completing
+and aborting the UnitOfWork is handled by the transaction boundary, often in the so called application layer (see
+<a class="xref" href="core-api.html#core-api-layer" title="Layer">Layer</a>)</p><p>Since it is very common to have all, or nearly all, methods in the <span class="emphasis"><em>transaction boundary</em></span> to handle the creation and
+completion, possibly with retry, in the same class, module or even layer, Qi4j provides</p></div></div><div class="section" title="TransientComposite"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-transient"></a>TransientComposite</h4></div></div></div><p>TransientComposite is a Composite meta type for all other cases. The main characteristics are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 It can not be serialized nor persisted.
 </li><li class="listitem">
 hashcode/equals are not treated specially and will be delegated to fragment(s) implementing those methods.
@@ -456,14 +687,151 @@ underlying Mixin method implementation altogether.</p><p>To create a concern, yo
 implements the Mixin Type (Typed Concerns) or java.lang.reflect.InvocationHandler (Generic Concerns),
 </li><li class="listitem">
 extend ConcernOf (Typed Concerns) or GenericConcern (Generic Concerns) [1]
-</li></ul></div></div><div class="section" title="Constraint"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-constraint"></a>Constraint</h4></div></div></div></div><div class="section" title="SideEffect"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-sideeffect"></a>SideEffect</h4></div></div></div></div><div class="section" title="Module"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-module"></a>Module</h4></div></div></div><p>Modules are logical compartments to assist developers in creating and maintaining well modularized code. A Module only
-belongs to a single Layer, but many Modules can exist in the same Layer. Composite access is limited to;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
-Composites within the same Module, with Visibility set to Visibility.module (default).
+</li></ul></div><p>You are allowed to modify both the in-arguments as well as the returned value, including throw exceptions if that is
+suitable, perhaps for post condition checks.</p><div class="section" title="Typed Concern"><div class="titlepage"><div><div><h5 class="title"><a id="_typed_concern_2"></a>Typed Concern</h5></div></div></div><p>As mentioned above, concerns that implements the <span class="emphasis"><em>Mixin Type</em></span> are called <span class="strong"><strong>Typed Mixins</strong></span>. They are more common in the
+business domain, and can be used for many important things in the domain model, such as checking post conditions (i.e.
+ensure that the state in the entire composite is valid), coordinating services, handling events and much more.</p><p>Typed Concerns doesn’t have to implement all the methods in the Mixin Type. By making the class abstract and only
+implementing the methods of interest, Qi4j will subclass the concern (otherwise not valid for the JVM), but the generated
+methods will never be invoked.</p></div><div class="section" title="Generic Concern"><div class="titlepage"><div><div><h5 class="title"><a id="_generic_concern_2"></a>Generic Concern</h5></div></div></div><p>In classic AOP, all advice are effectively <span class="emphasis"><em>generic</em></span>. There is no type information in the advice implementation and the
+pointcut can be defined anywhere in the code, and the implementation uses proxy InvocationHandlers. Qi4j supports this
+construct as well, and we call it <span class="strong"><strong>Generic Concern</strong></span>.</p><p>Generic Concerns will be added to all methods that the AppliesToFilter evaluates to true. By default, that is all methods.</p><p>AppliesToFilters is a mechanism to limit, or direct, which methods that the concern should be added to. You have full
+control over this selection process, via several mechanisms.</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+@AppliesTo annotation can be put on the concern, with either;
 </li><li class="listitem">
-Composites from Modules in the same Layer, with Visibility set to Visibility.layer
+an interface for which the methods should be wrapped, or
 </li><li class="listitem">
-Composites from Modules in Layers below, with Visibility set to Visibility.application
-</li></ul></div><p>Modules contains a lot of the Qi4j infrastructure, which are the enforcers of these wise modularization principles.</p><p>It is not possible to modify the Modules, their resolution nor binding in any way after the application starts.</p></div><div class="section" title="Composite Types Lookup"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-type-lookup"></a>Composite Types Lookup</h4></div></div></div><p>Composite Types Lookup can occurs when you explicitely lookup for a Composite by Type
+an AppliesToFilter implementation that is consulted during building the invocation stack, or
+</li><li class="listitem">
+an annotation type that must be given on the method.
+</li><li class="listitem">
+Concerns are added only to composites that declares the Concern, either in
+</li><li class="listitem">
+the Composite Type, or
+</li><li class="listitem">
+during assembly in the withConcerns() method.
+</li></ul></div><p>This means that we can make the following three samples of concerns. First the generic concern that is added to the methods
+of the JDBC Connection class;</p><pre class="programlisting brush: java">@AppliesTo( java.sql.Connection.class )
+public class CacheConcern extends GenericConcern
+    implements InvocationHandler
+{
+</pre><p>We can also use an AppliesToFilter to define which methods should be wrapped with the concern, like this;</p><pre class="programlisting brush: java">@AppliesTo( BusinessAppliesToFilter.class )
+public class BusinessConcern extends GenericConcern
+    implements InvocationHandler
+{
+[...snip...]
+
+public class BusinessAppliesToFilter
+    implements AppliesToFilter
+{
+
+    @Override
+    public boolean appliesTo( Method method, Class&lt;?&gt; mixin, Class&lt;?&gt; compositeType, Class&lt;?&gt; fragmentClass
+    )
+    {
+        return true; // Some criteria for when a method is wrapped with the concern.
+    }
+}
+</pre><p>And finally an example of how to use annotations to mark indvidual methods for being wrapped by the concern.</p><pre class="programlisting brush: java">@AppliesTo( Audited.class )
+public class AuditConcern extends GenericConcern
+    implements InvocationHandler
+{
+[...snip...]
+
+    @Override
+    public Object invoke( Object proxy, Method method, Object[] args )
+        throws Throwable
+    {
+        return null;
+    }
+}
+
+[...snip...]
+
+@Retention( RetentionPolicy.RUNTIME )
+@Target( { ElementType.METHOD } )
+@Documented
+@InjectionScope
+public @interface Audited
+{
+}
+</pre><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Even if a method fulfills the requirement for the concern, if the concern is not declared for the Composite then the concern will NOT be applied.</p></div></div><div class="section" title="Invocation Order"><div class="titlepage"><div><div><h5 class="title"><a id="_invocation_order"></a>Invocation Order</h5></div></div></div><p>The concerns are invoked AFTER all <a class="xref" href="">???</a> have been checked. The concerns are executed before the
+<a class="xref" href="">???</a> are executed in the return path.</p><p>The order of execution is defined by the declaration order, interface hierarchy, whether the concern is generic or typed
+and if they are declared in the interface or declared in the <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a>.</p><p>From the perspective of incoming call, i.e. after the &lt;core-api-constraints&gt;&gt; have been checked, the following rules
+are in place;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+Typed concerns are invoked AFTER Generic concerns.
+</li><li class="listitem">
+Concern declared to the LEFT are executed BEFORE concerns to the RIGHT.
+</li><li class="listitem">
+Concerns in subclasses are executed BEFORE concerns in super-interfaces.
+</li><li class="listitem">
+Concerns in super-interfaces are executed breadth BEFORE depth.
+</li><li class="listitem">
+Concerns in different super-interfaces at the same "level" are executed with the concerns declared in super-interfaces left of other super-interfaces first. (TODO: Strange explanation)
+</li><li class="listitem">
+Concerns declared in interfaces are executed AFTER concerns declared in <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a>.
+</li></ul></div></div></div><div class="section" title="Constraint"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-constraint"></a>Constraint</h4></div></div></div></div><div class="section" title="SideEffect"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-sideeffect"></a>SideEffect</h4></div></div></div></div><div class="section" title="DecoratorMixin"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-decoratormixin"></a>DecoratorMixin</h4></div></div></div><p>A little known feature is the DecoratorMixin, which allows any object to become a Mixin. This is useful when for instance
+the initialization of the object to act as a Mixin is complex, or maybe an instance is shared across many Composites.
+This functionality is only relevant in Transients, and therefor not available in other Composite meta types.</p><p>This is done by declaring the DecoratorMixin on the interface, and add the object to be used via the use() method on
+the TransientBuilder.</p><p>The DecoratorMixin will optimize the invocation for generic mixins, to avoid additional cost of reflection. But otherwise
+the DecoratorMixin is fairly simple</p><div class="section" title="Example"><div class="titlepage"><div><div><h5 class="title"><a id="_example"></a>Example</h5></div></div></div><p>Let’s say that we have a model, FooModel, whose implementation is simply a POJO. Several different views shares this
+the same model instance, so any changes to the model will notify the views.</p><p>We start with the FooModel interface;</p><pre class="programlisting brush: java">public interface FooModel
+{
+    String getBar();
+    void setBar(String value);
+    [...snip...]
+
+}
+</pre><p>and its implementation is not really relevant for this discussion.</p><p>Each of the views looks like this;</p><pre class="programlisting brush: java">@Mixins(View1.Mixin.class)
+public interface View1
+{
+    String bar();
+
+    public class Mixin
+        implements View1
+    {
+        @This
+        FooModel model;
+
+        @Override
+        public String bar()
+        {
+            return model.getBar();
+        }
+    }
+}
+</pre><p>Note that the mixin is expecting to have the FooModel as being part of the view. This also simplies the mixin, which
+can for instance add and remove listeners to model updates in lifecycle methods.</p><p>But we need an implementation of the FooModel that uses the actual implementation of the FooModel. So we decorate the
+FooModel with the DecoratorMixin.</p><pre class="programlisting brush: java">@Mixins(DecoratorMixin.class)
+public interface FooModel
+</pre><p>The DecoratorMixin expects that the implementation is found among the "@Uses" objects, so to create a view we simply
+do;</p><pre class="programlisting brush: java">public View1 createView1( FooModel model )
+{
+    TransientBuilder&lt;View1&gt; builder = module.newTransientBuilder( View1.class );
+    builder.use( model );
+    return builder.newInstance();
+}
+</pre><p>And there is nothing special in the assembly of this simple example;</p><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+    throws AssemblyException
+{
+    module.transients( View1.class );
+    module.transients( View2.class );
+    module.transients( FooModel.class );
+}
+</pre><p>This can now be validated in a small test;</p><pre class="programlisting brush: java">
+@Test
+public void testDecoration()
+{
+    FooModelImpl model = new FooModelImpl( "Init" );
+    View1 view1 = createView1( model );
+    View2 view2 = createView2( model );
+    assertThat( view1.bar(), equalTo( "Init" ) );
+    assertThat( view2.bar(), equalTo( "Init" ) );
+    model.setBar( "New Value" );
+    assertThat( view1.bar(), equalTo( "New Value" ) );
+    assertThat( view2.bar(), equalTo( "New Value" ) );
+}
+</pre></div></div><div class="section" title="Composite Types Lookup"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-type-lookup"></a>Composite Types Lookup</h4></div></div></div><p>Composite Types Lookup can occurs when you explicitely lookup for a Composite by Type
 (ex. ServiceFinder.findService(..) methods), when you ask for an injection or when you create a new composite instance.</p><p>All theses type lookup start from a Module, are lazy, cached and obey the Qi4j Visibility rules. Type Lookup works
 equally accross Composite Types with some subtle differences when it comes to Services and Entities.</p><div class="section" title="Object, Transient and Value Types Lookup"><div class="titlepage"><div><div><h5 class="title"><a id="_object_transient_and_value_types_lookup"></a>Object, Transient and Value Types Lookup</h5></div></div></div><p>When creating or injecting Objects, Transients or Values the Type Lookup does the following:</p><p>First, if Object/Transient/Value Models exactly match the given type, the closest one (Visibility then Assembly order)
 is returned. Multiple <span class="strong"><strong>exact</strong></span> matches with the same Visibility are <span class="strong"><strong>forbidden</strong></span> and result in an
@@ -492,7 +860,7 @@ handling.</p><p>A Gauge can represent anything, for instance, thread pool levels
 useful to have separate gauges for percentage (%) and absolute numbers of the same resource. Operations are mainly
 interested in being alerted when threshold are reach as a percentage, as it is otherwise too many numbers to keep
 track of.</p><p>To create a Gauge, you do something like;</p><pre class="programlisting brush: java">final BlockingQueue queue = new LinkedBlockingQueue( 20 );
-  [...snip...]
+[...snip...]
 
 MetricsGaugeFactory gaugeFactory = provider.createFactory( MetricsGaugeFactory.class );
 MetricsGauge&lt;Integer&gt; gauge = gaugeFactory.registerGauge( getClass(), "Sample Gauge", new MetricsGauge&lt;Integer&gt;()

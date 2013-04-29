@@ -48,10 +48,6 @@
 
 <script type="text/javascript" src="js/tablestyler.js"></script>
 
-<!-- Version Switcher -->
-
-<script type="text/javascript" src="js/versionswitcher.js"></script>
-
 <!-- Qi4j WebSite Progressive Enhancement -->
 
 <link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
@@ -75,7 +71,7 @@
 independently of Qi4j, together with the Qi4j Core Functional API, which the Core I/O API depends on.</p><p>The Qi4j Core I/O API tries to address the problem around shuffling data around from various I/O inputs and outputs,
 possibly with transformations and filtering along the way. It was identified that there is a general mix-up of concerns
 in the stereotypical I/O handling codebases that people deal with all the time. The reasoning around this, can be found
-in the <a class="xref" href="howto-use-io.html" title="Use I/O API">Use I/O API</a>, and is recommended reading.</p><div class="table"><a id="idp6197360"></a><p class="title"><strong>Table 5. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.io</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="The Problem"><div class="titlepage"><div><div><h4 class="title"><a id="_the_problem"></a>The Problem</h4></div></div></div><p>Why does I/O operations in Java have to be so complicated, with nested try/catch/finally and loops? Don’t you wish
+in the <a class="xref" href="howto-use-io.html" title="Use I/O API">Use I/O API</a>, and is recommended reading.</p><div class="table"><a id="idp6383600"></a><p class="title"><strong>Table 19. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.io</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="The Problem"><div class="titlepage"><div><div><h4 class="title"><a id="_the_problem"></a>The Problem</h4></div></div></div><p>Why does I/O operations in Java have to be so complicated, with nested try/catch/finally and loops? Don’t you wish
 that the operations could be expressed in a more natural way, such as;</p><pre class="programlisting brush: java">File source = ...
 File destination = ...
 source.copyTo( destination );</pre><p>It seems natural to do, yet it is not present for us. We need to involve FileInputStream/FileOutputStream, wrap them

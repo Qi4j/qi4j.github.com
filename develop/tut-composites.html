@@ -48,10 +48,6 @@
 
 <script type="text/javascript" src="js/tablestyler.js"></script>
 
-<!-- Version Switcher -->
-
-<script type="text/javascript" src="js/versionswitcher.js"></script>
-
 <!-- Qi4j WebSite Progressive Enhancement -->
 
 <link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
@@ -98,7 +94,8 @@ so that you don’t have to write everything yourself.</p><div class="itemizedli
 <a class="xref" href="tut-composites.html#tut-composites-step9" title="Step 9 - Private and Abstract Mixins">Step 9 - Private and Abstract Mixins</a>
 </li></ul></div><p>Each tutorial step in this series starts with the result from the previous tutorial, so you can
 always look at the next tutorial step for guidance on what to do.</p><p>At the bottom of each tutorial step, the is Solutions section, which list the files you should have come to if you
-have followed the instructions.</p><div class="section" title="Step 1 - Interface Refactoring"><div class="titlepage"><div><div><h4 class="title"><a id="tut-composites-step1"></a>Step 1 - Interface Refactoring</h4></div></div></div><div class="section" title="Initial Hello World"><div class="titlepage"><div><div><h5 class="title"><a id="_initial_hello_world"></a>Initial Hello World</h5></div></div></div><p>This whole tutorial describes how to step-by-step modify a typical HelloWorld "application" into a full-fledged Qi4j
+have followed the instructions.</p><p>If you want to reproduce what’s explained in this tutorial, remember to depend on the Core Runtime artifact that depends
+on Core API, Core SPI, Core Bootstrap and Core Functional &amp; I/O APIs:</p><div class="table"><a id="idp5033536"></a><p class="title"><strong>Table 5. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.runtime</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><p>See the <a class="xref" href="howto-depend-on-qi4j.html" title="Depend on Qi4j in your build">Depend on Qi4j in your build</a> tutorial for details.</p><div class="section" title="Step 1 - Interface Refactoring"><div class="titlepage"><div><div><h4 class="title"><a id="tut-composites-step1"></a>Step 1 - Interface Refactoring</h4></div></div></div><div class="section" title="Initial Hello World"><div class="titlepage"><div><div><h5 class="title"><a id="_initial_hello_world"></a>Initial Hello World</h5></div></div></div><p>This whole tutorial describes how to step-by-step modify a typical HelloWorld "application" into a full-fledged Qi4j
 Composite Oriented application. Here is the initial code of HelloWorld.</p><pre class="programlisting brush: java">
 /**
  * Initial HelloWorld implementation. Everything is mixed up
@@ -515,7 +512,9 @@ restriction we can make is to denote a type. Any other constraints on the input 
 optional, integer ranges, string regular expressions, and so on, cannot be expressed, and so we have to put this into
 Javadoc, and then manually add these checks in the implementation class.</p><p>In Qi4j there is the option to use Constraints, which are further restrictions on the parameters. This is implemented
 by having an annotation that describes what the Constraint does, and then an implementation class that checks whether a
-specific value fulfills the Constraint or not.</p><p>There are a number of pre-written constraints in Qi4j which you can use. The null check of the original HelloWorld
+specific value fulfills the Constraint or not.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The previous steps had a dependency to the <a class="xref" href="core-api.html" title="Core API"> Core API</a> only. The constraints you’ve used in this step,
+introduce a new dependency to the <a class="xref" href="library-constraints.html" title="Constraints">Constraints Library</a>, where all the constraint related classes reside. So
+update your classpath settings accordingly.</p></div><p>There are a number of pre-written constraints in Qi4j which you can use. The null check of the original HelloWorld
 version is already handled by default since Qi4j considers method parameters to be mandatory if not explicitly marked
 with the @Optional annotation. So, instead of doing that check we will add other checks that are useful to make, such
 as ensuring that the passed in string is not empty.</p><p>The only thing you have to do is add the annotation @NotEmpty to the method parameters you want to constrain in this
@@ -524,9 +523,7 @@ just use this, which is the common case, or override it by declaring your own @C
 TransientComposite type.</p><p>You can add as many Constraint annotations you want to a parameter. All of them will be checked whenever a method is
 called.</p><p>Steps for this tutorial:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 Add @NotEmpty to the state parameters.
-</li></ul></div><p>Note: The previous steps had a dependency to the <a class="xref" href="core-api.html" title="Core API"> Core API</a> only. The constraints you’ve used in this step,
-introduce a new dependency to the <a class="xref" href="library-constraints.html" title="Constraints">Constraints Library</a>, where all the constraint related classes reside. So
-update your classpath settings accordingly.</p><div class="section" title="Solution"><div class="titlepage"><div><div><h5 class="title"><a id="_solution_6"></a>Solution</h5></div></div></div><p>If you have successfully completed the task, you should end up with the following artifacts;</p><p>These ones remain unchanged:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+</li></ul></div><div class="section" title="Solution"><div class="titlepage"><div><div><h5 class="title"><a id="_solution_6"></a>Solution</h5></div></div></div><p>If you have successfully completed the task, you should end up with the following artifacts;</p><p>These ones remain unchanged:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 <code class="literal">HelloWorld.java</code>
 </li><li class="listitem">
 <code class="literal">HelloWorldComposite.java</code>

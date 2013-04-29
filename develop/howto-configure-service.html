@@ -48,10 +48,6 @@
 
 <script type="text/javascript" src="js/tablestyler.js"></script>
 
-<!-- Version Switcher -->
-
-<script type="text/javascript" src="js/versionswitcher.js"></script>
-
 <!-- Qi4j WebSite Progressive Enhancement -->
 
 <link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
@@ -75,7 +71,7 @@
 readable, writeable and queryable, just like other Entities. This should make Configuration management much simpler,
 since you can easily build GUI tools to allow editing of these in runtime. However, to simplify the initial values of
 the Configuration instance, Qi4j also does the initial bootstrapping of the Configuration entity for you. This HowTo is
-going to show how.</p><div class="section" title="We need a Service"><div class="titlepage"><div><div><h4 class="title"><a id="_we_need_a_service"></a>We need a Service</h4></div></div></div><p>To illustrate these features we create an TravelPlan service, which allows clients to find and make Reservations to
+going to show how.</p><p>If you want to reproduce what’s explained in this tutorial, remember to depend on the Core Bootstrap artifact:</p><div class="table"><a id="idp5526016"></a><p class="title"><strong>Table 13. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.bootstrap</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><p>At runtime you will need the Core Runtime artifact too. See the <a class="xref" href="howto-depend-on-qi4j.html" title="Depend on Qi4j in your build">Depend on Qi4j in your build</a> tutorial for details.</p><div class="section" title="We need a Service"><div class="titlepage"><div><div><h4 class="title"><a id="_we_need_a_service"></a>We need a Service</h4></div></div></div><p>To illustrate these features we create an TravelPlan service, which allows clients to find and make Reservations to
 Destinations. For the sake of simplicity, we are leaving out the domain details…</p><pre class="programlisting brush: java">public interface TravelPlan
 {
     // Domain methods, which are beyond the discussion at hand.

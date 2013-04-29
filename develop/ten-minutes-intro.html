@@ -48,10 +48,6 @@
 
 <script type="text/javascript" src="js/tablestyler.js"></script>
 
-<!-- Version Switcher -->
-
-<script type="text/javascript" src="js/versionswitcher.js"></script>
-
 <!-- Qi4j WebSite Progressive Enhancement -->
 
 <link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
@@ -86,7 +82,9 @@ Composites are constructed from Fragments.
 Fragments are Mixins, Concerns, Constraints and SideEffects.
 </li><li class="listitem">
 Only Mixins carry Composite state. The others are shared between Composite instances.
-</li></ul></div><p>Composition is done with Java interfaces and Annotations. Example;</p><pre class="programlisting brush: java">@Concerns( { PurchaseLimitConcern.class, InventoryConcern.class } )
+</li></ul></div><p>If you want to reproduce what’s explained in this tutorial, remember to depend on the Core Runtime artifact that depends
+on Core API, Core SPI, Core Bootstrap and Core Functional &amp; I/O APIs:</p><div class="table"><a id="idp4822960"></a><p class="title"><strong>Table 2. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.runtime</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><p>Moreover, you’ll need an EntityStore for persistence and an Indexing engine for querying. Choose among the available
+implementations listed in the <a class="xref" href="extensions.html" title="Extensions">Extensions</a> section.</p><p>See the <a class="xref" href="howto-depend-on-qi4j.html" title="Depend on Qi4j in your build">Depend on Qi4j in your build</a> tutorial for details.</p><p>Composition is done with Java interfaces and Annotations. Example;</p><pre class="programlisting brush: java">@Concerns( { PurchaseLimitConcern.class, InventoryConcern.class } )
 public interface OrderEntity
     extends Order, Confirmable,
             HasSequenceNumber, HasCustomer, HasLineItems,

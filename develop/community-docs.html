@@ -48,10 +48,6 @@
 
 <script type="text/javascript" src="js/tablestyler.js"></script>
 
-<!-- Version Switcher -->
-
-<script type="text/javascript" src="js/versionswitcher.js"></script>
-
 <!-- Qi4j WebSite Progressive Enhancement -->
 
 <link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
@@ -75,7 +71,7 @@
 <a class="ulink" href="http://www.methods.co.nz/asciidoc/" target="_top">Aciidoc Reference</a>
 </li><li class="listitem">
 <a class="ulink" href="http://powerman.name/doc/asciidoc" target="_top">AsciiDoc cheatsheet</a>
-</li></ul></div><p>The cheatsheet is really useful!</p><div class="section" title="Overall Flow"><div class="titlepage"><div><div><h4 class="title"><a id="community-docs-overall-flow"></a>Overall Flow</h4></div></div></div><p>Each (sub)project has its own documentation, in <span class="emphasis"><em>src/docs/</em></span> and all the Asciidoc documents have the <code class="literal">.txt</code> file extension.</p><p>The documents can use code snippets which will extract code from the project. This is preferred way to include
+</li></ul></div><p>The cheatsheet is really useful!</p><div class="section" title="Overall Flow"><div class="titlepage"><div><div><h4 class="title"><a id="community-docs-overall-flow"></a>Overall Flow</h4></div></div></div><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>To generate the website locally use <code class="literal">./gradlew -p manual website</code>. Output is in <code class="literal">~/manual/build/docs/website</code>.</p></div><p>Each (sub)project has its own documentation, in <span class="emphasis"><em>src/docs/</em></span> and all the Asciidoc documents have the <code class="literal">.txt</code> file extension.</p><p>The documents can use code snippets which will extract code from the project. This is preferred way to include
 source code in the documentation, since any refactoring will be reflected in the documentation.</p><p>The above files are all consumed by the build of the manual (by adding them as dependencies).
 To get content included in the manual, it has to be explicitly included by a document in the manual as well.</p><p>The whole documentation set is generated from the <span class="emphasis"><em>*manual*</em></span> module in the <code class="literal">qi4j-sdk</code>, and we are currently only creating the website.
 The User Guide and Reference Manual are future projects.</p></div><div class="section" title="Headings and document structure"><div class="titlepage"><div><div><h4 class="title"><a id="_headings_and_document_structure"></a>Headings and document structure</h4></div></div></div><p>Each document starts over with headings from level zero (the document title).

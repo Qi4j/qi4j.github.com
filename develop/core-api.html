@@ -48,10 +48,6 @@
 
 <script type="text/javascript" src="js/tablestyler.js"></script>
 
-<!-- Version Switcher -->
-
-<script type="text/javascript" src="js/versionswitcher.js"></script>
-
 <!-- Qi4j WebSite Progressive Enhancement -->
 
 <link href="css/progressive-enhancement.css" rel="stylesheet" type="text/css" />
@@ -72,7 +68,7 @@
  </script>
 
   </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Qi4j</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="core-api.html">Core API</span></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><a href="core-io.html">Core I/O API</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section" title="Core API"><div class="titlepage"><div><div><h3 class="title"><a id="core-api"></a>Core API</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The Qi4j Core API is the primary interface for client application code during the main execution phase, i.e. after the
-application has been activated.</p><div class="table"><a id="idp5673776"></a><p class="title"><strong>Table 1. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>2.0-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+application has been activated.</p><div class="table"><a id="idp5874592"></a><p class="title"><strong>Table 15. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
 the ability to assemble (compose) objects from smaller pieces, called Fragments.
 </li><li class="listitem">
 the construction of applications by assembling Composites into Modules and Modules into Layers.
@@ -149,9 +145,11 @@ The ValueComposite is very light-weight compared to the EntityComposite, and its
 of an EntityComposite via a Property.</p><p>The characteristics of a ValueComposite compared to other Composite meta types are;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 It is Immutable.
 </li><li class="listitem">
-Its equals/hashCode works on the values of the ValueComposite.
+Its equals/hashCode works on both the descriptor and the values of the ValueComposite.
 </li><li class="listitem">
 Can be used as Property types.
+</li><li class="listitem">
+Can be serialized and deserialized.
 </li></ul></div><div class="section" title="Value Serialization"><div class="titlepage"><div><div><h5 class="title"><a id="_value_serialization"></a>Value Serialization</h5></div></div></div><p>Value objects can be serialized and deserialized using the ValueSerialization API which is a Service API implemented
 by SPI and extensions.</p><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p><code class="literal">ValueSerialization extends ValueSerializer, ValueDeserializer</code>. See the <a class="xref" href="javadocs.html" title="Javadoc"> JavaDocs</a> for interfaces detail.</p></div><p>The ValueSerialization mechanism apply to the following object types :</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 ValueComposite,
@@ -166,6 +164,8 @@ Plain Value.
 </li></ul></div><p>Nested Plain Values, EntityReferences, Iterables, Maps, ValueComposites are supported.
 EntityComposites and EntityReferences are serialized as their identity string.</p><p>Plain Values can be one of :</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 String,
+</li><li class="listitem">
+Character or char,
 </li><li class="listitem">
 Boolean or boolean,
 </li><li class="listitem">
@@ -754,9 +754,9 @@ public class AuditConcern extends GenericConcern
 public @interface Audited
 {
 }
-</pre><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Even if a method fulfills the requirement for the concern, if the concern is not declared for the Composite then the concern will NOT be applied.</p></div></div><div class="section" title="Invocation Order"><div class="titlepage"><div><div><h5 class="title"><a id="_invocation_order"></a>Invocation Order</h5></div></div></div><p>The concerns are invoked AFTER all <a class="xref" href="">???</a> have been checked. The concerns are executed before the
-<a class="xref" href="">???</a> are executed in the return path.</p><p>The order of execution is defined by the declaration order, interface hierarchy, whether the concern is generic or typed
-and if they are declared in the interface or declared in the <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a>.</p><p>From the perspective of incoming call, i.e. after the &lt;core-api-constraints&gt;&gt; have been checked, the following rules
+</pre><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Even if a method fulfills the requirement for the concern, if the concern is not declared for the Composite then the concern will NOT be applied.</p></div></div><div class="section" title="Invocation Order"><div class="titlepage"><div><div><h5 class="title"><a id="_invocation_order"></a>Invocation Order</h5></div></div></div><p>The concerns are invoked AFTER all <a class="xref" href="core-api.html#core-api-constraint" title="Constraint">Constraint</a> have been checked. The concerns are executed before the
+<a class="xref" href="core-api.html#core-api-sideeffect" title="SideEffect">SideEffect</a> are executed in the return path.</p><p>The order of execution is defined by the declaration order, interface hierarchy, whether the concern is generic or typed
+and if they are declared in the interface or declared in the <a class="xref" href="core-bootstrap-assembly.html" title="Core Bootstrap">Assembly</a>.</p><p>From the perspective of incoming call, i.e. after the &lt;core-api-constraint&gt;&gt; have been checked, the following rules
 are in place;</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 Typed concerns are invoked AFTER Generic concerns.
 </li><li class="listitem">

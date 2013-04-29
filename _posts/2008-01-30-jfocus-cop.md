@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: posts
 title: Qi4j @ JFocus 2008 - Composite Oriented Programming
 ---
 ## Qi4j @ JFocus 2008 - Composite Oriented Programming

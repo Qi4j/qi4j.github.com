@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: posts
 title: Qi4j @ Arskonference 2009
 ---
 ## Qi4j @ Årskonference 2009

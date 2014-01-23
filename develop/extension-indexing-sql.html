@@ -72,30 +72,30 @@ get <a class="link" href="library-circuitbreaker.html" title="Circuit Breaker">C
 <a class="xref" href="extension-indexing-sql.html" title="SQL Index/Query">SQL Index/Query</a>.</p></div><p>The following SQL databases are supported:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 <a class="ulink" href="http://www.postgresql.org/" target="_top">PostgreSQL</a>
 </li></ul></div><p>Implementations per database Vendor share a generic codebase but can override about everything SQL. As a consequence
-they can have strong differences in terms of performance if they use vendor specific extensions.</p><div class="table"><a id="idp8194800"></a><p class="title"><strong>Table 83. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.extension</p></td><td align="left" valign="top"><p>org.qi4j.extension.indexing-sql</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Configuration"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_19"></a>Configuration</h4></div></div></div><p>SQL Index/Query Configuration is optional and provides only one configuration property: <code class="literal">schemaName</code> defaulted to
+they can have strong differences in terms of performance if they use vendor specific extensions.</p><div class="table"><a id="idp14767568"></a><p class="title"><strong>Table 83. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.extension</p></td><td align="left" valign="top"><p>org.qi4j.extension.indexing-sql</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Configuration"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_19"></a>Configuration</h4></div></div></div><p>SQL Index/Query Configuration is optional and provides only one configuration property: <code class="literal">schemaName</code> defaulted to
 <span class="emphasis"><em>qi4j_es</em></span>. On SQL databases that don’t support schemas this configuration property is simply ignored.</p><p>The assembly snippets below show the DataSource assembly alongside the SQL Index/Query assembly. Remember to configure
 the DataSource properly, see <a class="xref" href="library-sql.html" title="SQL">SQL Library</a> and <a class="xref" href="howto-configure-service.html" title="Configure a Service">Configure a Service</a>.</p></div><div class="section" title="PostgreSQL"><div class="titlepage"><div><div><h4 class="title"><a id="_postgresql_2"></a>PostgreSQL</h4></div></div></div><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">// DataSourceService
 new DBCPDataSourceServiceAssembler().
-        identifiedBy( "postgres-datasource-service" ).
-        visibleIn( Visibility.module ).
-        withConfig( config ).
-        withConfigVisibility( Visibility.layer ).
-        assemble( mainModule );
+    identifiedBy( "postgres-datasource-service" ).
+    visibleIn( Visibility.module ).
+    withConfig( config ).
+    withConfigVisibility( Visibility.layer ).
+    assemble( mainModule );
 
 // DataSource
 new DataSourceAssembler().
-        withDataSourceServiceIdentity( "postgres-datasource-service" ).
-        identifiedBy( "postgres-datasource" ).
-        visibleIn( Visibility.module ).
-        withCircuitBreaker().
-        assemble( mainModule );
+    withDataSourceServiceIdentity( "postgres-datasource-service" ).
+    identifiedBy( "postgres-datasource" ).
+    visibleIn( Visibility.module ).
+    withCircuitBreaker().
+    assemble( mainModule );
 
 // SQL Index/Query
 new PostgreSQLIndexQueryAssembler().
-        visibleIn( Visibility.application ).
-        withConfig( config ).
-        withConfigVisibility( Visibility.layer ).
-        assemble( mainModule );
+    visibleIn( Visibility.module ).
+    withConfig( config ).
+    withConfigVisibility( Visibility.layer ).
+    assemble( mainModule );
 </pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">enabled=true
 url=jdbc:postgresql://localhost:5432/jdbc_test_db
 driver=org.postgresql.Driver

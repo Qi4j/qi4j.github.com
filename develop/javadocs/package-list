@@ -32,6 +32,7 @@ org.qi4j.api.usecase
 org.qi4j.api.util
 org.qi4j.api.value
 org.qi4j.bootstrap
+org.qi4j.bootstrap.builder
 org.qi4j.entitystore.file
 org.qi4j.entitystore.file.assembly
 org.qi4j.entitystore.hazelcast
@@ -76,10 +77,8 @@ org.qi4j.index.sql.assembly
 org.qi4j.index.sql.internal
 org.qi4j.index.sql.support.api
 org.qi4j.index.sql.support.common
-org.qi4j.index.sql.support.derby
 org.qi4j.index.sql.support.postgresql
 org.qi4j.index.sql.support.skeletons
-org.qi4j.index.sql.support.sqlite
 org.qi4j.io
 org.qi4j.library.alarm
 org.qi4j.library.cache

@@ -68,7 +68,7 @@
  </script>
 
   </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Qi4j</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><span xmlns="" href="core.html">Core</span></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><a href="extensions.html">Extensions</a></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="core.html#_overview_3">Overview</a></span></dt><dt><span class="section"><span xmlns="" href="core-api.html">Core API</span></span></dt><dt><span class="section"><a href="core-bootstrap-assembly.html">Core Bootstrap</a></span></dt><dt><span class="section"><a href="core-testsupport.html">Core Test Support</a></span></dt><dt><span class="section"><a href="core-functional.html">Core Functional API</a></span></dt><dt><span class="section"><a href="core-io.html">Core I/O API</a></span></dt><dt><span class="section"><a href="core-spi.html">Core Extension SPI</a></span></dt><dt><span class="section"><a href="core-runtime.html">Core Runtime</a></span></dt></dl></div></div><div class="section" title="Core API"><div class="titlepage"><div><div><h3 class="title"><a id="core-api"></a>Core API</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>The Qi4j Core API is the primary interface for client application code during the main execution phase, i.e. after the
-application has been activated.</p><div class="table"><a id="idp12459744"></a><p class="title"><strong>Table 15. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+application has been activated.</p><div class="table"><a id="idp12459744"></a><p class="title"><strong>Table 15. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.api</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Composition"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-composition"></a>Composition</h4></div></div></div><p>Composition is at the heart of COP, and refers to two different levels of constructs;</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
 the ability to assemble (compose) objects from smaller pieces, called Fragments.
 </li><li class="listitem">
 the construction of applications by assembling Composites into Modules and Modules into Layers.
@@ -192,7 +192,13 @@ DateTime (JodaTime),
 LocalDateTime (JodaTime),
 </li><li class="listitem">
 LocalDate (JodaTime).
-</li></ul></div><p>Values of unknown types and all arrays are considered as <code class="literal">java.io.Serializable</code> and by so are (de)serialized to (from)
+</li><li class="listitem">
+Money (JodaMoney).
+</li><li class="listitem">
+BigMoney (JodaMoney).
+</li></ul></div><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>Serialization behaviour can be tuned with options.
+Every <code class="literal">ValueSerializer</code> methods can take a <code class="literal">ValueSerializer.Options</code> object that contains flags to change how some
+values are serialized. See the <a class="xref" href="javadocs.html" title="Javadoc"> JavaDocs</a> for more details.</p></div><p>Values of unknown types and all arrays are considered as <code class="literal">java.io.Serializable</code> and by so are (de)serialized to (from)
 base64 encoded bytes using pure Java serialization. If it happens that the value is not Serializable or the input to
 deserialize is invalid, a <code class="literal">ValueSerializationException</code> is thrown.</p><p>Methods of <code class="literal">ValueSerializer</code> allow to specify if the serialized state should contain extra type information about the
 serialized value. Having type information in the serialized payload allows to keep actual ValueComposite types and by so
@@ -378,10 +384,63 @@ public void assemble( ModuleAssembly module )
     service.instantiateOnStartup();
 </pre><p>If this method is not called during assembly, the activation will occur on first service usage.</p><p>Passivation occurs when a <a class="xref" href="core-api.html#core-api-module" title="Module">Module</a> is deactivated, typically because the whole application is shutting down.
 Passivation occurs in the reverse order of the activation, to ensure that dependent services are still available for a
-passivating service.</p><p>Activators assembled with the service will get their beforeActivation and afterActivation methods called around the
-ServiceComposite activation and their beforePassivation and afterPassivation around the ServiceComposite passivation.
+passivating service.</p><p>Activators can be assembled with Services to manage their activation.
+The easiest way is to implement the ServiceActivation interface directly in the ServiceComposite;</p><pre class="programlisting brush: java">@Mixins( MyActivationMixin.class )
+public static interface MyActivationDemoService
+    extends ServiceComposite, ServiceActivation
+{
+}
+
+public static class MyActivationMixin
+    implements ServiceActivation
+{
+    @Override
+    public void activateService()
+        throws Exception
+    {
+        // Activation code
+    }
+
+    @Override
+    public void passivateService()
+        throws Exception
+    {
+        // Passivation code
+    }
+}
+</pre><p>The activation code can also be moved outside the composite by using the ServiceActivatorAdapter;</p><pre class="programlisting brush: java">@Activators( MyActivator.class )
+public static interface MyOtherActivationDemoService
+    extends ServiceComposite
+{
+}
+
+public static class MyActivator
+    extends ServiceActivatorAdapter&lt;MyOtherActivationDemoService&gt;
+{
+    @Override
+    public void afterActivation( ServiceReference&lt;MyOtherActivationDemoService&gt; activated )
+        throws Exception
+    {
+        // Activation code
+    }
+
+    @Override
+    public void beforePassivation( ServiceReference&lt;MyOtherActivationDemoService&gt; passivating )
+        throws Exception
+    {
+        // Passivation code
+    }
+}
+</pre><p>Activators can be registered on Service assembly too, this way;</p><pre class="programlisting brush: java">@Override
+public void assemble( ModuleAssembly module )
+{
+    module.services( MyDemoService.class ).withActivators( MyActivator.class );
+}
+</pre><p>Activators assembled with the service will get their <code class="literal">beforeActivation</code> and <code class="literal">afterActivation</code> methods called around the
+ServiceComposite activation and their <code class="literal">beforePassivation</code> and <code class="literal">afterPassivation</code> around the ServiceComposite
+passivation.
 Member injection and constructor initialization occur during the activation. The ServiceComposite can be used from the
-afterActivation to the beforePassivation method.</p></div><div class="section" title="Identity and Tags"><div class="titlepage"><div><div><h5 class="title"><a id="_identity_and_tags"></a>Identity and Tags</h5></div></div></div><p>Services has an Identity, which drives the <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a> system and can be used to lookup a particular service
+<code class="literal">afterActivation</code> to the <code class="literal">beforePassivation</code> method.</p></div><div class="section" title="Identity and Tags"><div class="titlepage"><div><div><h5 class="title"><a id="_identity_and_tags"></a>Identity and Tags</h5></div></div></div><p>Services has an Identity, which drives the <a class="xref" href="core-api.html#core-api-service-configuration" title="Service Configuration">Service Configuration</a> system and can be used to lookup a particular service
 instance. Services can also be arbitrarily tagged, via the ServiceDescriptor. Example;</p><pre class="programlisting brush: java">@Override
 public void assemble( ModuleAssembly module )
     throws AssemblyException
@@ -894,4 +953,79 @@ MetricsHealthCheck healthCheck = healthFactory.registerHealthCheck(
             return new Result( status.isOk(), status.getErrorMessage(), status.getException() );
         }
     } );
+</pre></div></div><div class="section" title="Money API"><div class="titlepage"><div><div><h4 class="title"><a id="core-api-money"></a>Money API</h4></div></div></div><p>The Qi4j platform supports Money idioms thanks to the JodaMoney project and defines a Money Conversion API.</p><div class="section" title="Money State"><div class="titlepage"><div><div><h5 class="title"><a id="_money_state"></a>Money State</h5></div></div></div><p>JodaMoney types, <code class="literal">Money</code> and <code class="literal">BigMoney</code>, are both supported in Values and Entities.</p><p>Here are some sample Properties that contains monetary values:</p><pre class="programlisting brush: java">Property&lt;Money&gt; money();
+
+Property&lt;BigMoney&gt; bigMoney();
+
+Property&lt;List&lt;Money&gt;&gt; listOfMoney();
+
+Property&lt;Map&lt;String, Money&gt;&gt; mapOfMoney();
+</pre><p>See <a class="xref" href="core-api.html#core-api-value" title="ValueComposite">ValueComposite</a> and <a class="xref" href="core-api.html#core-api-entity" title="EntityComposite">EntityComposite</a> for details about the serialization of such values.</p></div><div class="section" title="Money Conversion"><div class="titlepage"><div><div><h5 class="title"><a id="_money_conversion"></a>Money Conversion</h5></div></div></div><p>The Money API defines the <code class="literal">MoneyConversion</code> service API as follows:</p><pre class="programlisting brush: java">public interface MoneyConversion
+{
+    /**
+     * Get current Rate between two currencies.
+     *
+     * @param from Source currency
+     * @param to Target currency
+     * @return Current Rate
+     * @throws MoneyConversionException if invocation fails
+     */
+    Rate currentRate( CurrencyUnit from, CurrencyUnit to )
+        throws MoneyConversionException;
+
+    /**
+     * Get EOD (End Of Day) Rate between two currencies.
+     *
+     * @param date Date for EOD Rate
+     * @param from Source currency
+     * @param to Target currency
+     * @return End Of Day Rate
+     * @throws MoneyConversionException if invocation fails
+     */
+    Rate endOfDateRateAt( DateTime date, CurrencyUnit from, CurrencyUnit to )
+        throws MoneyConversionException;
+
+    /**
+     * Get all current Rates from a currency.
+     *
+     * @param from Source currency
+     * @return All current Rates available
+     * @throws MoneyConversionException if invocation fails
+     */
+    Iterable&lt;Rate&gt; currentRates( CurrencyUnit from )
+        throws MoneyConversionException;
+
+    /**
+     * Get all EOD (End Of Day) Rates from a currency.
+     *
+     * @param date Date for EOD Rate
+     * @param from Source currency
+     * @return All End Of Day Rates available
+     * @throws MoneyConversionException if invocation fails
+     */
+    Iterable&lt;Rate&gt; endOfDateRatesAt( DateTime date, CurrencyUnit from )
+        throws MoneyConversionException;
+
+}
+</pre><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>By default, no <code class="literal">MoneyConversion</code> service is available, you need to choose one among the <a class="xref" href="libraries.html" title="Libraries">Libraries</a> and
+assemble it in your Application.</p></div><p>The <code class="literal">MoneyConversion</code> service supports getting current and past (End Of Day) rates.
+<code class="literal">Rate</code> objects are dated and allow to perform currency conversion on both <code class="literal">Money</code> and <code class="literal">BigMoney</code> values.
+When converting <code class="literal">Money</code> values you can choose the rounding mode to use.</p><p>MoneyConversion service is injected like this:</p><pre class="programlisting brush: java">@Service
+private MoneyConversion moneyConversion;
+</pre><p>You can then use it directly:</p><pre class="programlisting brush: java">Rate nowRate = moneyConversion.currentRate( CurrencyUnit.USD, CurrencyUnit.EUR );
+Rate pastRate = moneyConversion.endOfDateRateAt( pastDate, CurrencyUnit.USD, CurrencyUnit.EUR );
+[...snip...]
+
+BigMoney someBigMoney = BigMoney.of( CurrencyUnit.USD, 4096 );
+
+BigMoney pastEuros = pastRate.convert( someBigMoney );
+BigMoney nowEuros = nowRate.convert( someBigMoney );
+BigMoney balance = nowEuros.minus( pastEuros );
+[...snip...]
+
+Money someMoney = Money.of( CurrencyUnit.USD, 4096 );
+
+Money pastRoundedEuros = pastRate.convert( someMoney, RoundingMode.HALF_EVEN );
+Money nowRoundedEuros = nowRate.convert( someMoney, RoundingMode.HALF_EVEN );
+Money roundedBalance = nowRoundedEuros.minus( pastRoundedEuros );
 </pre></div></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="footer">(c) 2012 The Qi4j Community</div></body></html>

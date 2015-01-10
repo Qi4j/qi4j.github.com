@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>UoWFile</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="libraries.html" title="Libraries" /><link rel="prev" href="library-uid.html" title="UID" /><link rel="next" href="extensions.html" title="Extensions" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>UoWFile</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="libraries.html" title="Libraries" /><link rel="prev" href="library-uid.html" title="UID" /><link rel="next" href="extensions.html" title="Extensions" />
 
 
 <!-- favicon -->
@@ -72,39 +71,33 @@ Composites, mostly EntityComposites, so that if the UoW gets discarded, changes
 to files are discarded too. Concurrent modifications are properly handled.</p><p>Note that it has a performance impact relative to the files size as it
 duplicates the file to keep a backup for eventual rollback. However, the API
 provides a way to get non-managed handles on the attached files to keep your
-read-only operations fast.</p><p>The location of files is left to the developer using a private mixin.</p><div class="table"><a id="idp14214736"></a><p class="title"><strong>Table 61. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.uowfile</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Logging"><div class="titlepage"><div><div><h4 class="title"><a id="_logging_6"></a>Logging</h4></div></div></div><p>The SLF4J Logger used by this library is named "org.qi4j.library.uowfile".</p></div><div class="section" title="Add an attached file to an Entity"><div class="titlepage"><div><div><h4 class="title"><a id="_add_an_attached_file_to_an_entity"></a>Add an attached file to an Entity</h4></div></div></div><p>Let’s say you have the following Entity:</p><pre class="programlisting brush: java">public interface TestedEntity
-        extends EntityComposite,
-        [...snip...]
+read-only operations fast.</p><p>The location of files is left to the developer using a private mixin.</p><div class="table"><a id="idm78596832432"></a><p class="title"><strong>Table 61. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.uowfile</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Logging"><div class="titlepage"><div><div><h4 class="title"><a id="_logging_6"></a>Logging</h4></div></div></div><p>The SLF4J Logger used by this library is named "org.qi4j.library.uowfile".</p></div><div class="section" title="Add an attached file to an Entity"><div class="titlepage"><div><div><h4 class="title"><a id="_add_an_attached_file_to_an_entity"></a>Add an attached file to an Entity</h4></div></div></div><p>Let’s say you have the following Entity:</p><pre class="programlisting brush: java">public interface TestedEntity
+[...snip...]
 
 {
-
     Property&lt;String&gt; name();
-
 }
 </pre><p>To add an attached file to it you first need to extends HasUoWFileLifecycle:</p><pre class="programlisting brush: java">public interface TestedEntity
-        extends EntityComposite,
-                HasUoWFileLifecycle
+    , Identity
 {
-
     Property&lt;String&gt; name();
-
 }
 </pre><p>This provides you with the following contract:</p><pre class="programlisting brush: java">public interface HasUoWFile
 {
-
     /**
-     * IMPORTANT Use this {@link File} only inside read-only {@link UnitOfWork}s
+     * IMPORTANT Use this {@link File} inside read-only {@link UnitOfWork}s only
+     * @return The file that is attached.
      */
     File attachedFile();
 
     File managedFile();
     [...snip...]
 
-}
-</pre><p>Next you need to write the UoWFileLocator mixin:</p><pre class="programlisting brush: java">public static abstract class TestedFileLocatorMixin
-        implements UoWFileLocator
-{
 
+}
+</pre><p>Next you need to write the UoWFileLocator mixin:</p><pre class="programlisting brush: java">public static class TestedFileLocatorMixin
+    implements UoWFileLocator
+{
     @This
     private Identity meAsIdentity;
 
@@ -113,10 +106,9 @@ read-only operations fast.</p><p>The location of files is left to the developer 
     {
         return new File( baseTestDir, meAsIdentity.identity().get() );
     }
-
 }
 </pre><p>Assemble all this as follow:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-        throws AssemblyException
+    throws AssemblyException
 {
     new UoWFileAssembler().assemble( module );
 
@@ -128,34 +120,25 @@ read-only operations fast.</p><p>The location of files is left to the developer 
 File managedFile = entity.managedFile();
 </pre></div><div class="section" title="Going plural"><div class="titlepage"><div><div><h4 class="title"><a id="_going_plural"></a>Going plural</h4></div></div></div><p>Now if you want to attach several files to one entity, this library provides a
 simple mechanism allowing you to use any enum as discriminator.</p><p>Let’s say you have the following Entity:</p><pre class="programlisting brush: java">public interface TestedEntity
-        extends EntityComposite,
-        [...snip...]
+[...snip...]
 
 {
-
     Property&lt;String&gt; name();
-
 }
 </pre><p>It’s the very same as the one used to start the singular file support described
 above.</p><p>To add an attached file to it you first need to write an enum and extends
 HasUoWFilesLifecycle:</p><pre class="programlisting brush: java">public enum MyEnum
 {
-
     fileOne, fileTwo
-
 }
 
 public interface TestedEntity
-        extends EntityComposite,
-                HasUoWFilesLifecycle&lt;MyEnum&gt;
+    , Identity
 {
-
     Property&lt;String&gt; name();
-
 }
 </pre><p>This provides you with the following contract:</p><pre class="programlisting brush: java">public interface HasUoWFiles&lt;T extends Enum&lt;T&gt;&gt;
 {
-
     /**
      * IMPORTANT Use this {@link File} only inside read-only {@link UnitOfWork}s
      */
@@ -173,17 +156,17 @@ public interface TestedEntity
 
 }
 </pre><p>Next you need to write the UoWFileLocator mixin:</p><pre class="programlisting brush: java">public static abstract class TestedFilesLocatorMixin
-        implements UoWFilesLocator&lt;MyEnum&gt;
+    implements UoWFilesLocator&lt;MyEnum&gt;
 {
-
     @This
     private Identity meAsIdentity;
 
     @Override
     public Iterable&lt;File&gt; locateAttachedFiles()
     {
-        List&lt;File&gt; list = new ArrayList&lt;File&gt;();
-        for ( MyEnum eachValue : MyEnum.values() ) {
+        List&lt;File&gt; list = new ArrayList&lt;&gt;();
+        for( MyEnum eachValue : MyEnum.values() )
+        {
             list.add( new File( baseTestDir, meAsIdentity.identity().get() + "." + eachValue.name() ) );
         }
         return list;
@@ -194,10 +177,9 @@ public interface TestedEntity
     {
         return new File( baseTestDir, meAsIdentity.identity().get() + "." + key.name() );
     }
-
 }
 </pre><p>Assemble all this as follow:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-        throws AssemblyException
+    throws AssemblyException
 {
     new UoWFileAssembler().assemble( module );
 

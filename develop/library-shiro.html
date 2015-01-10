@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Shiro Security</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="libraries.html" title="Libraries" /><link rel="prev" href="library-servlet.html" title="Servlet" /><link rel="next" href="library-shiro-web.html" title="Shiro Web Security" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Shiro Security</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="libraries.html" title="Libraries" /><link rel="prev" href="library-servlet.html" title="Servlet" /><link rel="next" href="library-shiro-web.html" title="Shiro Web Security" />
 
 
 <!-- favicon -->
@@ -75,13 +74,16 @@ Shiro website.</p><p>Altough Apache Shiro can be used as-is with Qi4j Applicatio
 handy. If your use case do not fit any of theses integrations, look at their respective code. You should find out
 pretty easily how to compose the provided code to write your integration. Don’t hesitate to contribute interesting
 integrations to this very library.</p><p>We invite you to read the comprehensive <a class="ulink" href="http://shiro.apache.org/documentation.html" target="_top">Apache Shiro documentation</a>, we will
-mostly discuss Qi4j related matters here.</p><div class="table"><a id="idp13868064"></a><p class="title"><strong>Table 49. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.shiro-core</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Basic usage"><div class="titlepage"><div><div><h4 class="title"><a id="_basic_usage"></a>Basic usage</h4></div></div></div><p>For standalone applications, you can use plain Shiro easily. The only thing to do is to register a configured
+mostly discuss Qi4j related matters here.</p><div class="table"><a id="idm78597168608"></a><p class="title"><strong>Table 49. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.library</p></td><td align="left" valign="top"><p>org.qi4j.library.shiro-core</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Basic usage"><div class="titlepage"><div><div><h4 class="title"><a id="_basic_usage"></a>Basic usage</h4></div></div></div><p>For standalone applications, you can use plain Shiro easily. The only thing to do is to register a configured
 SecurityManager when activating your Qi4j Application. It can be done outside the application, before its activation,
 "à là" by-hand ;</p><pre class="programlisting brush: java">IniSecurityManagerFactory factory = new IniSecurityManagerFactory( "classpath:standalone-shiro.ini" );
 SecurityManager securityManager = factory.getInstance();
 SecurityUtils.setSecurityManager( securityManager );
 </pre><p>note that this example code register the SecurityManager as a VM static singleton.</p><p>However we recommend to use the provided IniSecurityManagerService that does exactly this when activated and unregister
-the SecurityManager when passivated:</p><pre class="programlisting brush: java">new StandaloneShiroAssembler().withConfig( configModule ).assemble( module );
+the SecurityManager when passivated:</p><pre class="programlisting brush: java">new StandaloneShiroAssembler().
+    withConfig( configModule, Visibility.layer ).
+    assemble( module );
+
 </pre><p>You can change the INI resource path through the ShiroIniConfiguration:</p><pre class="programlisting brush: java">public interface ShiroIniConfiguration
         extends ConfigurationComposite
 {
@@ -180,7 +182,9 @@ public void assemble( ModuleAssembly module )
 {
 [...snip...]
 
-    new StandaloneShiroAssembler().withConfig( configModule ).assemble( module );
+    new StandaloneShiroAssembler().
+        withConfig( configModule, Visibility.layer ).
+        assemble( module );
     module.services( MyRealmService.class );
 
     [...snip...]
@@ -244,8 +248,12 @@ public void assemble( ModuleAssembly module )
 {
 [...snip...]
 
-    new StandaloneShiroAssembler().withConfig( configModule ).assemble( module );
-    new PasswordDomainAssembler().withConfig( configModule ).assemble( module );
+    new StandaloneShiroAssembler().
+        withConfig( configModule, Visibility.layer ).
+        assemble( module );
+    new PasswordDomainAssembler().
+        withConfig( configModule, Visibility.layer ).
+        assemble( module );
 
     module.entities( User.class );
     module.services( UserFactory.class );
@@ -279,9 +287,14 @@ easily store roles, permissions and assignment to your accounts.</p><p>Let’s l
 {
 }
 
-</pre><p>Assembly is straight forward:</p><pre class="programlisting brush: java">new StandaloneShiroAssembler().withConfig( configModule ).assemble( module );
-new PasswordDomainAssembler().withConfig( configModule ).assemble( module );
-new PermissionsDomainAssembler().assemble( module );
+</pre><p>Assembly is straight forward:</p><pre class="programlisting brush: java">new StandaloneShiroAssembler().
+    withConfig( configModule, Visibility.layer ).
+    assemble( module );
+new PasswordDomainAssembler().
+    withConfig( configModule, Visibility.layer ).
+    assemble( module );
+new PermissionsDomainAssembler().
+    assemble( module );
 
 module.entities( User.class );
 module.services( UserFactory.class );

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>SQL EntityStore</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-es-riak.html" title="Riak EntityStore" /><link rel="next" href="extension-es-voldemort.html" title="Voldemort EntityStore" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>SQL EntityStore</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="extensions.html" title="Extensions" /><link rel="prev" href="extension-es-riak.html" title="Riak EntityStore" /><link rel="next" href="extension-es-voldemort.html" title="Voldemort EntityStore" />
 
 
 <!-- favicon -->
@@ -67,7 +66,7 @@
   })();
  </script>
 
-  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Qi4j</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="extensions.html#_overview_7">Overview</a></span></dt><dt><span class="section"><a href="extension-vs-orgjson.html">org.json ValueSerialization</a></span></dt><dt><span class="section"><a href="extension-vs-jackson.html">Jackson ValueSerialization</a></span></dt><dt><span class="section"><a href="extension-vs-stax.html">StAX ValueSerialization</a></span></dt><dt><span class="section"><a href="extension-money-oer.html">OpenExchangeRates.org</a></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-es-memory.html">Memory EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-gae.html">Google AppEngine EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jclouds.html">JClouds EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-leveldb.html">LevelDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-neo4j.html">Neo4j EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><span xmlns="" href="extension-es-sql.html">SQL EntityStore</span></span></dt><dt><span class="section"><a href="extension-es-voldemort.html">Voldemort EntityStore</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-rdf.html">OpenRDF Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-yammer.html">Yammer Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section" title="SQL EntityStore"><div class="titlepage"><div><div><h3 class="title"><a id="extension-es-sql"></a>SQL EntityStore</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>EntityStore service backed by a SQL database.</p><p>This extension fully leverage the <a class="xref" href="library-sql.html" title="SQL">SQL Library</a> meaning that you must use it to assemble your DataSource and that you
+  </head><body><div xmlns="" xmlns:exsl="http://exslt.org/common" class="logo"><a href="index.html"><img src="images/logo-standard.png" /></a></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="top-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="index.html#home">Qi4j</a></span></dt><dt><span class="section"><a href="intro.html">Introduction</a></span></dt><dt><span class="section"><a href="tutorials.html">Tutorials</a></span></dt><dt><span class="section"><a href="javadocs.html">Javadoc</a></span></dt><dt><span class="section"><a href="samples.html">Samples</a></span></dt><dt><span class="section"><a href="core.html">Core</a></span></dt><dt><span class="section"><a href="libraries.html">Libraries</a></span></dt><dt><span class="section"><span xmlns="" href="extensions.html">Extensions</span></span></dt><dt><span class="section"><a href="tools.html">Tools</a></span></dt><dt><span class="section"><a href="glossary.html">Glossary </a></span></dt></dl></div></div><div xmlns="" xmlns:exsl="http://exslt.org/common" class="sub-nav"><div xmlns="http://www.w3.org/1999/xhtml" class="toc"><dl><dt><span class="section"><a href="extensions.html#_overview_7">Overview</a></span></dt><dt><span class="section"><a href="extension-vs-orgjson.html">org.json ValueSerialization</a></span></dt><dt><span class="section"><a href="extension-vs-jackson.html">Jackson ValueSerialization</a></span></dt><dt><span class="section"><a href="extension-vs-stax.html">StAX ValueSerialization</a></span></dt><dt><span class="section"><a href="extension-cache-ehcache.html">Ehcache Cache</a></span></dt><dt><span class="section"><a href="extension-cache-memcache.html">Memcache Cache</a></span></dt><dt><span class="section"><a href="extension-es-memory.html">Memory EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-file.html">File EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-gae.html">Google AppEngine EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-hazelcast.html">Hazelcast EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jclouds.html">JClouds EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-jdbm.html">JDBM EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-leveldb.html">LevelDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-mongodb.html">MongoDB EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-neo4j.html">Neo4j EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-preferences.html">Preferences EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-redis.html">Redis EntityStore</a></span></dt><dt><span class="section"><a href="extension-es-riak.html">Riak EntityStore</a></span></dt><dt><span class="section"><span xmlns="" href="extension-es-sql.html">SQL EntityStore</span></span></dt><dt><span class="section"><a href="extension-es-voldemort.html">Voldemort EntityStore</a></span></dt><dt><span class="section"><a href="extension-index-elasticsearch.html">ElasticSearch Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-rdf.html">OpenRDF Index/Query</a></span></dt><dt><span class="section"><a href="extension-index-solr.html">Apache Solr Index/Query</a></span></dt><dt><span class="section"><a href="extension-indexing-sql.html">SQL Index/Query</a></span></dt><dt><span class="section"><a href="extension-metrics-yammer.html">Yammer Metrics</a></span></dt><dt><span class="section"><a href="extension-migration.html">Migration</a></span></dt><dt><span class="section"><a href="extension-reindexer.html">Reindexer</a></span></dt></dl></div></div><div class="section" title="SQL EntityStore"><div class="titlepage"><div><div><h3 class="title"><a id="extension-es-sql"></a>SQL EntityStore</h3></div></div></div><p class="remark"><em><span class="comment"></span></em></p><p class="devstatus-code-stable">code</p><p class="devstatus-docs-good">docs</p><p class="devstatus-tests-good">tests</p><p>EntityStore service backed by a SQL database.</p><p>This extension fully leverage the <a class="xref" href="library-sql.html" title="SQL">SQL Library</a> meaning that you must use it to assemble your DataSource and that you
 get <a class="link" href="library-circuitbreaker.html" title="Circuit Breaker">Circuit Breaker</a> and <a class="link" href="library-jmx.html" title="JMX">JMX</a> integration for free.</p><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>See the <a class="xref" href="sample-sql-support.html" title="SQL Support Sample">SQL Support Sample</a> that demonstrate combined use of <a class="xref" href="library-sql.html" title="SQL">SQL Library</a>, <a class="xref" href="extension-es-sql.html" title="SQL EntityStore"> SQL EntityStore</a> and
 <a class="xref" href="extension-indexing-sql.html" title="SQL Index/Query">SQL Index/Query</a>.</p></div><p>The following SQL databases are supported:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
 <a class="ulink" href="http://www.postgresql.org/" target="_top">PostgreSQL</a>
@@ -81,66 +80,63 @@ get <a class="link" href="library-circuitbreaker.html" title="Circuit Breaker">C
 <a class="ulink" href="http://db.apache.org/derby/" target="_top">Apache Derby</a> and <a class="ulink" href="http://www.oracle.com/technetwork/java/javadb/overview/index.htm" target="_top">Oracle JavaDB</a>
 </li></ul></div><p>Each entity state is stored as a single row so maximum number of entities is the maximum number of rows per table
 supported by the underlying SQL database.</p><p>Implementations per database Vendor share a generic codebase but can override about everything SQL. As a consequence
-they can have strong differences in terms of performance if they use vendor specific extensions.</p><div class="table"><a id="idp14667088"></a><p class="title"><strong>Table 79. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.extension</p></td><td align="left" valign="top"><p>org.qi4j.extension.entitystore-sql</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Configuration"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_14"></a>Configuration</h4></div></div></div><p>SQL EntityStore Configuration is optional and provides only one configuration property: <code class="literal">schemaName</code> defaulted to
+they can have strong differences in terms of performance if they use vendor specific extensions.</p><div class="table"><a id="idm78596370432"></a><p class="title"><strong>Table 79. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.extension</p></td><td align="left" valign="top"><p>org.qi4j.extension.entitystore-sql</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section" title="Configuration"><div class="titlepage"><div><div><h4 class="title"><a id="_configuration_15"></a>Configuration</h4></div></div></div><p>SQL EntityStore Configuration is optional and provides only one configuration property: <code class="literal">schemaName</code> defaulted to
 <span class="emphasis"><em>qi4j_es</em></span>. On SQL databases that don’t support schemas this configuration property is simply ignored.</p><p>The assembly snippets below show the DataSource assembly alongside the SQL EntityStore assembly. Remember to configure
 the DataSource properly, see <a class="xref" href="library-sql.html" title="SQL">SQL Library</a> and <a class="xref" href="howto-configure-service.html" title="Configure a Service">Configure a Service</a>.</p></div><div class="section" title="PostgreSQL"><div class="titlepage"><div><div><h4 class="title"><a id="_postgresql"></a>PostgreSQL</h4></div></div></div><p>Maximum number of entities is unlimited.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-        throws AssemblyException
+    throws AssemblyException
 {
 [...snip...]
 
     // DataSourceService
     new DBCPDataSourceServiceAssembler().
-            identifiedBy( "postgresql-datasource-service" ).
-            visibleIn( Visibility.module ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        identifiedBy( "postgresql-datasource-service" ).
+        visibleIn( Visibility.module ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 
     // DataSource
     new DataSourceAssembler().
-            withDataSourceServiceIdentity( "postgresql-datasource-service" ).
-            identifiedBy( "postgresql-datasource" ).
-            visibleIn( Visibility.module ).
-            withCircuitBreaker();
+        withDataSourceServiceIdentity( "postgresql-datasource-service" ).
+        identifiedBy( "postgresql-datasource" ).
+        visibleIn( Visibility.module ).
+        withCircuitBreaker().
+        assemble( module );
 
     // SQL EntityStore
     new PostgreSQLEntityStoreAssembler().
-            visibleIn( Visibility.application ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        visibleIn( Visibility.application ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 }
 </pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">enabled=true
 url=jdbc:postgresql://localhost:5432/jdbc_test_db
 driver=org.postgresql.Driver
 username=jdbc_test_login
 password=password</pre></div><div class="section" title="MySQL and MariaDB"><div class="titlepage"><div><div><h4 class="title"><a id="_mysql_and_mariadb"></a>MySQL and MariaDB</h4></div></div></div><p>Maximum number of entities depends on the choosen storage engine.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-        throws AssemblyException
+    throws AssemblyException
 {
 [...snip...]
 
     // DataSourceService
     new DBCPDataSourceServiceAssembler().
-            identifiedBy( "mysql-datasource-service" ).
-            visibleIn( Visibility.module ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        identifiedBy( "mysql-datasource-service" ).
+        visibleIn( Visibility.module ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 
     // DataSource
     new DataSourceAssembler().
-            withDataSourceServiceIdentity( "mysql-datasource-service" ).
-            identifiedBy( "mysql-datasource" ).
-            visibleIn( Visibility.module ).
-            withCircuitBreaker().
-            assemble( module );
+        withDataSourceServiceIdentity( "mysql-datasource-service" ).
+        identifiedBy( "mysql-datasource" ).
+        visibleIn( Visibility.module ).
+        withCircuitBreaker().
+        assemble( module );
 
     // SQL EntityStore
     new MySQLEntityStoreAssembler().
-            visibleIn( Visibility.application ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        visibleIn( Visibility.application ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 }
 </pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">enabled=true
 url=jdbc:mysql://localhost:3306/jdbc_test_db?profileSQL=true
@@ -148,96 +144,90 @@ driver=com.mysql.jdbc.Driver
 username=root
 password=</pre></div><div class="section" title="SQLite"><div class="titlepage"><div><div><h4 class="title"><a id="_sqlite"></a>SQLite</h4></div></div></div><p>Maximum number of entities is unlimited.</p><p>The <a class="ulink" href="http://www.xerial.org/trac/Xerial/wiki/SQLiteJDBC" target="_top">Xerial SQLite JDBC</a> driver is recommended.
 It provides native support on Linux, Windows and MaxOSX, pure Java on other OSes.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-        throws AssemblyException
+    throws AssemblyException
 {
 [...snip...]
 
     // DataSourceService
     new DBCPDataSourceServiceAssembler().
-            identifiedBy( "sqlite-datasource-service" ).
-            visibleIn( Visibility.module ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        identifiedBy( "sqlite-datasource-service" ).
+        visibleIn( Visibility.module ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 
     // DataSource
     new DataSourceAssembler().
-            withDataSourceServiceIdentity( "sqlite-datasource-service" ).
-            identifiedBy( "sqlite-datasource" ).
-            visibleIn( Visibility.module ).
-            withCircuitBreaker().
-            assemble( module );
+        withDataSourceServiceIdentity( "sqlite-datasource-service" ).
+        identifiedBy( "sqlite-datasource" ).
+        visibleIn( Visibility.module ).
+        withCircuitBreaker().
+        assemble( module );
 
     // SQL EntityStore
     new SQLiteEntityStoreAssembler().
-            visibleIn( Visibility.application ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        visibleIn( Visibility.application ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 }
 </pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">enabled=true
 url=jdbc:sqlite::memory:
 driver=org.sqlite.JDBC
 username=
 password=</pre></div><div class="section" title="H2 Database Engine"><div class="titlepage"><div><div><h4 class="title"><a id="_h2_database_engine"></a>H2 Database Engine</h4></div></div></div><p>Maximum number of entities is 2^64.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-        throws AssemblyException
+    throws AssemblyException
 {
 [...snip...]
 
     // DataSourceService
     new DBCPDataSourceServiceAssembler().
-            identifiedBy( "h2-datasource-service" ).
-            visibleIn( Visibility.module ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        identifiedBy( "h2-datasource-service" ).
+        visibleIn( Visibility.module ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 
     // DataSource
     new DataSourceAssembler().
-            withDataSourceServiceIdentity( "h2-datasource-service" ).
-            identifiedBy( "h2-datasource" ).
-            visibleIn( Visibility.module ).
-            withCircuitBreaker().
-            assemble( module );
+        withDataSourceServiceIdentity( "h2-datasource-service" ).
+        identifiedBy( "h2-datasource" ).
+        visibleIn( Visibility.module ).
+        withCircuitBreaker().
+        assemble( module );
 
     // SQL EntityStore
     new H2SQLEntityStoreAssembler().
-            visibleIn( Visibility.application ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        visibleIn( Visibility.application ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 }
 </pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">enabled=true
 url=jdbc:h2:mem:test
 driver=org.h2.Driver
 username=
 password=</pre></div><div class="section" title="Apache Derby and Oracle JavaDB"><div class="titlepage"><div><div><h4 class="title"><a id="_apache_derby_and_oracle_javadb"></a>Apache Derby and Oracle JavaDB</h4></div></div></div><p>Maximum number of entities is unlimited.</p><p>Assembly is done using the provided Assembler:</p><pre class="programlisting brush: java">public void assemble( ModuleAssembly module )
-        throws AssemblyException
+    throws AssemblyException
 {
 [...snip...]
 
     // DataSourceService
     new DBCPDataSourceServiceAssembler().
-            identifiedBy( "derby-datasource-service" ).
-            visibleIn( Visibility.module ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        identifiedBy( "derby-datasource-service" ).
+        visibleIn( Visibility.module ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 
     // DataSource
     new DataSourceAssembler().
-            withDataSourceServiceIdentity( "derby-datasource-service" ).
-            identifiedBy( "derby-datasource" ).
-            visibleIn( Visibility.module ).
-            withCircuitBreaker().
-            assemble( module );
+        withDataSourceServiceIdentity( "derby-datasource-service" ).
+        identifiedBy( "derby-datasource" ).
+        visibleIn( Visibility.module ).
+        withCircuitBreaker().
+        assemble( module );
 
     // SQL EntityStore
     new DerbySQLEntityStoreAssembler().
-            visibleIn( Visibility.application ).
-            withConfig( config ).
-            withConfigVisibility( Visibility.layer ).
-            assemble( module );
+        visibleIn( Visibility.application ).
+        withConfig( config, Visibility.layer ).
+        assemble( module );
 }
 </pre><p>Sample DataSource configuration defaults:</p><pre class="programlisting brush: java">enabled=true
 url=jdbc:derby:memory:testdb;create=true

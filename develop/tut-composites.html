@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Transient Composites Tutorial</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tutorials.html" title="Tutorials" /><link rel="prev" href="howto-assemble-application.html" title="Assemble an Application" /><link rel="next" href="tut-services.html" title="Services Composites Tutorial" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Transient Composites Tutorial</title><link rel="stylesheet" type="text/css" href="css/style.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /><link rel="home" href="index.html" title="" /><link rel="up" href="tutorials.html" title="Tutorials" /><link rel="prev" href="howto-assemble-application.html" title="Assemble an Application" /><link rel="next" href="tut-services.html" title="Services Composites Tutorial" />
 
 
 <!-- favicon -->
@@ -95,7 +94,7 @@ so that you don’t have to write everything yourself.</p><div class="itemizedli
 </li></ul></div><p>Each tutorial step in this series starts with the result from the previous tutorial, so you can
 always look at the next tutorial step for guidance on what to do.</p><p>At the bottom of each tutorial step, the is Solutions section, which list the files you should have come to if you
 have followed the instructions.</p><p>If you want to reproduce what’s explained in this tutorial, remember to depend on the Core Runtime artifact that depends
-on Core API, Core SPI, Core Bootstrap and Core Functional &amp; I/O APIs:</p><div class="table"><a id="idp11602656"></a><p class="title"><strong>Table 5. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.runtime</p></td><td align="left" valign="top"><p>2.1-SNAPSHOT</p></td></tr></tbody></table></div></div><br class="table-break" /><p>See the <a class="xref" href="howto-depend-on-qi4j.html" title="Depend on Qi4j in your build">Depend on Qi4j in your build</a> tutorial for details.</p><div class="section" title="Step 1 - Interface Refactoring"><div class="titlepage"><div><div><h4 class="title"><a id="tut-composites-step1"></a>Step 1 - Interface Refactoring</h4></div></div></div><div class="section" title="Initial Hello World"><div class="titlepage"><div><div><h5 class="title"><a id="_initial_hello_world"></a>Initial Hello World</h5></div></div></div><p>This whole tutorial describes how to step-by-step modify a typical HelloWorld "application" into a full-fledged Qi4j
+on Core API, Core SPI, Core Bootstrap and Core Functional &amp; I/O APIs:</p><div class="table"><a id="idm78602694336"></a><p class="title"><strong>Table 5. Artifact</strong></p><div class="table-contents"><table summary="Artifact" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th align="left" valign="top">Group ID</th><th align="left" valign="top">Artifact ID</th><th align="left" valign="top">Version</th></tr></thead><tbody><tr><td align="left" valign="top"><p>org.qi4j.core</p></td><td align="left" valign="top"><p>org.qi4j.core.runtime</p></td><td align="left" valign="top"><p>0</p></td></tr></tbody></table></div></div><br class="table-break" /><p>See the <a class="xref" href="howto-depend-on-qi4j.html" title="Depend on Qi4j in your build">Depend on Qi4j in your build</a> tutorial for details.</p><div class="section" title="Step 1 - Interface Refactoring"><div class="titlepage"><div><div><h4 class="title"><a id="tut-composites-step1"></a>Step 1 - Interface Refactoring</h4></div></div></div><div class="section" title="Initial Hello World"><div class="titlepage"><div><div><h5 class="title"><a id="_initial_hello_world"></a>Initial Hello World</h5></div></div></div><p>This whole tutorial describes how to step-by-step modify a typical HelloWorld "application" into a full-fledged Qi4j
 Composite Oriented application. Here is the initial code of HelloWorld.</p><pre class="programlisting brush: java">
 /**
  * Initial HelloWorld implementation. Everything is mixed up
@@ -265,10 +264,10 @@ Add a @Mixins annotation to it with the name of the Mixin as argument.
 <code class="literal">HelloWorldState.java</code>
 </li></ul></div><p><span class="strong"><strong>HelloWorldComposite.java</strong></span></p><pre class="programlisting brush: java">
 /**
- * This Composite interface declares all the Fragments
- * of the HelloWorld composite.
- * &lt;p/&gt;
+ * This Composite interface declares all the Fragments of the HelloWorld composite.
+ * &lt;p&gt;
  * Currently it only declares one Mixin.
+ * &lt;/p&gt;
  */
 @Mixins( HelloWorldMixin.class )
 public interface HelloWorldComposite
@@ -341,11 +340,12 @@ Remove the @Mixins annotation from the TransientComposite interface.
 /**
  * This Composite interface declares all the Fragments
  * of the HelloWorld composite.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * The Mixins annotation has been moved to the respective sub-interfaces.
  * The sub-interfaces therefore declare themselves what mixin implementation
  * is preferred. This interface could still have its own Mixins annotation
  * with overrides of those defaults however.
+ * &lt;/p&gt;
  */
 public interface HelloWorldComposite
     extends HelloWorld, TransientComposite
@@ -353,10 +353,10 @@ public interface HelloWorldComposite
 }
 </pre><p><span class="strong"><strong>HelloWorldBehaviour.java</strong></span></p><pre class="programlisting brush: java">
 /**
- * This interface contains only the behaviour
- * of the HelloWorld object.
- * &lt;p/&gt;
+ * This interface contains only the behaviour of the HelloWorld object.
+ * &lt;p&gt;
  * It declares what Mixin to use as default implementation.
+ * &lt;/p&gt;
  */
 @Mixins( HelloWorldBehaviourMixin.class )
 public interface HelloWorldBehaviour
@@ -365,14 +365,14 @@ public interface HelloWorldBehaviour
 }
 </pre><p><span class="strong"><strong>HelloWorldBehaviourMixin.java</strong></span></p><pre class="programlisting brush: java">
 /**
- * This is the implementation of the HelloWorld
- * behaviour interface.
- * &lt;p/&gt;
+ * This is the implementation of the HelloWorld behaviour interface.
+ * &lt;p&gt;
  * It uses a @This Dependency Injection
  * annotation to access the state of the Composite. The field
  * will be automatically injected when the Composite
  * is instantiated. Injections of resources or references
  * can be provided either to fields, constructor parameters or method parameters.
+ * &lt;/p&gt;
  */
 public class HelloWorldBehaviourMixin
     implements HelloWorldBehaviour
@@ -473,12 +473,13 @@ Add an @Concerns annotation on the HelloWorldBehaviourMixin which references the
 /**
  * This is the implementation of the HelloWorld
  * behaviour interface.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * It uses a @This Dependency Injection
  * annotation to access the state of the Composite. The field
  * will be automatically injected when the Composite
  * is instantiated. Injections of resources or references
  * can be provided either to fields, constructor parameters or method parameters.
+ * &lt;/p&gt;
  */
 @Concerns( HelloWorldBehaviourConcern.class )
 public class HelloWorldBehaviourMixin
@@ -533,9 +534,10 @@ Add @NotEmpty to the state parameters.
 /**
  * This interface contains only the behaviour
  * of the HelloWorld object.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * It declares what Mixin to use as default implementation, and also the extra
  * concern to be applied.
+ * &lt;/p&gt;
  */
 @Concerns( HelloWorldBehaviourConcern.class )
 @Mixins( HelloWorldBehaviourMixin.class )
@@ -547,12 +549,13 @@ public interface HelloWorldBehaviour
 /**
  * This is the implementation of the HelloWorld
  * behaviour interface.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * It uses a @This DependencyModel Injection
  * annotation to access the state of the Composite. The field
  * will be automatically injected when the Composite
  * is instantiated. Injections of resources or references
  * can be provided either to fields, constructor parameters or method parameters.
+ * &lt;/p&gt;
  */
 public class HelloWorldBehaviourMixin
     implements HelloWorldBehaviour
@@ -585,9 +588,10 @@ public class HelloWorldBehaviourConcern
 /**
  * This interface contains only the state
  * of the HelloWorld object.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * The parameters are declared as @NotEmpty, so the client cannot pass in empty strings
  * as values.
+ * &lt;/p&gt;
  */
 @Mixins( HelloWorldStateMixin.class )
 public interface HelloWorldState
@@ -656,8 +660,9 @@ public class HelloWorldBehaviourSideEffect
 /**
  * This Composite interface declares transitively
  * all the Fragments of the HelloWorld composite.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * It declares that the HelloWorldBehaviourSideEffect should be applied.
+ * &lt;/p&gt;
  */
 @Mixins( { HelloWorldBehaviourMixin.class, HelloWorldStateMixin.class } )
 @SideEffects( HelloWorldBehaviourSideEffect.class )
@@ -669,9 +674,10 @@ public interface HelloWorldComposite
 /**
  * This interface contains only the state
  * of the HelloWorld object.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * The parameters are declared as @NotEmpty, so the client cannot pass in empty strings
  * as values.
+ * &lt;/p&gt;
  */
 public interface HelloWorldState
 {
@@ -716,8 +722,9 @@ Update the state mixin to inject and return the properties as described above.
 /**
  * This is the implementation of the HelloWorld
  * behaviour interface.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * This version access the state using Qi4j Properties.
+ * &lt;/p&gt;
  */
 public class HelloWorldBehaviourMixin
     implements HelloWorldBehaviour
@@ -745,9 +752,10 @@ public interface HelloWorldComposite
 /**
  * This interface contains only the state
  * of the HelloWorld object.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * The state is now declared using Properties. The @NotEmpty annotation is applied to the
  * method instead, and has the same meaning as before.
+ * &lt;/p&gt;
  */
 public interface HelloWorldState
 {
@@ -852,10 +860,11 @@ public class HelloWorldBehaviourMixin
 /**
  * This Composite interface declares transitively
  * all the Fragments of the HelloWorld composite.
- * &lt;p/&gt;
+ * &lt;p&gt;
  * All standard declarations have been moved to
  * the StandardAbstractEntityComposite so we don't have to repeat
  * them in all Composites.
+ * &lt;/p&gt;
  */
 @Mixins( { HelloWorldBehaviourMixin.class, GenericPropertyMixin.class } )
 public interface HelloWorldComposite
@@ -895,12 +904,12 @@ Remove the HelloWorldState from the TransientComposite "extends" declaration.
 Remove the GenericPropertyMixin. The Property methods will be implemented by the standard PropertyMixin declared in the TransientComposite interface instead.
 </li></ul></div><div class="section" title="Solution"><div class="titlepage"><div><div><h5 class="title"><a id="_solution_10"></a>Solution</h5></div></div></div><p>If you have successfully completed the task, you should end up with the following artifacts only;</p><p><span class="strong"><strong>HelloWorldComposite.java</strong></span></p><pre class="programlisting brush: java">
 /**
- * This Composite interface declares transitively
- * all the Fragments of the HelloWorld composite.
- * &lt;p/&gt;
+ * This Composite interface declares transitively all the Fragments of the HelloWorld composite.
+ * &lt;p&gt;
  * The Fragments are all abstract, so it's ok to
  * put the domain methods here. Otherwise the Fragments
  * would have to implement all methods, including those in Composite.
+ * &lt;/p&gt;
  */
 @Mixins( { HelloWorldMixin.class } )
 public interface HelloWorldComposite

@@ -33,6 +33,9 @@ org.qi4j.api.util
 org.qi4j.api.value
 org.qi4j.bootstrap
 org.qi4j.bootstrap.builder
+org.qi4j.cache.ehcache
+org.qi4j.cache.ehcache.assembly
+org.qi4j.cache.memcache
 org.qi4j.entitystore.file
 org.qi4j.entitystore.file.assembly
 org.qi4j.entitystore.hazelcast
@@ -40,8 +43,10 @@ org.qi4j.entitystore.hazelcast.assembly
 org.qi4j.entitystore.jclouds
 org.qi4j.entitystore.jdbm
 org.qi4j.entitystore.jdbm.assembly
+org.qi4j.entitystore.leveldb
 org.qi4j.entitystore.memory
 org.qi4j.entitystore.mongodb
+org.qi4j.entitystore.neo4j
 org.qi4j.entitystore.prefs
 org.qi4j.entitystore.prefs.assembly
 org.qi4j.entitystore.redis
@@ -80,8 +85,10 @@ org.qi4j.index.sql.support.common
 org.qi4j.index.sql.support.postgresql
 org.qi4j.index.sql.support.skeletons
 org.qi4j.io
+org.qi4j.lang.groovy
+org.qi4j.lang.javascript
+org.qi4j.lang.jruby
 org.qi4j.library.alarm
-org.qi4j.library.cache
 org.qi4j.library.circuitbreaker
 org.qi4j.library.circuitbreaker.jmx
 org.qi4j.library.circuitbreaker.service
@@ -90,8 +97,10 @@ org.qi4j.library.constraints.annotation
 org.qi4j.library.conversion.values
 org.qi4j.library.fileconfig
 org.qi4j.library.http
+org.qi4j.library.invocationcache
 org.qi4j.library.jmx
 org.qi4j.library.locking
+org.qi4j.library.neo4j
 org.qi4j.library.osgi
 org.qi4j.library.rdf
 org.qi4j.library.rdf.entity
@@ -176,6 +185,7 @@ org.qi4j.spi.query
 org.qi4j.spi.uuid
 org.qi4j.spi.value
 org.qi4j.test
+org.qi4j.test.cache
 org.qi4j.test.entity
 org.qi4j.test.indexing
 org.qi4j.test.indexing.model
@@ -186,4 +196,6 @@ org.qi4j.test.util
 org.qi4j.test.value
 org.qi4j.tools.model.descriptor
 org.qi4j.tools.model.util
+org.qi4j.valueserialization.jackson
 org.qi4j.valueserialization.orgjson
+org.qi4j.valueserialization.stax

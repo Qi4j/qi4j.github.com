@@ -1,4 +1,3 @@
-
 = Abstract =
 
     qi4j = new Energy4Java();

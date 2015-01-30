@@ -4,7 +4,6 @@ source:      .
 destination: _site
 
 safe:        true
-auto:        true
 url:         http://qi4j.org
 production_url: http://qi4j.org
 

@@ -41,7 +41,7 @@ To install it locally:
 
 To preview the website locally from a working copy:
 
-    jekyll --server
+    jekyll serve
 
 Then go to [http://localhost:4000/](http://localhost:4000/).
 

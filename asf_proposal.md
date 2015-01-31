@@ -138,6 +138,7 @@ Jiri Jetmar - Independent consultant
 Jaydatt Desai - Logicom Solutions
 
 Additional important contributions over the years have come from;
+
 * Alex Schneyderman - Voalté
 * Alin Dreghiciu - Sonatype
 * Arvid Huss - Jayway
@@ -215,6 +216,7 @@ As Qi4j was never a legal entity, all contributions were directly licensed (Apac
 # External Dependencies
 
 Qi4j has few dependencies, and all dependencies in all non-optional code is ASLv2 compatible. The required dependencies are;
+
   * ASM
   * SLF4J (To be revised)
   * org.json (included in source form in the repository. To be revised)

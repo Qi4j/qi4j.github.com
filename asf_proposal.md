@@ -41,7 +41,7 @@ Qi4j is a platform that combines Aspects, Composition, Dependency Injection, Val
 Composite oriented programming is a term coined in the early days of Qi4j, to capture the notion of using another paradigm for creating applications, than the prevalent object oriented programming one.
 It comprises of the ability to write smaller parts of code than regular classes, and compose these so called fragments into a larger "Composite". It is similar to aspect-oriented programming, but we take it one step further, there is no base class. The Composite consists of fragments, but no fragment has higher significance than any other fragment. However, there are explicit types of fragments, namely Composite Types, Constraints, Mixins, Concerns and Side-effects, to clearly communicate "Intent". The macro level composition takes the form of Applications has Layers which contains Modules in which the Composite Types are declared.
 
-Qi4j also evangelizes strong typing, so the equivalent of Around-Advice in AOP, which is called Concerns, can be made type-safe or like AOP be generic (using java.lang.reflect.InvocationHandler interface). Composites can either be hard coded using annotations, or assembled dynamically during the bootstrap phase.
+Qi4j also evangelizes strong typing, so the equivalent of Around-Advice in AOP, which is called Concerns, can be made type-safe or like AOP be generic (using `java.lang.reflect.InvocationHandler` interface). Composites can either be hard coded using annotations, or assembled dynamically during the bootstrap phase.
 
 Qi4j is a whole new way to write Java applications, where focus lies on structures and interfaces, where classes are 'mere' implementation details.
 
@@ -196,15 +196,15 @@ There is no doubt that the Apache brand is strong, no one can deny that. But our
 
 # Documentation
 
-- Website; http://qi4j.org
-- Source Repository; http://github.com/Qi4j/qi4j-sdk
-- Current Mailing list; https://groups.google.com/forum/#!forum/qi4j-dev
+- Website; [http://qi4j.org](http://qi4j.org)
+- Source Repository; [http://github.com/Qi4j/qi4j-sdk](http://github.com/Qi4j/qi4j-sdk)
+- Current Mailing list; [https://groups.google.com/forum/#!forum/qi4j-dev](https://groups.google.com/forum/#!forum/qi4j-dev)
 
 
 # Initial Source
 
 As mentioned earlier, Qi4j started out at OPS4J community, and the codebase was initially on Subversion, then moved to OPS4J operated GIT repositories and finally we moved to GitHub. We tried to preserve history the best we could, with reasonable effort.
-So, https://github.com/Qi4j contains the repositories that are relevant for the Incubator. In practice, only the qi4j-sdk is current. We suggest that the qi4j-core, qi4j-libraries and qi4j-extensions are imported but made read-only. qi4j-sandbox is imported. qi4j.github.com contains the current website, but the sources for that resides primarily inside the qi4j-sdk repository.
+So, `https://github.com/Qi4j` contains the repositories that are relevant for the Incubator. In practice, only the `qi4j-sdk` is current. We suggest that the `qi4j-core`, `qi4j-libraries` and `qi4j-extensions` are imported but made read-only. `qi4j-sandbox` is imported. `qi4j.github.com` contains the current website, but the sources for that resides primarily inside the `qi4j-sdk` repository.
 
 
 # Source and Intellectual Property Submission Plan
@@ -251,7 +251,7 @@ We understand that Apache operates its own Git repositories, as well as having a
 
 ## Issue Tracking
 
-We also have Jira issues we wish to import from Atlassian operated https://ops4j1.jira.com/browse/QI, if possible, to 
+We also have Jira issues we wish to import from Atlassian operated `https://ops4j1.jira.com/browse/QI`, if possible, to 
 
     https://issues.apache.org/jira/browse/ZEST
 

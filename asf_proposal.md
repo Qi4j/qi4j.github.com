@@ -219,7 +219,7 @@ Qi4j has few dependencies, and all dependencies in all non-optional code is ASLv
 
   * ASM
   * SLF4J (To be revised)
-  * org.json (included in source form in the repository. To be revised)
+  * org.json
 
 There are optional libraries and extensions that have dependencies on projects with other licenses.
 One very notable case, the Neo4j entity store extension, is worth mentioning here. At the time this extension was created, Neo4j was under the AGPL license. It is now under GPL, yet the Qi4j Neo4j extension is licensed under Apache License v2. Are we not violating the license requirements of Neo4j? No, we think not, as the contribution itself was made by Neo Technology under the Apache license. Neo Technology argued that they had the right to provide the extension under ALv2, yet whoever ran a Qi4j application with the Neo4j storage extension, would be subjected to the AGPL (now GPL) requirements. Further discussion with Legal committee is expected to follow.

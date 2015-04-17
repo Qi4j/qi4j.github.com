@@ -4,8 +4,8 @@ source:      .
 destination: _site
 
 safe:        true
-url:         http://qi4j.org
-production_url: http://qi4j.org
+url:         http://zest.apache.org
+production_url: http://zest.apache.org
 
 future:      true
 lsi:         false

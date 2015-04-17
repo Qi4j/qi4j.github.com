@@ -9,7 +9,7 @@ production_url: http://zest.apache.org
 
 future:      true
 lsi:         false
-pygments:    false
+highlighter: pygments
 markdown:    kramdown
 permalink:   date
 

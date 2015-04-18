@@ -1,3 +1,7 @@
+THIS REPOSITORY IS NO LONGER ACTIVE.
+
+Please see http://zest.apache.org.
+
 
 # qi4j.github.com - qi4j.org
 
@@ -5,11 +9,11 @@ The official Qi4j website.
 
     .
     +-- develop/            Documentation for the 'develop' branch.
-    |   +-- javadocs/
+    |√ä√ä +-- javadocs/
     +-- latest/             Documentation for the 'master' branch aka. the latest stable release.
-    |   +-- javadocs/
+    |√ä√ä +-- javadocs/
     +-- VERSION_STRING/     Documentation for each stable release.
-    |   +-- javadocs/
+    |√ä√ä +-- javadocs/
     +-- landing-resources/  CSS, images, fonts and javascript files.
     +-- _config.yml         Jekyll configuration
     +-- _layouts/           Jekyll layouts
@@ -19,7 +23,7 @@ The official Qi4j website.
     +-- atom.xml            Atom news feed
     +-- downloads.html
     +-- _includes/
-    |   +-- releases/       Release download pages, one per file
+    |√ä√ä +-- releases/       Release download pages, one per file
     +-- community/
     +-- sitemap.txt         Sitemap
     +-- schemas/            Qi4j XML Schemas

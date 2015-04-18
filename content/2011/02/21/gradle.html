@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Qi4j moves to Gradle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="/landing-resources/css/bootstrap.css" rel="stylesheet">
+        <link href="/landing-resources/css/font-awesome.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 70px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link href="/landing-resources/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" type="image/png" href="/landing-resources/ico/favicon.png">
+
+        <!-- Analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-3118496-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><img src="/landing-resources/img/feather.png" width="64"/> Apache Zest</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li><a href="/news.html"><i class="icon-rss"></i> News</a></li>
+                            <li><a href="/downloads.html"><i class="icon-download"></i> Downloads</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                    <i class="icon-book"></i> Documentation <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="menuitem"><a href="/qi4j/latest/index.html"><i class="icon-caret-right"></i> Latest release</a></li>
+                                    <li role="menuitem"><a href="/qi4j/2.0/index.html"><i class="icon-caret-right"></i> 2.0</a></li>
+                                    <li role="menuitem"><a href="/qi4j/1.4/index.html"><i class="icon-caret-right"></i> &lt;=1.4.x</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/qi4j/develop/index.html"><i class="icon-caret-right"></i> Develop branch</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="/community">
+                                    <i class="icon-group"></i> Community <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="menuitem"><a href="/community/get_help.html"><i class="icon-caret-right"></i> Get Help</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/participate.html"><i class="icon-caret-right"></i> Participate</a></li>
+                                    <li role="menuitem"><a href="/community/playing_field.html"><i class="icon-caret-right"></i> Playing Field</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/codebase.html"><i class="icon-caret-right"></i> Codebase</a></li>
+                                    <li role="menuitem"><a href="/community/ci.html"><i class="icon-caret-right"></i> Continuous Integration</a></li>
+                                    <li role="menuitem"><a href="/community/roadmap.html"><i class="icon-caret-right"></i> Roadmap</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/contributors.html"><i class="icon-caret-right"></i> People behind Apache Zest</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/licensing.html"><i class="icon-caret-right"></i> Licensing</a></li>
+                                    <li role="menuitem"><a href="/community/licensing_faq.html"><i class="icon-caret-right"></i> Licensing FAQ</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="http://www.apache.org/foundation/sponsorship.html" target="_blank"><i class="icon-caret-right"></i> Sponsorship</a></li>
+                                    <li role="menuitem"><a href="http://www.apache.org/foundation/thanks.html" target="_blank"><i class="icon-caret-right"></i> Thanks</a></li>
+                                    <li role="menuitem"><a href="http://www.apache.org/security/" target="_blank"><i class="icon-caret-right"></i> Security</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div id="content" class="container-fluid">
+
+<div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+<h2 id="qi4j-moves-to-gradle">Qi4j moves to Gradle</h2>
+
+<p>The Qi4j project has discontinued its use of Maven and introduced Gradle as its build system.</p>
+
+<p>After fighting the Maven build system for years, and constantly looking for alternatives, the Qi4j community has finally decided to grab the bull by its horn and throw it out of the arena. Maven imposes a very rigid model on how to define your project, but has a weak internal model on how a build is executed. We therefor often see conflicts between plugins, plugins make too much assumptions and ignoring settings that are actually provided formally, and not to even mention the fundamentally flawed versioning system.</p>
+
+<p>After a few evaluations of alternatives (Gradle &amp; Buildr were the strong contenders), we have finally settled for Gradle (http://www.gradle.org and http://gradle.codehaus.org). Contrary to Maven, Gradle provides a strong internal model for build systems, but a flexible way to establish that model. In essence, in Maven, the declaration is static and the execution is ill-defined, and in Gradle the model is established programmatically and the execution is done off the model.</p>
+
+<p>This allows for a great deal more flexibility. Gradle also have nice integration with Ant and Ivy, so Gradle’s dependency system is handled by Ivy (without Ivy’s XML) and it is easy to use any build tool that provides an Ant task, again programmatically.</p>
+
+<p>The absence of XML is refreshing. So instead of;</p>
+
+<pre><code>&lt;dependencies&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.qi4j.core.runtime&lt;/groupId&gt;
+    &lt;artifactId&gt;qi4j-core-api&lt;/artifactId&gt;
+    &lt;version&gt;1.3&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.qi4j.core.runtime&lt;/groupId&gt;
+    &lt;artifactId&gt;qi4j-core-runtime&lt;/artifactId&gt;
+    &lt;version&gt;1.3&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+
+<p>The declaration of a dependency is done programmatically in Groovy code, so it can even be conditional and so forth, but the normal way is;</p>
+
+<pre><code>dependencies {
+    compile "org.qi4j.core:qi4j-core-api:1.2"
+    testRuntime "org.qi4j.core:qi4j-core-runtime:1.2"
+}
+</code></pre>
+
+<p>And YES, there is a difference between testCompile and testRuntime. 1 line instead of Maven’s 5-6 lines per dependency. And in true Ivy fashion, one can create one’s own scopes, although I doubt we need that in the near future.</p>
+
+<p>The dependency system is worth mentioning; Since Gradle understand multi module projects very well, again unlike Maven, it resolves the build order according to the tasks needed. This means that an upstream module’s tests can depend on a downstream module’s output. And even if the build is executed in the upstream module, the downstream module will be recompiled if any changes happened in it. You never need to worry about “Oh, I forgot to recompile X” again…</p>
+
+<p>Gradle does not need an installation. The Qi4j SDK project comes with a Gradle bootstrapper, so it will install itself. Very nice.</p>
+
+<p>Qi4j is still committed to produce Maven artifacts for publishing to Maven repositories, and the upcoming 1.3 release will be the first one using Gradle for this.</p>
+
+<p>We hope that this will make Qi4j development more enjoyable.</p>
+
+
+    </div>
+    <div class="span2"></div>
+</div>
+
+        </div>
+        <div class="container-fluid">
+            <hr>
+            <footer>
+                <p>
+                    Copyright &copy; 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/">Apache License, Version 2.0</a>.
+                    <br/>
+                    <small>
+                        Apache Zest, Zest, Apache, the Apache feather logo, and the Apache Zest project logo are trademarks of The Apache Software Foundation.<br/>
+                        All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+                    </small>
+                </p>
+            </footer>
+        </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/landing-resources/js/jquery-1.8.3.min.js"></script>
+        <script src="/landing-resources/js/bootstrap.min.js"></script>
+        <script src="/landing-resources/js/qi4j.org.js"></script>
+    </body>
+</html>
+

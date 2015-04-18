@@ -23,7 +23,7 @@ First, install jekyll: `gem install jekyll`, then:
 
     cd $PATH_TO_THE_DIRECTORY_THIS_FILE_IS_IN
     jekyll build
-    svn add content/*
+    svn add -q --force .
     svn commit -m  "zest: update website"
 
 

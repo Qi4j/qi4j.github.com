@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title></title>
+ <link href="http://zest.apache.org/atom.xml" rel="self"/>
+ <link href="http://zest.apache.org"/>
+ <updated>2015-04-18T13:34:43+02:00</updated>
+ <id>http://zest.apache.org</id>
+ <author>
+   <name></name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Qi4j SDK Release 2.0</title>
+   <link href="http://zest.apache.org/2013/04/28/qi4j-2.0.html"/>
+   <updated>2013-04-28T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2013/04/28/qi4j-2.0.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-20&quot;&gt;Qi4j SDK Release 2.0&lt;/h2&gt;
+
+&lt;p&gt;28 Apr 2013 - Montpellier/France &amp;amp; Shanghai/China - Qi4j Release 2.0&lt;/p&gt;
+
+&lt;p&gt;After nearly 2 years of hard work, the Qi4j Community today launched
+its second generation Composite Oriented Programming framework.&lt;/p&gt;
+
+&lt;p&gt;Qi4j is Composite Oriented Programming for the Java platform. It is a
+top-down approach to write business applications in a maintainable
+and efficient manner. Qi4j let you focus on the business domain,
+removing most impedance mismatches in software development, such as
+object-relation mapping, overlapping concerns and testability.&lt;/p&gt;
+
+&lt;p&gt;Qi4j’s main areas of excellence are its enforcement of application
+layering and modularization, the typed and generic AOP approach,
+affinity based dependency injection, persistence management, indexing
+and query subsystems, but there are much more.&lt;/p&gt;
+
+&lt;p&gt;The 2.0 release is practically a re-write of the entire runtime,
+according to co-founder Niclas Hedhman; “Although we are breaking
+compatibility in many select areas, most 1.4 applications can be
+converted with relatively few changes.”. He continues; “These changes
+are necessary for the next set of planned features, including full
+Scala integration, the upcoming JDK8 and Event Sourcing integrated
+into the persistence model.”&lt;/p&gt;
+
+&lt;p&gt;“It has been a bumpy ride to get this release out the door.”, said
+Paul Merlin, the 2.0 Release Manager, “but we are determined that
+Qi4j represents the best technological platform for Java to create
+applications with high business value.”
+Not only has the community re-crafted a remarkable codebase, but also
+created a brand new website, fully integrated with the new Gradle
+build process.&lt;/p&gt;
+
+&lt;p&gt;“The new website keeps the documentation in sync with the releases.”,
+Paul added. “All the samples in documentation are actual code being
+executed in our test suite. I am very proud of the work that has gone
+into the new site.”&lt;/p&gt;
+
+&lt;p&gt;We asked Niclas, “The community calls the Release 2.0 “Reductionism”.
+What does that mean?”&lt;/p&gt;
+
+&lt;p&gt;“We wanted to make all the necessary changes, which breaks
+compatibility, as quickly as possible and get the leanest possible
+Qi4j out the door. Many advanced features that are planned had to
+wait. We simply wanted the base platform to be available first.”,
+says Niclas on the topic.&lt;/p&gt;
+
+&lt;p&gt;So what is really New?&lt;/p&gt;
+
+&lt;p&gt;“Everything”, says Niclas. “For Qi4j Core, the most important change
+is the introduction of functional paradigm in the internal runtime.
+This creates cleaner code, and we’ll be able to leverage JDK8 very
+effectively when it will be available.
+The second big thing is to reduce the Qi4j Core and increase the
+Extensions concept to more areas than persistence and indexing. We
+have now added metrics and value serialization, others to come.”&lt;/p&gt;
+
+&lt;p&gt;And what is Next?&lt;/p&gt;
+
+&lt;p&gt;“Our main focus will be developper productivity. We have things such
+as TimeSeries, Event Sourcing support in Core, easier Assembly of
+Application Stacks in sight for future releases.We aim at constantly
+enriching the whole SDK (libraries, extensions, samples and tools)
+and its documentation. Another objective is to grow the core
+community through more open participation.”, says Paul. “Yes, there
+is much visionary work ahead.”, adds Niclas.&lt;/p&gt;
+
+&lt;p&gt;Find more information at http://qi4j.org and http://qi4j.org/2.0/&lt;/p&gt;
+
+&lt;p&gt;The Qi4j Community is a set of loosely coupled developers working
+hard to create the most exciting domain oriented application
+framework for the Java platform. Qi4j is licensed under the very
+liberal Apache License 2.0.&lt;/p&gt;
+
+&lt;p&gt;–  Qi4j Core Team&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j SDK Release 2.0-RC2</title>
+   <link href="http://zest.apache.org/2013/04/15/qi4j-2.0-rc2.html"/>
+   <updated>2013-04-15T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2013/04/15/qi4j-2.0-rc2.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-20-rc2&quot;&gt;Qi4j SDK Release 2.0-RC2&lt;/h2&gt;
+
+&lt;p&gt;Qi4j SDK 2.0-RC2 is ready for review, as another a stepping stone towards
+the long-awaited Qi4j 2.0.&lt;/p&gt;
+
+&lt;p&gt;Here is a summary of changes made since 2.0-RC1:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;New ValueSerialization SPI with JSON and XML extensions&lt;/li&gt;
+  &lt;li&gt;Small API fixes and better error reporting&lt;/li&gt;
+  &lt;li&gt;Fixed ManyAssociation equals() method&lt;/li&gt;
+  &lt;li&gt;Fixed locking issue inside concurrent Entity modification concern&lt;/li&gt;
+  &lt;li&gt;Fixed bug related to HATEOAS Links in the REST Library&lt;/li&gt;
+  &lt;li&gt;Enhanced various unit tests and Core TestSupport&lt;/li&gt;
+  &lt;li&gt;Documentation and javadoc enhancements&lt;/li&gt;
+  &lt;li&gt;Third party libraries version upgrade&lt;/li&gt;
+  &lt;li&gt;Build System upgraded to use the way faster Gradle 1.5 &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The sooner we can vet this release, the sooner we can get to the 2.0 
+and start working on exciting new features, improvements to
+non-release libraries and extensions, among many other things. So, 
+please take some time and try this out, report back anything that is
+not working as expected or other feedback for us to improve on. &lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j SDK Release 2.0-RC1</title>
+   <link href="http://zest.apache.org/2012/12/25/qi4j-2.0-rc1.html"/>
+   <updated>2012-12-25T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2012/12/25/qi4j-2.0-rc1.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-20-rc1&quot;&gt;Qi4j SDK Release 2.0-RC1&lt;/h2&gt;
+
+&lt;p&gt;Qi4j SDK 2.0-RC1 is ready for review, as a stepping stone towards to
+the long-awaited Qi4j 2.0.&lt;/p&gt;
+
+&lt;p&gt;The number of changes from 1.4 are far too many to list here. We will
+produce a document for this when coming to the 2.0 release.&lt;/p&gt;
+
+&lt;p&gt;The biggest driver for the 2.0 release is to introduce all the
+incompatibilities from 1.4. And we have on purpose held back a long
+list of features that can be added incrementally in the 2.x lifespan.&lt;/p&gt;
+
+&lt;p&gt;As you probably know already, the http://www.qi4j.org site has also
+received a make-over;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Landing page is styled differently.&lt;/li&gt;
+  &lt;li&gt;Community pages are on the Landing Page “area”&lt;/li&gt;
+  &lt;li&gt;Other Documentation is fully versioned&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A version switcher is available in the documentation:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;develop = develop branch&lt;/li&gt;
+  &lt;li&gt;latest = master branch&lt;/li&gt;
+  &lt;li&gt;1.4 = static snapshot of prev SiteVision site.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The sooner we can vet this release, the sooner we can get to the 2.0
+and start working on exciting new features, improvements to
+non-release libraries and extensions, among many other things. So,
+please take some time and try this out, report back anything that is
+not working as expected or other feedback for us to improve on.&lt;/p&gt;
+
+&lt;p&gt;And a BIG THANKS to Paul, who has been working long and hard to push
+himself (and me a bit) to get this release out the door. Including
+creating the new website.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>New Qi4j website!</title>
+   <link href="http://zest.apache.org/2012/05/25/new-website.html"/>
+   <updated>2012-05-25T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2012/05/25/new-website.html</id>
+   <content type="html">&lt;h2 id=&quot;new-qi4j-website&quot;&gt;New Qi4j website!&lt;/h2&gt;
+
+&lt;p&gt;After years with SiteVision from Senselogic, the Qi4j community has decided that SiteVision does not fulfill the needs of this community. Primarily, SiteVision can not satisfy some really central needs of open source communities;&lt;/p&gt;
+
+&lt;p&gt;Learning curve for SiteVision is higher than plain text tool chains.
+Offline editing is not possible.
+Distance between Sitevision server and users introduce network latencies that makes the SiteVision experience less than optimal.
+Versioning is non-trivial. Keeping old versions of the site up and running in parallel will be important as users seek information about older versions of the Qi4j SDK online.
+Integration with build system and codebase in general is fairly complex process.
+We are therefor saying a &lt;em&gt;Big THANK YOU&lt;/em&gt; to Senselogic and SiteVision for the time past, but we are now excited in moving forward with a new website and an underlying toolchain for it.&lt;/p&gt;
+
+&lt;p&gt;The site is completely static (for now), and is built from AsciiDoc plain text documents, plus various build-time integrations with the codebase, such as code snippets, and we will expand on this in the future, including development status (dev-status.xml), any version available on website, automatic example output capturing and much more. We also hope to be able to integrate Disqus for user commentary on every page.&lt;/p&gt;
+
+&lt;p&gt;Already, prior to launching the new site, the new toolchain has already proven itself worthy, as much more content has been generated by the community within a short period of time.&lt;/p&gt;
+
+&lt;p&gt;“I think this is a great leap forward for us. Although content management systems are powerful, they don’t serve the open source community needs very well.”, says Niclas Hedhman, one of the Qi4j Core Team members.&lt;/p&gt;
+
+&lt;p&gt;“We have tried to provide a styling format that works across a large set of browsers, operating systems and devices.”, says Paul Merlin, another Core Team member who placed the final touches on the design.&lt;/p&gt;
+
+&lt;p&gt;Enjoy the new website
+Any feedback is welcome, either on GitHub or qi4j-dev forum at Google Groups.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j's Future</title>
+   <link href="http://zest.apache.org/2012/05/02/qi4j-future.html"/>
+   <updated>2012-05-02T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2012/05/02/qi4j-future.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4js-future&quot;&gt;Qi4j’s Future&lt;/h2&gt;
+
+&lt;p&gt;Lately, the activity in Qi4j community has been fading. Key members of the community have been caught up in many different activities outside this community, from changing jobs to have additional personal commitments piling up.&lt;/p&gt;
+
+&lt;p&gt;Speculation has been circulating whether Qi4j will simply die.&lt;/p&gt;
+
+&lt;p&gt;Today, some of the community leaders met and decided to step up and start forging this project forward. There are a few immediate points which will be addressed first;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;New website. Sitevision is causing more problems than it solves for us.&lt;/li&gt;
+  &lt;li&gt;Documentation. It has always been lacking, partly due to Sitevision’s barrier to editing. With plain text documentation developers no longer have an excuse not to document the features in Qi4j.&lt;/li&gt;
+  &lt;li&gt;Roadmap to 2.0. Establish the features we want to incorporate and have done before 2.0. Effectively ensuring that all compatibility breaking features are included.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We hope that these future efforts will re-instill confidence in the viability of Qi4j in your projects.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ JFocus 2012 - ReST</title>
+   <link href="http://zest.apache.org/2012/02/15/jfocus.html"/>
+   <updated>2012-02-15T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2012/02/15/jfocus.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--jfokus-2012---rest&quot;&gt;Qi4j @ JFokus 2012 - ReST&lt;/h2&gt;
+
+&lt;p&gt;Implementing a REST API today is important in many cases, both as an integration point to your application and as a way for clients to access the application. But there are few frameworks out there that help you fulfil all the constraints of REST, and therefore only makes your API a REST-wannabe. The idiom that’s often missing is HATEOAS. This session will look at how you can build a ReSTful api and applying HATEOAS. The background of this session is the Qi4j at JavaZone 2010 - ReST/DCI presentation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.parleys.com/#st=5&amp;amp;id=3059&amp;amp;sl=6&quot;&gt;Watch the video&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Check the presentation slides online http://www.jfokus.se/jfokus12/preso/jf12_TheRoadToRest.pdf&lt;/p&gt;
+
+&lt;p&gt;On a related note, back in december 2012, Rickard posted “The domain model as REST anti-pattern” in his blog: http://www.jroller.com/rickard/entry/the_domain_model_as_rest&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j SDK Release 1.4</title>
+   <link href="http://zest.apache.org/2011/08/06/qi4j-sdk-1.4.html"/>
+   <updated>2011-08-06T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2011/08/06/qi4j-sdk-1.4.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-14&quot;&gt;Qi4j SDK Release 1.4&lt;/h2&gt;
+
+&lt;p&gt;Shanghai, 5 Aug 2011 - The Qi4j community today announced Release 1.4 of the innovative Java framework, Qi4j. This release is a consolidation release of the 1.x development branch, as development focus now is directed towards 2.0. The main new features in version 1.4 is Named Associations and inclusion of an industrial automation inspired alarm system.&lt;/p&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;The Qi4j Release 1.4 is a consolidation release, to bring together un-released features in the 1.x development branch. This is the last feature release in 1.x, and only serious bugs will be fixed and released. The Qi4j community will now focus on version 2.0 of Qi4j, which will again sport many ground=breaking features.&lt;/p&gt;
+
+&lt;h3 id=&quot;named-associations&quot;&gt;Named Associations&lt;/h3&gt;
+
+&lt;p&gt;In 1.4 it is now possible to map associations by name, and not only as a list. The name is local to the association itself, and operates very much like a Map. The entities referenced are as usual loaded lazily upon get() method.&lt;/p&gt;
+
+&lt;h3 id=&quot;alarm-system&quot;&gt;Alarm System&lt;/h3&gt;
+
+&lt;p&gt;Industrial automation systems have long had alarm systems as the main mechanism for reporting problems in a large system. This metaphor is actually very well suited in today’s complex enterprise systems as well. Alarms are in Qi4j implemented as an entity with a small state machine, dictated by an Alarm Model. The Standard Alarm model has four states; Normal, Activated, Deactivate and Acknowledged. After an alarm is activated, an individual person has to acknowledge the alarm before its state return to normal.&lt;/p&gt;
+
+&lt;p&gt;Further work will be done in this area for aggregation, notficiation, reporting and visualization.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j SDK Release 1.3</title>
+   <link href="http://zest.apache.org/2011/04/15/qi4j-sdk-1.3.html"/>
+   <updated>2011-04-15T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2011/04/15/qi4j-sdk-1.3.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-sdk-release-13&quot;&gt;Qi4j SDK Release 1.3&lt;/h2&gt;
+
+&lt;p&gt;Kuala Lumpur, 15 April 2011 - The Qi4j community today announced Release 1.3 of the innovative Java framework, Qi4j. This release is significant for several customers, moving to deploy Qi4j in business critical 24/7 systems. “We now feel that the core features of Qi4j are as stable as software systems ever get. Qi4j is now being deployed at a major investment bank in the risk pricing domain.”, said Niclas Hedhman, co-inventor of Qi4j together with Rickard Öberg, who added “Qi4j has really proved itself in StreamFlow, and I am convinced that many of our paradigms will stand the test of time.”&lt;/p&gt;
+
+&lt;p&gt;This release sports many new features, such as Solr Indexing, JMX integration, Circuit-breaker library, innovative API for dealing with I/O, functional paradigms and much more, but an important focus was to stabilize the many libraries and extensions.&lt;/p&gt;
+
+&lt;p&gt;The main new features are listed below. The community now sets its eyes ahead towards the next release(s), which will include an industrial automation alarm system, JMX aggregation for the cloud, Entity Viewers via the Rest API and a whole lot more documentation and test coverage. We all look forward to this and many other things to come from Qi4j, the most exciting, technology challenging project in the Open Source Java world.&lt;/p&gt;
+
+&lt;h3 id=&quot;io-api&quot;&gt;I/O API&lt;/h3&gt;
+
+&lt;p&gt;Rickard Öberg is once again inventing new ways to do common things. The I/O API correctly separates the concerns of reading, writing, exception handling, transformation and filtering. This resulted in a DSL like way of writing stream handling code. The I/O API is completely independent of everything in Qi4j and may be used separately. We may release it as a separate artifact in the future.&lt;/p&gt;
+
+&lt;h3 id=&quot;jmx-integration&quot;&gt;JMX Integration&lt;/h3&gt;
+
+&lt;p&gt;By addding a single line of code, you will get the application structure represented in your JMX “tree view”. Starting with a “Qi4j” node, under which each Qi4j Application is listed, followed by Layers, Modules and the Composites. All Services’ configuration instances are exposed and can be changed via JMX, as can services be stopped, started and restarted.&lt;/p&gt;
+
+&lt;h3 id=&quot;osgi-integration&quot;&gt;OSGi Integration&lt;/h3&gt;
+
+&lt;p&gt;All of Qi4j is now OSGi-compliant. That means that all jars are OSGi bundles, with imports and exports. On top of that, this release also contains the beginning of a OSGi-specific library, which allows Qi4j Services to be exported as OSGi services and vice versa. This library is still in beta.&lt;/p&gt;
+
+&lt;h3 id=&quot;circuit-breaker&quot;&gt;Circuit Breaker&lt;/h3&gt;
+
+&lt;p&gt;The CircuitBreaker library allows external resources to be monitored for health and taken offline when facing trouble. This is also signalled via JMX for human intervention.&lt;/p&gt;
+
+&lt;h3 id=&quot;solr-indexing&quot;&gt;Solr Indexing&lt;/h3&gt;
+
+&lt;p&gt;To allow free-text searches of content in entities, Qi4j now has integrated Solr via the Qi4j Indexing/Query extension mechanism. It is not possible to do generic queries via this extension, but it leveraging the Named Query feature. Free-text search enable your data in existing entitystores by using the Reindexer extension.&lt;/p&gt;
+
+&lt;h3 id=&quot;unitofwork-retry&quot;&gt;UnitOfWork Retry&lt;/h3&gt;
+
+&lt;p&gt;The UnitOfWorkConcern now handles an optional UnitOfWorkRetry annotation, allowing full re-runs of work. Literally a single annotation allows developers to add retry logic (or remove the complex retry logic already in place).&lt;/p&gt;
+
+&lt;h3 id=&quot;json-format-now-handles-maps&quot;&gt;JSON format now handles Maps&lt;/h3&gt;
+
+&lt;p&gt;The JSON serializer/deserializer has been equipped to handle Maps, by named properties instead of a java serialized map as was preveiously the case. The new deserializer logic is still compatible with the old format.&lt;/p&gt;
+
+&lt;h3 id=&quot;job-scheduler&quot;&gt;Job Scheduler&lt;/h3&gt;
+
+&lt;p&gt;A new library, org.qi4j.library.scheduler, can now launch jobs according to CRON formatted schedules.&lt;/p&gt;
+
+&lt;h3 id=&quot;specifications-in-assembly&quot;&gt;Specifications in Assembly&lt;/h3&gt;
+
+&lt;p&gt;The ModuleAssembly system has been revised heavily, to allow different parts of the application to apply assembly information to composites. This allows for near functional programming style of setting up composites.&lt;/p&gt;
+
+&lt;h3 id=&quot;iterables-utility&quot;&gt;Iterables Utility&lt;/h3&gt;
+
+&lt;p&gt;Qi4j is innovating again, with a utility to do functional programming style in Java for Iterables. In this first release, the utility only contains the most basic operations, but will be extended over time.&lt;/p&gt;
+
+&lt;h3 id=&quot;release-notes---qi4j---version-13&quot;&gt;Release Notes - Qi4j - Version 1.3&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;New Features&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;QI-277 - JMX services&lt;/li&gt;
+  &lt;li&gt;QI-281 - Solr query/indexing&lt;/li&gt;
+  &lt;li&gt;QI-284 - Circuit breaker library&lt;/li&gt;
+  &lt;li&gt;QI-285 - Active → Available&lt;/li&gt;
+  &lt;li&gt;QI-288 - Add a concern for handling retry on ConcurentModification&lt;/li&gt;
+  &lt;li&gt;QI-289 - Create a library for a job scheduler&lt;/li&gt;
+  &lt;li&gt;QI-291 - New API for doing I/O&lt;/li&gt;
+  &lt;li&gt;QI-295 - Exporter of Qi4j Services to OSGi&lt;/li&gt;
+  &lt;li&gt;QI-296 - Importer of OSGi services into the Qi4j world.&lt;/li&gt;
+  &lt;li&gt;QI-300 - Add test helper for scenarios&lt;/li&gt;
+  &lt;li&gt;QI-309 - Concern to handle ConcurentEntityModificationException and retry the UnitOfWork&lt;/li&gt;
+  &lt;li&gt;QI-320 - Maps in JSON format&lt;/li&gt;
+  &lt;li&gt;QI-321 - Specification driven assembly&lt;/li&gt;
+  &lt;li&gt;QI-341 - Support JodaTime natively in the toJSON() system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Improvements&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;QI-275 - Enhance the community documentation to spell out the trust issues in Core.&lt;/li&gt;
+  &lt;li&gt;QI-297 - Capture NullPointerException slightly more gracefully in ValueBuilderFactory&lt;/li&gt;
+  &lt;li&gt;QI-299 - Replace ServiceQualifier method with Specification&lt;/li&gt;
+  &lt;li&gt;QI-302 - Capture which class is declared final&lt;/li&gt;
+  &lt;li&gt;QI-305 - ObjectDescriptor in ModuleSPI&lt;/li&gt;
+  &lt;li&gt;QI-312 - Patch for Gradle build system&lt;/li&gt;
+  &lt;li&gt;QI-313 - Upgrade Neo4j extension to ver 1.2&lt;/li&gt;
+  &lt;li&gt;QI-317 - Obscure Exception can be improved.&lt;/li&gt;
+  &lt;li&gt;QI-326 - Cobertura reports in the build.&lt;/li&gt;
+  &lt;li&gt;QI-339 - Add support for variables in RDF named queries&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bug&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;QI-272 - Changing properties in Lifecycle sometimes doesn’t work&lt;/li&gt;
+  &lt;li&gt;QI-292 - ServiceLoader mechanism for Qi4j Runtime implementation is really awkward.&lt;/li&gt;
+  &lt;li&gt;QI-294 - qi4j-libraries: rdf/src/main/java/org/qi4j/library/rdf/model/ApplicationVisitor.java is not compilable&lt;/li&gt;
+  &lt;li&gt;QI-303 - Incorrect generics type for imported services.&lt;/li&gt;
+  &lt;li&gt;QI-304 - Composite extends Serializable&lt;/li&gt;
+  &lt;li&gt;QI-306 - Exception thrown when @Using on complex generic types&lt;/li&gt;
+  &lt;li&gt;QI-308 - The @UnitOfWorkDiscardOn annotation does not have runtime Retention&lt;/li&gt;
+  &lt;li&gt;QI-331 - BuildVersion class is in wrong package.&lt;/li&gt;
+  &lt;li&gt;QI-332 - Generated POMs doesn’t include the &amp;lt;repository&amp;gt; sections needed.&lt;/li&gt;
+  &lt;li&gt;QI-333 - Qi4j Runtime needs a way to bootstrap in OSGi&lt;/li&gt;
+  &lt;li&gt;QI-334 - Maven source jars are not generated and uploaded.&lt;/li&gt;
+  &lt;li&gt;QI-335 - Maven javadoc jars are not generated and uploaded&lt;/li&gt;
+  &lt;li&gt;QI-337 - Package org.qi4j.api.specification is imported more than once in Core Runtime OSGi bundle declaration.&lt;/li&gt;
+  &lt;li&gt;QI-340 - NPE in ModuleUnitOfWork which should be a informative Exception&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Task&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;QI-314 - Creation of proper SDK&lt;/li&gt;
+  &lt;li&gt;QI-315 - Define binary tarball layout&lt;/li&gt;
+  &lt;li&gt;QI-316 - Define source tarball layout&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j moves to Gradle</title>
+   <link href="http://zest.apache.org/2011/02/21/gradle.html"/>
+   <updated>2011-02-21T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2011/02/21/gradle.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-moves-to-gradle&quot;&gt;Qi4j moves to Gradle&lt;/h2&gt;
+
+&lt;p&gt;The Qi4j project has discontinued its use of Maven and introduced Gradle as its build system.&lt;/p&gt;
+
+&lt;p&gt;After fighting the Maven build system for years, and constantly looking for alternatives, the Qi4j community has finally decided to grab the bull by its horn and throw it out of the arena. Maven imposes a very rigid model on how to define your project, but has a weak internal model on how a build is executed. We therefor often see conflicts between plugins, plugins make too much assumptions and ignoring settings that are actually provided formally, and not to even mention the fundamentally flawed versioning system.&lt;/p&gt;
+
+&lt;p&gt;After a few evaluations of alternatives (Gradle &amp;amp; Buildr were the strong contenders), we have finally settled for Gradle (http://www.gradle.org and http://gradle.codehaus.org). Contrary to Maven, Gradle provides a strong internal model for build systems, but a flexible way to establish that model. In essence, in Maven, the declaration is static and the execution is ill-defined, and in Gradle the model is established programmatically and the execution is done off the model.&lt;/p&gt;
+
+&lt;p&gt;This allows for a great deal more flexibility. Gradle also have nice integration with Ant and Ivy, so Gradle’s dependency system is handled by Ivy (without Ivy’s XML) and it is easy to use any build tool that provides an Ant task, again programmatically.&lt;/p&gt;
+
+&lt;p&gt;The absence of XML is refreshing. So instead of;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+  &amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.qi4j.core.runtime&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;qi4j-core-api&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.3&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+  &amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.qi4j.core.runtime&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;qi4j-core-runtime&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.3&amp;lt;/version&amp;gt;
+    &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The declaration of a dependency is done programmatically in Groovy code, so it can even be conditional and so forth, but the normal way is;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dependencies {
+    compile &quot;org.qi4j.core:qi4j-core-api:1.2&quot;
+    testRuntime &quot;org.qi4j.core:qi4j-core-runtime:1.2&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And YES, there is a difference between testCompile and testRuntime. 1 line instead of Maven’s 5-6 lines per dependency. And in true Ivy fashion, one can create one’s own scopes, although I doubt we need that in the near future.&lt;/p&gt;
+
+&lt;p&gt;The dependency system is worth mentioning; Since Gradle understand multi module projects very well, again unlike Maven, it resolves the build order according to the tasks needed. This means that an upstream module’s tests can depend on a downstream module’s output. And even if the build is executed in the upstream module, the downstream module will be recompiled if any changes happened in it. You never need to worry about “Oh, I forgot to recompile X” again…&lt;/p&gt;
+
+&lt;p&gt;Gradle does not need an installation. The Qi4j SDK project comes with a Gradle bootstrapper, so it will install itself. Very nice.&lt;/p&gt;
+
+&lt;p&gt;Qi4j is still committed to produce Maven artifacts for publishing to Maven repositories, and the upcoming 1.3 release will be the first one using Gradle for this.&lt;/p&gt;
+
+&lt;p&gt;We hope that this will make Qi4j development more enjoyable.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j SDK 1.2 Released</title>
+   <link href="http://zest.apache.org/2010/10/23/qi4j-sdk-1.2.html"/>
+   <updated>2010-10-23T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2010/10/23/qi4j-sdk-1.2.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-sdk-12-released&quot;&gt;Qi4j SDK 1.2 Released&lt;/h2&gt;
+
+&lt;p&gt;The Qi4j community today announced the 3rd installment of the innovative Java framework, Qi4j. The main new features includes, SQL EntityStore, SQL Indexing/Querying, Caching SPI and a Service Qualifier API.&lt;/p&gt;
+
+&lt;p&gt;Additional to the new features, numerous improvements were made along side with significant internal changes. Here is a break down of the more important issues;&lt;/p&gt;
+
+&lt;p&gt;The Cache SPI is another important new feature. The pluggable Cache SPI means that it is equally simple to add new caching implementations as it is to add Entity Store implementations, in fact even easier since the SPI is very simple. The entity stores implementations that leverages the MapEntityStore layer in the Qi4j Runtime (which most do), will automatically benefit from the plugged in Cache.&lt;/p&gt;
+
+&lt;p&gt;The support of SQL has been a long-standing requested item, and thanks to new community blood, we now have the first generation of both EntityStore implementation as well as using SQL backends for querying and indexing. These two implementations is a testament that the Qi4j data model is truly flexible. The current implementation does not, however, support mapping of existing tables and expect to own the tables it needs. PostgreSQL and MySQL are the first support RDBMSes, and more are bound to follow in upcoming releases.&lt;/p&gt;
+
+&lt;p&gt;SLF4J was introduced as a dependency in Qi4j Core, and slowly starting to add additional debug and trace statements in the internals of Qi4j Runtime to aid in troubleshooting.&lt;/p&gt;
+
+&lt;p&gt;Qi4j community has also noted a JDK bug, which surface as a java.lang.ArrayStoreException, but is really a java.lang.TypeNotPresentException that gets treated incorrectly deep inside com.sun packages. This release did not manage to work around this, but we will in the next release.&lt;/p&gt;
+
+&lt;p&gt;The bugs fixed are of various nature. Some of the bugs listed in the release notes are possibly fixed prior to Qi4j 1.1, but not identified correctly. The two most important bug fixes are QI-247, Incorrect delegation of Object methods in TransientComposite, and QI-241 regarding the matching algorithm for @AppliesTo. The latter may seriously affect existing applications to include fragments when it previously didn’t.&lt;/p&gt;
+
+&lt;h3 id=&quot;release-notes---qi4j-sdk-12&quot;&gt;Release Notes - Qi4j SDK 1.2&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;New Features&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;QI-192 - Support indexing/querying of collection properties&lt;/li&gt;
+  &lt;li&gt;QI-260 - Introduce advanced cache (ehcache?) as a general purpose caching layer for all EntityStores&lt;/li&gt;
+  &lt;li&gt;QI-266 - Introduction of Service Qualifier API&lt;/li&gt;
+  &lt;li&gt;QI-268 - Cache SPI introduced in Core.&lt;/li&gt;
+  &lt;li&gt;QI-269 - Cache Extension - Ehcache&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Improvements&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;QI-58 - Property → Property .. → .. Querying&lt;/li&gt;
+  &lt;li&gt;QI-232 - Entity Type resolution is flawed&lt;/li&gt;
+  &lt;li&gt;QI-249 - Visitor-pattern to work with throws -declaration&lt;/li&gt;
+  &lt;li&gt;QI-263 - Replace JDK logging with SLF4J&lt;/li&gt;
+  &lt;li&gt;QI-264 - Use exception handling pattern in visitors&lt;/li&gt;
+  &lt;li&gt;QI-265 - Introduce SLF4J as logging framework.&lt;/li&gt;
+  &lt;li&gt;QI-267 - EntityStoreSPI.applyChanges() should have the EntityStoreUnitOfWork passed along.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bugs Fixed&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;QI-214 - Missing implementations of newEqualsPredicate&lt;/li&gt;
+  &lt;li&gt;QI-241 - AppliesTo match algorithm should be a OR condition in the targeted elements list&lt;/li&gt;
+  &lt;li&gt;QI-247 - Broken delegation of Object methods in TransientComposite&lt;/li&gt;
+  &lt;li&gt;QI-253 - Remaining bugs on moving to ASM&lt;/li&gt;
+  &lt;li&gt;QI-254 - FragmentClassLoader causes UnsupportedClassVersionError in most tests&lt;/li&gt;
+  &lt;li&gt;QI-255 - Qi4j tests do not take @Queryable(false) into account&lt;/li&gt;
+  &lt;li&gt;QI-256 - UndeclaredThrowableException - possibly related to new class-generation&lt;/li&gt;
+  &lt;li&gt;QI-257 - ConcernOf/SideEffectOf not working with Property&amp;lt;SomeType&amp;gt;&lt;/li&gt;
+  &lt;li&gt;QI-259 - JSONMapEntityStore did not update lastModified in entitystate&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ JavaZone 2010 - ReST/DCI</title>
+   <link href="http://zest.apache.org/2010/09/18/javazone.html"/>
+   <updated>2010-09-18T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2010/09/18/javazone.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--javazone-2010---restdci&quot;&gt;Qi4j @ JavaZone 2010 - ReST/DCI&lt;/h2&gt;
+
+&lt;p&gt;Qi4j at JavaZone 2010, Oslo, Norway. Rickard Öberg presented “Implementing a Rest API with DCI and Qi4j” at JavaZone on the 8 Sept 2010.&lt;/p&gt;
+
+&lt;p&gt;Implementing a REST API today is important in many cases, both as an integration point to your application and as a way for clients to access the application. But there are few frameworks out there that help you fulfil all the constraints of REST, and therefore only makes your API a REST-wannabe. This session will look at how you can use Qi4j along with the DCI pattern to implement a truly RESTful API, that follows all the constraints. We will look at how DCI maps to the RESTful way of thinking about web API’s, and how Qi4j can help with the actual implementation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://streaming.java.no/tcs/#page:recordingList&amp;amp;pageNumber:1&amp;amp;id:DD3955BC-997B-40C1-A7DC-421DB8EE6512&quot;&gt;Watch the video&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ Apache Readshow Shanghai</title>
+   <link href="http://zest.apache.org/2010/08/30/apache-roadshow-shanghai.html"/>
+   <updated>2010-08-30T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2010/08/30/apache-roadshow-shanghai.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--apache-roadshow-shanghai&quot;&gt;Qi4j @ Apache Roadshow Shanghai&lt;/h2&gt;
+
+&lt;p&gt;Qi4j was invited to present at the Apache Roadshow Shanghai 2010, largely due to Niclas Hedhman is currently living there and is an Apache Member. Niclas has reflected over how the presentation was done and some reactions from the audience. You can read all about it on his &lt;a href=&quot;http://www.jroller.com/niclas/entry/qi4j_in_shanghai_part_2&quot;&gt;blog&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j SDK 1.1 is out!</title>
+   <link href="http://zest.apache.org/2010/06/17/qi4j-1.1.html"/>
+   <updated>2010-06-17T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2010/06/17/qi4j-1.1.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-sdk-11-is-out&quot;&gt;Qi4j SDK 1.1 is out!&lt;/h2&gt;
+
+&lt;p&gt;Qi4j community hereby announces the availability of Release 1.1 of Qi4j Core, Qi4j Libraries and Qi4j Extensions.&lt;/p&gt;
+
+&lt;p&gt;Qi4j version 1.1 is now available. It is mostly an bug fix update, some SPI changes and a contributed EntityStore for EC2/S3 using Infinispan. The author, Philippe Van Dyck, explains;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Infinispan memory cache eviction mechanism is based on a memory threshold (i.e. you specify 100MB of memory for the cache in the store config)&lt;/li&gt;
+  &lt;li&gt;RHQ monitoring with Infinispan plugin&lt;/li&gt;
+  &lt;li&gt;Entries are gzipped on S3&lt;/li&gt;
+  &lt;li&gt;Wicket load balancing is done with infinispan (custom pagestore)&lt;/li&gt;
+  &lt;li&gt;I use a directory structure for qi4j identities (“Entity1/key1”) with a webdav interface to it, so one can mount Qi4j’s store in Mac OSX Finder.&lt;/li&gt;
+  &lt;li&gt;EC2 S3_PING is used in jgroups to join the cluster of qi4j stores&lt;/li&gt;
+  &lt;li&gt;Each Qi4j UnitOfWork is transaction backed with rollback support&lt;/li&gt;
+  &lt;li&gt;S3 (blobstore) access is using Infinispan synchronous and transacted mode&lt;/li&gt;
+  &lt;li&gt;EC2 images only contain the wicket web interface with a jetty https connector / when added to amazon elastic load balancer, Infinispan connects to the cache cluster and wicket begins to server load balanced requests - yep, just like that&lt;/li&gt;
+  &lt;li&gt;Current performance, as reported by RHQ, from EC2 to S3, is around 60ms per read/write from S3 (rough average). Elastic load balancing load tests with loadStorm are not done yet. But I don’t know any NOSQL alternative offering a permanent transacted monitored compressed Finder-mounted clustered load-balanced store.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Development continues towards 1.2 release, which includes better OSGi support, dropping CGLib dependency due to classloading issues, Google AppEngine support and hopefully the DCI support as developed in the StreamFlow project.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j SDK 1.0 has been released!</title>
+   <link href="http://zest.apache.org/2010/01/28/qi4j-1.0.html"/>
+   <updated>2010-01-28T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2010/01/28/qi4j-1.0.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-sdk-10-has-been-released&quot;&gt;Qi4j SDK 1.0 has been released!&lt;/h2&gt;
+
+&lt;p&gt;Qi4j SDK 1.0 has now been released. After 2 years of hard work, we have finally made an official release available. It contains all the core features of Qi4j, such as composites made from fragments like mixins, concerns, side-effects and constraints, and also the libraries and extensions that are useful for most application development.&lt;/p&gt;
+
+&lt;p&gt;During this weeks JFokus conference in Stockholm, Sweden, the Qi4j community released Qi4j SDK 1.0. Rickard Öberg made two presentations in association with the conference, focusing on how Qi4j and Composite Oriented Programming makes working with domain models on the Java platform easier compared to the usual POJO approach typically used in todays application development.&lt;/p&gt;
+
+&lt;p&gt;Qi4j is a significant step forward for the Java platform, with its focus on Domain Driven Design and support for the &lt;a href=&quot;http://www.artima.com/articles/dci_vision.html&quot;&gt;Data-Context-Interaction&lt;/a&gt; paradigm that is currently being worked on by Trygve Reenskaug as a way to revive object-orientation.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Quicker Frameworks</title>
+   <link href="http://zest.apache.org/2010/01/25/quicker-frameworks.html"/>
+   <updated>2010-01-25T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2010/01/25/quicker-frameworks.html</id>
+   <content type="html">&lt;h2 id=&quot;quicker-frameworks&quot;&gt;Quicker Frameworks&lt;/h2&gt;
+
+&lt;p&gt;Usually, a framework is created to make development faster by hiding the technical machinery underneath. Motivation behind Qi4j was very different. In this article written by Rickard Öberg for &lt;a href=&quot;http://domaindrivendesign.org/&quot;&gt;DomainDrivenDesign.org&lt;/a&gt;, he talks about how this domain-centric application development framework makes it quicker.&lt;/p&gt;
+
+&lt;p&gt;You can find the article on the DDD website &lt;a href=&quot;http://domaindrivendesign.org/library/oberg_2009&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ 0redev 2010 - DCI</title>
+   <link href="http://zest.apache.org/2010/01/25/oredev.html"/>
+   <updated>2010-01-25T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2010/01/25/oredev.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--redev-2010---dci&quot;&gt;Qi4j @ Øredev 2010 - DCI&lt;/h2&gt;
+
+&lt;p&gt;In this presentation that was recorded during Øredev 2009, Rickard Öberg presents how to use Qi4j to implement the DCI principles. DCI, or Data-Context-Interaction, is a new paradigm created by Trygve Reenskug, inventor of the MVC pattern.&lt;/p&gt;
+
+&lt;p&gt;The presentation can be found &lt;a href=&quot;http://www.oredev.org/prod/oredev/site.nsf/docsbycodename/session?opendocument&amp;amp;sid=88EF79931A074A1AC125759A003AB0ED&amp;amp;track=24116556E47101EAC12575A50049A141&amp;amp;day=5&quot;&gt;here&lt;/a&gt;, and it was part of a DCI track with Trygve and Jim Coplien, who’s presentations you can find &lt;a href=&quot;http://www.oredev.org/prod/oredev/site.nsf/docsbycodename/session?opendocument&amp;amp;sid=B5D8BF332A282FEEC1257599003E5694&amp;amp;track=24116556E47101EAC12575A50049A141&amp;amp;day=5&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.oredev.org/prod/oredev/site.nsf/docsbycodename/session?opendocument&amp;amp;sid=9986C37D739F8D39C12575940064F272&amp;amp;track=24116556E47101EAC12575A50049A141&amp;amp;day=5&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ JavaZone 2009 - Persistence</title>
+   <link href="http://zest.apache.org/2009/09/03/javazone.html"/>
+   <updated>2009-09-03T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2009/09/03/javazone.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--javazone-2009---persistence&quot;&gt;Qi4j @ JavaZone 2009 - Persistence&lt;/h2&gt;
+
+&lt;p&gt;JavaZone 2009 is held as usual in Oslo, Norway, on the 9th and 10th of September 2009. It is set to be an exciting event, Scandinavias larges Java Developer’s conference, but covers adjacent languages as well, such as Scala, Groovy and JRuby. Qi4j is represented with a presentation by Niclas Hedhman about “Qi4j Persistence” (10th Sept, 11:45). The short time available will only allow for the basics of Qi4j Persistence to be covered, but the audience is expected to get tantalized and curious about our great framework for rich domain model development.&lt;/p&gt;
+
+&lt;p&gt;Many other great speakers, both local Norwegians as well as International ones, will be present and all is set for a great conference, again…&lt;/p&gt;
+
+&lt;p&gt;Niclas will of course be available most of the conference time for face-to-face discussions, feedback and questions on Qi4j topics.&lt;/p&gt;
+
+&lt;p&gt;See you in Oslo.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ JFocus 2009 - COP / DDD</title>
+   <link href="http://zest.apache.org/2009/05/10/jfocus.html"/>
+   <updated>2009-05-10T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2009/05/10/jfocus.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--jfocus-2009---cop--ddd&quot;&gt;Qi4j @ JFocus 2009 - COP / DDD&lt;/h2&gt;
+
+&lt;p&gt;At JFokus earlier this year Rickard Öberg was interviewed by Dan Bergh Johnsson about Composite Oriented Programming and Qi4j.&lt;/p&gt;
+
+&lt;p&gt;The interview covers some of the rationale behind Composite Oriented Programming and the Qi4j project, its focus on DDD and why Java was chosen as language for the implementation. You can see the interview online on &lt;a href=&quot;http://www.youtube.com/watch?v=RcJqcJND42s&quot;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j 0.7 Released</title>
+   <link href="http://zest.apache.org/2009/04/20/qi4j-0.7.html"/>
+   <updated>2009-04-20T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2009/04/20/qi4j-0.7.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-07-released&quot;&gt;Qi4j 0.7 Released&lt;/h2&gt;
+
+&lt;p&gt;Query Cleanup.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j 0.6 Released</title>
+   <link href="http://zest.apache.org/2009/02/20/qi4j-0.6.html"/>
+   <updated>2009-02-20T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2009/02/20/qi4j-0.6.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-06-released&quot;&gt;Qi4j 0.6 Released&lt;/h2&gt;
+
+&lt;p&gt;Goal of Full Test Coverage in Core.&lt;/p&gt;
+
+&lt;p&gt;Break-up of project.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>DDD support in Qi4j explained</title>
+   <link href="http://zest.apache.org/2009/02/19/ddd-in-qi4j-explained.html"/>
+   <updated>2009-02-19T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2009/02/19/ddd-in-qi4j-explained.html</id>
+   <content type="html">&lt;h2 id=&quot;ddd-support-in-qi4j-explained&quot;&gt;DDD support in Qi4j explained&lt;/h2&gt;
+
+&lt;p&gt;Domain Driven Design has a special status in Qi4j, and its tactical bits are embraced in Qi4j itself. These includes Entities, Services and Values. In Rickard’s blog entry &lt;a href=&quot;http://www.jroller.com/rickard/entry/qi4j_and_state_modeling&quot;&gt;Qi4j and state modeling&lt;/a&gt;, he covers these topics in a relatively easy to understand and pedagogic format. A highly recommended read for people who want to get a quick overview of what Qi4j is really about.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ Arskonference 2009</title>
+   <link href="http://zest.apache.org/2009/01/10/arskonference.html"/>
+   <updated>2009-01-10T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2009/01/10/arskonference.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--rskonference-2009&quot;&gt;Qi4j @ Årskonference 2009&lt;/h2&gt;
+
+&lt;p&gt;It is indeed exciting times to be a Java developer in. Lots of stuff is happening in the Java space and it’s hard to predict what kind of development space we will be working in in the future.&lt;/p&gt;
+
+&lt;p&gt;Will all our Java code run in a cloud somewhere ?&lt;/p&gt;
+
+&lt;p&gt;Is “domain centric application development” the new magic wand we should be waving at our Java code ?&lt;/p&gt;
+
+&lt;p&gt;Join us and meet Rickard Öberg and get an in-depth view on his new exciting project, Qi4j (qi4j.org)&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j 0.5 Released</title>
+   <link href="http://zest.apache.org/2009/01/09/qi4j-0.5.html"/>
+   <updated>2009-01-09T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2009/01/09/qi4j-0.5.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-05-released&quot;&gt;Qi4j 0.5 Released&lt;/h2&gt;
+
+&lt;p&gt;Stabilization of Core&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ 0redev 2008 - Qi4j</title>
+   <link href="http://zest.apache.org/2008/11/17/oredev-qi4j.html"/>
+   <updated>2008-11-17T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2008/11/17/oredev-qi4j.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--0redev-2008---qi4j&quot;&gt;Qi4j @ 0redev 2008 - Qi4j&lt;/h2&gt;
+
+&lt;p&gt;Qi4j - code, examples and demo&lt;/p&gt;
+
+&lt;p&gt;Qi4j is an application development framework that promises to make it easier to create applications using DDD. But how does it accomplish this, and to what extent? This session will take us through the creation of a simple application using Qi4j and discuss the different features that simplify the developers life and makes it easier to apply agile practices.&lt;/p&gt;
+
+&lt;p&gt;Watch the whole session online &lt;a href=&quot;http://archive.oredev.org/topmenu/video/java/rickardobergqi4j.4.5a2d30d411ee6ffd28880001122.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j 0.4 Released</title>
+   <link href="http://zest.apache.org/2008/09/19/qi4j-0.4.html"/>
+   <updated>2008-09-19T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2008/09/19/qi4j-0.4.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-04-released&quot;&gt;Qi4j 0.4 Released&lt;/h2&gt;
+
+&lt;p&gt;CleanUp after the 0.3 changes.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ JavaZone 2008 - Composite Oriented Programming with Qi4j</title>
+   <link href="http://zest.apache.org/2008/09/15/javazone-cop.html"/>
+   <updated>2008-09-15T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2008/09/15/javazone-cop.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--javazone-2008---composite-oriented-programming-with-qi4j&quot;&gt;Qi4j @ JavaZone 2008 - Composite Oriented Programming with Qi4j&lt;/h2&gt;
+
+&lt;p&gt;In the current programming culture we have lost the OOP idea of objects containing both logic and state, the idea of reuse has largely failed due to impractical mechanisms, and combining pieces of code into larger structures using AOP has not quite delivered on its promises. Building large-scale software also gives us challenges with regard to complexity, enforcing architectural rules and codebase explosion. What if we could look at what we have and figure out a new way to address these problems, while promoting the idea from domain oriented modeling and retaining what works with what we have now? Composite Oriented Programing is a new way of dealing with these problems, and this presentation will show how the Qi4j implementation on the Java platform will enable you to get more done with less work, and in a way that allows you to avoid the mentioned problems. It will describe the COP terminology and show examples on how to use Qi4j to implement domain oriented models.&lt;/p&gt;
+
+&lt;p&gt;See the whole presentation online &lt;a href=&quot;http://javazone.no/incogito/session/Qi4j+-+a+new+approach+to+old+problems.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j 0.3 Released</title>
+   <link href="http://zest.apache.org/2008/08/08/qi4j-0.3.html"/>
+   <updated>2008-08-08T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2008/08/08/qi4j-0.3.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-03-released&quot;&gt;Qi4j 0.3 Released&lt;/h2&gt;
+
+&lt;p&gt;The 3rd pre-final release from the Qi4j community marks a new relatively stable milestone on the continued path to a production ready system. The 0.3 release is the 3rd major re-write of the Qi4j Core Runtime, after many lessons learned from previous implementations.&lt;/p&gt;
+
+&lt;p&gt;“The current Qi4j Core Runtime is soooo much lighter and easier to work with, both for the Core developers as well as extensions and advanced libraries developers.”, says Rickard Öberg, the Qi4j project lead. “We now have most of the ingredients in place for developers who want to delve into DDD without having to do everything from scratch. Having a toolkit to work with that speaks the same language as themselves, all the way from layers down to individual parameter constraints, makes life so much easier, and minimizes the need for translation from idea to actual code.”&lt;/p&gt;
+
+&lt;p&gt;“We now feel confident that the Qi4j Core Runtime has a good design and is stable enough to not go through any more disruptive changes. This enables us to move away from a feature-boxed release cycle into a more agile time-boxed one. This will enable more people to participate and use the Qi4j platform.”, says Niclas Hedhman. He continues; “Stefano Mazzocchi (Apache) once told me; Only projects with Bad Code, Great Vision will build strong communities. And I think Qi4j is exactly at this point right now. The vision for a better future is extremely promising, and we have so many areas that we need help to implement. Combined with a no barrier to write and commit code/documentation for all parts except Qi4j Core, we have the setup for accelerated participation in the months to come.”&lt;/p&gt;
+
+&lt;p&gt;With this release the Qi4j community moves from a feature-boxed release cycle into a time-boxed one. First week every month, there will be a release containing the work from previous release. Issues will be worked on in a semi-prioritized order and the participating developers are urged to keep the codebase stable towards the release date.&lt;/p&gt;
+
+&lt;p&gt;Rickard is keen to point out the Application Visualizer that has been started since the 0.2 release, “Another key tool which this release introduces is the beginning of the application visualizer, which automatically shows what your application look like. One of the main disadvantages of earlier frameworks is that the developers typically felt out of control and unable to see what was going on. When you have so many pieces working together it is important to get the big picture, and this is what we are now enabling.”&lt;/p&gt;
+
+&lt;p&gt;“Our immediate next steps involves a new remote Entity Store, getting the application visualization tool ready, changes to the Query API including named and native queries, and we are looking into introducing more explicit Composite archetypes, such as TransientComposite and ValueComposite”, says Rickard and then goes back coding.&lt;/p&gt;
+
+&lt;p&gt;The rest of us just can’t wait to see what is coming up next.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j 0.2 Released</title>
+   <link href="http://zest.apache.org/2008/06/06/qi4j-0.2.html"/>
+   <updated>2008-06-06T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2008/06/06/qi4j-0.2.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-02-released&quot;&gt;Qi4j 0.2 Released&lt;/h2&gt;
+
+&lt;p&gt;Full Unit Test &amp;amp; Javadoc on Core API.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j 0.1 Released</title>
+   <link href="http://zest.apache.org/2008/04/14/qi4j-0.1.html"/>
+   <updated>2008-04-14T00:00:00+02:00</updated>
+   <id>http://zest.apache.org/2008/04/14/qi4j-0.1.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-01-released&quot;&gt;Qi4j 0.1 Released&lt;/h2&gt;
+
+&lt;p&gt;Freeze of Core API.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @ JFocus 2008 - Composite Oriented Programming</title>
+   <link href="http://zest.apache.org/2008/01/30/jfocus-cop.html"/>
+   <updated>2008-01-30T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2008/01/30/jfocus-cop.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j--jfocus-2008---composite-oriented-programming&quot;&gt;Qi4j @ JFocus 2008 - Composite Oriented Programming&lt;/h2&gt;
+
+&lt;p&gt;OOP neglects the need of objects to adjust its behavior depending on the context. “John is a parent and programmer in the city, but a hunter and food in the jungle.”. Same object, different contexts. OOP has also not fulfilled its promise of re-usability, partly due to such static behavior and partly due to its inability to deal with fine-granularity of states and behaviors. Composite Oriented Programming addresses these issues, and Qi4J is an implementation available to Java programmers today.&lt;/p&gt;
+
+&lt;p&gt;Check the presentation slides online &lt;a href=&quot;http://www.jfokus.se/jfokus08/pres/jf08-CompositeOrientedProgrammingWithQi4j.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qi4j @Øredev 2007 - Composite Oriented Programming</title>
+   <link href="http://zest.apache.org/2007/11/13/oredev-cop.html"/>
+   <updated>2007-11-13T00:00:00+01:00</updated>
+   <id>http://zest.apache.org/2007/11/13/oredev-cop.html</id>
+   <content type="html">&lt;h2 id=&quot;qi4j-redev-2007---composite-oriented-programming&quot;&gt;Qi4j @Øredev 2007 - Composite Oriented Programming&lt;/h2&gt;
+
+&lt;p&gt;OOP neglects the need of objects to adjust its behavior depending on the context. “John is a parent and programmer in the city, but a hunter and food in the jungle.”. Same object, different contexts. OOP has also not fulfilled its promise of re-usability, partly due to such static behavior and partly due to its inability to deal with fine-granularity of states and behaviors.&lt;/p&gt;
+
+&lt;p&gt;Composite Oriented Programming addresses these issues, and Qi4J is an implementation available to Java programmers today.&lt;/p&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;http://archive.oredev.org/toppmeny/conference/java/qi4jcompositeorientedprog.4.76e8b1c6112f078db498000125951.html&quot;&gt;Øredev&lt;/a&gt; archive.&lt;/p&gt;
+
+&lt;p&gt;This presentation has been followed by a 6 hours Workshop.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ 
+</feed>
+

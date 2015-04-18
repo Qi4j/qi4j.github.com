@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Qi4j 0.3 Released</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="/landing-resources/css/bootstrap.css" rel="stylesheet">
+        <link href="/landing-resources/css/font-awesome.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 70px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link href="/landing-resources/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" type="image/png" href="/landing-resources/ico/favicon.png">
+
+        <!-- Analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-3118496-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><img src="/landing-resources/img/feather.png" width="64"/> Apache Zest</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li><a href="/news.html"><i class="icon-rss"></i> News</a></li>
+                            <li><a href="/downloads.html"><i class="icon-download"></i> Downloads</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                    <i class="icon-book"></i> Documentation <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="menuitem"><a href="/qi4j/latest/index.html"><i class="icon-caret-right"></i> Latest release</a></li>
+                                    <li role="menuitem"><a href="/qi4j/2.0/index.html"><i class="icon-caret-right"></i> 2.0</a></li>
+                                    <li role="menuitem"><a href="/qi4j/1.4/index.html"><i class="icon-caret-right"></i> &lt;=1.4.x</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/qi4j/develop/index.html"><i class="icon-caret-right"></i> Develop branch</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="/community">
+                                    <i class="icon-group"></i> Community <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="menuitem"><a href="/community/get_help.html"><i class="icon-caret-right"></i> Get Help</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/participate.html"><i class="icon-caret-right"></i> Participate</a></li>
+                                    <li role="menuitem"><a href="/community/playing_field.html"><i class="icon-caret-right"></i> Playing Field</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/codebase.html"><i class="icon-caret-right"></i> Codebase</a></li>
+                                    <li role="menuitem"><a href="/community/ci.html"><i class="icon-caret-right"></i> Continuous Integration</a></li>
+                                    <li role="menuitem"><a href="/community/roadmap.html"><i class="icon-caret-right"></i> Roadmap</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/contributors.html"><i class="icon-caret-right"></i> People behind Apache Zest</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/licensing.html"><i class="icon-caret-right"></i> Licensing</a></li>
+                                    <li role="menuitem"><a href="/community/licensing_faq.html"><i class="icon-caret-right"></i> Licensing FAQ</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="http://www.apache.org/foundation/sponsorship.html" target="_blank"><i class="icon-caret-right"></i> Sponsorship</a></li>
+                                    <li role="menuitem"><a href="http://www.apache.org/foundation/thanks.html" target="_blank"><i class="icon-caret-right"></i> Thanks</a></li>
+                                    <li role="menuitem"><a href="http://www.apache.org/security/" target="_blank"><i class="icon-caret-right"></i> Security</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div id="content" class="container-fluid">
+
+<div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+<h2 id="qi4j-03-released">Qi4j 0.3 Released</h2>
+
+<p>The 3rd pre-final release from the Qi4j community marks a new relatively stable milestone on the continued path to a production ready system. The 0.3 release is the 3rd major re-write of the Qi4j Core Runtime, after many lessons learned from previous implementations.</p>
+
+<p>“The current Qi4j Core Runtime is soooo much lighter and easier to work with, both for the Core developers as well as extensions and advanced libraries developers.”, says Rickard Öberg, the Qi4j project lead. “We now have most of the ingredients in place for developers who want to delve into DDD without having to do everything from scratch. Having a toolkit to work with that speaks the same language as themselves, all the way from layers down to individual parameter constraints, makes life so much easier, and minimizes the need for translation from idea to actual code.”</p>
+
+<p>“We now feel confident that the Qi4j Core Runtime has a good design and is stable enough to not go through any more disruptive changes. This enables us to move away from a feature-boxed release cycle into a more agile time-boxed one. This will enable more people to participate and use the Qi4j platform.”, says Niclas Hedhman. He continues; “Stefano Mazzocchi (Apache) once told me; Only projects with Bad Code, Great Vision will build strong communities. And I think Qi4j is exactly at this point right now. The vision for a better future is extremely promising, and we have so many areas that we need help to implement. Combined with a no barrier to write and commit code/documentation for all parts except Qi4j Core, we have the setup for accelerated participation in the months to come.”</p>
+
+<p>With this release the Qi4j community moves from a feature-boxed release cycle into a time-boxed one. First week every month, there will be a release containing the work from previous release. Issues will be worked on in a semi-prioritized order and the participating developers are urged to keep the codebase stable towards the release date.</p>
+
+<p>Rickard is keen to point out the Application Visualizer that has been started since the 0.2 release, “Another key tool which this release introduces is the beginning of the application visualizer, which automatically shows what your application look like. One of the main disadvantages of earlier frameworks is that the developers typically felt out of control and unable to see what was going on. When you have so many pieces working together it is important to get the big picture, and this is what we are now enabling.”</p>
+
+<p>“Our immediate next steps involves a new remote Entity Store, getting the application visualization tool ready, changes to the Query API including named and native queries, and we are looking into introducing more explicit Composite archetypes, such as TransientComposite and ValueComposite”, says Rickard and then goes back coding.</p>
+
+<p>The rest of us just can’t wait to see what is coming up next.</p>
+
+    </div>
+    <div class="span2"></div>
+</div>
+
+        </div>
+        <div class="container-fluid">
+            <hr>
+            <footer>
+                <p>
+                    Copyright &copy; 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/">Apache License, Version 2.0</a>.
+                    <br/>
+                    <small>
+                        Apache Zest, Zest, Apache, the Apache feather logo, and the Apache Zest project logo are trademarks of The Apache Software Foundation.<br/>
+                        All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+                    </small>
+                </p>
+            </footer>
+        </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/landing-resources/js/jquery-1.8.3.min.js"></script>
+        <script src="/landing-resources/js/bootstrap.min.js"></script>
+        <script src="/landing-resources/js/qi4j.org.js"></script>
+    </body>
+</html>
+

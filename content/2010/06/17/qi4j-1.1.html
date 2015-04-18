@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Qi4j SDK 1.1 is out!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="/landing-resources/css/bootstrap.css" rel="stylesheet">
+        <link href="/landing-resources/css/font-awesome.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 70px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link href="/landing-resources/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" type="image/png" href="/landing-resources/ico/favicon.png">
+
+        <!-- Analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-3118496-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><img src="/landing-resources/img/feather.png" width="64"/> Apache Zest</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li><a href="/news.html"><i class="icon-rss"></i> News</a></li>
+                            <li><a href="/downloads.html"><i class="icon-download"></i> Downloads</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="#">
+                                    <i class="icon-book"></i> Documentation <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="menuitem"><a href="/qi4j/latest/index.html"><i class="icon-caret-right"></i> Latest release</a></li>
+                                    <li role="menuitem"><a href="/qi4j/2.0/index.html"><i class="icon-caret-right"></i> 2.0</a></li>
+                                    <li role="menuitem"><a href="/qi4j/1.4/index.html"><i class="icon-caret-right"></i> &lt;=1.4.x</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/qi4j/develop/index.html"><i class="icon-caret-right"></i> Develop branch</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="/community">
+                                    <i class="icon-group"></i> Community <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="menuitem"><a href="/community/get_help.html"><i class="icon-caret-right"></i> Get Help</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/participate.html"><i class="icon-caret-right"></i> Participate</a></li>
+                                    <li role="menuitem"><a href="/community/playing_field.html"><i class="icon-caret-right"></i> Playing Field</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/codebase.html"><i class="icon-caret-right"></i> Codebase</a></li>
+                                    <li role="menuitem"><a href="/community/ci.html"><i class="icon-caret-right"></i> Continuous Integration</a></li>
+                                    <li role="menuitem"><a href="/community/roadmap.html"><i class="icon-caret-right"></i> Roadmap</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/contributors.html"><i class="icon-caret-right"></i> People behind Apache Zest</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="/community/licensing.html"><i class="icon-caret-right"></i> Licensing</a></li>
+                                    <li role="menuitem"><a href="/community/licensing_faq.html"><i class="icon-caret-right"></i> Licensing FAQ</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="http://www.apache.org/foundation/sponsorship.html" target="_blank"><i class="icon-caret-right"></i> Sponsorship</a></li>
+                                    <li role="menuitem"><a href="http://www.apache.org/foundation/thanks.html" target="_blank"><i class="icon-caret-right"></i> Thanks</a></li>
+                                    <li role="menuitem"><a href="http://www.apache.org/security/" target="_blank"><i class="icon-caret-right"></i> Security</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div id="content" class="container-fluid">
+
+<div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+<h2 id="qi4j-sdk-11-is-out">Qi4j SDK 1.1 is out!</h2>
+
+<p>Qi4j community hereby announces the availability of Release 1.1 of Qi4j Core, Qi4j Libraries and Qi4j Extensions.</p>
+
+<p>Qi4j version 1.1 is now available. It is mostly an bug fix update, some SPI changes and a contributed EntityStore for EC2/S3 using Infinispan. The author, Philippe Van Dyck, explains;</p>
+
+<ul>
+  <li>Infinispan memory cache eviction mechanism is based on a memory threshold (i.e. you specify 100MB of memory for the cache in the store config)</li>
+  <li>RHQ monitoring with Infinispan plugin</li>
+  <li>Entries are gzipped on S3</li>
+  <li>Wicket load balancing is done with infinispan (custom pagestore)</li>
+  <li>I use a directory structure for qi4j identities (“Entity1/key1”) with a webdav interface to it, so one can mount Qi4j’s store in Mac OSX Finder.</li>
+  <li>EC2 S3_PING is used in jgroups to join the cluster of qi4j stores</li>
+  <li>Each Qi4j UnitOfWork is transaction backed with rollback support</li>
+  <li>S3 (blobstore) access is using Infinispan synchronous and transacted mode</li>
+  <li>EC2 images only contain the wicket web interface with a jetty https connector / when added to amazon elastic load balancer, Infinispan connects to the cache cluster and wicket begins to server load balanced requests - yep, just like that</li>
+  <li>Current performance, as reported by RHQ, from EC2 to S3, is around 60ms per read/write from S3 (rough average). Elastic load balancing load tests with loadStorm are not done yet. But I don’t know any NOSQL alternative offering a permanent transacted monitored compressed Finder-mounted clustered load-balanced store.</li>
+</ul>
+
+<p>Development continues towards 1.2 release, which includes better OSGi support, dropping CGLib dependency due to classloading issues, Google AppEngine support and hopefully the DCI support as developed in the StreamFlow project.</p>
+
+    </div>
+    <div class="span2"></div>
+</div>
+
+        </div>
+        <div class="container-fluid">
+            <hr>
+            <footer>
+                <p>
+                    Copyright &copy; 2015 The Apache Software Foundation, Licensed under the <a href="http://www.apache.org/licenses/">Apache License, Version 2.0</a>.
+                    <br/>
+                    <small>
+                        Apache Zest, Zest, Apache, the Apache feather logo, and the Apache Zest project logo are trademarks of The Apache Software Foundation.<br/>
+                        All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+                    </small>
+                </p>
+            </footer>
+        </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/landing-resources/js/jquery-1.8.3.min.js"></script>
+        <script src="/landing-resources/js/bootstrap.min.js"></script>
+        <script src="/landing-resources/js/qi4j.org.js"></script>
+    </body>
+</html>
+

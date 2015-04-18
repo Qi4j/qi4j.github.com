@@ -1,7 +1,8 @@
 # See https://github.com/mojombo/jekyll/wiki/Configuration
 
-source:      .
-destination: _site
+source:      src
+destination: content
+keep_files:  [ schemas, qi4j ]
 
 safe:        true
 url:         http://zest.apache.org
@@ -9,7 +10,7 @@ production_url: http://zest.apache.org
 
 future:      true
 lsi:         false
-highlighter: pygments
+highlighter: rouge
 markdown:    kramdown
 permalink:   date
 
@@ -21,4 +22,3 @@ kramdown:
   toc_levels:     1..6
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-  

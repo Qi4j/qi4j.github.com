@@ -1,0 +1,74 @@
+---
+title: Apache Zest Downloads
+layout: default
+---
+<div class="page-header">
+    <h1>Downloads</h1>
+</div>
+
+<div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+
+        <p class="lead">
+            We are working towards distributing a useful SDK for Qi4j development, usable without connectivity. This
+            work has not been highest on the list and we are generally lagging in the release of the SDK in comparison
+            to the artifact releases. We strive to change this in the future.
+        </p>
+        <p class="lead">
+            Using Gradle, Maven, SBT, Ivy or any other build system that provide dependency management? Learn how to
+            <a href="qi4j/latest/howto-depend-on-qi4j.html">depend on Qi4j in your build</a>.
+        </p>
+
+        <h2>Versioning</h2>
+
+        <p>Qi4j versioning tries to stick to;</p>
+        <ul>
+            <li>For changes in the 3rd version digit, for instance from 1.3.1 to 1.3.2, only bug fixes have occurred.</li>
+            <li>For changes in the 2nd version digit, for instance from 1.3.1 to 1.4, more features have been added.</li>
+            <li>For changes in the 1st version digit, for instance from 1.3.1 to 2.0, incompatibilities have been introduced.</li>
+        </ul>
+        <p>
+            However, this will only be true for the Qi4j API, i.e. the classes found in org.qi4j.core.api JAR.
+            For SPI and especially the Runtime, we reserve the right of incompatible changes between releases in the
+            second digit.
+        </p>
+        <p>
+            Qi4j also has dependencies on other systems. We reserve the right that these dependencies may change
+            between releases. For instance, a change between 1.1 and 1.2 was that CGLib was dropped and replaced by ASM
+            as a new dependency.
+        </p>
+
+        <h2>Qi4j SDK Releases</h2>
+
+        <p>
+            The Qi4j SDK is split in two downloads: binaries and sources. Both downloads are available in the zip and
+            tar.gz formats. The source code is also available on <a href="http://github.com/apache/zest-qi4j">Github</a>.
+        </p>
+        <p class="lead">
+            The binary distributions contains Qi4j artifacts (classes, javadocs and sources jars), samples and
+            tutorials sources plus a local copy of the whole documentation website.
+        </p>
+        <p class="lead">
+            The source distributions contains the whole Qi4j SDK source tree.
+        </p>
+        <p>
+            The binary distributions contains Qi4j artifacts only to keep the download size small.
+            Each Qi4j artifact comes with a file prefixed <code>..-runtime-deps.txt</code> that contains the list of
+            its dependencies.
+            Moreover, at the SDK root you'll find a <a href="http://en.wikipedia.org/wiki/Metalink">Metalink</a> file
+            named <code>qi4j-sdk-runtime-deps.metalink</code> that you can use to download all needed dependencies
+            jars. Metalink files can be downloaded using curl, aria2 and a lot of other download tools. Support in wget
+            is coming.
+        </p>
+
+        {% include releases/2.0.html %}
+        {% include releases/1.4.1.html %}
+        {% include releases/1.4.html %}
+        {% include releases/1.3.html %}
+        {% include releases/1.2.html %}
+        {% include releases/1.0.html %}
+
+    </div>
+    <div class="span2"></div>
+</div>
